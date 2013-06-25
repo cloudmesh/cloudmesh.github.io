@@ -3,20 +3,25 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Cloudmesh's documentation!
+Cloudmesh
 =====================================
 
-Contents:
+This page will be the home of various cloudmesh projects
+
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: -1
+
+   projects
 
 
 
-Indices and tables
-==================
+.. comment::
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+  Indices and tables 
+  ==================
+
+  * :ref:`genindex`
+  * :ref:`modindex`
+  * :ref:`search`
 
