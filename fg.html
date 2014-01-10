@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Development Projects &mdash; Cloudmesh  documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.0.0/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloudmesh  documentation" href="index.html" />
+    <link rel="prev" title="Overview" href="cloudmesh.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+  <a href="https://github.com/cloudmesh/"
+     class="visible-desktop"><img
+    style="position: absolute; top: 40px; right: 0; border: 0;"
+    src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"
+    alt="Fork me on GitHub"></a>
+
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Cloudmesh</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="toc.html">Table of Contents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#cloudmesh-software-and-architecture">Cloudmesh Software and Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#futuregrid-cloud-computing-testbed-as-a-service-project-vision">FutureGrid: Cloud Computing Testbed as a Service: Project Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#initial-set-of-use-cases-for-futuregrid">Initial Set of Use Cases for FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#fg-service-architecture-to-research-develop-and-experiment-with-novel-cloud-systems">FG service architecture to research, develop and experiment with novel cloud systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#futuregrid-system-organization-and-internal-architecture">FutureGrid System Organization and Internal Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#futurecloud-management-and-operations">FutureCloud Management and Operations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cloudmesh.html#cloudmesh-software-and-architecture">Cloudmesh Software and Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#management-framework">Management Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#accounting-and-app-store">Accounting and App Store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#networking">Networking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#software-defined-storage-as-a-service">Software Defined Storage as a Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#monitoring">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#role-and-use-of-standards-and-open-source-software">Role and Use of Standards and Open Source Software</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Development Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rain">Rain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cloud-mesh">Cloud Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cloud-metrics">Cloud Metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cmd3">CMD3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#old-cm">OLD CM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#teefaa">Teefaa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fg-portal">FG Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fg-statistics">FG Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github">Github</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Development Projects</a><ul>
+<li><a class="reference internal" href="#rain">Rain</a></li>
+<li><a class="reference internal" href="#cloud-mesh">Cloud Mesh</a></li>
+<li><a class="reference internal" href="#cloud-metrics">Cloud Metrics</a></li>
+<li><a class="reference internal" href="#cmd3">CMD3</a></li>
+<li><a class="reference internal" href="#old-cm">OLD CM</a></li>
+<li><a class="reference internal" href="#tbd">TBD</a></li>
+<li><a class="reference internal" href="#teefaa">Teefaa</a></li>
+<li><a class="reference internal" href="#fg-portal">FG Portal</a></li>
+<li><a class="reference internal" href="#fg-statistics">FG Statistics</a></li>
+<li><a class="reference internal" href="#github">Github</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="cloudmesh.html"
+         title="Previous Chapter: Overview">&laquo; Overview</a></li>
+              
+            
+            
+            
+            
+              <li>
+<div id="sourcelink">
+  <a href="_sources/fg.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="development-projects">
+<h1>Development Projects<a class="headerlink" href="#development-projects" title="Permalink to this headline">¶</a></h1>
+<p>We are working on a number of devellopment projects. Instead of just providing a single project, we decided to split the development up in some smaller subproject. This allows the groups to work independently from each other and avoids the problem that a compile error in one code causes an issue in another. All projects listed her are managed in github.&lt;/p</p>
+<div class="section" id="rain">
+<h2>Rain<a class="headerlink" href="#rain" title="Permalink to this headline">¶</a></h2>
+<p>A project to do bare metal and VM based dynamic provisioning for a HPC cluster, OpenStack, Eucalyptus, Nimbus, ... .</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/rain.png"><img alt="abc" src="_images/rain.png" style="width: 450.0px; height: 318.75px;" /></a>
+<p class="caption"><strong>Figure:</strong> abc</p>
+</div>
+<p><a class="reference external" href="http://futuregrid.github.com/rain">http://futuregrid.github.com/rain</a></p>
+<p><a class="reference external" href="https://github.com/futuregrid/rain">https://github.com/futuregrid/rain</a></p>
+</div>
+<div class="section" id="cloud-mesh">
+<h2>Cloud Mesh<a class="headerlink" href="#cloud-mesh" title="Permalink to this headline">¶</a></h2>
+<p>A project to interface easily with multiple clouds from the command line and a command shell.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/cloudmesh.png"><img alt="abc" src="_images/cloudmesh.png" style="width: 450.0px; height: 318.75px;" /></a>
+<p class="caption"><strong>Figure:</strong> abc</p>
+</div>
+<p><a class="reference external" href="http://futuregrid.github.com/flask_cm/">http://futuregrid.github.com/flask_cm/</a>
+<a class="reference external" href="https://github.com/futuregrid/flask_cm">https://github.com/futuregrid/flask_cm</a></p>
+</div>
+<div class="section" id="cloud-metrics">
+<h2>Cloud Metrics<a class="headerlink" href="#cloud-metrics" title="Permalink to this headline">¶</a></h2>
+<p>A project to measure and display metric information about usage and utilization of your cloud.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/metric.png"><img alt="abc" src="_images/metric.png" style="width: 450.0px; height: 318.75px;" /></a>
+<p class="caption"><strong>Figure:</strong> abc</p>
+</div>
+<p><a class="reference external" href="http://futuregrid.github.com/cloud-metrics">http://futuregrid.github.com/cloud-metrics</a>
+<a class="reference external" href="https://github.com/futuregrid/cloud-metrics">https://github.com/futuregrid/cloud-metrics</a>
+<a class="reference external" href="https://portal.futuregrid.org/doc/metric/index.html">https://portal.futuregrid.org/doc/metric/index.html</a></p>
+</div>
+<div class="section" id="cmd3">
+<h2>CMD3<a class="headerlink" href="#cmd3" title="Permalink to this headline">¶</a></h2>
+<p>A dynamic CMD shell with plugins, scripts, and variables.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/cmd3.png"><img alt="abc" src="_images/cmd3.png" style="width: 318.75px; height: 195.0px;" /></a>
+<p class="caption"><strong>Figure:</strong> abc</p>
+</div>
+<p><a class="reference external" href="http://futuregrid.github.com/cmd3">http://futuregrid.github.com/cmd3</a></p>
+<p><a class="reference external" href="https://github.com/futuregrid/cmd3">https://github.com/futuregrid/cmd3</a></p>
+</div>
+<div class="section" id="old-cm">
+<h2>OLD CM<a class="headerlink" href="#old-cm" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/cloudmesh.png"><img alt="abc" src="_images/cloudmesh.png" style="width: 450.0px; height: 318.75px;" /></a>
+<p class="caption"><strong>Figure:</strong> abc</p>
+</div>
+<p><a class="reference external" href="http://futuregrid.github.com/flask_cm/">http://futuregrid.github.com/flask_cm/</a>
+<a class="reference external" href="https://github.com/futuregrid/flask_cm">https://github.com/futuregrid/flask_cm</a></p>
+</div>
+<div class="section" id="tbd">
+<h2>TBD<a class="headerlink" href="#tbd" title="Permalink to this headline">¶</a></h2>
+<p>A project to measure and display metric information about usage and utilization of your cloud.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/metric.png"><img alt="abc" src="_images/metric.png" style="width: 450.0px; height: 318.75px;" /></a>
+<p class="caption"><strong>Figure:</strong> abc</p>
+</div>
+<p><a class="reference external" href="http://futuregrid.github.com/cloud-metrics">http://futuregrid.github.com/cloud-metrics</a>
+<a class="reference external" href="https://github.com/futuregrid/cloud-metrics">https://github.com/futuregrid/cloud-metrics</a>
+<a class="reference external" href="https://portal.futuregrid.org/doc/metric/index.html">https://portal.futuregrid.org/doc/metric/index.html</a></p>
+</div>
+<div class="section" id="teefaa">
+<h2>Teefaa<a class="headerlink" href="#teefaa" title="Permalink to this headline">¶</a></h2>
+<p>A project to dynamically provision operating systems.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/vcluster.png"><img alt="abc" src="_images/vcluster.png" style="width: 450.0px; height: 318.75px;" /></a>
+<p class="caption"><strong>Figure:</strong> abc</p>
+</div>
+<p><a class="reference external" href="http://futuregrid.github.com/teefaa">http://futuregrid.github.com/teefaa</a>
+<a class="reference external" href="https://github.com/futuregrid/teefaa">https://github.com/futuregrid/teefaa</a></p>
+<p>Cloud Cluster
+A project to create a SLURM based cluster in your cloud and run MPI jobs on it.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/vcluster.png"><img alt="abc" src="_images/vcluster.png" style="width: 450.0px; height: 318.75px;" /></a>
+<p class="caption"><strong>Figure:</strong> abc</p>
+</div>
+<p><a class="reference external" href="http://futuregrid.github.com/virtual-cluster">http://futuregrid.github.com/virtual-cluster</a>
+<a class="reference external" href="https://github.com/futuregrid/virtual-cluster">https://github.com/futuregrid/virtual-cluster</a></p>
+</div>
+<div class="section" id="fg-portal">
+<h2>FG Portal<a class="headerlink" href="#fg-portal" title="Permalink to this headline">¶</a></h2>
+<p>A project to do develop a portal for the project</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/portal.png"><img alt="abc" src="_images/portal.png" style="width: 450.0px; height: 318.75px;" /></a>
+<p class="caption"><strong>Figure:</strong> abc</p>
+</div>
+<p><a class="reference external" href="https://portal.futuregrid.org/">https://portal.futuregrid.org/</a>
+<a class="reference external" href="https://github.com/futuregrid/portal">https://github.com/futuregrid/portal</a></p>
+</div>
+<div class="section" id="fg-statistics">
+<h2>FG Statistics<a class="headerlink" href="#fg-statistics" title="Permalink to this headline">¶</a></h2>
+<p>A project to analyse the users demand.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/statistics.png"><img alt="abc" src="_images/statistics.png" style="width: 450.0px; height: 318.75px;" /></a>
+<p class="caption"><strong>Figure:</strong> abc</p>
+</div>
+<p><a class="reference external" href="https://portal.futuregrid.org/projects-statistics">https://portal.futuregrid.org/projects-statistics</a></p>
+</div>
+<div class="section" id="github">
+<h2>Github<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
+<p>Our projects are managed on Github.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/github.png"><img alt="abc" src="_images/github.png" style="width: 450.0px; height: 318.75px;" /></a>
+<p class="caption"><strong>Figure:</strong> abc</p>
+</div>
+<p><a class="reference external" href="http://futuregrid.github.com/">http://futuregrid.github.com/</a>
+<a class="reference external" href="https://github.com/futuregrid/">https://github.com/futuregrid/</a></p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+  
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, FutureGrid.<br/>
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.jumbotron {
+  margin: 5px 0;
+  background-color: #141452;
+}
+.jumbotron h1 {
+  font-size: 72px;
+  line-height: 1;
+  font-weight: bold;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+
+footer {
+  background-color: white;
+}
