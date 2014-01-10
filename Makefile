@@ -3,8 +3,8 @@ BASENAME=$(shell basename $(PATHNAME))
 
 TAG=`cat VERSION.txt`
 
-all:
-	make -f Makefile force
+all: html
+
 
 ######################################################################
 # GIT INTERFACES
@@ -77,6 +77,8 @@ html: sphinx
 
 sphinx:
 	cd doc; make html
+	cp -r doc/build/html/* .
+	cp -r doc/source/images .
 	open index.html
 
 
