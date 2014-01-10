@@ -1,0 +1,177 @@
+Development Projects
+======================================================================
+
+We are working on a number of devellopment projects. Instead of just providing a single project, we decided to split the development up in some smaller subproject. This allows the groups to work independently from each other and avoids the problem that a compile error in one code causes an issue in another. All projects listed her are managed in github.</p
+
+
+Rain
+-----
+
+A project to do bare metal and VM based dynamic provisioning for a HPC cluster, OpenStack, Eucalyptus, Nimbus, ... . 
+
+
+.. figure:: _static/rain.png
+   :scale: 75 %
+   :alt: abc
+
+   **Figure:** abc
+
+
+http://futuregrid.github.com/rain
+
+https://github.com/futuregrid/rain
+
+  
+Cloud Mesh
+--------------
+A project to interface easily with multiple clouds from the command line and a command shell.
+
+
+.. figure:: _static/cloudmesh.png
+   :scale: 75 %
+   :alt: abc
+
+   **Figure:** abc
+
+
+http://futuregrid.github.com/flask_cm/
+https://github.com/futuregrid/flask_cm
+
+Cloud Metrics
+---------------
+
+A project to measure and display metric information about usage and utilization of your cloud.
+
+
+.. figure:: _static/metric.png
+   :scale: 75 %
+   :alt: abc
+
+   **Figure:** abc
+
+
+http://futuregrid.github.com/cloud-metrics
+https://github.com/futuregrid/cloud-metrics
+https://portal.futuregrid.org/doc/metric/index.html
+
+CMD3
+-------
+A dynamic CMD shell with plugins, scripts, and variables.
+
+
+.. figure:: _static/cmd3.png
+   :scale: 75 %
+   :alt: abc
+
+   **Figure:** abc
+
+
+http://futuregrid.github.com/cmd3
+
+https://github.com/futuregrid/cmd3
+
+OLD CM
+-------
+
+.. figure:: _static/cloudmesh.png
+   :scale: 75 %
+   :alt: abc
+
+   **Figure:** abc
+
+
+http://futuregrid.github.com/flask_cm/
+https://github.com/futuregrid/flask_cm
+
+TBD
+---------  
+A project to measure and display metric information about usage and utilization of your cloud.
+
+
+.. figure:: _static/metric.png
+   :scale: 75 %
+   :alt: abc
+
+   **Figure:** abc
+
+
+http://futuregrid.github.com/cloud-metrics
+https://github.com/futuregrid/cloud-metrics
+https://portal.futuregrid.org/doc/metric/index.html
+
+
+
+Teefaa
+--------
+A project to dynamically provision operating systems.
+
+
+.. figure:: _static/vcluster.png
+   :scale: 75 %
+   :alt: abc
+
+   **Figure:** abc
+
+
+http://futuregrid.github.com/teefaa
+https://github.com/futuregrid/teefaa
+
+Cloud Cluster
+A project to create a SLURM based cluster in your cloud and run MPI jobs on it.
+
+
+.. figure:: _static/vcluster.png
+   :scale: 75 %
+   :alt: abc
+
+   **Figure:** abc
+
+
+http://futuregrid.github.com/virtual-cluster
+https://github.com/futuregrid/virtual-cluster
+
+FG Portal
+------------
+A project to do develop a portal for the project
+
+
+
+.. figure:: _static/portal.png
+   :scale: 75 %
+   :alt: abc
+
+   **Figure:** abc
+
+
+https://portal.futuregrid.org/
+https://github.com/futuregrid/portal
+
+FG Statistics
+----------------
+A project to analyse the users demand.
+
+
+.. figure:: _static/statistics.png
+   :scale: 75 %
+   :alt: abc
+
+   **Figure:** abc
+
+
+https://portal.futuregrid.org/projects-statistics
+
+Github
+-------
+
+Our projects are managed on Github.
+
+.. figure:: _static/github.png
+   :scale: 75 %
+   :alt: abc
+
+   **Figure:** abc
+
+
+http://futuregrid.github.com/ 
+https://github.com/futuregrid/
+
