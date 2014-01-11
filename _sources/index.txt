@@ -14,23 +14,34 @@
 
 	 <div class="carousel-inner">
 	   <div class="item active">
-	     <img src="_static/cloudmesh-arch-2013.png" alt="slide-01" width="300" class="img-responsive"/>
+             <br>
+	     <img src="_static/One_black_Pixel.png" height="400"/>
+	     <img src="_static/cloudmesh-arch-2013.png" alt="slide-01"
+	   width="300" height="400" class="img-responsive"/>
 	     <div class="container">
 	       <div class="carousel-caption">
-	         <table><tr><td width=30%></td><td>
-		<p class="lead">The Architecture
-	   is layerd and fexible enabeling easy extensibillity.</p>
-		 
-                        <a class="btn btn-primary btn-large">Learn more »</a>
+	         <table>
+                 <tr>
+		 <td width=30%>
+		 </td>
+                 <td>
+		 <h1>Architecture</h1>
+		<p class="lead"> The Architecture is layerd,
+	   fexible and extensibillity.</p>
+		<a class="btn btn-primary btn-large">Learn more »</a>
 	       </td></tr></table>
 	       </div>
 	     </div>
 	   </div>
 	   <div class="item">
-	     <img src="_static/cm-gui.png"  width="400"  alt="">
+             <br>
+	     <img src="_static/cm-gui.png" height="400" width="400"
+	               alt="">
+             <br>
 	     <div class="container">
 	       <div class="carousel-caption">
 	         <table><tr><td width=50%></td><td>
+		 <h1>Web Interface</h1>
 		 <p class="lead">A Web User Interface offers access to FutureGrid,
 	       Azure, AWS, HP Cloud and others.</p>
 		 <a class="btn btn-large btn-primary" href="#">Learn
@@ -40,15 +51,18 @@
 	     </div>
 	   </div>
 	   <div class="item">
-	     <img src="_static/Slide1.png" width="300" alt="">
+	      <br>
+	     <img src="_static/Slide1.png"  vspace="50" width="300"
+	               alt="">
 	     <div class="container">
 	       <div class="carousel-caption">
- 	         <table><tr><td width=30%></td><td>
-		<h3>Integrated Functionality</h3>
+ 	         <table><tr height="400px">
+		 <td width=30%></td><td>
+		<h1>Integrated Functionality</h1>
 		<p class="lead">Support for VMs,
 	       bare metal provisioning, monitoring, HPC.</p>
-		 <a class="btn btn-large btn-primary" href="#">Browse
-		 gallery</a>
+		 <a class="btn btn-large btn-primary" href="#">Learn
+	   more</a>
 	       </td></tr></table>
 	       </div>
 	     </div>
