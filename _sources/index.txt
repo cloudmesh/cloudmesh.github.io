@@ -24,7 +24,7 @@
 		 <td width=30%>
 		 </td>
                  <td>
-		 <h1>Architecture</h1>
+		 <h1>Cloudmesh Architecture</h1>
 		<p class="lead"> The Architecture is layerd,
 	   fexible and extensibillity.</p>
 		<a class="btn btn-primary btn-large">Learn more »</a>
@@ -40,7 +40,7 @@
 	     <div class="container">
 	       <div class="carousel-caption">
 	         <table><tr><td width=50%></td><td>
-		 <h1>Web Interface</h1>
+		 <h1>Cloudmesh Web Interface</h1>
 		 <p class="lead">A Web User Interface offers access to FutureGrid,
 	       Azure, AWS, HP Cloud and others.</p>
 		 <a class="btn btn-large btn-primary" href="#">Learn
@@ -57,7 +57,7 @@
 	       <div class="carousel-caption">
  	         <table><tr height="400px">
 		 <td width=30%></td><td>
-		<h1>Integrated Functionality</h1>
+		<h1>Cloudmesh Integrated Functionality</h1>
 		<p class="lead">Support for VMs,
 	       bare metal provisioning, monitoring, HPC.</p>
 		 <a class="btn btn-large btn-primary" href="#">Learn
@@ -96,3 +96,4 @@ This page will be the home of various cloudmesh projects
    projects
    cloudmesh
    fg
+   bib
