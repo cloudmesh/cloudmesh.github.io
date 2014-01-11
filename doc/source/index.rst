@@ -15,7 +15,6 @@
 	 <div class="carousel-inner">
 	   <div class="item active">
              <br>
-	     <img src="_static/One_black_Pixel.png" height="400"/>
 	     <img src="_static/cloudmesh-arch-2013.png" alt="slide-01"
 	   width="300" height="400" class="img-responsive"/>
 	     <div class="container">
@@ -71,11 +70,9 @@
 	 <a class="left carousel-control" href="#myCarousel"
 	       data-slide="prev">
                &lsaquo;
-	       <span class="glyphicon glyphicon-circle-arrow-left"></span>	 
 	 </a>
 	 <a class="right carousel-control" href="#myCarousel"
 	       data-slide="next">
-	       <span class="glyphicon glyphicon-circle-arrow-right"></span>
               &rsaquo;
        </a>
        </div>
