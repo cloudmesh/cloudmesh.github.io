@@ -27,7 +27,7 @@
 		 <h1>Cloudmesh Architecture</h1>
 		<p class="lead"> The Architecture is layerd,
 	   fexible and extensibillity.</p>
-		<a class="btn btn-primary btn-large">Learn more »</a>
+		<a class="btn btn-primary btn-large" href="./cloudmesh.html">Learn more »</a>
 	       </td></tr></table>
 	       </div>
 	     </div>
@@ -43,7 +43,7 @@
 		 <h1>Cloudmesh Web Interface</h1>
 		 <p class="lead">A Web User Interface offers access to FutureGrid,
 	       Azure, AWS, HP Cloud and others.</p>
-		 <a class="btn btn-large btn-primary" href="#">Learn
+		 <a class="btn btn-large btn-primary" href="./screenshots.html">Learn
 	       more</a>
 	       </td></tr></table>
 	       </div>
@@ -60,7 +60,7 @@
 		<h1>Cloudmesh Integrated Functionality</h1>
 		<p class="lead">Support for VMs,
 	       bare metal provisioning, monitoring, HPC.</p>
-		 <a class="btn btn-large btn-primary" href="#">Learn
+		 <a class="btn btn-large btn-primary" href="./cloudmesh.html">Learn
 	   more</a>
 	       </td></tr></table>
 	       </div>
@@ -86,14 +86,20 @@
 Cloudmesh
 =====================================
 
-This page will be the home of various cloudmesh projects
+
+.. list-table::
+   :widths: 10 10 10 10 10
+
+   * - :doc:`cloudmesh`
+     - :doc:`projects`
+     - :doc:`cloud`
+     - :doc:`rain`    
+     - :doc:`hpc`
+   * - :doc:`faq`
+     - :doc:`contact`
+     - :doc:`screenshots`
+     - :doc:`bib`
+     - 
 
 
-.. toctree::
-   :maxdepth: 1
 
-   toc
-   projects
-   cloudmesh
-   fg
-   bib
