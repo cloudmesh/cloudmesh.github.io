@@ -39,10 +39,11 @@ cloudmesh:
 3. Project Contributors
 ----------------------------------------------------------------------
 
-`Cloudmesh <https://github.com/cloudmesh/cloudmesh>`_ is a community project and has received contributions from
-12 developers. Their names and contributions to the code are
-maintained in Github and you can find out more information about each
-individual contributor from out  `Github Project Page </git>`_ .
+`Cloudmesh <https://github.com/cloudmesh/cloudmesh>`_ is a community
+project and has received contributions from 12 developers. Their names
+and contributions to the code are maintained in Github and you can
+find out more information about each individual contributor from out
+`Github Project Page </git>`_ .
 
 4. Contact
 ----------------------------------------------------------------------

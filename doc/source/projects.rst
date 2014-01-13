@@ -1,7 +1,12 @@
 Projects
 =======
 
-We are working on a number of devellopment projects. Instead of just providing a single project, we decided to split the development up in some smaller subproject. This allows the groups to work independently from each other and avoids the problem that a compile error in one code causes an issue in another. All projects listed her are managed in github.
+We are working on a number of devellopment projects. Instead of just
+providing a single project, we decided to split the development up in
+some smaller subproject. This allows the groups to work independently
+from each other and avoids the problem that a compile error in one
+code causes an issue in another. All projects listed her are managed
+in github.
 
 .. list-table:: Projects
    :widths: 15 10 30 10

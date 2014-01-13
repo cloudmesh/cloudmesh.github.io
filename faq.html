@@ -139,82 +139,90 @@ the features at <a class="reference internal" href="screenshots.html"><em>Screen
 <p>How do I login?</p>
 <ul class="simple">
 <li>You need to have a futureGrid account. You can use your FutureGrid
-username and password to login. If you do not have an account note that it is
-easy to apply for an <a class="reference external" href="http://manual.futuregrid.org/account.html">account and project on FutureGrid</a>.</li>
+username and password to login. If you do not have an account note
+that it is easy to apply for an <a class="reference external" href="http://manual.futuregrid.org/account.html">account and project on FutureGrid</a>.</li>
 </ul>
 <p>How do I get started?</p>
 <ul class="simple">
-<li>You need to first register clouds and make sure you provide the proper
-credentials to the cloud. If you change the password, naturally you also need to
-update it in cloudmesh, for now.</li>
+<li>You need to first register clouds and make sure you provide the
+proper credentials to the cloud. If you change the password,
+naturally you also need to update it in cloudmesh, for now.</li>
 </ul>
 <p>I like to start a VM but get an error with the key ...</p>
 <ul>
-<li><p class="first">You need to go to the registration window for the clouds and press on the key
-button for each cloud to register your keys.</p>
-<p>We have not automatized the process of uploading your keys to all clouds at once.</p>
+<li><p class="first">You need to go to the registration window for the clouds and press
+on the key button for each cloud to register your keys.</p>
+<p>We have not automatized the process of uploading your keys to all
+clouds at once.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="setup-local-deploy">
 <h2>Setup - Local deploy<a class="headerlink" href="#setup-local-deploy" title="Permalink to this headline">¶</a></h2>
-<p>We developed a manual that is currently under construction, we have successfully shown
-cloudmesh has been installed by a number of different users. If you like to improve the
-installation instructions please help.</p>
+<p>We developed a manual that is currently under construction, we have
+successfully shown cloudmesh has been installed by a number of
+different users. If you like to improve the installation instructions
+please help.</p>
 </div>
 <div class="section" id="general-questions">
 <h2>General Questions<a class="headerlink" href="#general-questions" title="Permalink to this headline">¶</a></h2>
 <p>Can I install cloudmesh on my local computer?</p>
 <ul class="simple">
-<li>Yes you can. Cloudmesh is developed from the start with the principal that you
-ought to be able to run it in shared user mod, or on your local computer. When
-you run it on your local computer you will be able to start it from yaml
-configuration files containing your user data.</li>
+<li>Yes you can. Cloudmesh is developed from the start with the
+principal that you ought to be able to run it in shared user mod, or
+on your local computer. When you run it on your local computer you
+will be able to start it from yaml configuration files containing
+your user data.</li>
 </ul>
 <p>Can I use cloudmesh to connect to AWS, Azure, HP cloud, EC2 clouds?</p>
 <ul class="simple">
-<li>Yes you can we do support the OpenStack native protocols and EC2 via our
-cloudmesh compatibility IaaS library. This library registers clouds by name,
-so you can for example refresh images, flavors, and servers from them.
-The EC2 integration is done via libcloud allowing you in principal to access
-the many clouds libcloud supports. If you need a cloud and it is not supported,
-please let us know.</li>
+<li>Yes you can we do support the OpenStack native protocols and EC2 via
+our cloudmesh compatibility IaaS library. This library registers
+clouds by name, so you can for example refresh images, flavors, and
+servers from them.  The EC2 integration is done via libcloud
+allowing you in principal to access the many clouds libcloud
+supports. If you need a cloud and it is not supported, please let us
+know.</li>
 </ul>
 <p>How do you support other clouds behind firewalls?</p>
 <ul class="simple">
-<li>we are currently developing a proxy service that allows us interact with the clouds that
-are behind a firewall.</li>
+<li>we are currently developing a proxy service that allows us interact
+with the clouds that are behind a firewall.</li>
 </ul>
-<p>How is it possible that you can support clouds such as tashi that obviously do not have EC2
-interfaces?</p>
+<p>How is it possible that you can support clouds such as tashi that
+obviously do not have EC2 interfaces?</p>
 <ul class="simple">
-<li>We have developed a very simple abstraction in cloudmesh that allows us to integrate
-custom calls and methods to other clouds. Thus it is possible for us to support multiple
-protocols as well as even different access technologies such as API, command line,
-or REST calls. Good examples are OpenStack which we communicate with in the native
-OpenStack REST calls, while we use command line interfaces while communicating with tashi
-through a firewall.</li>
+<li>We have developed a very simple abstraction in cloudmesh that allows
+us to integrate custom calls and methods to other clouds. Thus it is
+possible for us to support multiple protocols as well as even
+different access technologies such as API, command line, or REST
+calls. Good examples are OpenStack which we communicate with in the
+native OpenStack REST calls, while we use command line interfaces
+while communicating with tashi through a firewall.</li>
 </ul>
 </div>
 <div class="section" id="development-questions">
 <h2>Development Questions<a class="headerlink" href="#development-questions" title="Permalink to this headline">¶</a></h2>
 <p>Cloudmesh is cool, can I participate in the development?</p>
 <ul class="simple">
-<li>Yes, Yes, Yes. We love your participation. If you have ideas or want to help on extending cloudmesh, or even
-documentation, testing and code cleanup let us know. You will be properly acknowledged in our future releases.</li>
+<li>Yes, Yes, Yes. We love your participation. If you have ideas or want
+to help on extending cloudmesh, or even documentation, testing and
+code cleanup let us know. You will be properly acknowledged in our
+future releases.</li>
 </ul>
 <p>I like to contribute my code to cloudmesh?</p>
 <ul class="simple">
-<li>Yes you can do that. We can create you a repository on cloudmesh. We need to
-discuss and agree how to best integrate your code.</li>
+<li>Yes you can do that. We can create you a repository on cloudmesh. We
+need to discuss and agree how to best integrate your code.</li>
 </ul>
 <p>You use Flask why not Django?</p>
 <ul class="simple">
-<li>When we started the project we found that the entry level to django was too
-high for students to participate. We originally used cherypy, but have since
-used flask. In a future version we will consider django. We look for helpers
-than can help us with the transition. In the meanwhile we will continue to use
-flask. We believe it will not be that difficult to switch to django.</li>
+<li>When we started the project we found that the entry level to django
+was too high for students to participate. We originally used
+cherypy, but have since used flask. In a future version we will
+consider django. We look for helpers than can help us with the
+transition. In the meanwhile we will continue to use flask. We
+believe it will not be that difficult to switch to django.</li>
 </ul>
 </div>
 </div>
