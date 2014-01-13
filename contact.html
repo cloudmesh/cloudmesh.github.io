@@ -10,8 +10,7 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootswatch-2.3.2/cosmo/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.0.0/cosmo/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
     
@@ -29,7 +28,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="top" title="Cloudmesh  documentation" href="index.html" />
@@ -48,22 +47,22 @@
 
 
 
-  <div id="navbar" class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-
-        <a class="brand" href="index.html"><img src="_static/fg-logo-white-24x36.png">
+        <a class="navbar-brand" href="index.html"><img src="_static/fg-logo-white-24x36.png">
           Cloudmesh</a>
-        <span class="navbar-text pull-left"><b></b></span>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
 
-        <div class="nav-collapse">
-          <ul class="nav">
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
             <li class="divider-vertical"></li>
             
             
@@ -92,7 +91,7 @@
             
             
             
-              <li>
+              <li class="hidden-sm">
 <div id="sourcelink">
   <a href="_sources/contact.txt"
      rel="nofollow">Source</a>
@@ -111,13 +110,12 @@
 </form>
           
         </div>
-      </div>
     </div>
   </div>
 
 <div class="container">
   <div class="row">
-    <div class="span12">
+    <div class="col-md-12">
       
   <div class="section" id="contact">
 <h1>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h1>
@@ -142,23 +140,23 @@
 </div>
 
 <hr>
-<div class="container-fluid" style="background-color: #141452; color: #F2F2F2; font-size: smaller;">
-<div class="row-fluid">
-   <div class="span3" id="f1"> 
+<div class="container" style="background-color: #141452; color: #F2F2F2; font-size: smaller;">
+<div class="row">
+   <div class="col-sm-3 col-md-3 col-lg-3" id="f1"> 
      <b>Home</b>
      <ul>
      <li><a href="index.html">Cloudmesh</a></li>
      <li> <a href="https://portal.futuregrid.org">FutureGrid</a></li>
      </ul>
    </div>
-   <div class="span3" id="f2"> 
+   <div class="col-sm-3 col-md-3 col-lg-3" id="f2"> 
      <b>About</b>
      <ul>
      <li><a href="cloudmesh.html">Overview</a></li>
      <li> <a href="contact.html">Contact</a></li>
      </ul>
    </div>
-   <div class="span3" id="f3"> 
+   <div class="col-sm-3 col-md-3 col-lg-3" id="f3"> 
      <b>Technology</b>
      <ul>
      <li><a href="projects.html">Projects</a></li>    
@@ -167,7 +165,7 @@
      <li> <a href="hpc.html">HPC</a></li>
      </ul>
    </div>
-   <div class="span3" id="f4"> 
+   <div class="col-sm-3 col-md-3 col-lg-3" id="f4"> 
      <b>Information</b>
      <ul>
      <li><a href="bib.html">References</a></li>
