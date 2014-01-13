@@ -7,14 +7,14 @@ Are there any screenshots?
 ---------------------------
 
 * A number of screenshots are available to showcase some of 
-  the features at :doc:`screenshots`
+  the Cloudmesh features at :doc:`screenshots`
 
 Setup - Register cloud in the cloudmesh.futuregrid.org service
 ---------------------------------------------------------------
 
 How do I login?
 
-* You need to have a futureGrid account. You can use your FutureGrid
+* You need to have a FutureGrid account. You can use your FutureGrid
   username and password to login. If you do not have an account note
   that it is easy to apply for an `account and project on FutureGrid
   <http://manual.futuregrid.org/account.html>`_.
@@ -23,7 +23,7 @@ How do I get started?
 
 * You need to first register clouds and make sure you provide the
   proper credentials to the cloud. If you change the password,
-  naturally you also need to update it in cloudmesh, for now.
+  naturally you also need to update it in Cloudmesh, for now.
   
   
 I like to start a VM but get an error with the key ...
@@ -37,42 +37,41 @@ I like to start a VM but get an error with the key ...
 Setup - Local deploy
 --------------------
 
-We developed a manual that is currently under construction, we have
-successfully shown cloudmesh has been installed by a number of
-different users. If you like to improve the installation instructions
-please help.
+We developed a manual that is currently under construction. We have
+successfully shown that Cloudmesh has been installed by a number of
+different users. If you would like to improve the installation instructions, your help is appreciated.
 
 
 General Questions
 ---------------------
 
-Can I install cloudmesh on my local computer?
+Can I install Cloudmesh on my local computer?
 
 * Yes you can. Cloudmesh is developed from the start with the
-  principal that you ought to be able to run it in shared user mod, or
-  on your local computer. When you run it on your local computer you
+  principle that you ought to be able to run it in shared user mod, or
+  on your local computer. When you run it on your local computer, you
   will be able to start it from yaml configuration files containing
   your user data.
   
-Can I use cloudmesh to connect to AWS, Azure, HP cloud, EC2 clouds?
+Can I use Cloudmesh to connect to AWS, Azure, HP cloud, EC2 clouds?
 
-* Yes you can we do support the OpenStack native protocols and EC2 via
-  our cloudmesh compatibility IaaS library. This library registers
+* Yes you can. We support the OpenStack native protocols and EC2 via
+  our Cloudmesh compatibility IaaS library. This library registers
   clouds by name, so you can for example refresh images, flavors, and
   servers from them.  The EC2 integration is done via libcloud
-  allowing you in principal to access the many clouds libcloud
+  allowing you in principle to access the many clouds libcloud
   supports. If you need a cloud and it is not supported, please let us
   know.
   
 How do you support other clouds behind firewalls?
 
-* we are currently developing a proxy service that allows us interact
-  with the clouds that are behind a firewall.
+* We are currently developing a proxy service that will allow us to interact
+  with clouds that are behind a firewall.
 
 How is it possible that you can support clouds such as tashi that
 obviously do not have EC2 interfaces?
 
-* We have developed a very simple abstraction in cloudmesh that allows
+* We have developed a very simple abstraction in Cloudmesh that allows
   us to integrate custom calls and methods to other clouds. Thus it is
   possible for us to support multiple protocols as well as even
   different access technologies such as API, command line, or REST
@@ -84,19 +83,19 @@ obviously do not have EC2 interfaces?
 Development Questions
 ----------------------------
 
-Cloudmesh is cool, can I participate in the development?
+Cloudmesh is cool. Can I participate in the development?
 
 * Yes, Yes, Yes. We love your participation. If you have ideas or want
-  to help on extending cloudmesh, or even documentation, testing and
+  to help on extending Cloudmesh, or even documentation, testing and
   code cleanup let us know. You will be properly acknowledged in our
   future releases.
 
-I like to contribute my code to cloudmesh?
+I would like to contribute my code to Cloudmesh.
 
-* Yes you can do that. We can create you a repository on cloudmesh. We
-  need to discuss and agree how to best integrate your code.
+* Yes, you can do that. We can create a repository for you on Cloudmesh. We
+  need to discuss and agree how to best integrate your code. Please contact us.
   
-You use Flask why not Django?
+You use Flask. Why not Django?
 
 * When we started the project we found that the entry level to django
   was too high for students to participate. We originally used
