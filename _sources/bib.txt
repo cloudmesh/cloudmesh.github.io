@@ -1,6 +1,13 @@
 References
 =========
 
+* General FutureGrid: [1]_ [5]_
+* Cloud Comparison: [3]_
+* Rain and Image Management: [2]_ [7]_ [8]_ [9]_
+* Cloud Metric [6]_
+* Others [4]_
+
+
 .. [1] **Design of the FutureGrid Experiment Management Framework**, Gregor von Laszewski, Geoffrey C. Fox, Fugang Wang, 
         Andrew Younge, Andrew, A Kulshrestha, Gregory G. Pike, Warren Smith,  Jens Voeckler, Renato J. Figueiredo, Jose Fortes, Kate Keahey,
         Ewa Deelman,   Proceedings of Gateway Computing Environments 2010 (GCE2010) at SC10,  2010, New Orleans, LA, Nov,  IEEE,  
@@ -60,7 +67,8 @@ References
   New York, NY, USA,
   ACM,
   DOI 10.1145/2378975.2378982,
-  ISBN 978-1-4503-1754-2
+  ISBN 978-1-4503-1754-2,
+  `(PDF) <http://grids.ucs.indiana.edu/ptliupages/publications/p25-vonLaszewski.pdf>`_
 
 
 .. [7]  **FutureGrid Image Repository: A Generic Catalog and Storage System for Heterogeneous Virtual Machine Images**,
@@ -86,7 +94,7 @@ References
   **Dynamic Provisioned Experiments in FutureGrid**,
   von Laszewski, Gregor and Geoffrey C. Fox and von Laszewski, Gregor
   and Geoffrey C. Fox and FutureGrid Team,
-  howpublished =2nd IEEE International Conference on Cloud Computing Technology and
+  2nd IEEE International Conference on Cloud Computing Technology and
   Science (CloudCom2010), Indianapolis, IN,
   12/1/2010,
   2010,
