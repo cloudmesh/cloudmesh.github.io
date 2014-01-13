@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Overview &mdash; Cloudmesh  documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.0.0/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="Cloudmesh  documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+  <a href="https://github.com/cloudmesh/"
+     class="visible-desktop"><img
+    style="position: absolute; top: 40px; right: 0; border: 0;"
+    src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"
+    alt="Fork me on GitHub"></a>
+
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Cloudmesh</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ></ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Overview</a><ul>
+<li><a class="reference internal" href="#system-monitoring-and-operations">System Monitoring and Operations</a></li>
+<li><a class="reference internal" href="#user-and-project-services">User and Project Services</a><ul>
+<li><a class="reference internal" href="#accounting-and-app-store">Accounting and App Store</a></li>
+<li><a class="reference internal" href="#networking">Networking</a></li>
+<li><a class="reference internal" href="#monitoring">Monitoring</a></li>
+<li><a class="reference internal" href="#role-and-use-of-standards-and-open-source-software">Role and Use of Standards and Open Source Software</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li>
+<div id="sourcelink">
+  <a href="_sources/cloudmesh.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>Cloudmesh is an important component  to deliver a software-defined system – encompassing virtualized and bare-metal infrastructure, networks, application, systems and platform software – with a unifying goal of providing Cloud Testbeds as a Service (CTaaS).  Cloudmesh federates a number of resources from academia and industry. This includes existing FutureGrid infrastructure (4704 cores used by more than 355 projects), Amzon Web Services, Azure, HP Cloud, Karlsruhe  using various technologies.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/cloudmesh-arch-2013.png"><img alt="cloudmesh architecture" src="_images/cloudmesh-arch-2013.png" style="width: 540.75px; height: 555.0px;" /></a>
+<p class="caption"><strong>Figure:</strong> The cloudmesh architecture. Green = components available, under improvement. Yellow = components under development.</p>
+</div>
+<p>A goal of Cloudmesh is to aggregate resources not only from FutureGrid, but also from OpenCirrus, Amazon, Microsoft Azure, and HP Cloud and GENI resources to name only a few. Cloudmesh was originally developed in order to simplify the execution of multiple concurrent experiments on a federated cloud infrastructure.  In addition to virtual resources, FG exposes bare-metal provisioning to users, but also a subset of HPC monitoring infrastructure tools. Services will be available through command line, API, and Web interfaces.</p>
+<p>The three layers of the Cloudmesh architecture include a Cloudmesh Management Framework for monitoring and operations, user and project management, experiment planning and deployment of services needed by an experiment, Provisioning and execution environments  to be deployed on resources (or interfaced with) to enable experiment management, and resources.</p>
+<div class="section" id="system-monitoring-and-operations">
+<h2>System Monitoring and Operations<a class="headerlink" href="#system-monitoring-and-operations" title="Permalink to this headline">¶</a></h2>
+<p>The management framework contains services to facilitate FG day-to-day operation, including federated or selective monitoring of the infrastructure. Cloudmesh leverages the FG for the operational services and allow administrators to view ongoing system status and experiments, as well as interact with users through ticket systems and messaging queues to inform subscribed users on the status of the system.</p>
+<p>The cloudmesh management framework offers services that simplify integration of resources in the FG nucleus or through federation. This includes, for user management, access to predefined setup templates for services in enabling resource and service provisioning as well as experiment execution. To integrate IaaS frameworks cloudmesh offers two distinct services:</p>
+<ul class="simple">
+<li><ol class="first loweralpha">
+<li>a federated IaaS frameworks hosted on FutureGrid,</li>
+</ol>
+</li>
+<li><ol class="first loweralpha" start="2">
+<li>the availability of a service that is hosted on FG allowing the “integration” of IaaS frameworks through user credentials either registered by the users or automatically obtained from our distributed user directory. For (b) several toolkits exist to create user-based federations, including our own abstraction level which supports interoperability via libcloud, but more importantly it supports directly the native OpenStack protocol and overcomes limitations of the EC2 protocol and the libcloud compatibility layer. Plugins that we currently develop will enable access to clouds via firewall penetration, abstraction layers for clouds with few public IP addresses and integration with new services such as OpenStack Heat. We successfully federated resources from Azure, AWS, the HP cloud, Karlsruhe Institute of Technology Cloud, and four FutureGrid clouds using various versions of OpenStack and Eucalyptus. The same will be done for OpenCirrus resources at GT and CMU through firewalls or proxy servers.</li>
+</ol>
+</li>
+</ul>
+<p>Additional management flexibility will be introduced through automatic cloud-bursting and shifting services. While cloud bursting will locate empty resources in other clouds, cloud shifting will identify unused services and resources, shut them down and provision them with services that are requested by the users. We have demonstrated this concept in 2012, moving resources for ~100 users to services that were needed based on class schedules. A reservation system will be used to allow for reserved creation of such environments, along with improvements of automation of cloud-shifting.</p>
+</div>
+<div class="section" id="user-and-project-services">
+<h2>User and Project Services<a class="headerlink" href="#user-and-project-services" title="Permalink to this headline">¶</a></h2>
+<p>FG user and project services simplify the application processes needed to obtain user accounts and projects. We have demonstrated in FG the ability to create accounts in a very short time, including vetting projects and users – allowing fast turn-around times for the majority of FG projects with an initial startup allocation. Cloudmesh re-use this infrastructure and also allows users to manage proxy accounts to federate to other IaaS services to provide an easy interface to integrate them.</p>
+<div class="section" id="accounting-and-app-store">
+<h3>Accounting and App Store<a class="headerlink" href="#accounting-and-app-store" title="Permalink to this headline">¶</a></h3>
+<p>To lower the barrier of entry cloudmesh will be providing a  shopping cart will allow checking out of predefined repeatable experiment templates. A cost is associated with an experiment making it possible to engage in a careful planning and to save time by reusing previous experiments.  Additionally, the Cloudmesh App Store may function as a clearing-house of images, image templates, services offered and provisioning templates. Users may package complex deployment descriptions in an easy parameter/form-based interface and other users may be able to replicate the specified setup with.</p>
+<p>Due to our advanced Cloudmesh Metrics framework we are in the position to further develop an integrated accounting framework allowing a usage cost model for users and management to identify the real impact of an experiment on resources. This will be useful to avoid overprovisioning and inefficient resource usage. The cost model will be based not only on number of core hours used, but also the capabilities of the resource, the time and special support it takes to set up the experiment. We will expand upon the metrics framework of FutureGrid that allows measuring of VM and HPC usage and associate this with cost models. Benchmarks will be used to normalize the charge models.</p>
+</div>
+<div class="section" id="networking">
+<h3>Networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h3>
+<p>We have a broad vision of resource integration in FG with systems offering different levels of control from &#8220;bare metal&#8221; to use of a portion of a resource. Likewise, we must utilize networks offering various levels of control, from standard IP connectivity to completely configurable SDNs as novel cloud architectures will almost certainly leverage NaaS and SDN alongside system software and middleware.
+FG resources will make use of SDN using OpenFlow whenever possible and the same level of networking control will not be available in every location.</p>
+</div>
+<div class="section" id="monitoring">
+<h3>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h3>
+<p>To serve the purposes of CISE researchers, cloudmesh must be able to access empirical data about the properties and performance of the underlying infrastructure beyond what is available from commercial cloud environments. To accommodate this requirement we have developed a uniform access interface to virtual machine monitoring information available for OpenStack and Eucalyptus, and Nimbus.
+In Future, we will be enhancing the access to historical user information. Right now they are exposed through predefined reports that we create on a regular basis. Tho achieve this we will also leverage the ongoing work while using the AMPQ protocol. Furthermore, Cloudmesh will provide access to common monitoring infrastructure as provided by Ganglia, Nagios, Inca, perfSonar, PAPI and others.</p>
+</div>
+<div class="section" id="role-and-use-of-standards-and-open-source-software">
+<h3>Role and Use of Standards and Open Source Software<a class="headerlink" href="#role-and-use-of-standards-and-open-source-software" title="Permalink to this headline">¶</a></h3>
+<p>Cloudmesh will use standards and open source software as part of its design principles towards sustainability into. We will leverage efforts such as OCCI and CDMI and are already using community efforts on interoperability APIs as provided by Apache libcloud. However, as libcloud is feature limited cloudmesh provides and additional abstraction layer that exposes cloud interfaces on the native-protocol level. Furthermore we interface to commercial Clouds such as Microsoft Azure, Amazon WS, and HP Cloud to providing access to robust commercial high availability services.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+  
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, FutureGrid.<br/>
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>
