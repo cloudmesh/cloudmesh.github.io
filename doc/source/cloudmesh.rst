@@ -29,8 +29,8 @@ available through command line, API, and Web interfaces.
 The three layers of the Cloudmesh architecture include a Cloudmesh
 Management Framework for monitoring and operations, user and project
 management, experiment planning and deployment of services needed by
-an experiment, Provisioning and execution environments to be deployed
-on resources (or interfaced with) to enable experiment management, and
+an experiment, provisioning and execution environments to be deployed
+on resources to (or interfaced with) enable experiment management, and
 resources.
 
 System Monitoring and Operations
@@ -38,8 +38,8 @@ System Monitoring and Operations
 
 The management framework contains services to facilitate FG day-to-day
 operation, including federated or selective monitoring of the
-infrastructure. Cloudmesh leverages the FG for the operational
-services and allow administrators to view ongoing system status and
+infrastructure. Cloudmesh leverages FG for the operational
+services and allows administrators to view ongoing system status and
 experiments, as well as interact with users through ticket systems and
 messaging queues to inform subscribed users on the status of the
 system.
