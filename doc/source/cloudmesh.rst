@@ -152,10 +152,10 @@ Role and Use of Standards and Open Source Software
 ======================================================================
 
 Cloudmesh will use standards and open source software as part of its
-design principles towards sustainability into. We will leverage
+design principles towards sustainability. We will leverage
 efforts such as OCCI and CDMI and are already using community efforts
 on interoperability APIs as provided by Apache libcloud. However, as
-libcloud is feature limited cloudmesh provides and additional
+libcloud is feature limited Cloudmesh provides an additional
 abstraction layer that exposes cloud interfaces on the native-protocol
 level. Furthermore we interface to commercial Clouds such as Microsoft
 Azure, Amazon WS, and HP Cloud to providing access to robust
