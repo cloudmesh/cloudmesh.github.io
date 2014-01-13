@@ -1,9 +1,8 @@
-
 **********************************************************************
 Overview
 **********************************************************************
 
-Cloudmesh is an important component  to deliver a software-defined system – encompassing virtualized and bare-metal infrastructure, networks, application, systems and platform software – with a unifying goal of providing Cloud Testbeds as a Service (CTaaS).  Cloudmesh federates a number of resources from academia and industry. This includes existing FutureGrid infrastructure (4704 cores used by more than 355 projects), Amzon Web Services, Azure, HP Cloud, Karlsruhe  using various technologies. 
+Cloudmesh is an important component  to deliver a software-defined system – encompassing virtualized and bare-metal infrastructure, networks, application, systems and platform software – with a unifying goal of providing Cloud Testbeds as a Service (CTaaS).  Cloudmesh federates a number of resources from academia and industry. This includes existing FutureGrid infrastructure (4704 cores used by more than 355 projects), Amazon Web Services, Azure, HP Cloud, Karlsruhe  using various technologies. 
 
 .. figure:: images/cloudmesh-arch-2013.png	
    :scale: 75 %
