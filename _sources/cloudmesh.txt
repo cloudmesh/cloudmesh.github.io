@@ -87,7 +87,7 @@ FutureGrid user and project services simplify the application processes needed
 to obtain user accounts and projects. We have demonstrated in FutureGrid the
 ability to create accounts in a very short time, including vetting
 projects and users – allowing fast turn-around times for the majority
-of FutureGrid projects with an initial startup allocation. Cloudmesh re-use
+of FutureGrid projects with an initial startup allocation. Cloudmesh re-uses
 this infrastructure and also allows users to manage proxy accounts to
 federate to other IaaS services to provide an easy interface to
 integrate them.
@@ -95,10 +95,10 @@ integrate them.
 Accounting and App Store
 ======================================================================
 
-To lower the barrier of entry cloudmesh will be providing a shopping
-cart will allow checking out of predefined repeatable experiment
+To lower the barrier of entry Cloudmesh will be providing a shopping
+cart which will allow checking out of predefined repeatable experiment
 templates. A cost is associated with an experiment making it possible
-to engage in a careful planning and to save time by reusing previous
+to engage in careful planning and to save time by reusing previous
 experiments. Additionally, the Cloudmesh App Store may function as a
 clearing-house of images, image templates, services offered and
 provisioning templates. Users may package complex deployment
@@ -111,7 +111,7 @@ cost model for users and management to identify the real impact of an
 experiment on resources. This will be useful to avoid overprovisioning
 and inefficient resource usage. The cost model will be based not only
 on number of core hours used, but also the capabilities of the
-resource, the time and special support it takes to set up the
+resource, the time, and special support it takes to set up the
 experiment. We will expand upon the metrics framework of FutureGrid
 that allows measuring of VM and HPC usage and associate this with cost
 models. Benchmarks will be used to normalize the charge models.
@@ -134,15 +134,15 @@ location.
 Monitoring 
 ======================================================================
 
-To serve the purposes of CISE researchers, cloudmesh must be able to
+To serve the purposes of CISE researchers, Cloudmesh must be able to
 access empirical data about the properties and performance of the
 underlying infrastructure beyond what is available from commercial
 cloud environments. To accommodate this requirement we have developed
 a uniform access interface to virtual machine monitoring information
-available for OpenStack and Eucalyptus, and Nimbus. In Future, we will
+available for OpenStack, Eucalyptus, and Nimbus. In the future, we will
 be enhancing the access to historical user information. Right now they
 are exposed through predefined reports that we create on a regular
-basis. Tho achieve this we will also leverage the ongoing work while
+basis. To achieve this we will also leverage the ongoing work while
 using the AMPQ protocol. Furthermore, Cloudmesh will provide access to
 common monitoring infrastructure as provided by Ganglia, Nagios, Inca,
 perfSonar, PAPI and others.
@@ -152,10 +152,10 @@ Role and Use of Standards and Open Source Software
 ======================================================================
 
 Cloudmesh will use standards and open source software as part of its
-design principles towards sustainability into. We will leverage
+design principles towards sustainability. We will leverage
 efforts such as OCCI and CDMI and are already using community efforts
 on interoperability APIs as provided by Apache libcloud. However, as
-libcloud is feature limited cloudmesh provides and additional
+libcloud is feature limited Cloudmesh provides an additional
 abstraction layer that exposes cloud interfaces on the native-protocol
 level. Furthermore we interface to commercial Clouds such as Microsoft
 Azure, Amazon WS, and HP Cloud to providing access to robust

@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -11,13 +10,14 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootswatch-3.0.0/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
+        URL_ROOT:    './',
         VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -29,7 +29,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="top" title="Cloudmesh  documentation" href="index.html" />
@@ -48,21 +48,22 @@
 
 
 
-  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Cloudmesh</a>
-        <span class="navbar-text navbar-version pull-left"><b></b></span>
-      </div>
 
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
+        <a class="brand" href="index.html"><img src="_static/fg-logo-white-24x36.png">
+          Cloudmesh</a>
+        <span class="navbar-text pull-left"><b></b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
             <li class="divider-vertical"></li>
             
             
@@ -117,12 +118,13 @@
 </form>
           
         </div>
+      </div>
     </div>
   </div>
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="span12">
       
   <div class="section" id="faq">
 <h1>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h1>
@@ -131,14 +133,14 @@
 <h2>Are there any screenshots?<a class="headerlink" href="#are-there-any-screenshots" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>A number of screenshots are available to showcase some of
-the features at <a class="reference internal" href="screenshots.html"><em>Screenshots</em></a></li>
+the Cloudmesh features at <a class="reference internal" href="screenshots.html"><em>Screenshots</em></a></li>
 </ul>
 </div>
 <div class="section" id="setup-register-cloud-in-the-cloudmesh-futuregrid-org-service">
 <h2>Setup - Register cloud in the cloudmesh.futuregrid.org service<a class="headerlink" href="#setup-register-cloud-in-the-cloudmesh-futuregrid-org-service" title="Permalink to this headline">¶</a></h2>
 <p>How do I login?</p>
 <ul class="simple">
-<li>You need to have a futureGrid account. You can use your FutureGrid
+<li>You need to have a FutureGrid account. You can use your FutureGrid
 username and password to login. If you do not have an account note
 that it is easy to apply for an <a class="reference external" href="http://manual.futuregrid.org/account.html">account and project on FutureGrid</a>.</li>
 </ul>
@@ -146,7 +148,7 @@ that it is easy to apply for an <a class="reference external" href="http://manua
 <ul class="simple">
 <li>You need to first register clouds and make sure you provide the
 proper credentials to the cloud. If you change the password,
-naturally you also need to update it in cloudmesh, for now.</li>
+naturally you also need to update it in Cloudmesh, for now.</li>
 </ul>
 <p>I like to start a VM but get an error with the key ...</p>
 <ul>
@@ -159,40 +161,39 @@ clouds at once.</p>
 </div>
 <div class="section" id="setup-local-deploy">
 <h2>Setup - Local deploy<a class="headerlink" href="#setup-local-deploy" title="Permalink to this headline">¶</a></h2>
-<p>We developed a manual that is currently under construction, we have
-successfully shown cloudmesh has been installed by a number of
-different users. If you like to improve the installation instructions
-please help.</p>
+<p>We developed a manual that is currently under construction. We have
+successfully shown that Cloudmesh has been installed by a number of
+different users. If you would like to improve the installation instructions, your help is appreciated.</p>
 </div>
 <div class="section" id="general-questions">
 <h2>General Questions<a class="headerlink" href="#general-questions" title="Permalink to this headline">¶</a></h2>
-<p>Can I install cloudmesh on my local computer?</p>
+<p>Can I install Cloudmesh on my local computer?</p>
 <ul class="simple">
 <li>Yes you can. Cloudmesh is developed from the start with the
-principal that you ought to be able to run it in shared user mod, or
-on your local computer. When you run it on your local computer you
+principle that you ought to be able to run it in shared user mod, or
+on your local computer. When you run it on your local computer, you
 will be able to start it from yaml configuration files containing
 your user data.</li>
 </ul>
-<p>Can I use cloudmesh to connect to AWS, Azure, HP cloud, EC2 clouds?</p>
+<p>Can I use Cloudmesh to connect to AWS, Azure, HP cloud, EC2 clouds?</p>
 <ul class="simple">
-<li>Yes you can we do support the OpenStack native protocols and EC2 via
-our cloudmesh compatibility IaaS library. This library registers
+<li>Yes you can. We support the OpenStack native protocols and EC2 via
+our Cloudmesh compatibility IaaS library. This library registers
 clouds by name, so you can for example refresh images, flavors, and
 servers from them.  The EC2 integration is done via libcloud
-allowing you in principal to access the many clouds libcloud
+allowing you in principle to access the many clouds libcloud
 supports. If you need a cloud and it is not supported, please let us
 know.</li>
 </ul>
 <p>How do you support other clouds behind firewalls?</p>
 <ul class="simple">
-<li>we are currently developing a proxy service that allows us interact
-with the clouds that are behind a firewall.</li>
+<li>We are currently developing a proxy service that will allow us to interact
+with clouds that are behind a firewall.</li>
 </ul>
 <p>How is it possible that you can support clouds such as tashi that
 obviously do not have EC2 interfaces?</p>
 <ul class="simple">
-<li>We have developed a very simple abstraction in cloudmesh that allows
+<li>We have developed a very simple abstraction in Cloudmesh that allows
 us to integrate custom calls and methods to other clouds. Thus it is
 possible for us to support multiple protocols as well as even
 different access technologies such as API, command line, or REST
@@ -203,19 +204,19 @@ while communicating with tashi through a firewall.</li>
 </div>
 <div class="section" id="development-questions">
 <h2>Development Questions<a class="headerlink" href="#development-questions" title="Permalink to this headline">¶</a></h2>
-<p>Cloudmesh is cool, can I participate in the development?</p>
+<p>Cloudmesh is cool. Can I participate in the development?</p>
 <ul class="simple">
 <li>Yes, Yes, Yes. We love your participation. If you have ideas or want
-to help on extending cloudmesh, or even documentation, testing and
+to help on extending Cloudmesh, or even documentation, testing and
 code cleanup let us know. You will be properly acknowledged in our
 future releases.</li>
 </ul>
-<p>I like to contribute my code to cloudmesh?</p>
+<p>I would like to contribute my code to Cloudmesh.</p>
 <ul class="simple">
-<li>Yes you can do that. We can create you a repository on cloudmesh. We
-need to discuss and agree how to best integrate your code.</li>
+<li>Yes, you can do that. We can create a repository for you on Cloudmesh. We
+need to discuss and agree how to best integrate your code. Please contact us.</li>
 </ul>
-<p>You use Flask why not Django?</p>
+<p>You use Flask. Why not Django?</p>
 <ul class="simple">
 <li>When we started the project we found that the entry level to django
 was too high for students to participate. We originally used
