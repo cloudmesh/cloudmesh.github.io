@@ -25,8 +25,8 @@
 		 </td>
                  <td>
 		 <h1>Cloudmesh Architecture</h1>
-		<p class="lead"> The Architecture is layerd,
-	   fexible and extensibillity.</p>
+		<p class="lead"> The Architecture is layered,
+	   flexible and extensible.</p>
 		<a class="btn btn-primary btn-large" href="./cloudmesh.html">Learn more »</a>
 	       </td></tr></table>
 	       </div>
