@@ -1,11 +1,11 @@
 Projects
 =======
 
-We are working on a number of devellopment projects. Instead of just
-providing a single project, we decided to split the development up in
-some smaller subproject. This allows the groups to work independently
-from each other and avoids the problem that a compile error in one
-code causes an issue in another. All projects listed her are managed
+We are working on a number of development projects. Instead of just
+providing a single project, we decided to split the development up into
+smaller subprojects. This allows the groups to work independently
+and avoids the problem that a compile error in one
+code causes an issue in another. All projects listed here are managed
 in github.
 
 .. list-table:: Projects
@@ -38,7 +38,7 @@ in github.
        different IaaS, Bare metal, and HPC services.
      - `github <https://github.com/futuregrid/rain-move>`_,
        `doc <http://futuregrid.github.io/rain-move/>`_
-   * - 
+   * - |image-teefaa|
      - Teefaa
      - A project to dynamically provision operating systems.
      - `github <https://github.com/cloudmesh/teefaa>`_,
@@ -84,4 +84,7 @@ in github.
    :width: 100px
 
 .. |image-rain| image:: _static/rain.png
+   :width: 100px
+
+.. |image-teefaa| image:: _static/teefaa.png
    :width: 100px
