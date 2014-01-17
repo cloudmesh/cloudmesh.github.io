@@ -54,21 +54,22 @@ two distinct services:
 * (a) a federated IaaS frameworks hosted on FutureGrid,
 
 * (b) the availability of a service that is hosted on FutureGrid allowing the
-“integration” of IaaS frameworks through user credentials either
-registered by the users or automatically obtained from our distributed
-user directory. For (b) several toolkits exist to create user-based
-federations, including our own abstraction level which supports
-interoperability via libcloud, but more importantly it supports
-directly the native OpenStack protocol and overcomes limitations of
-the EC2 protocol and the libcloud compatibility layer. Plugins that we
-currently develop will enable access to clouds via firewall
-penetration, abstraction layers for clouds with few public IP
-addresses and integration with new services such as OpenStack Heat. We
-successfully federated resources from Azure, AWS, the HP cloud,
-Karlsruhe Institute of Technology Cloud, and four FutureGrid clouds
-using various versions of OpenStack and Eucalyptus. The same will be
-done for OpenCirrus resources at GT and CMU through firewalls or proxy
-servers.
+  “integration” of IaaS frameworks through user credentials either
+  registered by the users or automatically obtained from our distributed
+  user directory. 
+
+For (b) several toolkits exist to create user-based federations,
+including our own abstraction level which supports interoperability
+via libcloud, but more importantly it supports directly the native
+OpenStack protocol and overcomes limitations of the EC2 protocol and
+the libcloud compatibility layer. Plugins that we currently develop
+will enable access to clouds via firewall penetration, abstraction
+layers for clouds with few public IP addresses and integration with
+new services such as OpenStack Heat. We successfully federated
+resources from Azure, AWS, the HP cloud, Karlsruhe Institute of
+Technology Cloud, and four FutureGrid clouds using various versions of
+OpenStack and Eucalyptus. The same will be done for OpenCirrus
+resources at GT and CMU through firewalls or proxy servers.
 
 Additional management flexibility will be introduced through automatic
 cloud-bursting and shifting services. While cloud bursting will locate

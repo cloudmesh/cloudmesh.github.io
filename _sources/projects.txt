@@ -1,5 +1,5 @@
 Projects
-=======
+===========
 
 We are working on a number of development projects. Instead of just
 providing a single project, we decided to split the development up into

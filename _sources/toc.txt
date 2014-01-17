@@ -8,8 +8,7 @@ Table Of Contents
    cloudmesh
 
 
-.. comment::
-
+..
   Indices and tables 
   ==================
 

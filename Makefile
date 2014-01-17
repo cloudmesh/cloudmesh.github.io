@@ -4,7 +4,7 @@ BASENAME=$(shell basename $(PATHNAME))
 TAG=`cat VERSION.txt`
 
 all: html
-
+	make -f Makefile view
 
 ######################################################################
 # GIT INTERFACES
@@ -79,6 +79,8 @@ sphinx:
 	cd doc; $(MAKE) html
 	cp -r doc/build/html/* .
 	cp -r doc/source/images .
+
+view:
 	open index.html
 
 
