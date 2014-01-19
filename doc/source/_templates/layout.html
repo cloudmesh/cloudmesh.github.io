@@ -4,6 +4,9 @@
 {# Custom CSS overrides #}
 {% set bootswatch_css_custom = ['_static/my-styles.css'] %}
 
+{% block sidebarlogo %}
+   <img src="{{ pathto('_static/fg-logo-white-24x36.png', 1) }}">
+{% endblock %}
 
 {# Add some extra stuff before and use existing with 'super()' call. #}
 {% block footer %}
