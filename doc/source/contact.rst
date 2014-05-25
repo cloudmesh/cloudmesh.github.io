@@ -3,21 +3,20 @@ Contact
 
 To find out more about Cloudmesh, please contact
 
-`Gregor von Laszewski <http://gregor.cyberaide.org>`_
+:Address:
+   `Gregor von Laszewski <http://gregor.cyberaide.org>`_
 
-	E-mail: laszewski@gmail.com
+   E-mail: laszewski@gmail.com
 
-	Indiana University
+   Indiana University
 
-	Pervasive Technology Institute
+   School of Informatics and Computing
 
-	2729 E 10th St.
+   Informatics West
 
-	Bloomington IN 47408
+   901 E. 10th St.
 
-	Phone (office): (812) 856 1311
+   Bloomington, IN 47408
 
-	Fax: (812) 856 1537
-
-	`Google Map <http://maps.google.com/maps?hl=en&source=hp&q=Indiana%20University%20Pervasive%20Technology%20Institute%202729%20E%2010th%20St.%20Bloomington%20IN%2047408&um=1&ie=UTF-8&sa=N&tab=wl>`_
+   `Google Map <http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=901+E.+10th+St.,+Bloomington,+IN+47408&sll=39.165788,-86.523404&sspn=0.011895,0.027895&g=150+S.+Woodlawn+Ave.,+Bloomington,+IN+47405&ie=UTF8&ll=39.170796,-86.523321&spn=0.011894,0.027895&z=16&iwloc=addr>`_
 
