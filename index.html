@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -10,9 +9,8 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootswatch-3.0.0/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.1.0/cosmo/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -26,9 +24,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="top" title="Cloudmesh  documentation" href="#" />
@@ -39,6 +37,149 @@
 
   </head>
   <body>
+  
+
+   
+
+    <!--
+    <link
+    href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700'
+    rel='stylesheet' type='text/css'>
+    -->
+
+    <link href="_static/owl/assets/css/bootstrapTheme.css" rel="stylesheet">
+    <link href="_static/owl/assets/css/custom.css" rel="stylesheet">
+
+    <!-- Owl Carousel Assets -->
+    <link href="_static/owl/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="_static/owl/owl-carousel/owl.theme.css" rel="stylesheet">
+
+    <!-- Prettify -->
+    <!--
+    <link href="_static/owl/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    -->
+
+              <div id="owl-demo" class="owl-carousel">
+                <div class="item">
+		  <center>
+		  <p> Layered Extensible Architecture </p>
+		  </center>
+		  <img src="_static/cloudmesh-arch-2013.png" alt="Architecture">
+		</div>
+
+		<div class="item">
+		  <center>
+		  <p> Convenient Command Shell </p>
+		  </center>
+		  <img src="_static/cmd3.png" alt="Command Shell">
+		</div>		  
+		
+
+		<div class="item">
+		  <center>
+		  <p> Cloudmesh an On-ramp to Clouds </p>
+		  </center>
+		  <img src="_static/Slide1.png" alt="Command Shell">
+		</div>		  
+		
+
+		<div class="item">
+		  <center>
+		  <p> Cloudmesh Metric for Clouds </p>
+		  </center>
+  		  <img src="_static/Metric.png" alt="Metric">
+		</div>
+
+		<div class="item">
+		  <center>
+		  <p> Cloudmesh Inventory</p>
+		  </center>
+  		  <img src="_static/inventory.png" alt="">
+		</div>
+
+		<div class="item">
+		  <center>
+		  <p> Cloudmesh PaaS Launcher</p>
+		  </center>
+  		  <img src="_static/launcher.png" alt="">
+		</div>
+
+		<div class="item">
+		  <center>
+		  <p> Cloudmesh Federated VMs </p>
+		  </center>
+  		  <img src="_static/manage_vms.png" alt="">
+		</div>
+
+		<div class="item">
+		  <center>
+		  <p> Cloudmesh HPC Queue Info</p>
+		  </center>
+  		  <img src="_static/qinfo.png" alt="">
+		</div>
+
+		<div class="item">
+		  <center>
+		  <p> Cloudmesh HPC Queue Stat</p>
+		  </center>
+  		  <img src="_static/qstat.png" alt="">
+		</div>
+
+		<div class="item">
+		  <center>
+		  <p> Cloudmesh Service Map</p>
+		  </center>
+  		  <img src="_static/service_map.png" alt="">
+		</div>
+
+		<div class="item">
+		  <center>
+		  <p> Cloudmesh Clouds Registry</p>
+		  </center>
+  		  <img src="_static/cloud_register_openstack.png" alt="Metric">
+		</div>
+
+              </div>
+
+    <script src="_static/owl/owl-carousel/owl.carousel.js"></script>
+
+	          <style>
+    #owl-demo .item{
+        margin: 3px;
+    }
+    #owl-demo .item img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    </style>
+
+    <script>
+    $(document).ready(function() {
+      $("#owl-demo").owlCarousel({
+        autoPlay: 3000,
+        items : 3,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3]
+      });
+
+    });
+    </script>
+
+    <!--	     
+    <script src="_static/owl/assets/js/bootstrap-collapse.js"></script>
+    <script src="_static/owl/assets/js/bootstrap-transition.js"></script>
+    <script src="_static/owl/assets/js/bootstrap-tab.js"></script>
+    -->
+	      
+<!--    <script src="_static/owl/assets/js/google-code-prettify/prettify.js"></script>-->
+    <!-- <script src="_static/owl/assets/js/application.js"></script> -->
+
+	      
+
+     
+   
+
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -60,16 +201,25 @@
             
             
               <li class="dropdown globaltoc-container">
-  <a href="#"
-     class="dropdown-toggle"
-     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ></ul>
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
 </li>
               
                 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"><ul>
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Cloudmesh</a></li>
 </ul>
 </ul>
@@ -110,87 +260,7 @@
   <div class="row">
     <div class="col-md-12">
       
-  <div class="jumbotron">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-   <!-- Indicators -->
-   <!--
-      <ol class="carousel-indicators">
-       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      </ol>
-      -->
-
-      <div class="carousel-inner">
-        <div class="item active">
-          <br>
-          <img src="_static/cloudmesh-arch-2013.png" alt="slide-01"
-        width="300" height="400" class="img-responsive"/>
-          <div class="container">
-            <div class="carousel-caption">
-              <table>
-              <tr>
-              <td width=30%>
-              </td>
-              <td>
-              <h1>Cloudmesh Architecture</h1>
-             <p class="lead"> The Architecture is layered,
-        flexible and extensible.</p>
-             <a class="btn btn-primary btn-large" href="./cloudmesh.html">Learn more »</a>
-            </td></tr></table>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <br>
-          <img src="_static/cm-gui.png" height="400" width="400"
-                    alt="">
-          <br>
-          <div class="container">
-            <div class="carousel-caption">
-              <table><tr><td width=50%></td><td>
-              <h1>Cloudmesh Web Interface</h1>
-              <p class="lead">A Web User Interface offers access to FutureGrid,
-            Azure, AWS, HP Cloud and others.</p>
-              <a class="btn btn-large btn-primary" href="./screenshots.html">Learn
-            more</a>
-            </td></tr></table>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-           <br>
-          <img src="_static/Slide1.png"  vspace="50" width="300"
-                    alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <table><tr height="400px">
-              <td width=30%></td><td>
-             <h1>Cloudmesh Integrated Functionality</h1>
-             <p class="lead">Support for VMs,
-            bare metal provisioning, monitoring, HPC.</p>
-              <a class="btn btn-large btn-primary" href="./cloudmesh.html">Learn
-        more</a>
-            </td></tr></table>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel"
-            data-slide="prev">
-            &lsaquo;
-      </a>
-      <a class="right carousel-control" href="#myCarousel"
-            data-slide="next">
-           &rsaquo;
-    </a>
-    </div>
-    </div>
-
-
-  </div>
-</div><div class="section" id="cloudmesh">
+  <div class="section" id="cloudmesh">
 <h1>Cloudmesh<a class="headerlink" href="#cloudmesh" title="Permalink to this headline">¶</a></h1>
 <table border="1" class="docutils">
 <colgroup>
@@ -222,47 +292,6 @@
       
   </div>
 </div>
-<div style="background-color: #141452; color: white">
-<br>
-<div class="container" style="background-color: #141452; color: #F2F2F2; font-size: smaller;">
-<div class="row width="100%" style="background-color: #141452;">
-   <div class="span12 style="background-color: #141452;">
-   <div class="col-sm-3 col-md-3 col-lg-3" id="f1"> 
-     <b>Home</b>
-     <ul>
-     <li><a href="index.html">Cloudmesh</a></li>
-     <li> <a href="https://portal.futuregrid.org">FutureGrid</a></li>
-     </ul>
-   </div>
-   <div class="col-sm-3 col-md-3 col-lg-3" id="f2"> 
-     <b>About</b>
-     <ul>
-     <li><a href="cloudmesh.html">Overview</a></li>
-     <li> <a href="contact.html">Contact</a></li>
-     </ul>
-   </div>
-   <div class="col-sm-3 col-md-3 col-lg-3" id="f3"> 
-     <b>Technology</b>
-     <ul>
-     <li><a href="projects.html">Projects</a></li>    
-     <li><a href="cloud.html">IaaS</a></li>
-     <li> <a href="rain.html">Rain</a></li>
-     <li> <a href="hpc.html">HPC</a></li>
-     </ul>
-   </div>
-   <div class="col-sm-3 col-md-3 col-lg-3" id="f4"> 
-     <b>Information</b>
-     <ul>
-     <li><a href="bib.html">References</a></li>
-     <li><a href="screenshots.html">Screenshots</a></li>
-     <li> <a href="faq.html">FAQ</a></li>
-     </ul>
-   </div>
-</div>
-</div>
-</div>
-</div>
-  
 <footer class="footer">
   <div class="container">
     <p class="pull-right">
@@ -274,7 +303,5 @@
     </p>
   </div>
 </footer>
-
-
   </body>
 </html>

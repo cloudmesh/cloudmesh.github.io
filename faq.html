@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -10,9 +9,8 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootswatch-3.0.0/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.1.0/cosmo/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -26,9 +24,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="top" title="Cloudmesh  documentation" href="index.html" />
@@ -39,6 +37,11 @@
 
   </head>
   <body>
+  
+
+      
+   
+
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -60,16 +63,25 @@
             
             
               <li class="dropdown globaltoc-container">
-  <a href="index.html"
-     class="dropdown-toggle"
-     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ></ul>
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
 </li>
               
                 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"><ul>
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">FAQ</a><ul>
 <li><a class="reference internal" href="#are-there-any-screenshots">Are there any screenshots?</a></li>
 <li><a class="reference internal" href="#setup-register-cloud-in-the-cloudmesh-futuregrid-org-service">Setup - Register cloud in the cloudmesh.futuregrid.org service</a></li>
@@ -224,47 +236,6 @@ believe it will not be that difficult to switch to django.</li>
       
   </div>
 </div>
-<div style="background-color: #141452; color: white">
-<br>
-<div class="container" style="background-color: #141452; color: #F2F2F2; font-size: smaller;">
-<div class="row width="100%" style="background-color: #141452;">
-   <div class="span12 style="background-color: #141452;">
-   <div class="col-sm-3 col-md-3 col-lg-3" id="f1"> 
-     <b>Home</b>
-     <ul>
-     <li><a href="index.html">Cloudmesh</a></li>
-     <li> <a href="https://portal.futuregrid.org">FutureGrid</a></li>
-     </ul>
-   </div>
-   <div class="col-sm-3 col-md-3 col-lg-3" id="f2"> 
-     <b>About</b>
-     <ul>
-     <li><a href="cloudmesh.html">Overview</a></li>
-     <li> <a href="contact.html">Contact</a></li>
-     </ul>
-   </div>
-   <div class="col-sm-3 col-md-3 col-lg-3" id="f3"> 
-     <b>Technology</b>
-     <ul>
-     <li><a href="projects.html">Projects</a></li>    
-     <li><a href="cloud.html">IaaS</a></li>
-     <li> <a href="rain.html">Rain</a></li>
-     <li> <a href="hpc.html">HPC</a></li>
-     </ul>
-   </div>
-   <div class="col-sm-3 col-md-3 col-lg-3" id="f4"> 
-     <b>Information</b>
-     <ul>
-     <li><a href="bib.html">References</a></li>
-     <li><a href="screenshots.html">Screenshots</a></li>
-     <li> <a href="faq.html">FAQ</a></li>
-     </ul>
-   </div>
-</div>
-</div>
-</div>
-</div>
-  
 <footer class="footer">
   <div class="container">
     <p class="pull-right">
@@ -276,7 +247,5 @@ believe it will not be that difficult to switch to django.</li>
     </p>
   </div>
 </footer>
-
-
   </body>
 </html>
