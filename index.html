@@ -41,148 +41,7 @@
 
    
 
-    <!--
-    <link
-    href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700'
-    rel='stylesheet' type='text/css'>
-    -->
-
-    <link href="_static/owl/assets/css/bootstrapTheme.css" rel="stylesheet">
-    <link href="_static/owl/assets/css/custom.css" rel="stylesheet">
-
-    <!-- Owl Carousel Assets -->
-    <link href="_static/owl/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="_static/owl/owl-carousel/owl.theme.css" rel="stylesheet">
-
-    <!-- Prettify -->
-    <!--
-    <link href="_static/owl/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-    -->
-
-              <div id="owl-demo" class="owl-carousel">
-                <div class="item">
-		  <center>
-		  <p> Layered Extensible Architecture </p>
-		  </center>
-		  <a href="cloudmesh.html">		  
-		  <img src="_static/cloudmesh-arch-2013.png"
-		       alt="Architecture">
-		  </a>
-		</div>
-
-		<div class="item">
-		  <center>
-		  <p> Convenient Command Shell </p>
-		  </center>
-
-		  <a href="http://cloudmesh.futuregrid.org/cmd3/">
-		  <img src="_static/cmd3.png" alt="Command Shell">
-		  </a>
-		</div>		  
-
-		<div class="item">
-		  <center>
-		  <p> Cloudmesh an On-ramp to Clouds </p>
-		  </center>
-		  <img src="_static/Slide1.png" alt="Command Shell">
-		</div>		  
-		
-
-		<div class="item">
-		  <center>
-		  <p> Cloudmesh Metric for Clouds </p>
-		  </center>
-
-                  <a href="http://futuregrid.github.io/cloud-metrics/">
-  		  <img src="_static/metric.png" alt="Metric">
-		  </a>
-		</div>
-
-		<div class="item">
-		  <center>
-		  <p> Cloudmesh Inventory</p>
-		  </center>
-  		  <img src="_static/inventory.png" alt="">
-		</div>
-
-		<div class="item">
-		  <center>
-		  <p> Cloudmesh PaaS Launcher</p>
-		  </center>
-  		  <img src="_static/launcher.png" alt="">
-		</div>
-
-		<div class="item">
-		  <center>
-		  <p> Cloudmesh Federated VMs </p>
-		  </center>
-  		  <img src="_static/manage_vms.png" alt="">
-		</div>
-
-		<div class="item">
-		  <center>
-		  <p> Cloudmesh HPC Queue Info</p>
-		  </center>
-  		  <img src="_static/qinfo.png" alt="">
-		</div>
-
-		<div class="item">
-		  <center>
-		  <p> Cloudmesh HPC Queue Stat</p>
-		  </center>
-  		  <img src="_static/qstat.png" alt="">
-		</div>
-
-		<div class="item">
-		  <center>
-		  <p> Cloudmesh Service Map</p>
-		  </center>
-  		  <img src="_static/service_map.png" alt="">
-		</div>
-
-		<div class="item">
-		  <center>
-		  <p> Cloudmesh Clouds Registry</p>
-		  </center>
-  		  <img src="_static/cloud_register_openstack.png" alt="Metric">
-		</div>
-
-              </div>
-
-    <script src="_static/owl/owl-carousel/owl.carousel.js"></script>
-
-	          <style>
-    #owl-demo .item{
-        margin: 3px;
-    }
-    #owl-demo .item img{
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-    </style>
-
-    <script>
-    $(document).ready(function() {
-      $("#owl-demo").owlCarousel({
-        autoPlay: 3000,
-        items : 3,
-        itemsDesktop : [1199,3],
-        itemsDesktopSmall : [979,3]
-      });
-
-    });
-    </script>
-
-    <!--	     
-    <script src="_static/owl/assets/js/bootstrap-collapse.js"></script>
-    <script src="_static/owl/assets/js/bootstrap-transition.js"></script>
-    <script src="_static/owl/assets/js/bootstrap-tab.js"></script>
-    <script src="_static/owl/assets/js/google-code-prettify/prettify.js"></script>
-    <script src="_static/owl/assets/js/application.js"></script>
-    -->	      
-
-     
+   
    
 
 
@@ -265,31 +124,80 @@
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="cloudmesh">
-<h1>Cloudmesh<a class="headerlink" href="#cloudmesh" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
+  <table border="1" class="docutils">
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
+<col width="30%" />
+<col width="60%" />
+<col width="10%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="cloudmesh.html"><em>Overview</em></a></td>
-<td><a class="reference internal" href="projects.html"><em>Projects</em></a></td>
-<td><a class="reference internal" href="cloud.html"><em>IaaS</em></a></td>
-<td><a class="reference internal" href="rain.html"><em>Rain</em></a></td>
-<td><a class="reference internal" href="hpc.html"><em>HPC</em></a></td>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head">Description</th>
+<th class="head">Image</th>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="faq.html"><em>FAQ</em></a></td>
-<td><a class="reference internal" href="contact.html"><em>Contact</em></a></td>
-<td><a class="reference internal" href="screenshots.html"><em>Screenshots</em></a></td>
-<td><a class="reference internal" href="bib.html"><em>References</em></a></td>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Cloudmesh Core</td>
+<td>A project to interface easily with multiple clouds from the command line and a command shell.
+<a class="reference external" href="https://github.com/cloudmesh/cloudmesh">github</a>,
+<a class="reference external" href="http://cloudmesh.github.io/cloudmesh/">doc</a></td>
+<td><a class="reference internal" href="_images/cloud_register_openstack1.png"><img alt="image-registry" src="_images/cloud_register_openstack1.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Layered Extensible Architecture</td>
 <td>&nbsp;</td>
+<td><a class="reference internal" href="_images/cloudmesh-arch-20131.png"><img alt="image-arch" src="_images/cloudmesh-arch-20131.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Convenient Command Shell</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="_images/cmd3.png"><img alt="image-cmd3" src="_images/cmd3.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Cloudmesh an On-ramp to Clouds</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="_images/Slide1.png"><img alt="image-onramp" src="_images/Slide1.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Cloudmesh Metric for Clouds</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="_images/metric.png"><img alt="image-metric" src="_images/metric.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Cloudmesh Inventory</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="_images/inventory1.png"><img alt="image-inventory" src="_images/inventory1.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Cloudmesh PaaS Launcher</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="_images/launcher1.png"><img alt="image-launcher" src="_images/launcher1.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Cloudmesh Federated VMs</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="_images/manage_vms1.png"><img alt="image-manage-vms" src="_images/manage_vms1.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Cloudmesh HPC Queue Info</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="_images/qinfo1.png"><img alt="image-qinfo" src="_images/qinfo1.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Cloudmesh HPC Queue Stat</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="_images/qstat1.png"><img alt="image-qstat" src="_images/qstat1.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Cloudmesh Service Map</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="_images/service_map1.png"><img alt="image-service-map" src="_images/service_map1.png" style="width: 100px;" /></a></td>
 </tr>
 </tbody>
 </table>
+<div class="section" id="cloudmesh">
+<h1>Cloudmesh<a class="headerlink" href="#cloudmesh" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="cloudmesh.html"><em>Overview</em></a></li>
+<li><a class="reference internal" href="projects.html"><em>Projects</em></a></li>
+<li><a class="reference internal" href="cloud.html"><em>IaaS</em></a></li>
+<li><a class="reference internal" href="rain.html"><em>Rain</em></a></li>
+<li><a class="reference internal" href="hpc.html"><em>HPC</em></a></li>
+<li><a class="reference internal" href="faq.html"><em>FAQ</em></a></li>
+<li><a class="reference internal" href="contact.html"><em>Contact</em></a></li>
+<li><a class="reference internal" href="screenshots.html"><em>Screenshots</em></a></li>
+<li><a class="reference internal" href="bib.html"><em>References</em></a></li>
+</ul>
 </div>
 
 
@@ -304,7 +212,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2014, FutureGrid.<br/>
+        &copy; Copyright 2014, Cloudmesh.<br/>
     </p>
   </div>
 </footer>
