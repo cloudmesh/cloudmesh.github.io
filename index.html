@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Cloudmesh &mdash; Cloudmesh  documentation</title>
+    <title>Home &mdash; Cloudmesh  documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -28,8 +28,10 @@
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/cm-logo.ico"/>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="top" title="Cloudmesh  documentation" href="#" />
+    <link rel="next" title="Overview" href="cloudmesh.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -41,8 +43,12 @@
 
    
 
+
    
-   
+
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
 
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
@@ -54,7 +60,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="_static/fg-logo-white-24x36.png">
+        <a class="navbar-brand" href="#"><img src="_static/cm-logo-24.png">
           Cloudmesh</a>
         <span class="navbar-text navbar-version pull-left"><b></b></span>
       </div>
@@ -72,7 +78,42 @@
      href="#">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"></ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#system-monitoring-and-operations">System Monitoring and Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#user-and-project-services">User and Project Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">IaaS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#interfaces">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#integration-of-external-clouds">Integration of External Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#open-source">Open Source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">Rain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#are-there-any-screenshots">Are there any screenshots?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#setup-register-cloud-in-the-cloudmesh-futuregrid-org-service">Setup - Register cloud in the cloudmesh.futuregrid.org service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#setup-local-deploy">Setup - Local deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#general-questions">General Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#development-questions">Development Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshots.html">Screenshots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#cloud-management">Cloud Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#provisioning-raining-not-yet-released">Provisioning/Raining (Not yet released)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#batch-queues">Batch Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#inventory">Inventory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">References</a></li>
+</ul>
+</ul>
 </li>
               
                 <li class="dropdown">
@@ -84,7 +125,11 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Cloudmesh</a></li>
+<li><a class="reference internal" href="#">Home</a><ul>
+<li><a class="reference internal" href="#fetaures">Fetaures</a></li>
+<li><a class="reference internal" href="#cloudmesh">Cloudmesh</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -93,6 +138,10 @@
             
               
                 
+  <li>
+    <a href="cloudmesh.html" title="Next Chapter: Overview"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Overview &raquo;</span>
+    </a>
+  </li>
               
             
             
@@ -122,9 +171,53 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><h4>Site Contents</h4>
+
+<ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">IaaS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">Rain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshots.html">Screenshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">References</a></li>
+</ul>
+
+</ul>
+
+<h4>Page Contents</h4><ul>
+<li><a class="reference internal" href="#">Home</a><ul>
+<li><a class="reference internal" href="#fetaures">Fetaures</a></li>
+<li><a class="reference internal" href="#cloudmesh">Cloudmesh</a></li>
+</ul>
+</li>
+</ul>
+
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+<div id="sourcelink">
+  <a href="_sources/index.txt"
+     rel="nofollow">Source</a>
+</div>
+        </div>
+      </div>
+    <div class="col-md-9">
       
-  <table border="1" class="docutils">
+  <div class="section" id="home">
+<h1>Home<a class="headerlink" href="#home" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="fetaures">
+<h2>Fetaures<a class="headerlink" href="#fetaures" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
 <colgroup>
 <col width="30%" />
 <col width="60%" />
@@ -141,7 +234,7 @@
 <td>A project to interface easily with multiple clouds from the command line and a command shell.
 <a class="reference external" href="https://github.com/cloudmesh/cloudmesh">github</a>,
 <a class="reference external" href="http://cloudmesh.github.io/cloudmesh/">doc</a></td>
-<td><a class="reference internal" href="_images/cloud_register_openstack1.png"><img alt="image-registry" src="_images/cloud_register_openstack1.png" style="width: 100px;" /></a></td>
+<td><a class="reference internal" href="_images/cloud_register_openstack.png"><img alt="image-registry" src="_images/cloud_register_openstack.png" style="width: 100px;" /></a></td>
 </tr>
 <tr class="row-odd"><td>Layered Extensible Architecture</td>
 <td>&nbsp;</td>
@@ -161,43 +254,48 @@
 </tr>
 <tr class="row-odd"><td>Cloudmesh Inventory</td>
 <td>&nbsp;</td>
-<td><a class="reference internal" href="_images/inventory1.png"><img alt="image-inventory" src="_images/inventory1.png" style="width: 100px;" /></a></td>
+<td><a class="reference internal" href="_images/inventory.png"><img alt="image-inventory" src="_images/inventory.png" style="width: 100px;" /></a></td>
 </tr>
 <tr class="row-even"><td>Cloudmesh PaaS Launcher</td>
 <td>&nbsp;</td>
-<td><a class="reference internal" href="_images/launcher1.png"><img alt="image-launcher" src="_images/launcher1.png" style="width: 100px;" /></a></td>
+<td><a class="reference internal" href="_images/launcher.png"><img alt="image-launcher" src="_images/launcher.png" style="width: 100px;" /></a></td>
 </tr>
 <tr class="row-odd"><td>Cloudmesh Federated VMs</td>
 <td>&nbsp;</td>
-<td><a class="reference internal" href="_images/manage_vms1.png"><img alt="image-manage-vms" src="_images/manage_vms1.png" style="width: 100px;" /></a></td>
+<td><a class="reference internal" href="_images/manage_vms.png"><img alt="image-manage-vms" src="_images/manage_vms.png" style="width: 100px;" /></a></td>
 </tr>
 <tr class="row-even"><td>Cloudmesh HPC Queue Info</td>
 <td>&nbsp;</td>
-<td><a class="reference internal" href="_images/qinfo1.png"><img alt="image-qinfo" src="_images/qinfo1.png" style="width: 100px;" /></a></td>
+<td><a class="reference internal" href="_images/qinfo.png"><img alt="image-qinfo" src="_images/qinfo.png" style="width: 100px;" /></a></td>
 </tr>
 <tr class="row-odd"><td>Cloudmesh HPC Queue Stat</td>
 <td>&nbsp;</td>
-<td><a class="reference internal" href="_images/qstat1.png"><img alt="image-qstat" src="_images/qstat1.png" style="width: 100px;" /></a></td>
+<td><a class="reference internal" href="_images/qstat.png"><img alt="image-qstat" src="_images/qstat.png" style="width: 100px;" /></a></td>
 </tr>
 <tr class="row-even"><td>Cloudmesh Service Map</td>
 <td>&nbsp;</td>
-<td><a class="reference internal" href="_images/service_map1.png"><img alt="image-service-map" src="_images/service_map1.png" style="width: 100px;" /></a></td>
+<td><a class="reference internal" href="_images/service_map.png"><img alt="image-service-map" src="_images/service_map.png" style="width: 100px;" /></a></td>
 </tr>
 </tbody>
 </table>
+</div>
 <div class="section" id="cloudmesh">
-<h1>Cloudmesh<a class="headerlink" href="#cloudmesh" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="cloudmesh.html"><em>Overview</em></a></li>
-<li><a class="reference internal" href="projects.html"><em>Projects</em></a></li>
-<li><a class="reference internal" href="cloud.html"><em>IaaS</em></a></li>
-<li><a class="reference internal" href="rain.html"><em>Rain</em></a></li>
-<li><a class="reference internal" href="hpc.html"><em>HPC</em></a></li>
-<li><a class="reference internal" href="faq.html"><em>FAQ</em></a></li>
-<li><a class="reference internal" href="contact.html"><em>Contact</em></a></li>
-<li><a class="reference internal" href="screenshots.html"><em>Screenshots</em></a></li>
-<li><a class="reference internal" href="bib.html"><em>References</em></a></li>
+<h2>Cloudmesh<a class="headerlink" href="#cloudmesh" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">IaaS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">Rain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshots.html">Screenshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">References</a></li>
 </ul>
+</div>
+</div>
 </div>
 
 

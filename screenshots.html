@@ -28,8 +28,11 @@
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/cm-logo.ico"/>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="top" title="Cloudmesh  documentation" href="index.html" />
+    <link rel="next" title="References" href="bib.html" />
+    <link rel="prev" title="Contact" href="contact.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -40,7 +43,10 @@
   
 
       
-   
+
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
 
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
@@ -52,7 +58,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><img src="_static/fg-logo-white-24x36.png">
+        <a class="navbar-brand" href="index.html"><img src="_static/cm-logo-24.png">
           Cloudmesh</a>
         <span class="navbar-text navbar-version pull-left"><b></b></span>
       </div>
@@ -70,7 +76,42 @@
      href="index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"></ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#system-monitoring-and-operations">System Monitoring and Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#user-and-project-services">User and Project Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">IaaS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#interfaces">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#integration-of-external-clouds">Integration of External Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#open-source">Open Source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">Rain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#are-there-any-screenshots">Are there any screenshots?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#setup-register-cloud-in-the-cloudmesh-futuregrid-org-service">Setup - Register cloud in the cloudmesh.futuregrid.org service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#setup-local-deploy">Setup - Local deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#general-questions">General Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#development-questions">Development Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Screenshots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cloud-management">Cloud Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#provisioning-raining-not-yet-released">Provisioning/Raining (Not yet released)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#batch-queues">Batch Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inventory">Inventory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">References</a></li>
+</ul>
+</ul>
 </li>
               
                 <li class="dropdown">
@@ -98,6 +139,14 @@
             
               
                 
+  <li>
+    <a href="contact.html" title="Previous Chapter: Contact"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Contact</span>
+    </a>
+  </li>
+  <li>
+    <a href="bib.html" title="Next Chapter: References"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">References &raquo;</span>
+    </a>
+  </li>
               
             
             
@@ -127,7 +176,50 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><h4>Site Contents</h4>
+
+<ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">IaaS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">Rain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Screenshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">References</a></li>
+</ul>
+
+</ul>
+
+<h4>Page Contents</h4><ul>
+<li><a class="reference internal" href="#">Screenshots</a><ul>
+<li><a class="reference internal" href="#cloud-management">Cloud Management</a></li>
+<li><a class="reference internal" href="#provisioning-raining-not-yet-released">Provisioning/Raining (Not yet released)</a></li>
+<li><a class="reference internal" href="#batch-queues">Batch Queues</a></li>
+<li><a class="reference internal" href="#status">Status</a></li>
+<li><a class="reference internal" href="#inventory">Inventory</a></li>
+</ul>
+</li>
+</ul>
+
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+<div id="sourcelink">
+  <a href="_sources/screenshots.txt"
+     rel="nofollow">Source</a>
+</div>
+        </div>
+      </div>
+    <div class="col-md-9">
       
   <div class="section" id="screenshots">
 <h1>Screenshots<a class="headerlink" href="#screenshots" title="Permalink to this headline">¶</a></h1>
@@ -151,11 +243,11 @@ much simpler interface, as for example is demonstrated in our launcher
 <p class="caption"><strong>Figure:</strong> Registering an EC2 compatible cloud</p>
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/cloud_register_openstack.png"><img alt="_images/cloud_register_openstack.png" src="_images/cloud_register_openstack.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/cloud_register_openstack1.png"><img alt="_images/cloud_register_openstack1.png" src="_images/cloud_register_openstack1.png" style="width: 80%;" /></a>
 <p class="caption"><strong>Figure:</strong> Registering an OpenStack protocol compatible cloud.</p>
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/manage_vms.png"><img alt="_images/manage_vms.png" src="_images/manage_vms.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/manage_vms1.png"><img alt="_images/manage_vms1.png" src="_images/manage_vms1.png" style="width: 80%;" /></a>
 <p class="caption"><strong>Figure:</strong>  Starting and deletion of VMs is easy in cloudmesh through a simple table view.</p>
 </div>
 </div>
@@ -168,7 +260,7 @@ implemented a policy based access control that allows a role based
 access based on projects and users. In near future we will integrate
 our bare metal provisioning management.  features into this system.</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/launcher.png"><img alt="_images/launcher.png" src="_images/launcher.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/launcher1.png"><img alt="_images/launcher1.png" src="_images/launcher1.png" style="width: 80%;" /></a>
 <p class="caption"><strong>Figure:</strong> Launching predefined configurations on FutureGrid</p>
 </div>
 <div class="figure align-center">
@@ -185,11 +277,11 @@ and other HPC job) is conveniently provided in cloudmesh. Launchers
 and conduct customized job creation. Via MyHadoop for example it is
 possible to start Hadoop jobs in queues on FutureGrid.</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/qinfo.png"><img alt="_images/qinfo.png" src="_images/qinfo.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/qinfo1.png"><img alt="_images/qinfo1.png" src="_images/qinfo1.png" style="width: 80%;" /></a>
 <p class="caption"><strong>Figure:</strong> Listing the available queues</p>
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/qstat.png"><img alt="_images/qstat.png" src="_images/qstat.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/qstat1.png"><img alt="_images/qstat1.png" src="_images/qstat1.png" style="width: 80%;" /></a>
 <p class="caption"><strong>Figure:</strong> Listing the queue information about jobs and status</p>
 </div>
 </div>
@@ -211,11 +303,11 @@ this, we have developed an inventory. In addition we also developed
 physical view of the rack that can either be augmented with service
 type displays or temperature of the rack.</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/inventory.png"><img alt="_images/inventory.png" src="_images/inventory.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/inventory1.png"><img alt="_images/inventory1.png" src="_images/inventory1.png" style="width: 80%;" /></a>
 <p class="caption"><strong>Figure:</strong> Inventory of the systems.</p>
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/service_map.png"><img alt="_images/service_map.png" src="_images/service_map.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/service_map1.png"><img alt="_images/service_map1.png" src="_images/service_map1.png" style="width: 80%;" /></a>
 <p class="caption"><strong>Figure:</strong> Service map to depict which server is dedicated to which services</p>
 </div>
 <div class="figure align-center">

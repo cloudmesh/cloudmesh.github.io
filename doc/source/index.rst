@@ -1,3 +1,8 @@
+Home
+======================================================================
+
+Fetaures
+----------------------------------------------------------------------
 
 .. list-table:: 
    :widths: 30 60 10
@@ -77,17 +82,21 @@
 
 
 Cloudmesh
-=====================================
+----------------------------------------------------------------------
 
-* :doc:`cloudmesh`
-* :doc:`projects`
-* :doc:`cloud`
-* :doc:`rain`    
-* :doc:`hpc`
-* :doc:`faq`
-* :doc:`contact`
-* :doc:`screenshots`
-* :doc:`bib`
+.. toctree::
+   :maxdepth: 1
+
+   self
+   cloudmesh
+   projects
+   cloud
+   rain    
+   hpc
+   faq
+   contact
+   screenshots
+   bib
 
 
 
