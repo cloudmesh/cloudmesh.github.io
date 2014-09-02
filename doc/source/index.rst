@@ -13,7 +13,7 @@ A user oriented documentation is avalable as part of an evolving
 <http://cloudmesh.github.io/introduction_to_cloud_computing>`__  with Cloudmesh.
 
 Links to additional documentation of the cloudmesh projects is
-provided on the `Projects page <projects>` page. 
+provided on the `Projects page <projects.html>`__ page. 
 
 
 
