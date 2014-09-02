@@ -1,6 +1,22 @@
 Home
 ======================================================================
 
+Cloudmesh is a project to easyly manage virtaul machines and bare
+metal provisioned Operarting systems in a multicloud environment. We
+are also providing the ability to deploy platforms. 
+
+Documentation
+----------------------------------------------------------------------
+
+A user oriented documentation is avalable as part of an evolving
+`Introduction to Cloud Computing
+<http://cloudmesh.github.io/introduction_to_cloud_computing>`__  with Cloudmesh.
+
+Links to additional documentation of the cloudmesh projects is
+provided on the `Projects page <projects>` page. 
+
+
+
 Fetaures
 ----------------------------------------------------------------------
 
