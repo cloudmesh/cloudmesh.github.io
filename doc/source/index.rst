@@ -1,4 +1,4 @@
-Home
+Cloudmesh
 ======================================================================
 
 Cloudmesh is a project to easyly manage virtaul machines and bare
@@ -10,10 +10,9 @@ Documentation
 
 A user oriented documentation is avalable as part of an evolving
 `Introduction to Cloud Computing
-<http://cloudmesh.github.io/introduction_to_cloud_computing>`__  with Cloudmesh.
-
-Links to additional documentation of the cloudmesh projects is
-provided on the `Projects page <projects.html>`__ page. 
+<http://cloudmesh.github.io/introduction_to_cloud_computing>`__ with
+Cloudmesh. Links to additional documentation of the cloudmesh projects
+is provided on the `Projects page <projects.html>`__ page.
 
 
 
