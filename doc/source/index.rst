@@ -77,10 +77,7 @@ Features
        Computational Grid, but also user managed heterogeneous sets
        of clusters that may not be paort of a national or
        international Grid infrastructure.
-     - |image-qinfo|
-   * - 
-     -
-     - |image-qstat|
+     - |image-qinfo| |image-qstat|
    * - Cloudmesh Service Map
      - For locally maintained resources, Cloudmesh provides the
        ability to visualize a service map. We will be expanding upon
