@@ -83,7 +83,7 @@ sphinx:
 view:
 	open index.html
 
-publish:
-	git commit -am "update web page" .
+publish: sphinx
+	git commit -am "update web page" 
 	git push
 
