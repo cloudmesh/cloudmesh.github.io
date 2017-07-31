@@ -5,6 +5,9 @@ Cloudmesh is a project to easily manage virtual machines and bare
 metal provisioned operating systems in a multicloud environment. We
 are also providing the ability to deploy platforms.
 
+* http://cloudmesh.github.io/
+
+  
 Documentation
 ----------------------------------------------------------------------
 
@@ -148,6 +151,7 @@ Cloudmesh
    :maxdepth: 1
 
    self
+   bib
    cloudmesh
    projects
    cloud
@@ -156,7 +160,6 @@ Cloudmesh
    faq
    contact
    screenshots
-   bib
 
 Web Content
 -----------
