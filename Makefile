@@ -77,15 +77,13 @@ htmml: sphinx
 
 sphinx:
 	cd doc; $(MAKE) html
-	cp -r doc/build/html/* docs
-	cp -r doc/source/images docs
+	cp -r doc/build/html/* .
+	cp -r doc/source/images .
 
 view:
 	open index.html
 
 publish:
-	git add doc
-	git add docs
-	git commit -m "update web page" doc docs
+	git commit -am "update web page" .
 	git push
 
