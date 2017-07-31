@@ -73,14 +73,19 @@ clean:
 # SPHINX DOC
 ###############################################################################
 
-html: sphinx
+htmml: sphinx
 
 sphinx:
 	cd doc; $(MAKE) html
-	cp -r doc/build/html/* .
-	cp -r doc/source/images .
+	cp -r doc/build/html/* docs
+	cp -r doc/source/images docs
 
 view:
 	open index.html
 
+publish:
+	git add doc
+	git add docs
+	git commit -m "update web page" doc docs
+	git push
 
