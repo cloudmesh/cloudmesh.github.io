@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Cloudmesh &#8212; Cloudmesh Web documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'Web',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/cm-logo.ico"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="bib.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+  
+
+   
+
+
+   
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span><img src="_static/cm-logo-24.png"></span>
+          Cloudmesh</a>
+        <span class="navbar-text navbar-version pull-left"><b>Web</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cloudmesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#system-monitoring-and-operations">System Monitoring and Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#user-and-project-services">User and Project Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">IaaS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#interfaces">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#integration-of-external-clouds">Integration of External Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#open-source">Open Source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">Rain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#are-there-any-screenshots">Are there any screenshots?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#setup-register-cloud-in-the-cloudmesh-futuregrid-org-service">Setup - Register cloud in the cloudmesh.futuregrid.org service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#setup-local-deploy">Setup - Local deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#general-questions">General Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#development-questions">Development Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshots.html">Screenshots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#cloud-management">Cloud Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#provisioning-raining-not-yet-released">Provisioning/Raining (Not yet released)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#batch-queues">Batch Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#inventory">Inventory</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Cloudmesh</a><ul>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#cloudmesh-3">Cloudmesh 3</a></li>
+<li><a class="reference internal" href="#cloudmesh-1">Cloudmesh 1</a></li>
+<li><a class="reference internal" href="#id2">Cloudmesh</a></li>
+<li><a class="reference internal" href="#web-content">Web Content</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="bib.html" title="Next Chapter: References"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">References &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/index.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><h4>Site Contents</h4>
+
+<ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cloudmesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">IaaS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">Rain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshots.html">Screenshots</a></li>
+</ul>
+
+</ul>
+
+<h4>Page Contents</h4><ul>
+<li><a class="reference internal" href="#">Cloudmesh</a><ul>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#cloudmesh-3">Cloudmesh 3</a></li>
+<li><a class="reference internal" href="#cloudmesh-1">Cloudmesh 1</a></li>
+<li><a class="reference internal" href="#id2">Cloudmesh</a></li>
+<li><a class="reference internal" href="#web-content">Web Content</a></li>
+</ul>
+</li>
+</ul>
+
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+<div id="sourcelink">
+  <a href="_sources/index.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="cloudmesh">
+<h1>Cloudmesh<a class="headerlink" href="#cloudmesh" title="Permalink to this headline">¶</a></h1>
+<p>Cloudmesh is a project to easily manage virtual machines and bare
+metal provisioned operating systems in a multicloud environment. We
+are also providing the ability to deploy platforms.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://cloudmesh.github.io/">http://cloudmesh.github.io/</a></li>
+</ul>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>A user oriented documentation is available as part of an evolving
+<a class="reference external" href="http://cloudmesh.github.io/introduction_to_cloud_computing">Introduction to Cloud Computing</a> with
+Cloudmesh. Links to additional documentation of the Cloudmesh projects
+is provided on the <a class="reference external" href="projects.html">Projects page</a> page.</p>
+</div>
+<div class="section" id="cloudmesh-3">
+<h2>Cloudmesh 3<a class="headerlink" href="#cloudmesh-3" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="60%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head">Description</th>
+<th class="head">Image</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Cloudmesh Client</td>
+<td>A client interface to multiple clouds including OpenStack, AWS,
+and Azure.
+<a class="reference external" href="https://github.com/cloudmesh/cloudmesh.client">github</a></td>
+<td><a class="reference internal" href="_images/cmd3.png"><img alt="image-cmd3" src="_images/cmd3.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Layered Extensible Architecture</td>
+<td>Cloudmesh has a layered architecture that allows easy
+development of new features. This also allows more easy
+contribution by the community while developing integrated and
+smaller sub components.</td>
+<td><a class="reference internal" href="_images/cloudmesh-arch-20131.png"><img alt="image-arch" src="_images/cloudmesh-arch-20131.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Cloudmesh an On-ramp to Clouds</td>
+<td>Cloudmesh can be used as an on-ramp to clouds and even HPC
+services. This makes it possible to use Azure, AWS, OpenStack,
+and other clouds as well as HPC batch systems in the same
+framework easily.</td>
+<td><a class="reference internal" href="_images/Slide1.png"><img alt="image-onramp" src="_images/Slide1.png" style="width: 100px;" /></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cloudmesh-1">
+<h2>Cloudmesh 1<a class="headerlink" href="#cloudmesh-1" title="Permalink to this headline">¶</a></h2>
+<p>At this time we are focussing on Cloudmesh 3 and are not using
+Cloudmesh 1 features. However Cloudmesh 1 could still be useful.</p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="60%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head">Description</th>
+<th class="head">Image</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Cloudmesh Core</td>
+<td>A project to interface easily with multiple clouds from the command line and a command shell.
+<a class="reference external" href="https://github.com/cloudmesh/cloudmesh">github</a>,
+<a class="reference external" href="http://cloudmesh.github.io/cloudmesh/">doc</a></td>
+<td><a class="reference internal" href="_images/cloud_register_openstack.png"><img alt="image-registry" src="_images/cloud_register_openstack.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Convenient Command Shell</td>
+<td>Cloudmesh contains a nice command shell that goes beyond a
+simple commandline interface. State can be saved between
+command invocations.</td>
+<td><a class="reference internal" href="_images/cmd3.png"><img alt="image-cmd3" src="_images/cmd3.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Cloudmesh Metric for Clouds</td>
+<td>Cloudmesh contains a metric report system that id used can
+provide customized reports.</td>
+<td><a class="reference internal" href="_images/metric.png"><img alt="image-metric" src="_images/metric.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Cloudmesh Inventory</td>
+<td>Cloudmesh has a simple inventory that allows system
+administrators and users to easily manage resource inventory
+in inventory datatables. The attributes in that table can be
+defined by the user</td>
+<td><a class="reference internal" href="_images/inventory.png"><img alt="image-inventory" src="_images/inventory.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Cloudmesh PaaS Launcher</td>
+<td>Cloudmesh has the ability to interface with various DevOps
+frameworks. Through them we expose via simple command tools the
+ability to conveniently launch platforms. Examples are virtual
+clusters on OpenStack, Apache storm and others. We have an easy
+way to integrate additional platforms into the command shell
+through an automatic code generator for command additions.</td>
+<td><a class="reference internal" href="_images/launcher.png"><img alt="image-launcher" src="_images/launcher.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Cloudmesh Federated VMs</td>
+<td>Cloudmesh allows the federated management of VMs through one
+interface. This allows us to use CLoudmesh as an onramp</td>
+<td><a class="reference internal" href="_images/manage_vms.png"><img alt="image-manage-vms" src="_images/manage_vms.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Cloudmesh HPC Batch Processing</td>
+<td>Cloudmesh includes the ability to view HPC queues. Most
+recently we have added a simple API to also submit jobs. Our
+goal is to be able to manage millions of jobs submitted to a
+Computational Grid, but also user managed heterogeneous sets
+of clusters that may not be port of a national or
+international Grid infrastructure.</td>
+<td><a class="reference internal" href="_images/qinfo.png"><img alt="image-qinfo" src="_images/qinfo.png" style="width: 100px;" /></a> <a class="reference internal" href="_images/qstat.png"><img alt="image-qstat" src="_images/qstat.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Cloudmesh Service Map</td>
+<td>For locally maintained resources, Cloudmesh provides the
+ability to visualize a service map. We will be expanding upon
+this effort to integrate with our new inventory. This makes it
+possible to for example display services mapped onto compute
+servers, but also concrete sensor information such as
+temperature of the servers</td>
+<td><a class="reference internal" href="_images/service_map.png"><img alt="image-service-map" src="_images/service_map.png" style="width: 100px;" /></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h2>Cloudmesh<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cloudmesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">IaaS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">Rain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshots.html">Screenshots</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="web-content">
+<h2>Web Content<a class="headerlink" href="#web-content" title="Permalink to this headline">¶</a></h2>
+<p>The Web content is maintained in the master branch of</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/cloudmesh/cloudmesh.github.io">https://github.com/cloudmesh/cloudmesh.github.io</a></li>
+</ul>
+<p>specifically at</p>
+<p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh.github.io/tree/master/doc/source">https://github.com/cloudmesh/cloudmesh.github.io/tree/master/doc/source</a></p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014-2017, cloudmesh.org.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

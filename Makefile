@@ -84,6 +84,7 @@ view:
 	open index.html
 
 publish: sphinx
+	git add *.html *.js images _images _static _sources
 	git commit -am "update web page" 
 	git push
 

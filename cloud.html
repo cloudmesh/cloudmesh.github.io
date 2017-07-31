@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>IaaS &#8212; Cloudmesh Web documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'Web',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/cm-logo.ico"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Rain" href="rain.html" />
+    <link rel="prev" title="Projects" href="projects.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+  
+
+      
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/cm-logo-24.png"></span>
+          Cloudmesh</a>
+        <span class="navbar-text navbar-version pull-left"><b>Web</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Cloudmesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#system-monitoring-and-operations">System Monitoring and Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#user-and-project-services">User and Project Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">IaaS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#interfaces">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#integration-of-external-clouds">Integration of External Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#open-source">Open Source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">Rain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#are-there-any-screenshots">Are there any screenshots?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#setup-register-cloud-in-the-cloudmesh-futuregrid-org-service">Setup - Register cloud in the cloudmesh.futuregrid.org service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#setup-local-deploy">Setup - Local deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#general-questions">General Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#development-questions">Development Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshots.html">Screenshots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#cloud-management">Cloud Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#provisioning-raining-not-yet-released">Provisioning/Raining (Not yet released)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#batch-queues">Batch Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#inventory">Inventory</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">IaaS</a><ul>
+<li><a class="reference internal" href="#interfaces">Interfaces</a></li>
+<li><a class="reference internal" href="#integration-of-external-clouds">Integration of External Clouds</a></li>
+<li><a class="reference internal" href="#open-source">Open Source</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="projects.html" title="Previous Chapter: Projects"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Projects</span>
+    </a>
+  </li>
+  <li>
+    <a href="rain.html" title="Next Chapter: Rain"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Rain &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/cloud.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><h4>Site Contents</h4>
+
+<ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Cloudmesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">IaaS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">Rain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshots.html">Screenshots</a></li>
+</ul>
+
+</ul>
+
+<h4>Page Contents</h4><ul>
+<li><a class="reference internal" href="#">IaaS</a><ul>
+<li><a class="reference internal" href="#interfaces">Interfaces</a></li>
+<li><a class="reference internal" href="#integration-of-external-clouds">Integration of External Clouds</a></li>
+<li><a class="reference internal" href="#open-source">Open Source</a></li>
+</ul>
+</li>
+</ul>
+
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+<div id="sourcelink">
+  <a href="_sources/cloud.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="iaas">
+<h1>IaaS<a class="headerlink" href="#iaas" title="Permalink to this headline">¶</a></h1>
+<p>Cloudmesh IaaS abstratcions provides a convenient set of interfaces to
+various clouds.  Currently we focus on virtual machine management, but
+a future version will include other services.</p>
+<div class="section" id="interfaces">
+<h2>Interfaces<a class="headerlink" href="#interfaces" title="Permalink to this headline">¶</a></h2>
+<p>The Cloudmesh core interfaces include</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">API:</th><td class="field-body">A python API that simplifies access to clouds while being able o
+use the native cloud protocols and not just an EC2 compatibility
+mode (e.g. as is provided by <a class="reference external" href="https://libcloud.apache.org/">libcloud</a> or <a class="reference external" href="https://github.com/boto/boto#boto">boto</a>).  However, we
+are also providing an EC2 interface based on libcloud, making it
+possible to integrate easily the many clouds supported by it.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Shell:</th><td class="field-body">A command shell allows easy interaction with various clouds
+using simple commands. As the commands can be included in
+scripts, it can also help to formulate simple experiment
+templates.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Commands:</th><td class="field-body">The shell commands can also be used on the Unix command
+line, making it possible to integrate cloudmesh features
+into the unix ecosystem.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Web UI:</th><td class="field-body">On <a class="reference external" href="https://portal.futuregrid.org/">FutureGrid</a>, we are providing an example for a hosted mode
+of Cloudmesh. See <a class="reference external" href="https://futuregrid.org/cloudmesh">https://futuregrid.org/cloudmesh</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Console UI:</th><td class="field-body">It is possible to host Cloudmesh on your own
+computer. This may be desirable if you would like to customize
+the interfaces or develop support for additional platforms. We
+would like to hear back from you if you use it in this
+fashion. We are also interested in integrating your new
+components and features into Cloudmesh. If you would like to
+become a developer, please contact <a class="reference external" href="mailto:laszewski&#37;&#52;&#48;gmail&#46;com">laszewski<span>&#64;</span>gmail<span>&#46;</span>com</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">iPython:</th><td class="field-body">We are currently developing a set of simple examples to let
+users know how easy it is to use the API.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="integration-of-external-clouds">
+<h2>Integration of External Clouds<a class="headerlink" href="#integration-of-external-clouds" title="Permalink to this headline">¶</a></h2>
+<p>Currently we support the native OpenStack and the EC2 protocols. This
+allows you to integrate a large number of clouds, not just FutureGrid Cloud resources. However, some clouds
+require use of a certificate. In this case you can talk to us.</p>
+<p>We have successfully demonstrated integration with:</p>
+<ul class="simple">
+<li>OpenStack Grizzly clouds, an example is sierra.futuregrid.org</li>
+<li>EC2 OpenStack cloud, an example is alamo.futuregrid.org</li>
+<li>HP Cloud East</li>
+<li>HP Cloud West</li>
+<li>Karlsruhe Institute of Technology</li>
+<li>Azure (standalone mode)</li>
+<li>AWS (standalone mode)</li>
+</ul>
+<p>Although we have demonstrated that it is possible to integrate with
+Cloudmesh we have not yet exposed this feature by default. Users are
+welcome to try it.</p>
+</div>
+<div class="section" id="open-source">
+<h2>Open Source<a class="headerlink" href="#open-source" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Apache:</th><td class="field-body">Cloudmesh is distributed with the Apache 2.0 license</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Github:</th><td class="field-body">Cloudmesh is hosted on github.gom. More information is provided at
+<a class="reference external" href="/git">our github page</a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Bugs:</th><td class="field-body">You can submit bugs through the FutureGrid help page at
+<a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014-2017, cloudmesh.org.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
