@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Cloudmesh &mdash; my Cloudmesh Web documentation</title>
-    
-    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootswatch-3.2.0/cosmo/bootstrap.min.css" type="text/css" />
+    <title>Cloudmesh &#8212; Cloudmesh Web documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
-    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
         VERSION:     'Web',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -26,11 +21,12 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="_static/cm-logo.ico"/>
     <link rel="author" title="About these documents" href="about.html" />
-    <link rel="top" title="my Cloudmesh Web documentation" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Overview" href="cloudmesh.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -38,7 +34,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
   </head>
-  <body role="document">
+  <body>
   
 
    
@@ -60,8 +56,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="_static/cm-logo-24.png">
-          my Cloudmesh</a>
+        <a class="navbar-brand" href="#"><span><img src="_static/cm-logo-24.png"></span>
+          Cloudmesh</a>
         <span class="navbar-text navbar-version pull-left"><b>Web</b></span>
       </div>
 
@@ -78,7 +74,7 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Cloudmesh</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cloudmesh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#system-monitoring-and-operations">System Monitoring and Operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloudmesh.html#user-and-project-services">User and Project Services</a></li>
@@ -126,8 +122,9 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Cloudmesh</a><ul>
 <li><a class="reference internal" href="#documentation">Documentation</a></li>
-<li><a class="reference internal" href="#features">Features</a></li>
-<li><a class="reference internal" href="#id1">Cloudmesh</a></li>
+<li><a class="reference internal" href="#cloudmesh-3">Cloudmesh 3</a></li>
+<li><a class="reference internal" href="#cloudmesh-1">Cloudmesh 1</a></li>
+<li><a class="reference internal" href="#id2">Cloudmesh</a></li>
 </ul>
 </li>
 </ul>
@@ -149,7 +146,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="_sources/index.txt"
+  <a href="_sources/index.rst.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -176,7 +173,7 @@
 
 <ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Cloudmesh</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cloudmesh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloud.html">IaaS</a></li>
@@ -193,8 +190,9 @@
 <h4>Page Contents</h4><ul>
 <li><a class="reference internal" href="#">Cloudmesh</a><ul>
 <li><a class="reference internal" href="#documentation">Documentation</a></li>
-<li><a class="reference internal" href="#features">Features</a></li>
-<li><a class="reference internal" href="#id1">Cloudmesh</a></li>
+<li><a class="reference internal" href="#cloudmesh-3">Cloudmesh 3</a></li>
+<li><a class="reference internal" href="#cloudmesh-1">Cloudmesh 1</a></li>
+<li><a class="reference internal" href="#id2">Cloudmesh</a></li>
 </ul>
 </li>
 </ul>
@@ -207,12 +205,12 @@
   <input type="hidden" name="area" value="default" />
 </form>
 <div id="sourcelink">
-  <a href="_sources/index.txt"
+  <a href="_sources/index.rst.txt"
      rel="nofollow">Source</a>
 </div>
         </div>
       </div>
-    <div class="col-md-9">
+    <div class="col-md-9 content">
       
   <div class="section" id="cloudmesh">
 <h1>Cloudmesh<a class="headerlink" href="#cloudmesh" title="Permalink to this headline">¶</a></h1>
@@ -226,9 +224,49 @@ are also providing the ability to deploy platforms.</p>
 Cloudmesh. Links to additional documentation of the Cloudmesh projects
 is provided on the <a class="reference external" href="projects.html">Projects page</a> page.</p>
 </div>
-<div class="section" id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
+<div class="section" id="cloudmesh-3">
+<h2>Cloudmesh 3<a class="headerlink" href="#cloudmesh-3" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="60%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head">Description</th>
+<th class="head">Image</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Cloudmesh Client</td>
+<td>A client interface to multiple clouds including OpenStack, AWS,
+and Azure.
+<a class="reference external" href="https://github.com/cloudmesh/cloudmesh.client">github</a></td>
+<td><a class="reference internal" href="_images/cmd3.png"><img alt="image-cmd3" src="_images/cmd3.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Layered Extensible Architecture</td>
+<td>Cloudmesh has a layered architecture that allows easy
+development of new features. This also allows more easy
+contribution by the community while developing integrated and
+smoler sub components.</td>
+<td><a class="reference internal" href="_images/cloudmesh-arch-20131.png"><img alt="image-arch" src="_images/cloudmesh-arch-20131.png" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Cloudmesh an On-ramp to Clouds</td>
+<td>Cloudmesh can be used as an on-ramp to clouds and even HPC
+services. This makes it possible to use Azure, AWS, OpenStack,
+and other clouds as well as HPC batch systems in the same
+framework easily.</td>
+<td><a class="reference internal" href="_images/Slide1.png"><img alt="image-onramp" src="_images/Slide1.png" style="width: 100px;" /></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cloudmesh-1">
+<h2>Cloudmesh 1<a class="headerlink" href="#cloudmesh-1" title="Permalink to this headline">¶</a></h2>
+<p>At this time we are focussing on Cloudmesh 3 and are not using
+Cloudmesh 1 features. However Cloudmesh 1 could still be useful.</p>
+<table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="30%" />
 <col width="60%" />
@@ -247,25 +285,11 @@ is provided on the <a class="reference external" href="projects.html">Projects p
 <a class="reference external" href="http://cloudmesh.github.io/cloudmesh/">doc</a></td>
 <td><a class="reference internal" href="_images/cloud_register_openstack.png"><img alt="image-registry" src="_images/cloud_register_openstack.png" style="width: 100px;" /></a></td>
 </tr>
-<tr class="row-odd"><td>Layered Extensible Architecture</td>
-<td>Cloudmesh has a layered architecture that allows easy
-development of new features. This also allows more easy
-contribution by the community while developing integrated and
-smoler sub components.</td>
-<td><a class="reference internal" href="_images/cloudmesh-arch-20131.png"><img alt="image-arch" src="_images/cloudmesh-arch-20131.png" style="width: 100px;" /></a></td>
-</tr>
-<tr class="row-even"><td>Convenient Command Shell</td>
+<tr class="row-odd"><td>Convenient Command Shell</td>
 <td>Cloudmesh contains a nice command shell that goes beyond a
 simple commandline interface. State can be safed between
 command invocations.</td>
 <td><a class="reference internal" href="_images/cmd3.png"><img alt="image-cmd3" src="_images/cmd3.png" style="width: 100px;" /></a></td>
-</tr>
-<tr class="row-odd"><td>Cloudmesh an On-ramp to Clouds</td>
-<td>Cloudmesh can be used as an on-ramp to clouds and even HPC
-services. This makes it possible to use Azure, AWS, OpenStack,
-and other clouds as well as HPC batch systems in the same
-framework easily.</td>
-<td><a class="reference internal" href="_images/Slide1.png"><img alt="image-onramp" src="_images/Slide1.png" style="width: 100px;" /></a></td>
 </tr>
 <tr class="row-even"><td>Cloudmesh Metric for Clouds</td>
 <td>Cloudmesh contains a metric report system that id used can
@@ -314,11 +338,11 @@ temperature of the servers</td>
 </tbody>
 </table>
 </div>
-<div class="section" id="id1">
-<h2>Cloudmesh<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>Cloudmesh<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Cloudmesh</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cloudmesh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloudmesh.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloud.html">IaaS</a></li>
@@ -345,7 +369,7 @@ temperature of the servers</td>
       
     </p>
     <p>
-        &copy; Copyright 2014, mycloudmesh.org.<br/>
+        &copy; Copyright 2014-2017, cloudmesh.org.<br/>
     </p>
   </div>
 </footer>

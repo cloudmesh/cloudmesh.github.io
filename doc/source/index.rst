@@ -16,8 +16,40 @@ is provided on the `Projects page <projects.html>`__ page.
 
 
 
-Features
+Cloudmesh 3
+-----------
+
+.. list-table:: 
+   :widths: 30 60 10
+   :header-rows: 1
+
+   * - Feature
+     - Description
+     - Image
+   * - Cloudmesh Client
+     - A client interface to multiple clouds including OpenStack, AWS,
+       and Azure.
+       `github <https://github.com/cloudmesh/cloudmesh.client>`_
+     - |image-cmd3|
+   * - Layered Extensible Architecture 
+     - Cloudmesh has a layered architecture that allows easy
+       development of new features. This also allows more easy
+       contribution by the community while developing integrated and
+       smaller sub components.
+     - |image-arch|
+   * - Cloudmesh an On-ramp to Clouds 
+     - Cloudmesh can be used as an on-ramp to clouds and even HPC
+       services. This makes it possible to use Azure, AWS, OpenStack,
+       and other clouds as well as HPC batch systems in the same
+       framework easily. 
+     - |image-onramp|
+
+
+Cloudmesh 1
 ----------------------------------------------------------------------
+
+At this time we are focussing on Cloudmesh 3 and are not using
+Cloudmesh 1 features. However Cloudmesh 1 could still be useful.
 
 .. list-table:: 
    :widths: 30 60 10
@@ -31,37 +63,25 @@ Features
        `github <https://github.com/cloudmesh/cloudmesh>`_,
        `doc <http://cloudmesh.github.io/cloudmesh/>`_
      - |image-registry|
-   * - Layered Extensible Architecture 
-     - Cloudmesh has a layered architecture that allows easy
-       development of new features. This also allows more easy
-       contribution by the community while developing integrated and
-       smoler sub components.
-     - |image-arch|
    * - Convenient Command Shell 
      - Cloudmesh contains a nice command shell that goes beyond a
-       simple commandline interface. State can be safed between
+       simple commandline interface. State can be saved between
        command invocations.
      - |image-cmd3|
-   * - Cloudmesh an On-ramp to Clouds 
-     - Cloudmesh can be used as an on-ramp to clouds and even HPC
-       services. This makes it possible to use Azure, AWS, OpenStack,
-       and other clouds as well as HPC batch systems in the same
-       framework easily. 
-     - |image-onramp|
    * - Cloudmesh Metric for Clouds 
      - Cloudmesh contains a metric report system that id used can
        provide customized reports.
      - |image-metric|
    * - Cloudmesh Inventory
      - Cloudmesh has a simple inventory that allows system
-       administrators and useres to easily manage resource inventory
+       administrators and users to easily manage resource inventory
        in inventory datatables. The attributes in that table can be
        defined by the user
      - |image-inventory|
    * - Cloudmesh PaaS Launcher
-     - CLoudmesh has the ability to interfave with various DevOps
+     - Cloudmesh has the ability to interface with various DevOps
        frameworks. Through them we expose via simple command tools the
-       ability to conveniently launch platforms. Exampls are virtual
+       ability to conveniently launch platforms. Examples are virtual
        clusters on OpenStack, Apache storm and others. We have an easy
        way to integrate additional platforms into the command shell
        through an automatic code generator for command additions.
@@ -72,16 +92,16 @@ Features
      - |image-manage-vms|
    * - Cloudmesh HPC Batch Processing
      - Cloudmesh includes the ability to view HPC queues. Most
-       recently we have added a simpl API to also submit jobs. Our
+       recently we have added a simple API to also submit jobs. Our
        goal is to be able to manage millions of jobs submitted to a
        Computational Grid, but also user managed heterogeneous sets
-       of clusters that may not be paort of a national or
+       of clusters that may not be port of a national or
        international Grid infrastructure.
      - |image-qinfo| |image-qstat|
    * - Cloudmesh Service Map
      - For locally maintained resources, Cloudmesh provides the
        ability to visualize a service map. We will be expanding upon
-       this effort to integrate with our new inventory. THis makes it
+       this effort to integrate with our new inventory. This makes it
        possible to for example display services mapped onto compute
        servers, but also concrete sensor information such as
        temperature of the servers
@@ -138,6 +158,16 @@ Cloudmesh
    screenshots
    bib
 
+Web Content
+-----------
+
+The Web content is maintained in the master branch of
+
+* https://github.com/cloudmesh/cloudmesh.github.io
+
+specifically at
+
+https://github.com/cloudmesh/cloudmesh.github.io/tree/master/doc/source
 
 
 

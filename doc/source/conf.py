@@ -36,8 +36,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'my Cloudmesh'
-copyright = u'2014, mycloudmesh.org'
+project = u'Cloudmesh'
+copyright = u'2014-2017, cloudmesh.org'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -93,7 +93,7 @@ html_theme = 'bootstrap'
 # documentation.
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "my Cloudmesh",
+    'navbar_title': "Cloudmesh",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Site",
