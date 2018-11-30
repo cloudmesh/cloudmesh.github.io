@@ -7,6 +7,32 @@ are also providing the ability to deploy platforms.
 
 * http://cloudmesh.github.io/
 
+
+Note
+-------
+
+Although this Web page is still relevant and mostly up to
+date, we are doing some improvements to it.
+
+Importnat to note is that we have two valid cloudmesh versions and
+dependent on needs you need to chose the one or the other. We have
+
+* Version 3: which is our classical cloudmesh and has the most
+  functionality
+* Client: which is a newer version, but does not yet have all the
+  functionality
+
+We currently also have a development version that merges Version 3 and
+Client functionality that we call Version 4.
+
+In addition We are working on a new look of our Web page and have a
+prototype available at
+
+* https://cloudmesh-community.github.io/
+  
+This Web page has links to Educational material and projects as well
+as sumamrizes some of the newer community developments.
+  
   
 Documentation
 ----------------------------------------------------------------------

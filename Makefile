@@ -73,7 +73,7 @@ clean:
 # SPHINX DOC
 ###############################################################################
 
-htmml: sphinx
+html: sphinx
 
 sphinx:
 	cd doc; $(MAKE) html
