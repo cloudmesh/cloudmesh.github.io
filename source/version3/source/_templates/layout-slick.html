@@ -1,0 +1,57 @@
+{% extends "!layout.html" %}
+
+{# Custom CSS overrides #}
+{# set bootswatch_css_custom = ['_static/my-styles.css'] #}
+
+{# Add github banner (from: https://github.com/blog/273-github-ribbons). #}
+{% block header %}
+  {{ super() }}
+
+
+
+   {% if pagename in ["index"] %}
+
+  <link rel="stylesheet" type="text/css" href="_static/slick/slick.css"/>
+  <script type="text/javascript" src="_static/slick/slick.min.js"></script>
+
+   <div class="header" id="content">
+
+      <div class="slick-slider">
+        <div>
+	  <center>
+	        <img src="_static/cloudmesh-arch-2013.png"
+                     height="300" text="test"/><br>
+	     Cloudmesh has a layered flexible architecture.
+	  <center>
+	</div>
+        <div>
+	  <center>
+	    Second
+	  </center>
+	</div>
+        <div>
+	  <center>
+	    Third
+	  <center>
+	</div>
+    </div>
+
+    <script>
+
+    $(document).ready(function(){
+	    $('.slick-slider').slick({
+	      arrows: true,
+              autoplay: true,
+              dots: true,
+              fade: true,
+              accessibility: true,
+	    });
+
+    });
+
+    </script>
+     
+  {% endif %}   
+   
+{% endblock %}
+

@@ -70,20 +70,21 @@ clean:
 	rm -rf *.egg-info
 
 #############################################################################
-# SPHINX DOC
+# VERSION3 DOC - SPHINX 
 ###############################################################################
 
-html: sphinx
+html: version3
 
-sphinx:
-	cd doc; $(MAKE) html
-	cp -r doc/build/html/* .
-	cp -r doc/source/images .
+version3:
+	mkdir -p version3
+	cd source/version3; $(MAKE) html
+	cp -r source/version3/build/html/* version3
+	cp -r source/version3/source/images version3
 
 view:
-	open index.html
+	open version3/index.html
 
-publish: sphinx
+publish: version3
 	git add *.html *.js images _images _static _sources
 	git commit -am "update web page" 
 	git push

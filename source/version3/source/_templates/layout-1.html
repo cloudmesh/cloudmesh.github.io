@@ -1,0 +1,16 @@
+{% extends "!layout.html" %}
+
+{# Custom CSS overrides #}
+{# set bootswatch_css_custom = ['_static/my-styles.css'] #}
+
+{% block header %}
+  {{ super() }}
+
+   {% if pagename in ["index"] %}
+
+   {% include "carousel.html" %}
+
+{% endif %}   
+   
+{% endblock %}
+

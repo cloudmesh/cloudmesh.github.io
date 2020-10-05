@@ -1,0 +1,49 @@
+{% extends "!layout.html" %}
+
+{# Custom CSS overrides #}
+{# set bootswatch_css_custom = ['_static/my-styles.css'] #}
+
+{% block header %}
+  {{ super() }}
+
+   {% if pagename in ["index"] %}
+
+<!-- Shared assets -->
+
+        <link rel="stylesheet" type="text/css" href="_static/jcarousel/examples/_shared/css/style.css">
+        <!-- Example assets -->
+        <link rel="stylesheet" type="text/css" href="_static/jcarousel/examples/basic/jcarousel.basic.css">
+
+        <script type="text/javascript" src="_static/jcarousel/dist/jquery.jcarousel.min.js"></script>
+
+        <script type="text/javascript" src="_static/jcarousel/examples/basic/jcarousel.basic.js"></script>
+
+   <div class="header" id="content">
+
+<div class="jcarousel-wrapper">
+                <div class="jcarousel">
+                    <ul>
+                        <li><img src="_static/cloudmesh-arch-2013.png" height="200" alt=""></li>
+                        <li><img src="_static/metric.png" height="200" alt=""></li>
+                        <li><img src="_static/cm-gui.png" height="200" alt=""></li>		
+		   </ul>
+                </div>
+
+                <p class="photo-credits">
+                    Screenshots by <a
+                    href="http://www.futuregrid.org">Gregor von Laszewski</a>
+                </p>
+
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                
+                <p class="jcarousel-pagination">
+                    
+                </p>
+            </div>
+
+     
+  {% endif %}   
+   
+{% endblock %}
+
