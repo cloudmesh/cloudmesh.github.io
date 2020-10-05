@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cybertraining – Modules</title>
+    <title>Cloudmesh – Modules</title>
     <link>/modules/</link>
-    <description>Recent content in Modules on Cybertraining</description>
+    <description>Recent content in Modules on Cloudmesh</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="/modules/index.xml" rel="self" type="application/rss+xml" />
