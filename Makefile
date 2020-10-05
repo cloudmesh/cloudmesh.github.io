@@ -80,8 +80,8 @@ html: version1
 version1:
 	mkdir -p docs/version1
 	cd source/version1; $(MAKE) html
-#	cp -r source/version1/build/html/* version1
-#	cp -r source/version1/source/images version1
+	cp -r source/version1/build/html/* docs/version1
+	cp -r source/version1/source/images docs/version1
 
 view:
 	open version1/index.html
