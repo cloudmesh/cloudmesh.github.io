@@ -1,6 +1,8 @@
 PATHNAME=$(shell pwd)
 BASENAME=$(shell basename $(PATHNAME))
 
+.PHONY: version1
+
 TAG=`cat VERSION.txt`
 
 all: html
@@ -76,10 +78,10 @@ clean:
 html: version1
 
 version1:
-	mkdir -p version1
+	mkdir -p docs/version1
 	cd source/version1; $(MAKE) html
-	cp -r source/version1/build/html/* version1
-	cp -r source/version1/source/images version1
+#	cp -r source/version1/build/html/* version1
+#	cp -r source/version1/source/images version1
 
 view:
 	open version1/index.html
