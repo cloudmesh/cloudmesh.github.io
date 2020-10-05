@@ -75,6 +75,10 @@ clean:
 # VERSION1 DOC - SPHINX 
 ###############################################################################
 
+hugo:
+	cd source/home; hugo
+	touch docs/.nojekyll
+
 html: version4
 
 version4:

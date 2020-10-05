@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloudmesh: A multicloud toolkit on Cloudmesh</title>
+    <link>https://cloudmesh.github.io/</link>
+    <description>Recent content in Cloudmesh: A multicloud toolkit on Cloudmesh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudmesh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloudmesh Version 4</title>
+      <link>https://cloudmesh.github.io/post/version-4/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/version-4/</guid>
+      <description>Cloudmesh version 4 is documented at the following
+ https://cloudmesh.github.io/cloudmesh-manual/  Features Multicloud VM and Data Interfaces to
+ AWS Azure Google Oracle  </description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://cloudmesh.github.io/post/faq/</link>
+      <pubDate>Tue, 09 Apr 2019 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/faq/</guid>
+      <description>This section will include a number of FAQs
+Are there any screenshots?
+  A number of screenshots are available to showcase some of the Cloudmesh features at screenshots
+TODO: link missing
+  Can I install Cloudmesh on my local computer?
+ Cloudmesh has been used on macOS, Linux, and Windows Computers.  How do I get started?
+ See: https://cloudmesh.github.io/cloudmesh-manual/  Can I use Cloudmesh to connect to OpenStack clouds, AWS, Azure, Google, Oracle Clouds?</description>
+    </item>
+    
+    <item>
+      <title>Cloudmesh Version 3</title>
+      <link>https://cloudmesh.github.io/post/version-3/</link>
+      <pubDate>Wed, 11 Apr 2018 11:13:32 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/version-3/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Cloudmesh Version 2</title>
+      <link>https://cloudmesh.github.io/post/version-2/</link>
+      <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/version-2/</guid>
+      <description>TBD.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://cloudmesh.github.io/post/about/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/about/</guid>
+      <description>Features We are working towards providing the following features into cloudmesh:
+ easy management of multiple clouds in cloudmesh while supporting various native libraries. portability library to access information in regards to images, flavors, and vms management of hundreds/thousands of virtual machines integration of non FutureGrid cLouds by users into cloudmesh so users can access them from cloudmesh a command line shell a web interface possibility to download and deploy cloudmesh locally by a user (so he can manage his own clouds) others  Bugs  AWS, Azure, and EC2 images can not yet be handled well in the data tables if there are thousands of entries.</description>
+    </item>
+    
+    <item>
+      <title>Cloudmesh</title>
+      <link>https://cloudmesh.github.io/post/o-cloudmesh/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/o-cloudmesh/</guid>
+      <description>Cloudmesh is an important component to deliver a software-defined system &amp;ndash; encompassing virtualized and bare-metal infrastructure, networks, application, systems and platform software &amp;ndash; with a unifying goal of providing Cloud Testbeds as a Service (CTaaS). Cloudmesh federates a number of resources from academia and industry. This includes existing FutureGrid infrastructure (4704 cores used by more than 355 projects), Amazon Web Services, Azure, HP Cloud, Karlsruhe using various technologies.
+A goal of Cloudmesh is to aggregate resources not only from FutureGrid, but also from OpenCirrus, Amazon, Microsoft Azure, and HP Cloud and GENI resources to name only a few.</description>
+    </item>
+    
+    <item>
+      <title>Cloudmesh 1</title>
+      <link>https://cloudmesh.github.io/post/o-cloudmesh-1/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/o-cloudmesh-1/</guid>
+      <description>At this time we are focussing on Cloudmesh 3 and are not using Cloudmesh 1 features. However Cloudmesh 1 could still be useful.
+ Feature Description Image
+ Cloudmesh Core A project to interface easily with multiple clouds {width=&amp;quot;100px&amp;rdquo;} from the command line and a command shell. github,
+doc
+Convenient Command Cloudmesh contains a nice command shell that goes {width=&amp;quot;100px&amp;rdquo;} Shell beyond a simple commandline interface. State can be saved between command invocations.</description>
+    </item>
+    
+    <item>
+      <title>Cloudmesh cmd3</title>
+      <link>https://cloudmesh.github.io/post/o-cloudmesh-cmd3/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/o-cloudmesh-cmd3/</guid>
+      <description> 2016 - 2017 https://github.com/cloudmesh-cmd3  Contains
+ base cloudmesh client portal  </description>
+    </item>
+    
+    <item>
+      <title>Cloudmesh Version 1</title>
+      <link>https://cloudmesh.github.io/post/version-1/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/version-1/</guid>
+      <description>TBD.</description>
+    </item>
+    
+    <item>
+      <title>Cloudmesh Version 1: Screenshots</title>
+      <link>https://cloudmesh.github.io/post/screenshot/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/screenshot/</guid>
+      <description>Please note that cloudmesh supports a role based user policy model. Although you may see some screenshots of advanced features some of these features may not yet released to the users.
+Cloud Management Cloudmesh has a simple interface to register and conduct some elementary management functions. In contrast to other systems cloudmesh uses the native cloud protocol and is not just relying on the EC2 compatible clouds. Certainly the Graphical user interface can be improved and customized.</description>
+    </item>
+    
+    <item>
+      <title>Hadoop</title>
+      <link>https://cloudmesh.github.io/post/hadoop/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/hadoop/</guid>
+      <description>Please chose from the following templates to select which version of Haddop you like to easily install.
+&amp;lt;form&amp;gt;
+&amp;lt;font size=&amp;quot;+4&amp;quot;&amp;gt; &amp;lt;table&amp;gt;
+&amp;lt;tr&amp;gt; &amp;lt;th&amp;gt;Template &amp;lt;/th&amp;gt; &amp;lt;th&amp;gt; Description&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt; Servers &amp;lt;/th&amp;gt; &amp;lt;th&amp;gt; Cost &amp;lt;/th&amp;gt; &amp;lt;tr&amp;gt;
+&amp;lt;tr&amp;gt; &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/static/img/hadoop-elephant.jpg&amp;quot; width=&amp;quot;100&amp;quot; height=&amp;quot;100&amp;quot;&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; This will install hadoop on Linux servers a resource in ICRISP &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;input type=&amp;quot;number&amp;quot; name=&amp;quot;quantity&amp;quot; min=&amp;quot;0&amp;quot; max=&amp;quot;128&amp;quot; value=&amp;quot;64&amp;quot;&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; $80.00 &amp;lt;/td&amp;gt;
+&amp;lt;tr&amp;gt; &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/static/img/hadoop-microsoft.jpg&amp;quot; width=&amp;quot;100&amp;quot; height=&amp;quot;100&amp;quot;&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; This will install hadoop on Microsoft servers a resource in ICRISP &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;input type=&amp;quot;number&amp;quot; name=&amp;quot;quantity&amp;quot; min=&amp;quot;0&amp;quot; max=&amp;quot;128&amp;quot; value=&amp;quot;0&amp;quot;&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; $0.</description>
+    </item>
+    
+    <item>
+      <title>HPC</title>
+      <link>https://cloudmesh.github.io/post/hpc/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/hpc/</guid>
+      <description>Cloudmesh provides a simple interface to view High Perfomance Computer clusters batch queues. This includes a python API, iPython examples, a hosted user interface and a stand alone user interface. Currently we support Torques qstat and qinfo. An interface for pbsnodes is also available and is used in our service display.
+ qinfo  Information about which queues are available
+ qstat  Information which jobs ar ecurrently running
+ pbsnodes  Information about which services are use on a server and set in the comments of pbs</description>
+    </item>
+    
+    <item>
+      <title>IaaS</title>
+      <link>https://cloudmesh.github.io/post/iaas/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/iaas/</guid>
+      <description>Cloudmesh IaaS abstratcions provides a convenient set of interfaces to various clouds. Currently we focus on virtual machine management, but a future version will include other services.
+Interfaces The Cloudmesh core interfaces include
+ API  A python API that simplifies access to clouds while being able o use the native cloud protocols and not just an EC2 compatibility mode (e.g. as is provided by libcloud or boto). However, we are also providing an EC2 interface based on libcloud, making it possible to integrate easily the many clouds supported by it.</description>
+    </item>
+    
+    <item>
+      <title>News</title>
+      <link>https://cloudmesh.github.io/post/news/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/news/</guid>
+      <description>We are happy to announce the alpha release of cloudmesh. Cloudmesh is capable of interfacing with clouds and HPC frameworks. We have successfully demonstarted by our developers usage of
+ OpenStack Clouds on FutureGrid (India, Sierra, Alamo) AWS Azure HP Cloud Karlsruhe Institute of Technolgy Cloud  At this time we only expose the FutuureGrid Sierra OpenStack cloud. We like to acknowledge all those that helped us developing Cloudmesh.
+Thanks</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://cloudmesh.github.io/post/projects/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/projects/</guid>
+      <description>We are working on a number of development projects. Instead of just providing a single project, we decided to split the development up into smaller subprojects. This allows the groups to work independently and avoids the problem that a compile error in one code causes an issue in another. All projects listed here are managed in github.
+ Image Project Description Source
+ {width=&amp;quot;100px&amp;rdquo;} Cloudmesh Core A project to interface easily github, with multiple clouds from the doc command line and a command shell.</description>
+    </item>
+    
+    <item>
+      <title>Rain</title>
+      <link>https://cloudmesh.github.io/post/rain/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/rain/</guid>
+      <description>Cloudmesh provides a convenient interface to baremetal access of resources and to provision services on these bare metal resources. We term this concept rain.
+Rain is integrated into the cloudmesh UI through a role based access control mechanism allowing either specific users or specific projects to gain access. Furthermore, users and projects can be restricted in which reosurces the users have access to. This is of special importance to be able to conduct successive experiments on the exact same resources.</description>
+    </item>
+    
+    <item>
+      <title>References</title>
+      <link>https://cloudmesh.github.io/post/bib/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>https://cloudmesh.github.io/post/bib/</guid>
+      <description>General FutureGrid:12 Cloud Comparison:3 Rain and Image Management:4567 Cloud Metric8 Others9    Design of the FutureGrid Experiment Management Framework, Gregor von Laszewski, Geoffrey C. Fox, Fugang Wang, Andrew Younge, Andrew, A Kulshrestha, Gregory G. Pike, Warren Smith, Jens Voeckler, Renato J. Figueiredo, Jose Fortes, Kate Keahey, Ewa Deelman, Proceedings of Gateway Computing Environments 2010 (GCE2010) at SC10, 2010, New Orleans, LA, Nov, IEEE, DOI 10.1109/GCE.2010.5676126, (PDF) &amp;#x21a9;&amp;#xfe0e;</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://cloudmesh.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmesh.github.io/contact/</guid>
+      <description>Please contact Gregor von Laszewski on his Web page at:
+ https://laszewski.github.io/  or send an e-mail to
+ laszewski@gmail.com  </description>
+    </item>
+    
+  </channel>
+</rss>
