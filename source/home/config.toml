@@ -1,3 +1,5 @@
+publishDir = "../../docs"
+
 title = "Cloudmesh"
 baseURL = "https://cloudmesh.github.io"
 languageCode = "en-us"
