@@ -3,15 +3,130 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>/modules/contrib/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>/modules/list/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>/contrib/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>/contrib/start/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/contrib/guidelines/</loc>
+  </url>
+  
+  <url>
+    <loc>/modules/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/cloudmesh-rest/</loc>
+  </url>
+  
+  <url>
+    <loc>/contrib/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/git-pull-request/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/module/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/pandoc/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/markdown/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/module/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/pandoc/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/sample/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/contrib/start/markdown/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/alert/</loc>
+  </url>
+  
+  <url>
+    <loc>/contrib/contributors/</loc>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/elements/</loc>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/figure/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/figure/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/graph/</loc>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/mermaid/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/mermaid/</loc>
   </url>
   
 </urlset>

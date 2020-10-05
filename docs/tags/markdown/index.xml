@@ -1,0 +1,63 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cybertraining – markdown</title>
+    <link>/tags/markdown/</link>
+    <description>Recent content in markdown on Cybertraining</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Modules: Pandoc Sample</title>
+      <link>/modules/sample/pandoc/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/modules/sample/pandoc/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;In this section we demonstret the usage of pandoc within hugo.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&#34;toc&#34;&gt;
+  
+&lt;/div&gt;
+&lt;h1 id=&#34;pandoc-sample&#34;&gt;Pandoc Sample&lt;/h1&gt;
+&lt;p&gt;We process this file with pandoc.&lt;/p&gt;
+&lt;h2 id=&#34;footnote&#34;&gt;Footnote&lt;/h2&gt;
+&lt;p&gt;Footnotes also workw in hugo’s markdown. Here is a footnote reference,&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; and another &lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;citation-test&#34;&gt;Citation test&lt;/h2&gt;
+&lt;p&gt;This paper describes the Java CoG Kit &lt;span class=&#34;citation&#34; data-cites=&#34;doi:10.1002/cpe.572&#34;&gt;[@doi:10.1002/cpe.572]&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;sec:test&#34;&gt;This is a section&lt;/h2&gt;
+&lt;p&gt;This is a refernce to &lt;span class=&#34;citation&#34; data-cites=&#34;sec:test&#34;&gt;@sec:test&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+&lt;p&gt;A Math formula with equation can be done this way&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ a^2 \]&lt;/span&gt; {#eq:label}&lt;/p&gt;
+&lt;p&gt;As we see we can refer to &lt;span class=&#34;citation&#34; data-cites=&#34;eq:label&#34;&gt;@eq:label&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Here is just an inline math equation&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(b^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;Here is the first footnote.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;Here is the second footnote.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
