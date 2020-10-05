@@ -75,7 +75,13 @@ clean:
 # VERSION1 DOC - SPHINX 
 ###############################################################################
 
-html: version1
+html: version4
+
+version4:
+	mkdir -p docs/version4
+	cd source/version4; $(MAKE) html
+	cp -r source/version4/build/html/* docs
+	cp -r source/version4/source/images docs
 
 version1:
 	mkdir -p docs/version1
@@ -84,7 +90,7 @@ version1:
 	cp -r source/version1/source/images docs/version1
 
 view:
-	open version1/index.html
+	open docs/index.html
 
 publish: version1
 	git add *.html *.js images _images _static _sources
