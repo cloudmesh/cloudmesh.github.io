@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/modules/contrib/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/list/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/contrib/overview/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/contrib/start/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/contrib/guidelines/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/cloudmesh-rest/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/core/</loc>
+  </url>
+  
+  <url>
+    <loc>/plugins/</loc>
+    <lastmod>2020-10-05T18:38:38-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/contrib/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/</loc>
+    <lastmod>2020-10-05T18:38:38-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/git-pull-request/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/plugins/iaas/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/module/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/pandoc/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/markdown/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/module/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/pandoc/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/sample/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/contrib/start/markdown/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/plugins/abstract/</loc>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/alert/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/plugins/iaas/aws/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-10-05T18:38:38-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/core/cmd5/</loc>
+  </url>
+  
+  <url>
+    <loc>/core/common/</loc>
+  </url>
+  
+  <url>
+    <loc>/core/configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>/contrib/contributors/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/elements/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/figure/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/figure/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/graph/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/core/installer/</loc>
+  </url>
+  
+  <url>
+    <loc>/core/inventory/</loc>
+  </url>
+  
+  <url>
+    <loc>/modules/sample/mermaid/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/mermaid/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+</urlset>
