@@ -3,88 +3,129 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/modules/contrib/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/modules/contrib/</loc>
   </url>
   
   <url>
-    <loc>/modules/list/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/modules/list/</loc>
   </url>
   
   <url>
-    <loc>/contrib/overview/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/contrib/overview/</loc>
   </url>
   
   <url>
-    <loc>/contrib/start/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/contrib/start/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/contrib/guidelines/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/about/</loc>
   </url>
   
   <url>
-    <loc>/modules/cloudmesh-rest/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/contrib/guidelines/</loc>
   </url>
   
   <url>
-    <loc>/core/</loc>
-    <lastmod>2020-10-05T21:01:19-04:00</lastmod>
+    <loc>/docs/core/</loc>
   </url>
   
   <url>
-    <loc>/pi/</loc>
-    <lastmod>2020-10-05T21:37:43-04:00</lastmod>
+    <loc>/docs/plugins/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/plugins/</loc>
-    <lastmod>2020-10-05T18:38:38-04:00</lastmod>
+    <loc>/docs/modules/cloudmesh-rest/</loc>
   </url>
   
   <url>
-    <loc>/contrib/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/</loc>
-    <lastmod>2020-10-05T18:38:38-04:00</lastmod>
+    <loc>/docs/version/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/old/</loc>
-    <lastmod>2020-10-05T22:04:53-04:00</lastmod>
+    <loc>/docs/modules/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/git-pull-request/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/version/version-4/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/plugins/iaas/</loc>
-    <lastmod>2020-10-05T21:01:19-04:00</lastmod>
+    <loc>/docs/pi/</loc>
   </url>
   
   <url>
-    <loc>/modules/sample/module/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/version/version-3/</loc>
+    <lastmod>2018-04-11T11:13:32-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/sample/pandoc/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/version/version-2/</loc>
+    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/sample/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/version/rain/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/version/version.1/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/version/screenshot/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/contrib/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/version/version-0/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/modules/git-pull-request/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/plugins/iaas/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/modules/sample/module/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/modules/sample/pandoc/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/modules/sample/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/contact/</loc>
   </url>
   
   <url>
@@ -93,42 +134,37 @@
   </url>
   
   <url>
-    <loc>/modules/old/version-4/</loc>
+    <loc>/tags/</loc>
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/markdown/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/module/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/pandoc/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/sample/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/old/faq/</loc>
+    <loc>/docs/faq/</loc>
     <lastmod>2019-04-09T10:58:08-04:00</lastmod>
   </url>
   
@@ -143,23 +179,13 @@
   </url>
   
   <url>
-    <loc>/modules/old/version-3/</loc>
-    <lastmod>2018-04-11T11:13:32-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/2/</loc>
     <lastmod>2017-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/old/version-2/</loc>
-    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/contrib/start/markdown/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/contrib/start/markdown/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -168,92 +194,54 @@
   </url>
   
   <url>
-    <loc>/modules/old/about/</loc>
+    <loc>/docs/todo/o-cloudmesh/</loc>
     <lastmod>2016-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/old/o-cloudmesh/</loc>
+    <loc>/docs/todo/hadoop/</loc>
     <lastmod>2016-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/old/o-cloudmesh-1/</loc>
+    <loc>/docs/todo/hpc/</loc>
     <lastmod>2016-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/old/o-cloudmesh-cmd3/</loc>
+    <loc>/docs/todo/iaas/</loc>
     <lastmod>2016-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/old/version-1/</loc>
+    <loc>/docs/todo/news/</loc>
     <lastmod>2016-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/old/screenshot/</loc>
+    <loc>/docs/todo/projects/</loc>
     <lastmod>2016-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/old/hadoop/</loc>
+    <loc>/docs/todo/refrences/</loc>
     <lastmod>2016-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/modules/old/hpc/</loc>
-    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+    <loc>/docs/plugins/abstract/</loc>
   </url>
   
   <url>
-    <loc>/modules/old/iaas/</loc>
-    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+    <loc>/docs/modules/sample/alert/</loc>
   </url>
   
   <url>
-    <loc>/modules/old/news/</loc>
-    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+    <loc>/docs/plugins/iaas/aws/</loc>
   </url>
   
   <url>
-    <loc>/modules/old/projects/</loc>
-    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/modules/old/rain/</loc>
-    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/modules/old/bib/</loc>
-    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/plugins/abstract/</loc>
-    <lastmod>2020-10-05T21:01:19-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/modules/sample/alert/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/plugins/iaas/aws/</loc>
-    <lastmod>2020-10-05T21:01:19-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/pi/burner/</loc>
-    <lastmod>2020-10-05T21:37:43-04:00</lastmod>
+    <loc>/docs/pi/burner/</loc>
   </url>
   
   <url>
@@ -262,68 +250,51 @@
   </url>
   
   <url>
-    <loc>/core/cmd5/</loc>
-    <lastmod>2020-10-05T21:01:19-04:00</lastmod>
+    <loc>/docs/core/cmd5/</loc>
   </url>
   
   <url>
-    <loc>/core/common/</loc>
-    <lastmod>2020-10-05T21:01:19-04:00</lastmod>
+    <loc>/docs/core/common/</loc>
   </url>
   
   <url>
-    <loc>/core/configuration/</loc>
-    <lastmod>2020-10-05T21:01:19-04:00</lastmod>
+    <loc>/docs/core/configuration/</loc>
   </url>
   
   <url>
-    <loc>/modules/old/contact/</loc>
-    <lastmod>2020-10-05T22:04:53-04:00</lastmod>
+    <loc>/docs/contrib/contributors/</loc>
   </url>
   
   <url>
-    <loc>/contrib/contributors/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/modules/sample/elements/</loc>
   </url>
   
   <url>
-    <loc>/modules/sample/elements/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/modules/sample/figure/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/modules/sample/figure/</loc>
   </url>
   
   <url>
     <loc>/tags/figure/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/graph/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/core/installer/</loc>
-    <lastmod>2020-10-05T21:01:19-04:00</lastmod>
+    <loc>/docs/core/installer/</loc>
   </url>
   
   <url>
-    <loc>/core/inventory/</loc>
-    <lastmod>2020-10-05T21:01:19-04:00</lastmod>
+    <loc>/docs/core/inventory/</loc>
   </url>
   
   <url>
-    <loc>/modules/sample/mermaid/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/docs/modules/sample/mermaid/</loc>
   </url>
   
   <url>
     <loc>/tags/mermaid/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
   </url>
   
 </urlset>

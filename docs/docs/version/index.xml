@@ -1,0 +1,345 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloudmesh – Version</title>
+    <link>/docs/version/</link>
+    <description>Recent content in Version on Cloudmesh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="/docs/version/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Cloudmesh Version 4</title>
+      <link>/docs/version/version-4/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/version/version-4/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Cloudmesh version 4 is documented at the following&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloudmesh.github.io/cloudmesh-manual/&#34;&gt;https://cloudmesh.github.io/cloudmesh-manual/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;p&gt;Multicloud VM and Data Interfaces to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS&lt;/li&gt;
+&lt;li&gt;Azure&lt;/li&gt;
+&lt;li&gt;Google&lt;/li&gt;
+&lt;li&gt;Oracle&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cloudmesh Version 3</title>
+      <link>/docs/version/version-3/</link>
+      <pubDate>Wed, 11 Apr 2018 11:13:32 -0400</pubDate>
+      
+      <guid>/docs/version/version-3/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;2016 - 2017&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh-cmd3&#34;&gt;https://github.com/cloudmesh-cmd3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Contains&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;base&lt;/li&gt;
+&lt;li&gt;cloudmesh&lt;/li&gt;
+&lt;li&gt;client portal&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cloudmesh Version 2</title>
+      <link>/docs/version/version-2/</link>
+      <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
+      
+      <guid>/docs/version/version-2/</guid>
+      <description>
+        
+        
+        &lt;p&gt;TBD.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Rain</title>
+      <link>/docs/version/rain/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>/docs/version/rain/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Cloudmesh provides a convenient interface to baremetal access of
+resources and to provision services on these bare metal resources. We
+term this concept &lt;strong&gt;rain&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Rain is integrated into the cloudmesh UI through a role based access
+control mechanism allowing either specific users or specific projects to
+gain access. Furthermore, users and projects can be restricted in which
+reosurces the users have access to. This is of special importance to be
+able to conduct successive experiments on the exact same resources.&lt;/p&gt;
+&lt;p&gt;Although we can enable a scheduler based interface to bare metal
+provisioning, the our current rol based, resource reserveration provides
+the user with more access to specific experiment setups.&lt;/p&gt;
+&lt;p&gt;The following provisioning conccepts are important and are included in
+rain&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;Baremetal&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;bare metal provisioning provides the ability to provisin an OS
+directly on the server.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Service&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;services can be dynamically provisioned either via bare metal or
+IaaS provisioning.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Platform&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;A combination of bare metal, IaaS, and service provisioning may
+provide users with a platform. Instead of users needing to put
+together such a platform, they can benefit from previous
+instantiations and templates developed by others.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cloudmesh Version 1</title>
+      <link>/docs/version/version.1/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>/docs/version/version.1/</guid>
+      <description>
+        
+        
+        &lt;p&gt;At this time we are focussing on Cloudmesh 3 and are not using Cloudmesh
+1 features. However Cloudmesh 1 could still be useful.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Feature&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Image&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloudmesh Core&lt;/td&gt;
+&lt;td&gt;A project to interface easily with multiple clouds from the command line and a command shell. &lt;a href=&#34;https://github.com/cloudmesh/cloudmesh&#34;&gt;github&lt;/a&gt;, &lt;a href=&#34;http://cloudmesh.github.io/cloudmesh/&#34;&gt;doc&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;../images/cloudmesh/cloud_register_openstack.png&#34; alt=&#34;image-registry&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Convenient Command Shell&lt;/td&gt;
+&lt;td&gt;Cloudmesh contains a nice command shell that goes beyond a simple commandline interface. State can be saved between command invocations.&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;../images/cmd3.png&#34; alt=&#34;image-cmd3&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloudmesh Metric for Clouds&lt;/td&gt;
+&lt;td&gt;Cloudmesh contains a metric report system that id used can provide customized reports.&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;../images/cloudmesh/metric.png&#34; alt=&#34;image-metric&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloudmesh Inventory&lt;/td&gt;
+&lt;td&gt;Cloudmesh has a simple inventory that allows system administrators and users to easily manage resource inventory in inventory datatables. The attributes in that table can be defined by the user&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;../images/cloudmesh/inventory.png&#34; alt=&#34;image-inventory&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloudmesh PaaS Launcher&lt;/td&gt;
+&lt;td&gt;Cloudmesh has the ability to interface with various DevOps frameworks. Through them we expose via simple command tools the ability to conveniently launch platforms. Examples are  clusters on OpenStack, Apache storm and others. We have an easy way to integrate additional platforms into the command shell through an automatic code generator for command additions.&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;../images/cloudmesh/launcher.png&#34; alt=&#34;image-launcher&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloudmesh Federated VMs&lt;/td&gt;
+&lt;td&gt;Cloudmesh allows the federated management of VMs  through one interface. This allows us to use Cloudmesh as an onramp&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;../images/cloudmesh/manage_vms.png&#34; alt=&#34;image-manage-vms&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloudmesh HPC Batch Processing&lt;/td&gt;
+&lt;td&gt;Cloudmesh includes the ability to view HPC queues.  Most recently we have added a simple API to also submit jobs. Our goal is to be able to manage millions of jobs submitted to a Computational Grid, but also user managed heterogeneous sets of clusters that may not be port of a national or international Grid infrastructure.&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;../images/cloudmesh/qinfo.png&#34; alt=&#34;image-qinfo&#34;&gt; &lt;img src=&#34;../images/cloudmesh/qstat.png&#34; alt=&#34;image-qstat&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloudmesh Service Map&lt;/td&gt;
+&lt;td&gt;For locally maintained resources, Cloudmesh provides the ability to visualize a service map. We will be expanding upon this effort to integrate with our new inventory. This makes it possible to for example display services mapped onto compute servers, but also concrete sensor information such as temperature of the servers&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;../images/cloudmesh/service_map.png&#34; alt=&#34;image-service-map&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cloudmesh Version 1: Screenshots</title>
+      <link>/docs/version/screenshot/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>/docs/version/screenshot/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Please note that cloudmesh supports a role based user policy model.
+Although you may see some screenshots of advanced features some of these
+features may not yet released to the users.&lt;/p&gt;
+&lt;h2 id=&#34;cloud-management&#34;&gt;Cloud Management&lt;/h2&gt;
+&lt;p&gt;Cloudmesh has a simple interface to register and conduct some elementary
+management functions. In contrast to other systems cloudmesh uses the
+native cloud protocol and is not just relying on the EC2 compatible
+clouds. Certainly the Graphical user interface can be improved and
+customized. We have just provided a very simple interface that focuses
+on exposing more info that encourages you to conduct more with the
+management functionality instead of just hiding information to the user.
+For end-users, we can naturally develop a much simpler interface, as for
+example is demonstrated in our launcher (which is not yet released).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/cloudmesh/cloud_register_openstack.png&#34; alt=&#34;Figure: Registering an OpenStack protocol compatible cloud.&#34;&gt;
+&lt;strong&gt;Figure:&lt;/strong&gt; Registering an OpenStack protocol compatible cloud.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/cloudmesh/cloud_register_ec2.png&#34; alt=&#34;Figure: Registering an EC2 compatible cloud&#34;&gt;
+&lt;strong&gt;Figure:&lt;/strong&gt; Registering an EC2 compatible cloud.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/cloudmesh/manage_vms.png&#34; alt=&#34;Figure: Starting and deletion of VMs is easy in cloudmesh through a simple table view.&#34;&gt;
+&lt;strong&gt;Figure:&lt;/strong&gt; Starting and deletion of VMs is easy in cloudmesh through a simple table view.&lt;/p&gt;
+&lt;h2 id=&#34;provisioningraining&#34;&gt;Provisioning/Raining&lt;/h2&gt;
+&lt;p&gt;Cloudmesh contains the ability to provision a server via bare metal
+access by the users. To simplify this already available access we are
+currently developing a simpler interface to it. We have already
+implemented a policy based access control that allows a role based
+access based on projects and users. In near future we will integrate our
+bare metal provisioning management. features into this system.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/cloudmesh/launcher.png&#34; alt=&#34;Figure: Launching predefined configurations on FutureGrid.&#34;&gt;
+&lt;strong&gt;Figure:&lt;/strong&gt; Launching predefined configurations on FutureGrid.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/cloudmesh/provisioning_policy.png&#34; alt=&#34;Figure: Defining the baremetal access policy&#34;&gt;
+&lt;strong&gt;Figure:&lt;/strong&gt; Defining the baremetal access policy.&lt;/p&gt;
+&lt;h2 id=&#34;batch-queues&#34;&gt;Batch Queues&lt;/h2&gt;
+&lt;p&gt;Hadoop is often installed on a cluster. Thus having access to the queues
+to monitor queue based resource reservation for Hadoop jobs (or and
+other HPC job) is conveniently provided in cloudmesh. Launchers (under
+development) can be used to easily interface with the systems and
+conduct customized job creation. Via MyHadoop for example it is possible
+to start Hadoop jobs in queues on FutureGrid.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/cloudmesh/qinfo.png&#34; alt=&#34;Figure: Listing the available queues.&#34;&gt;
+&lt;strong&gt;Figure:&lt;/strong&gt; Listing the available queues.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/cloudmesh/qstat.png&#34; alt=&#34;Figure: Listing the queue information about jobs and status&#34;&gt;
+&lt;strong&gt;Figure:&lt;/strong&gt; Listing the queue information about jobs and status.&lt;/p&gt;
+&lt;h2 id=&#34;status&#34;&gt;Status&lt;/h2&gt;
+&lt;p&gt;The status of the system will be visible in a status window. Here we
+just show a view of the HPC resources. We already have developed a cloud
+monitoring system that we intend to integrate soon. For FutureGrid this
+system is already deployed via the FG portal.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/cloudmesh/status_hpc.png&#34; alt=&#34;Figure: Displaying a simple status of the systems (hereHPC).&#34;&gt;
+&lt;strong&gt;Figure:&lt;/strong&gt; Displaying a simple status of the systems(hereHPC).&lt;/p&gt;
+&lt;h2 id=&#34;inventory&#34;&gt;Inventory&lt;/h2&gt;
+&lt;p&gt;Often we just need to know sme details about the system. To facilitate
+this, we have developed an inventory. In addition we also developed
+physical view of the rack that can either be augmented with service type
+displays or temperature of the rack.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/cloudmesh/inventory.png&#34; alt=&#34;Figure: Inventory of the systems.&#34;&gt;
+&lt;strong&gt;Figure:&lt;/strong&gt; Inventory of the systems.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/cloudmesh/service_map.png&#34; alt=&#34;Figure: Service map to depict which server is dedicated to which services.&#34;&gt;
+&lt;strong&gt;Figure:&lt;/strong&gt; Service map to depict which server is dedicated to which services.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/cloudmesh/temperature_map.png&#34; alt=&#34;Figure: Temperature map of a rack&#34;&gt;
+&lt;strong&gt;Figure:&lt;/strong&gt; Temperature map of a rack&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cloudmesh Version 0</title>
+      <link>/docs/version/version-0/</link>
+      <pubDate>Sat, 09 Apr 2016 10:58:08 -0400</pubDate>
+      
+      <guid>/docs/version/version-0/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;main-features&#34;&gt;Main Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Easy management of multiple clouds in cloudmesh while supporting
+various native libraries.&lt;/li&gt;
+&lt;li&gt;Portability library to access information in regards to images,
+flavors, and vms&lt;/li&gt;
+&lt;li&gt;Management of hundreds/thousands of virtual machines&lt;/li&gt;
+&lt;li&gt;Integration of non FutureGrid cLouds by users into cloudmesh so
+users can access them from cloudmesh&lt;/li&gt;
+&lt;li&gt;A command line shell&lt;/li&gt;
+&lt;li&gt;A web interface&lt;/li&gt;
+&lt;li&gt;Local instalation of cloudmesh on the users computer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cloudmesh-01----native-protocol-for-multicloud-access&#34;&gt;Cloudmesh 0.1 &amp;ndash; Native protocol for multicloud access&lt;/h2&gt;
+&lt;p&gt;Cloudmesh was part of the effort of FutureGrid to provide a simple
+experiment management functionality.&lt;/p&gt;
+&lt;p&gt;Originally cloudmesh was just a &lt;a href=&#34;https://github.com/futuregrid/cm&#34;&gt;command line
+tool&lt;/a&gt; that was able to start
+hundreds of VMs on various clouds in order to conduct stress testing
+of cloud deployments. There was no comparable tool available. Our
+requirements were simple, but none of the tools fulfilled the
+following requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start hundreds of VMs from the command line with a simple command&lt;/li&gt;
+&lt;li&gt;Delete the VMs from a user through the command line&lt;/li&gt;
+&lt;li&gt;provide native support of the cloud and not just using a wrapper
+library such as libcloud or a standard such as OCCI (we wanted to
+debug the cloud and not the wrapper libraries or standards)&lt;/li&gt;
+&lt;li&gt;Elementary display on which VMs run where.&lt;/li&gt;
+&lt;li&gt;Deploy a stand alone version of cloudmesh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Through this tool we were able to identify issues with our clouds and
+improve the deployment.&lt;/p&gt;
+&lt;p&gt;Other tools that we tried to use were hiding these issues as they for
+example did not use the native API protocol, but instead used
+alternative protocols such as EC2 in case of our OpenStack clouds. As a
+user this may be ok, but as a resource provider such limitation is
+naturally problematic.&lt;/p&gt;
+&lt;h2 id=&#34;cloudmesh-02----web-browser-interface&#34;&gt;Cloudmesh 0.2 &amp;ndash; Web Browser Interface&lt;/h2&gt;
+&lt;p&gt;Next we replaced the &lt;code&gt;curses&lt;/code&gt; based user interface with a web browser
+based user interface. This made it possible to more easily develop more
+sophisticated interfaces in General.&lt;/p&gt;
+&lt;p&gt;At the same time we reused our python command shell interpreter cmd3 so
+that it is more easily possible to develop command line tools
+automatically from the commands we already developed as part of the
+command shell anyways.&lt;/p&gt;
+&lt;p&gt;A command shell is obviously important as it allows us to describe
+experiments as scripts.&lt;/p&gt;
+&lt;h2 id=&#34;cloudmesh-03----portal-interface&#34;&gt;Cloudmesh 0.3 &amp;ndash; Portal Interface&lt;/h2&gt;
+&lt;p&gt;Base on the success from the earlier versions and the use of a web
+browser as interface, it became clear that users could benefit from our
+effort. Thus we started to generalize the framework a bit and work
+towards distributing cloudmesh as a single user environment while users
+can install a stand alone version of the software.&lt;/p&gt;
+&lt;p&gt;Based on this internal success of cloudmesh we started thinking it would
+be good to expose the functionality also to users.&lt;/p&gt;
+&lt;h2 id=&#34;cloudmesh-04----database-for-vm-status&#34;&gt;Cloudmesh 0.4 &amp;ndash; Database for VM Status&lt;/h2&gt;
+&lt;p&gt;In cloudmesh 0.4 we transformed the store of the VM, flavor, and images
+into a database, we also moved the development of the code in a new
+&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh&#34;&gt;Github Cloudmesh&lt;/a&gt; repository.&lt;/p&gt;
+&lt;h3 id=&#34;cloudmesh-05---07&#34;&gt;Cloudmesh 0.5 - 0.7&lt;/h3&gt;
+&lt;p&gt;The following important changes took place:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction of a role based authentication theme&lt;/li&gt;
+&lt;li&gt;Adding FG authentication from the portal account&lt;/li&gt;
+&lt;li&gt;Tngesting users either from a yaml file or LDAP directory&lt;/li&gt;
+&lt;li&gt;Adding capabilities to list vms, flavors, and images from AWS,
+Azure, EC2 (via libcloud) and OpenStack natively.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

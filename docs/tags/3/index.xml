@@ -15,15 +15,24 @@
     
     
     <item>
-      <title>Modules: Cloudmesh Version 3</title>
-      <link>/modules/old/version-3/</link>
+      <title>Docs: Cloudmesh Version 3</title>
+      <link>/docs/version/version-3/</link>
       <pubDate>Wed, 11 Apr 2018 11:13:32 -0400</pubDate>
       
-      <guid>/modules/old/version-3/</guid>
+      <guid>/docs/version/version-3/</guid>
       <description>
         
         
-        &lt;p&gt;TBD&lt;/p&gt;
+        &lt;ul&gt;
+&lt;li&gt;2016 - 2017&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh-cmd3&#34;&gt;https://github.com/cloudmesh-cmd3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Contains&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;base&lt;/li&gt;
+&lt;li&gt;cloudmesh&lt;/li&gt;
+&lt;li&gt;client portal&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>

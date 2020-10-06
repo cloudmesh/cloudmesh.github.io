@@ -1,0 +1,52 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloudmesh – Plugins</title>
+    <link>/docs/plugins/</link>
+    <description>Recent content in Plugins on Cloudmesh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="/docs/plugins/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: IaaS</title>
+      <link>/docs/plugins/iaas/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/plugins/iaas/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;A collection of plugins related to making IaaS easer to use.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Abstractions</title>
+      <link>/docs/plugins/abstract/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/plugins/abstract/</guid>
+      <description>
+        
+        
+        &lt;p&gt;A set of Abstractions related to cloud computing that not only makes the development of cloud programs easier.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
