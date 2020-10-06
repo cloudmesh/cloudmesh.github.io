@@ -1,6 +1,25 @@
 ---
-title: "Cloudmesh: A multicloud toolkit"
-featured_image: '/images/gohugo-default-sample-hero-image.jpg'
-description: "Cloudmesh enables you ti interface with various clouds"
+title: "Old"
+linkTitle: "Old"
+weight: 30
+menu:
+  main:
+    weight: 30
 ---
-Welcome to Cloudmesh.
+
+{{% pageinfo %}}
+This page has been recently added and will contain new modules that can be integrated into courses.
+{{% /pageinfo %}}
+
+
+At this time, we have not yet placed additional modules here.
+
+Please revisit this page ...
+
+## Tag Cloud
+
+{{< tag_cloud >}}
+
+## List
+
+

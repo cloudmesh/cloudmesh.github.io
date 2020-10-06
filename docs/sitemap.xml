@@ -39,6 +39,7 @@
   
   <url>
     <loc>/pi/</loc>
+    <lastmod>2020-10-05T21:37:43-04:00</lastmod>
   </url>
   
   <url>
@@ -54,6 +55,11 @@
   <url>
     <loc>/modules/</loc>
     <lastmod>2020-10-05T18:38:38-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/</loc>
+    <lastmod>2020-10-05T22:04:53-04:00</lastmod>
   </url>
   
   <url>
@@ -78,6 +84,21 @@
   
   <url>
     <loc>/modules/sample/</loc>
+    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/4/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/version-4/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <lastmod>2020-10-05T17:15:45-04:00</lastmod>
   </url>
   
@@ -107,13 +128,112 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+    <loc>/modules/old/faq/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/scene/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/3/</loc>
+    <lastmod>2018-04-11T11:13:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/version-3/</loc>
+    <lastmod>2018-04-11T11:13:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/2/</loc>
+    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/version-2/</loc>
+    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
     <loc>/contrib/start/markdown/</loc>
     <lastmod>2020-10-05T17:15:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/1/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/about/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/o-cloudmesh/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/o-cloudmesh-1/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/o-cloudmesh-cmd3/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/version-1/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/screenshot/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/hadoop/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/hpc/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/iaas/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/news/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/projects/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/rain/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/bib/</loc>
+    <lastmod>2016-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
   </url>
   
   <url>
@@ -133,11 +253,12 @@
   
   <url>
     <loc>/pi/burner/</loc>
+    <lastmod>2020-10-05T21:37:43-04:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-10-05T21:01:19-04:00</lastmod>
+    <lastmod>2020-10-05T21:37:43-04:00</lastmod>
   </url>
   
   <url>
@@ -153,6 +274,11 @@
   <url>
     <loc>/core/configuration/</loc>
     <lastmod>2020-10-05T21:01:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/modules/old/contact/</loc>
+    <lastmod>2020-10-05T22:04:53-04:00</lastmod>
   </url>
   
   <url>

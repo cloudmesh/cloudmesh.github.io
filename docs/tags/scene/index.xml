@@ -1,0 +1,67 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloudmesh – scene</title>
+    <link>/tags/scene/</link>
+    <description>Recent content in scene on Cloudmesh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 09 Apr 2019 10:58:08 -0400</lastBuildDate>
+    
+	  <atom:link href="/tags/scene/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Modules: FAQ</title>
+      <link>/modules/old/faq/</link>
+      <pubDate>Tue, 09 Apr 2019 10:58:08 -0400</pubDate>
+      
+      <guid>/modules/old/faq/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This section will include a number of FAQs&lt;/p&gt;
+&lt;p&gt;Are there any screenshots?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A number of screenshots are available to showcase some of the
+Cloudmesh features at &lt;code&gt;screenshots&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;TODO: link missing&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Can I install Cloudmesh on my local computer?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloudmesh has been used on macOS, Linux, and Windows Computers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;How do I get started?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;See: &lt;a href=&#34;https://cloudmesh.github.io/cloudmesh-manual/&#34;&gt;https://cloudmesh.github.io/cloudmesh-manual/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Can I use Cloudmesh to connect to OpenStack clouds, AWS, Azure, Google,
+Oracle Clouds?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yes you can. We have had users using all such clouds. You can
+configure it as documented in the manaual.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Can I participate in the development?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yes, Yes, Yes. We love your participation. If you have ideas or want
+to help on extending Cloudmesh, or even documentation, testing and
+code cleanup let us know. You will be properly acknowledged in our
+future releases.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I would like to contribute my code to Cloudmesh.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yes, you can do that. We can create a repository for you on
+Cloudmesh. We need to discuss and agree how to best integrate your
+code. Please contact us.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

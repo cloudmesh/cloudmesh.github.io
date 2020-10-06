@@ -1,0 +1,43 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloudmesh – 4</title>
+    <link>/tags/4/</link>
+    <description>Recent content in 4 on Cloudmesh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="/tags/4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Modules: Cloudmesh Version 4</title>
+      <link>/modules/old/version-4/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/modules/old/version-4/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Cloudmesh version 4 is documented at the following&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloudmesh.github.io/cloudmesh-manual/&#34;&gt;https://cloudmesh.github.io/cloudmesh-manual/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;p&gt;Multicloud VM and Data Interfaces to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS&lt;/li&gt;
+&lt;li&gt;Azure&lt;/li&gt;
+&lt;li&gt;Google&lt;/li&gt;
+&lt;li&gt;Oracle&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
