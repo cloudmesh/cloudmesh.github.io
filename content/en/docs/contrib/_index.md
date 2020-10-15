@@ -3,7 +3,7 @@ title: "Contributors"
 linkTitle: "Contributors"
 weight: 3
 description: >
-  We provide a list of content contributors. IF you contributed and do not see your name here, please let us know so we can add you.
+  A list of content contributors. If you contributed and do not see your name here, please let us know so we can add you.
 ---
 
 {{% pageinfo %}}

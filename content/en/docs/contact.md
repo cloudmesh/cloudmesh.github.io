@@ -2,6 +2,7 @@
 title: "Contact"
 linkTitle: "Contact"
 weight: 100
+description: Contuct us fro more information
 menu:
   main:
     weight: 100

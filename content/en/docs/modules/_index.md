@@ -2,9 +2,7 @@
 title: "Modules"
 linkTitle: "Modules"
 weight: 30
-menu:
-  main:
-    weight: 30
+description: Selected Modules that use cloudmesh
 ---
 
 {{% pageinfo %}}

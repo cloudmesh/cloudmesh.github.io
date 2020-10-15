@@ -7,9 +7,6 @@ title: "FAQ"
 ---
 
 
-
-This section will include a number of FAQs
-
 **Can I install Cloudmesh on my local computer?**
 
 > Cloudmesh has been used on macOS, Linux, and Windows Computers.

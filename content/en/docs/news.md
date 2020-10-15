@@ -2,9 +2,7 @@
 title: "News"
 linkTitle: "News"
 weight: 2
-#menu:
-#  main:
-#    weight: 100
+description: News about CLoudmesh
 ---
 
 We are happy to announce the release of Cloudmesh version 4. Cloudmesh is

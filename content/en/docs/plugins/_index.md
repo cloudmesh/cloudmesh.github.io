@@ -3,9 +3,9 @@ title: "Plugins"
 linkTitle: "Plugins"
 description: List of  a slected number of frequently used plugins for cloudmesh. 
 weight: 20
-menu:
-  main:
-    weight: 20
+#menu:
+#  main:
+#    weight: 20
 ---
 
 {{% pageinfo %}}
