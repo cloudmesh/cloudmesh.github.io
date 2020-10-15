@@ -4,7 +4,6 @@
     <link>/docs/plugins/</link>
     <description>Recent content in Plugins on Cloudmesh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="/docs/plugins/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,35 +14,181 @@
     
     
     <item>
-      <title>Docs: IaaS</title>
-      <link>/docs/plugins/iaas/</link>
-      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      <title>Docs: Autogenerating Analytics Rest Services</title>
+      <link>/docs/plugins/cloudmesh-rest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/plugins/iaas/</guid>
+      <guid>/docs/plugins/cloudmesh-rest/</guid>
       <description>
         
         
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;A collection of plugins related to making IaaS easer to use.&lt;/p&gt;
+&lt;p&gt;On this page, we will deploy a Pipeline Anova SVM onto our openapi server, and subsequently train the model
+with data and make predictions from said data. All code needed for this is provided in the &lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-openapi&#34;&gt;cloudmesh-openapi&lt;/a&gt; repository. The code is largely based on this &lt;a href=&#34;https://scikit-learn.org/stable/auto_examples/feature_selection/plot_feature_selection_pipeline.html&#34;&gt;sklearn example&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;toc&#34;&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#1-overview&#34;&gt;1. Overview&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#11-prerequisite&#34;&gt;1.1 Prerequisite&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#12-effort&#34;&gt;1.2 Effort&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#13-list-of-topics-covered&#34;&gt;1.3 List of Topics Covered&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#2-the-python-code&#34;&gt;2. The Python Code&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#3-generating-the-openapi-yaml-file&#34;&gt;3. Generating the OpenAPI YAML file&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#4-the-openapi-yaml-file-optional&#34;&gt;4. The OpenAPI YAML File (optional)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#5-starting-the-server&#34;&gt;5. Starting the Server&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#6-interacting-with-the-endpoints&#34;&gt;6. Interacting With the Endpoints&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#uploading-the-dataset&#34;&gt;Uploading the Dataset&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#training-on-the-dataset&#34;&gt;Training on the Dataset&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#making-predictions&#34;&gt;Making Predictions&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#7-clean-up-optional&#34;&gt;7. Clean Up (optional)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#8-assignments&#34;&gt;8. Assignments&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#9-references&#34;&gt;9. References&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
 
+&lt;h2 id=&#34;1-overview&#34;&gt;1. Overview&lt;/h2&gt;
+&lt;h3 id=&#34;11-prerequisite&#34;&gt;1.1 Prerequisite&lt;/h3&gt;
+&lt;p&gt;It is also assumed that the user has installed and has familiarity with the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install cloudmesh-openapi using the developer install as documented &lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-openapi&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python 3.8.x&lt;/li&gt;
+&lt;li&gt;Linux Command line&lt;/li&gt;
+&lt;li&gt;Working in a python environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;12-effort&#34;&gt;1.2 Effort&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;15 minutes (not including assignment)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;13-list-of-topics-covered&#34;&gt;1.3 List of Topics Covered&lt;/h3&gt;
+&lt;p&gt;In this module, we focus on the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Training ML models with stateless requests&lt;/li&gt;
+&lt;li&gt;Generating RESTful APIs using &lt;code&gt;cms openapi&lt;/code&gt; for existing python code&lt;/li&gt;
+&lt;li&gt;Deploying openapi definitions onto a localserver&lt;/li&gt;
+&lt;li&gt;Interacting with newly created openapi services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-the-python-code&#34;&gt;2. The Python Code&lt;/h2&gt;
+&lt;p&gt;First, let us ensure we are in the correct directory. If you followed the cloudmesh-openapi installation directions as dictated in the &lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-openapi&#34;&gt;installation guide&lt;/a&gt;, simply navigate to the root directory of &lt;code&gt;cloudmesh-openapi&lt;/code&gt;. Notice how we are still working in our python virtual environment &lt;code&gt;ENV3&lt;/code&gt; from the installation guide.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(ENV3) &amp;gt; pwd
+~/cm/cloudmesh-openapi
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Let us take a look at the PipelineAnova SVM example code.&lt;/p&gt;
+&lt;p&gt;A
+&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html&#34;&gt;Pipeline&lt;/a&gt;
+is a &lt;em&gt;pipeline&lt;/em&gt; of transformations to apply with a final
+estimator. Analysis of variance
+(&lt;a href=&#34;https://en.wikipedia.org/wiki/Analysis_of_variance&#34;&gt;ANOVA&lt;/a&gt;) is used
+for feature selection. A Support vector machine
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Support_vector_machine&#34;&gt;SVM&lt;/a&gt; is used as
+the actual learning model on the features.&lt;/p&gt;
+&lt;p&gt;Use your favorite editor to look at it (whether it be vscode, vim,
+nano, etc). We will use emacs&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(ENV3) &amp;gt; emacs ./tests/Scikitlearn-experimental/sklearn_svm.py
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The class within this file has two main methods to interact with (except for the file upload capability which is added at runtime)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@classmethod
+def train(cls, filename: str) -&amp;gt; str:
+    &amp;quot;&amp;quot;&amp;quot;
+    Given the filename of an uploaded file, train a PipelineAnovaSVM
+    model from the data. Assumption of data is the classifications 
+    are in the last column of the data.
 
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Abstractions</title>
-      <link>/docs/plugins/abstract/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/plugins/abstract/</guid>
-      <description>
-        
-        
-        &lt;p&gt;A set of Abstractions related to cloud computing that not only makes the development of cloud programs easier.&lt;/p&gt;
+    Returns the classification report of the test split
+    &amp;quot;&amp;quot;&amp;quot;
+    # some code...
+
+@classmethod
+def make_prediction(cls, model_name: str, params: str):
+    &amp;quot;&amp;quot;&amp;quot;
+    Make a prediction based on training configuration
+    &amp;quot;&amp;quot;&amp;quot;
+    # some code...
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Note the parameters that each of these methods takes in. These parameters are expected as part of the stateless request for each method.&lt;/p&gt;
+&lt;h2 id=&#34;3-generating-the-openapi-yaml-file&#34;&gt;3. Generating the OpenAPI YAML file&lt;/h2&gt;
+&lt;p&gt;Let us now use the python code from above to create the openapi YAML file that we will deploy onto our server. To correctly generate this file, use the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(ENV3) &amp;gt; cms openapi generate PipelineAnovaSVM 
+    \ --filename=./tests/Scikitlearn-experimental/sklearn_svm.py
+    \ --import_class
+    \ --enable_upload
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Let us digest the options we have specified:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--filename&lt;/code&gt; indicates the path to the python file in which our code is located&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--import_class&lt;/code&gt; notifies &lt;code&gt;cms openapi&lt;/code&gt; that the YAML file is generated
+from a class. The name of this class is specified as &lt;code&gt;PipelineAnovaSVM&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--enable_upload&lt;/code&gt; allows the user to upload files to be stored on the server for reference. This flag causes &lt;code&gt;cms openapi&lt;/code&gt; to auto-generate a new python file with the &lt;code&gt;upload&lt;/code&gt; method appended to the end of
+the file. For this example, you will notice a new file has been added in the same directory as &lt;code&gt;sklearn_svm.py&lt;/code&gt;. The file is aptly called: &lt;code&gt;sklearn_svm_upload-enabled.py&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-the-openapi-yaml-file-optional&#34;&gt;4. The OpenAPI YAML File (optional)&lt;/h2&gt;
+&lt;p&gt;If Section 2 above was correctly, cms will have generated the corresponding openapi YAML file. Let us take a look at it.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(ENV3) &amp;gt; emacs ./tests/Scikitlearn-experimental/sklearn_svm.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This YAML file has a lot of information to digest. The basic structure is documented &lt;a href=&#34;https://swagger.io/docs/specification/basic-structure/&#34;&gt;here&lt;/a&gt;. However, it is not necessary to understand this information to deploy RESTful APIs.&lt;/p&gt;
+&lt;p&gt;However, take a look at &lt;code&gt;paths:&lt;/code&gt; on line 9 in this file. Under this section, we have several different endpoints for our API listed. Notice the correlation between the endpoints and the python file we generated from.&lt;/p&gt;
+&lt;h2 id=&#34;5-starting-the-server&#34;&gt;5. Starting the Server&lt;/h2&gt;
+&lt;p&gt;Using the YAML file from Section 2, we can now start the server.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(ENV3) &amp;gt; cms openapi server start ./tests/Scikitlearn-experimental/sklearn_svm.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The server should now be active. Navigate to &lt;a href=&#34;http://localhost:8080/cloudmesh/ui&#34;&gt;http://localhost:8080/cloudmesh/ui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cloudmesh_ui.png&#34; alt=&#34;Unavailable&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;6-interacting-with-the-endpoints&#34;&gt;6. Interacting With the Endpoints&lt;/h2&gt;
+&lt;h3 id=&#34;uploading-the-dataset&#34;&gt;Uploading the Dataset&lt;/h3&gt;
+&lt;p&gt;We now have a nice user inteface to interact with our newly generated
+API. Let us upload the data set. We are going to use the iris data set in this example. We have provided it for you to use. Simply navigate to the &lt;code&gt;/upload&lt;/code&gt; endpoint by clicking on it, then click Try it out.&lt;/p&gt;
+&lt;p&gt;We can now upload the file. Click on Choose File and upload the data set located at &lt;code&gt;./tests/Scikitlearn-experimental/iris.data&lt;/code&gt;. Simply hit Execute after the file is uploaded. We should then get a &lt;code&gt;200&lt;/code&gt; return code (telling us that everything went ok).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;upload_endpoint.png&#34; alt=&#34;Unavaialable&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;training-on-the-dataset&#34;&gt;Training on the Dataset&lt;/h3&gt;
+&lt;p&gt;The server now has our dataset. Let us now navigate to the &lt;code&gt;/train&lt;/code&gt; endpoint by, again, clicking on it. Similarly, click &lt;code&gt;Try it out&lt;/code&gt;. The parameter being asked for is the filename. The filename we are interested in is iris.data. Then click execute. We should get another &lt;code&gt;200&lt;/code&gt; return code with a Classification Report in the Response Body.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;train_endpoint.png&#34; alt=&#34;Unavailable&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;making-predictions&#34;&gt;Making Predictions&lt;/h3&gt;
+&lt;p&gt;We now have a trained model on the iris data set. Let us now use it to make predictions. The model expects 4 attribute values: sepal length, seapl width, petal length, and petal width. Let us use the values &lt;code&gt;5.1, 3.5, 1.4, 0.2&lt;/code&gt; as our attributes. The expected classification is &lt;code&gt;Iris-setosa&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Navigate to the &lt;code&gt;/make_prediction&lt;/code&gt; endpoint as we have with other endpoints. Again, let us &lt;code&gt;Try it out&lt;/code&gt;. We need to provide the name of the model and the params (attribute values). For the model name, our model is aptly called &lt;code&gt;iris&lt;/code&gt; (based on the name of the data set).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;make_prediction_endpoint.png&#34; alt=&#34;Unavailable&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As expected, we have a classification of &lt;code&gt;Iris-setosa&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;7-clean-up-optional&#34;&gt;7. Clean Up (optional)&lt;/h2&gt;
+&lt;p&gt;At this point, we have created and trained a model using &lt;code&gt;cms openapi&lt;/code&gt;. After satisfactory use, we can shut down the server. Let us check what we have running.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(ENV3) &amp;gt; cms openapi server ps
+openapi server ps
+
+INFO: Running Cloudmesh OpenAPI Servers
+
+...
+
+[{&#39;name&#39;: &#39;sklearn_svm&#39;, &#39;pid&#39;: 7496, &#39;spec&#39;: &#39;./tests/Scikitlearn-experimental/sklearn_svm.yaml&#39;}]
++-------------+------+--------------------------------------------------+
+| name        | pid  | spec                                             |
++-------------+------+--------------------------------------------------+
+| sklearn_svm | 7496 | ./tests/Scikitlearn-                             |
+|             |      | experimental/sklearn_svm.yaml                    |
++-------------+------+--------------------------------------------------+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We can stop the server with the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(ENV3) &amp;gt; cms openapi server stop sklearn_svm
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We can verify the server is shut down by running the &lt;code&gt;ps&lt;/code&gt; command again.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(ENV3) &amp;gt; 
+openapi server ps
+
+INFO: Running Cloudmesh OpenAPI Servers
+
+[]
+None
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;8-assignments&#34;&gt;8. Assignments&lt;/h2&gt;
+&lt;p&gt;Many ML models follow the same basic process for training and testing:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Upload Training Data&lt;/li&gt;
+&lt;li&gt;Train the model&lt;/li&gt;
+&lt;li&gt;Test the model&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Using the PipelineAnovaSVM code as a template, write python code for a new model and deploy it as a RESTful API as we have done above. Train and test your model using the provided iris data set. There are plenty of examples that can be referenced &lt;a href=&#34;https://scikit-learn.org/stable/auto_examples/index.html#&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;9-references&#34;&gt;9. References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sikit-learn.org&#34;&gt;Sikit-learn Web Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>

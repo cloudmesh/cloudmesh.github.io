@@ -34,9 +34,6 @@ another. All projects listed here are managed in github.
                                                                                    different IaaS, Bare metal, and  
                                                                                    HPC services.                    
 
-  ![image-teefaa](_static/teefaa.png){width="100px"}             Teefaa            A project to dynamically         [github](https://github.com/cloudmesh/teefaa),
-                                                                                   provision operating systems.     [doc](http://cloudmesh.github.io/teefaa/)
-
   ![image-metric](_static/metric.png){width="100px"}             Cloud-Metrics     A project to measure and display [github](https://github.com/futuregrid/cloud-metrics),
                                                                                    metric information about usage   [doc](http://futuregrid.github.io/cloud-metrics/)
                                                                                    and utilization of your cloud.   [github](https://github.com/futuregrid/cloud-accounting)

@@ -12,8 +12,6 @@ Cloudmesh PI can be used to create your own minicloud
 {{% /pageinfo %}}
 
 
-## Tag Cloud
+* Pi Cluster Burner
+  * A convenient script to create SDCards for a PI cluster
 
-{{< tag_cloud >}}
-
-## List

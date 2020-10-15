@@ -1,11 +1,10 @@
 ---
-title: Contact
-featured_image: "images/notebook.jpg"
-omit_header_text: true
-description: We'd love to hear from you
-type: page
-menu: main
+title: "Contact"
+linkTitle: "Contact"
 weight: 100
+menu:
+  main:
+    weight: 100
 ---
 
 Please contact Gregor von Laszewski on his Web page at:

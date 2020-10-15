@@ -1,6 +1,7 @@
 ---
 title: "Plugins"
 linkTitle: "Plugins"
+description: List of  a slected number of frequently used plugins for cloudmesh. 
 weight: 20
 menu:
   main:
@@ -8,14 +9,21 @@ menu:
 ---
 
 {{% pageinfo %}}
-This page has been recently added and will contain new modules that can be integrated into courses.
+Here we list a slected number of frequently used plugins for cloudmesh. 
 {{% /pageinfo %}}
 
 
-At this time, we have not yet placed additional plugins.
+* Cloud Abstractions
+  * A set of Abstractions related to cloud computing that not only
+    makes the development of cloud programs easier.
 
-## Tag Cloud
+* IaaS
+  * AWS
+  * Azure
+  * Google
+  * Oracle
+  * OpenStack
 
-{{< tag_cloud >}}
+See the Manual for mor details:
 
-## List
+* <https://cloudmesh.github.io/cloudmesh-manual/>

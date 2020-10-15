@@ -1,12 +1,13 @@
 ---
-date: 2016-04-09T10:58:08-04:00
-description: "News"
-featured_image: "/images/cloud2.jpg"
-tags: ["1"]
 title: "News"
+linkTitle: "News"
+weight: 2
+#menu:
+#  main:
+#    weight: 100
 ---
 
-We are happy to announce the alpha release of cloudmesh. Cloudmesh is
+We are happy to announce the release of Cloudmesh version 4. Cloudmesh is
 capable of interfacing with clouds and HPC frameworks. We have
 successfully demonstarted by our developers usage of
 
@@ -21,6 +22,5 @@ like to acknowledge all those that helped us developing Cloudmesh.
 
 Thanks
 
-Gregor von Laszewski and the rest of
+Gregor von Laszewski
 
-[the cloudmesh team](/git).

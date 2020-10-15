@@ -2,7 +2,7 @@
 date: 2019-04-09T10:58:08-04:00
 description: "FAQ"
 featured_image: "/images/faq.jpg"
-tags: ["scene"]
+tags: ["FAQ"]
 title: "FAQ"
 ---
 
@@ -10,36 +10,33 @@ title: "FAQ"
 
 This section will include a number of FAQs
 
-Are there any screenshots?
+**Can I install Cloudmesh on my local computer?**
 
--   A number of screenshots are available to showcase some of the
-    Cloudmesh features at `screenshots`
+> Cloudmesh has been used on macOS, Linux, and Windows Computers.
 
-	TODO: link missing
+**How do I get started?**
 
-Can I install Cloudmesh on my local computer?
+> See: <https://cloudmesh.github.io/cloudmesh-manual/>
 
--   Cloudmesh has been used on macOS, Linux, and Windows Computers.
+**Can I use Cloudmesh to connect to OpenStack clouds, AWS, Azure, Google,
+Oracle Clouds?**
 
-How do I get started?
+> Yes you can. We have had users using all such clouds. You can
+  configure it as documented in the manaual.
 
--   See: <https://cloudmesh.github.io/cloudmesh-manual/>
+**Can I participate in the development?**
 
-Can I use Cloudmesh to connect to OpenStack clouds, AWS, Azure, Google,
-Oracle Clouds?
-
--   Yes you can. We have had users using all such clouds. You can
-    configure it as documented in the manaual.
-
-Can I participate in the development?
-
--   Yes, Yes, Yes. We love your participation. If you have ideas or want
+>   Yes, Yes, Yes. We love your participation. If you have ideas or want
     to help on extending Cloudmesh, or even documentation, testing and
     code cleanup let us know. You will be properly acknowledged in our
     future releases.
 
-I would like to contribute my code to Cloudmesh.
+>   To get started, please contact Gregor, he will help you making the
+    integration or use easy.
 
--   Yes, you can do that. We can create a repository for you on
-    Cloudmesh. We need to discuss and agree how to best integrate your
-    code. Please contact us.
+**Can I use cloudmesh in my own projects?**
+
+>   Yes you can, but please acknowledge us. If you like help with your
+    integration please contact Gregor.
+
+    

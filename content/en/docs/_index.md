@@ -8,16 +8,12 @@ menu:
 ---
 
 {{% pageinfo %}}
-This page has been recently added and will contain new modules that can be integrated into courses.
+
+Cloudmesh has an extensive documentation that is maintained in its own
+repositories. We are providing here a collection of useful links to
+get you started.
+
 {{% /pageinfo %}}
 
 
-At this time, we have not yet placed additional modules here.
 
-Please revisit this page ...
-
-## Tag Cloud
-
-{{< tag_cloud >}}
-
-## List

@@ -1,10 +1,11 @@
 ---
-title: "Version"
-linkTitle: "Version"
-weight: 30
-menu:
-  main:
-    weight: 30
+title: "Versions"
+linkTitle: "Versions"
+description: Notes about previous versions including the cloudmesh portal.
+weight: 2
+#menu:
+#  main:
+#    weight: 30
 ---
 
 {{% pageinfo %}}
