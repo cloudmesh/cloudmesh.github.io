@@ -1,0 +1,15 @@
+Pygments
+sphinx_rtd_theme
+recommonmark 
+jupyter_sphinx
+sphinx-autobuild
+sphinxcontrib-mermaid
+sphinxcontrib-images
+sphinxcontrib-fulltoc
+sphinx-gallery
+cloudmesh-common
+cloudmesh-cmd5
+cloudmesh-sys
+cloudmesh-storage
+cloudmesh-google
+cloudmesh-oracle

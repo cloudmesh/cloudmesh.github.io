@@ -1,0 +1,22 @@
+version --number
++-------------------------+---------+
+| Package                 | Version |
++-------------------------+---------+
+| cloudmesh.abstract      | 4.3.4   |
+| cloudmesh.admin         | 4.3.2   |
+| cloudmesh.aws           | 4.1.8   |
+| cloudmesh.azure         | 4.1.10  |
+| cloudmesh.chameleon     | 4.3.0   |
+| cloudmesh.cloud         | 4.4.1   |
+| cloudmesh.cmd5          | 4.3.9   |
+| cloudmesh.common        | 4.3.26  |
+| cloudmesh.configuration | 4.3.5   |
+| cloudmesh.google        | 4.1.9   |
+| cloudmesh.gui           | 4.3.2   |
+| cloudmesh.inventory     | 4.3.2   |
+| cloudmesh.openstack     | 4.3.1   |
+| cloudmesh.oracle        | 4.1.4   |
+| cloudmesh.storage       | 4.0.14  |
+| cloudmesh.sys           | 4.3.3   |
+| cloudmesh.test          | 4.3.2   |
++-------------------------+---------+
