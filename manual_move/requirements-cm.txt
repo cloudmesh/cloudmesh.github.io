@@ -1,0 +1,8 @@
+-e git://github.com/cloudmesh/cloudmesh-common.git#egg=cloudmesh-common
+-e git://github.com/cloudmesh/cloudmesh-cmd5.git#egg=cloudmesh-cmd5
+-e git://github.com/cloudmesh/cloudmesh-sys.git#egg=cloudmesh-sys
+-e git://github.com/cloudmesh/cloudmesh-cloud.git#egg=cloudmesh-cloud
+-e git://github.com/cloudmesh/cloudmesh-storage.git#egg=cloudmesh-storage
+-e git://github.com/cloudmesh/cloudmesh-inventory.git#egg=cloudmesh-inventory
+-e git://github.com/cloudmesh/cloudmesh-flow.git#egg=cloudmesh-flow
+-e git://github.com/cloudmesh/cloudmesh-emr.git#egg=cloudmesh-emr
