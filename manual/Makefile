@@ -7,8 +7,6 @@ VERSION=`head -1 VERSION`
 GIT=https://github.com/cloudmesh
 COMMUNITY=$(GIT)-community
 
-HERCULES=docker run --rm srcd/hercules hercules
-LABOURS=docker run --rm -i -v $(pwd):/io srcd/hercules labours
 SOURCE=docs-source/source
 API=docs-source/source/api
 REGISTER=docs-source/source/register
@@ -166,7 +164,7 @@ inspect: dest/gitinspector/gitinspector.py
 
 contrib:
 	git config --global mailmap.file .mailmap
-	@bin/authors.py
+	@../bin/authors.py
 
 register:
 	mkdir -p $(REGISTER)
@@ -227,7 +225,7 @@ manual:
 
 authors:
 	git config --global mailmap.file .mailmap
-	@bin/authors.py > $(SOURCE)/preface/authors.rst
+	@../bin/authors.py > $(SOURCE)/preface/authors.rst
 
 doc: authors
 	mv ~/.cloudmesh/cloudmesh.yaml ~/.cloudmesh/cloudmesh.yaml-tmp
@@ -238,10 +236,10 @@ doc: authors
 	cd docs-source; make html
 	cp -r $(SOURCE)/_ext docs-source/build/html
 	cp -r $(SOURCE)/_templates docs-source/build/html
-	cp -r docs-source/build/html/ docs
+	cp -r docs-source/build/html/ ../docs/manual
 	mv ~/.cloudmesh/cloudmesh.yaml-tmp ~/.cloudmesh/cloudmesh.yaml
-	cp -r $(SOURCE)/inspector docs/inspector
-	touch docs/.nojekyll
+	cp -r $(SOURCE)/inspector ../docs/manual/inspector
+	touch ../docs/.nojekyll
 
 pdf: authors
 	mv ~/.cloudmesh/cloudmesh.yaml ~/.cloudmesh/cloudmesh.yaml-tmp
