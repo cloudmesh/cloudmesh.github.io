@@ -1,0 +1,526 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Quickstart" href="quickstart/quickstart.html" />
+    <link rel="prev" title="Installation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation-of-cloudmesh-with-docker">Installation of cloudmesh with Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-of-cloudmesn-in-python">Installation of Cloudmesn in Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#anaconda-and-conda">Anaconda and Conda</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ssh-key">SSH key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#first-configuration">First configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-directory-cloudmesh">The Directory .cloudmesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-of-mongodb">Installation of MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker/install-docker.html">Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os/install-linux.html">Installation for for Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os/install-macos.html">Installation for macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pi/install-pi.html">Prerequisites for Raspbian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/index.html">Windows Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install-dev.html">Installation of Cloudmesh (Source Install for Developers)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database/install-mongo.html">Cloudmesh Database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Installation</a> &raquo;</li>
+        
+      <li>Overview</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/installation/install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#installation-of-cloudmesh-with-docker" id="id1">Installation of cloudmesh with Docker</a></p></li>
+<li><p><a class="reference internal" href="#installation-of-cloudmesn-in-python" id="id2">Installation of Cloudmesn in Python</a></p>
+<ul>
+<li><p><a class="reference internal" href="#anaconda-and-conda" id="id3">Anaconda and Conda</a></p>
+<ul>
+<li><p><a class="reference internal" href="#python-installation-from-python-org" id="id4">Python Installation from python.org</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#ssh-key" id="id5">SSH key</a></p></li>
+<li><p><a class="reference internal" href="#first-configuration" id="id6">First configuration</a></p></li>
+<li><p><a class="reference internal" href="#the-directory-cloudmesh" id="id7">The Directory .cloudmesh</a></p></li>
+<li><p><a class="reference internal" href="#installation-of-mongodb" id="id8">Installation of MongoDB</a></p></li>
+</ul>
+</div>
+<p>Cloudmesh is easy to install. Dependent on your preferences you can choose an
+install from</p>
+<ul class="simple">
+<li><p>pip if you are a Cloudmesh user with experience,</p></li>
+<li><p>an installation in containers if you are a user with no experience,</p></li>
+<li><p>source install if you are a developer.</p></li>
+</ul>
+<p>Please read the installation section in this manual thoroughly, and understand
+the items explained before you install it. Do not just paste and copy the text in
+your terminal and execute it as it could have unexpected consequences.
+This also helps to decide which installation method is best suited for you.</p>
+<p>We are providing a <strong>clickable</strong> map to help you in your decision process which
+version to install.</p>
+<script>mermaid.initialize({startOnLoad:true});</script><div class="mermaid">
+            graph LR
+     os{OS}
+
+     os--&gt;chose{Chose OS}
+     os--&gt;Raspbian
+     os--&gt;macOS
+     os--&gt;Windows
+     os--&gt;Linux
+     os--&gt;a
+
+     a--&gt;cmi
+
+     chose--&gt;pip
+     chose--&gt;c{Chose}
+
+     Raspbian--&gt;pip
+
+     subgraph Python
+         p([3.7, 3.8, conda, jupyter])
+         pip(pip install fa:fa-link)
+         cmi(cloudmesh-installer fa:fa-link)
+     end
+
+     subgraph IoT
+         Raspbian(Rasbian fa:fa-link)
+     end
+
+     subgraph Developer
+         a{Any OS}
+     end
+
+
+     subgraph  OS
+         chose
+         Linux(Linux fa:fa-link)
+         macOS(macOS fa:fa-link)
+         Windows(Windows fa:fa-link)
+     end
+
+     subgraph Container
+
+         c
+         Docker(Docker fa:fa-link)
+         cmsd(cmsd fa:fa-link)
+     end
+
+     click Raspbian &quot;https://cloudmesh.github.io/cloudmesh-manual/installation/install-pi.html&quot;
+     click Windows &quot;https://cloudmesh.github.io/cloudmesh-manual/installation/install-windows.html&quot;
+     click Linux &quot;https://cloudmesh.github.io/cloudmesh-manual/installation/install-linux.html&quot;
+     click macOS &quot;https://cloudmesh.github.io/cloudmesh-manual/installation/install-macos.html&quot;
+
+     click Docker &quot;https://cloudmesh.github.io/cloudmesh-manual/installation/install-cmsd.html&quot;
+     click cmsd &quot;https://cloudmesh.github.io/cloudmesh-manual/installation/install-cmsd.html&quot;
+     click pip &quot;https://cloudmesh.github.io/cloudmesh-manual/installation/install-native.html&quot;
+     click cmi &quot;https://cloudmesh.github.io/cloudmesh-manual/installation/cloudmesh-installer.html&quot;
+
+     style Container fill:#8fc,stroke:#333,stroke-width:2px
+     style OS fill:#eef,stroke:#333,stroke-width:2px
+     style Python fill:#2df,stroke:#333,stroke-width:2px
+        </div><div class="section" id="installation-of-cloudmesh-with-docker">
+<h2><a class="toc-backref" href="#id1">Installation of cloudmesh with Docker</a><a class="headerlink" href="#installation-of-cloudmesh-with-docker" title="Permalink to this headline">¶</a></h2>
+<p>Although cloudmesh can just be installed on containers without the use of Python,
+it is best if you use cmsd. This is a python program that is designed to manage
+the containers and makes use of cloudmesh simple form the command line.</p>
+<p>This installation can be conducted on all OSes on which docker and python 3.8.2 or newer  is
+installed. Cloudmesh can also be installed with a specialized <cite>cloudmesh-cmsd</cite>
+command that is distributed as source and on PyPi.</p>
+<p>See  <a class="reference internal" href="../cmsd.html"><span class="doc">Cloudmesh cmsd</span></a> for more information.</p>
+</div>
+<div class="section" id="installation-of-cloudmesn-in-python">
+<h2><a class="toc-backref" href="#id2">Installation of Cloudmesn in Python</a><a class="headerlink" href="#installation-of-cloudmesn-in-python" title="Permalink to this headline">¶</a></h2>
+<p>On some operating systems, you will need a number of tools installed
+on your computer before you can install cloudmesh.  It is important to
+full fill these requirements. Please use the clickable map to identify
+the OS method you use and follow the link.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please only continue once you have the Prerequists fulfilled.</p>
+</div>
+<p>Once you have installed the prerequisites on your computer cloudmesh
+is also each to install natively in your python virtual environment.
+Please note that we do not recommend installing it on your OS
+directly, but you <strong>must</strong> use a virtual environment.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We recommend that you use Python <cite>venv</cite> to isolate the
+system Python form the user python. For simplicity we assume
+and document on how to set up a virtual environment in the
+home directory under the directory name <cite>~/ENV3</cite>.</p>
+</div>
+<div class="section" id="anaconda-and-conda">
+<h3><a class="toc-backref" href="#id3">Anaconda and Conda</a><a class="headerlink" href="#anaconda-and-conda" title="Permalink to this headline">¶</a></h3>
+<p>Cloudmesh can be installed in anaconda with pip. Please follow our pip
+instructions, but make sure you create your own virtualenv with conda and assure
+you use python at least 3.8.2.</p>
+<div class="section" id="python-installation-from-python-org">
+<h4><a class="toc-backref" href="#id4">Python Installation from python.org</a><a class="headerlink" href="#python-installation-from-python-org" title="Permalink to this headline">¶</a></h4>
+<p>The easiest installation of Python for cloudmesh is to use the installation from
+<a class="reference external" href="https://www.python.org/downloads">https://www.python.org/downloads</a>. Please, visit the page and follow the
+instructions. After this install, you have <cite>python3</cite> available from the
+command line. After the installation of Python do the following:</p>
+<p>Linux, macOS, Windows gitbash:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3.8 -m venv ~/ENV3
+$ <span class="nb">source</span> ~/ENV3/bin/activate
+$ pip install pip -U
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can add at the end of your <cite>.bashrc</cite> (ubuntu) or <cite>.bash_profile</cite>
+(macOS) file the line so the environment is always loaded.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ~/ENV3/bin/activate
+</pre></div>
+</div>
+</div>
+<p>In Windows CMD, you can do this with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python -m venv ENV3
+$ ENV3<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+$ pip install pip -U
+</pre></div>
+</div>
+<p>Now you can now install cloudmesh <code class="docutils literal notranslate"><span class="pre">cmsd</span></code> with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install cloudmesh-openstack
+</pre></div>
+</div>
+<p>In a Linux subsystem, <cite>~/</cite> is the default location, assumed
+to be the home directory.  In a windows system, this location is
+assumed to be under <cite>C:UsersUSERNAME</cite>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="ssh-key">
+<h2><a class="toc-backref" href="#id5">SSH key</a><a class="headerlink" href="#ssh-key" title="Permalink to this headline">¶</a></h2>
+<p>In order for you to use a cloud you will need an ssh key that you use to interact
+conveniently with cloud resources. This can be
+created from the command line with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen
+</pre></div>
+</div>
+<p>Please make sure to use a passphrase with your key. Anyone telling you to use
+a passwordless key is giving you the wrong advice.</p>
+</div>
+<div class="section" id="first-configuration">
+<h2><a class="toc-backref" href="#id6">First configuration</a><a class="headerlink" href="#first-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Once installed, test the cloudmesh command and at the same time create
+a configuration file. This is done by invoking the <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">help</span></code> command the first
+time. Thus, just type the command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms <span class="nb">help</span>
+</pre></div>
+</div>
+<p>in your terminal. It will create a directory <cite>~/.cloudmesh</cite>
+in which you can find the configuration file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/.</span><span class="n">cloudmesh</span><span class="o">/</span><span class="n">cloudmesh</span><span class="o">.</span><span class="n">yaml</span>
+</pre></div>
+</div>
+<p>To get you started quickly, we are providing some convenient programs that help
+you set things up. Use the commands</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms gui
+cms init
+</pre></div>
+</div>
+<p>To set up a default configuration. However, you can also do this from
+the command line while using the <cite>config</cite> command in case the <cite>gui</cite>
+command is not an option for you:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">bash</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>cms config set cloudmesh.profile.user=YOURUSERNAME
+cms set key user=YOURUSERNAME</p>
+</div></blockquote>
+<p>Alternatively, you can edit and modify the <cite>~/.clloudmesh/cloudmesh.yaml</cite> file.</p>
+<p>Cloudmesh comes with cloud service bundles that can be easily
+installed using the <cite>pip</cite> command.  Examples include</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install cloudmesh-openstack
+pip install cloudmesh-aws
+pip install cloudmesh-google
+pip install cloudmesh-azure
+pip install cloudmesh-volume
+pip install cloudmesh-storage
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-directory-cloudmesh">
+<h2><a class="toc-backref" href="#id7">The Directory .cloudmesh</a><a class="headerlink" href="#the-directory-cloudmesh" title="Permalink to this headline">¶</a></h2>
+<p>All cloudmesh related configuration information is stored in the
+<cite>.cloudmesh</cite> directory.  In case you want to start fresh, simply
+delete that directory and its subdirectories. However, if you need
+information from it, make sure you make a backup.</p>
+<p>Please note that in this file, you have sensitive information, and it
+should never be backed up into GitHub, box, icloud, or other such services.
+Keep it on your computer or back it up on a secure encrypted external hard
+drive or storage media only you have access to.</p>
+</div>
+<div class="section" id="installation-of-mongodb">
+<h2><a class="toc-backref" href="#id8">Installation of MongoDB</a><a class="headerlink" href="#installation-of-mongodb" title="Permalink to this headline">¶</a></h2>
+<p>Once you have installed cloudmesh it is easy to install MongoDB with
+the build-in MongoDB installer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">admin</span> <span class="n">mongo</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>The installation of Mongo is done on the default port, and a version
+of mongo is installed in your ~/.cloudmsh directory. If you have other
+versions of Mongo on your computer make sure it is the newer one, as
+Mongo states, older versions must first completely uninstalled, so
+Mongo works properly.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="quickstart/quickstart.html" class="btn btn-neutral float-right" title="Quickstart" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,476 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Infrastructure Workflow &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Virtual Machine Management" href="vm/vm.html" />
+    <link rel="prev" title="HPC" href="hpc/refcard.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">To Do</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="deprecated.html">Deprecated</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="configuration/encryption.html">Cloudmesh Config File Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vcluster.html">Virtual Cluster (in progress)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc/batch.html">Batch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc/refcard.html">HPC</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Infrastructure Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#database-objects">Database Objects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#definition-collection">Definition Collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-flow-collection">Running Flow Collection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#javascript-interface-proposed">Javascript Interface (proposed)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rest">REST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vm/vm.html">Virtual Machine Management</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="deprecated.html">Deprecated</a> &raquo;</li>
+        
+      <li>Infrastructure Workflow</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/workflow.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="infrastructure-workflow">
+<h1>Infrastructure Workflow<a class="headerlink" href="#infrastructure-workflow" title="Permalink to this headline">¶</a></h1>
+<p>Cloudmesh supports an infrastructure
+<a class="reference external" href="https://github.com/cloudmesh/cloudmesh-flow">workflow</a> where users
+can specify python functions and map their execution on cloud
+infrastructure. The workflow feature allows you to define Python
+functions on a workflow class, and specify when to execute them via the
+command line or in a YAML file. You can then visualize the result of
+your workflow execution.</p>
+<p>An example is given next.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cloudmesh.flow.WorkFlow</span> <span class="kn">import</span> <span class="n">BaseWorkFlow</span>
+
+<span class="k">class</span> <span class="nc">MyFlow</span><span class="p">(</span><span class="n">BaseWorkFlow</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in a!&quot;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in b!&quot;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">c</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in c!&quot;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This allows you to define functions in your workflow file. Then you can
+write a specification for the sequence to execute your functions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">a</span><span class="p">;</span> <span class="n">b</span> <span class="o">||</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Where</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">;</span> <span class="pre">b</span></code> is executed sequentially</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">||</span> <span class="pre">c</span></code> is executed in parallel.</p></li>
+</ul>
+<p>Finally, after execution the results are stored in MongoDB to be
+visualized or consumed by later functions in the series.</p>
+<div class="section" id="database-objects">
+<h2>Database Objects<a class="headerlink" href="#database-objects" title="Permalink to this headline">¶</a></h2>
+<p>There are two collections related to workflow objects. The first is for
+the definition of a flow, and the second for the status of a flow that
+is in progress.</p>
+<div class="section" id="definition-collection">
+<h3>Definition Collection<a class="headerlink" href="#definition-collection" title="Permalink to this headline">¶</a></h3>
+<p>When you define a workflow, a new collection is created for the
+definition. For a workflow named “test”, this collection exists at
+“test-flow”. This collection contains objects that look like the
+following:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;pytesta&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;dependencies&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+    <span class="nt">&quot;workflow&quot;</span> <span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;flow&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;pytesta&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;test-flow&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-05-02 00:32:11.034870&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-05-02 00:32:11.034870&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;flow&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;status&quot;</span> <span class="p">:</span> <span class="s2">&quot;defined&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The salient features are <code class="docutils literal notranslate"><span class="pre">name</span></code>, which is the name of the node, and
+<code class="docutils literal notranslate"><span class="pre">dependencies</span></code> which is an array of other node names this node depends
+upon. All elements in a flow definition collection will have
+<code class="docutils literal notranslate"><span class="pre">status</span> <span class="pre">:</span> <span class="pre">&quot;defined&quot;</span></code>.</p>
+</div>
+<div class="section" id="running-flow-collection">
+<h3>Running Flow Collection<a class="headerlink" href="#running-flow-collection" title="Permalink to this headline">¶</a></h3>
+<p>When a flow is started with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms flow run
+</pre></div>
+</div>
+<p>A new collection is started with the suffix “-active” added at the end.
+For example, if your flowname is <code class="docutils literal notranslate"><span class="pre">test</span></code> and your nodes are defined in
+<code class="docutils literal notranslate"><span class="pre">test-flow</span></code>, then the active collection in MongoDB will be
+<code class="docutils literal notranslate"><span class="pre">test-flow-active</span></code>. Objects in this collection are similar to the
+above, with two changes:</p>
+<ol class="arabic simple">
+<li><p>First, they have a <code class="docutils literal notranslate"><span class="pre">result</span></code> field attached, which holds the JSON
+value from the result of executing the node and</p></li>
+<li><p>They have a richer <code class="docutils literal notranslate"><span class="pre">status</span></code> field, with the following values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pending</span></code> is the status when the flow starts</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">running</span></code> is the status when a node is being executed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finished</span></code> is the status when the node has executed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">error</span></code> is the status when a node finished execution with a
+non-zero exit code</p></li>
+</ul>
+</li>
+</ol>
+<p>When interacting directly with the database, it is important to use the
+values from the definition collection unless you are explicitly
+interacting with a flow in progress. The running collection may not be
+up-to-date and may contain incorrect information. For example the
+<code class="docutils literal notranslate"><span class="pre">dependencies</span></code> array in the definition collection reflects the overall
+dependencies specified in the flow definition but in the running
+collection the array is continually modified whenever other nodes finish
+their work.</p>
+</div>
+</div>
+<div class="section" id="javascript-interface-proposed">
+<h2>Javascript Interface (proposed)<a class="headerlink" href="#javascript-interface-proposed" title="Permalink to this headline">¶</a></h2>
+<p>We are looking for someone that would chose as its project to include a
+rendering of some DAG in javascript. The javascript library must be free
+to use. Nodes and edges must be able to be labeled.</p>
+<p>A promising start for a Javascript library is</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://visjs.org/network_examples.html">http://visjs.org/network_examples.html</a></p></li>
+<li><p><a class="reference external" href="http://visjs.org/examples/network/events/interactionEvents.html">http://visjs.org/examples/network/events/interactionEvents.html</a></p></li>
+</ul>
+<p>This project is only recommended for someone that knows javascript
+already.</p>
+<p>You will do the rest of the project in python. It is important that the
+functions be specified in python and not just Javascript. The focus is
+not on specifying the DAG with a GUI, but to visualizing it at runtime
+with status updates</p>
+<p>Here is another summary that we posted earlier and is probably better as
+it has a dict return</p>
+<p>So what we want to do is something i have done previously somewhere with
+graphviz, but instead of using graphviz we use java script. W want to
+define tasks that depend on each other. The tasks are defined as python
+functions. The dependencies are specified via a simple graph string</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">a</span> <span class="p">();</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">);</span> <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">;</span> <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;done&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="p">:</span><span class="s2">&quot;circle&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">b</span> <span class="p">();</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">);</span> <span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="k">return</span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;done&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="p">:</span><span class="s2">&quot;circle&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">b</span> <span class="p">();</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">);</span> <span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="k">return</span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;done&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="p">:</span><span class="s2">&quot;circle&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;c&quot;</span><span class="p">}</span>
+
+
+<span class="n">w</span> <span class="o">=</span> <span class="n">workflow</span><span class="p">(</span><span class="s2">&quot;a; b | c&quot;</span><span class="p">)</span>
+
+<span class="p">;</span> <span class="o">=</span> <span class="n">sequential</span>
+
+<span class="o">|</span> <span class="o">=</span> <span class="n">parallel</span>
+
+
+<span class="n">w</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>While executing the javascript would change dynamically the state and
+color after a calculation is completed. The workflow should also be able
+to be specified in yaml</p>
+<p>Here just one idea:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tasks</span><span class="p">:</span>
+    <span class="n">task</span><span class="p">:</span>
+      <span class="n">name</span><span class="p">:</span> <span class="n">a</span>
+      <span class="n">parameter</span><span class="p">:</span>
+         <span class="n">x</span><span class="p">:</span> <span class="s2">&quot;int&quot;</span>
+         <span class="n">y</span><span class="p">::</span> <span class="s2">&quot;int&quot;</span>
+      <span class="n">calculation</span><span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+      <span class="n">entry</span><span class="p">:</span>
+         <span class="n">color</span><span class="p">:</span> <span class="n">green</span>
+         <span class="n">label</span><span class="p">:</span> <span class="n">a</span>
+         <span class="n">value</span><span class="p">:</span> <span class="n">x</span> <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">python</span> <span class="n">variable</span> <span class="n">local</span> <span class="n">to</span> <span class="n">the</span> <span class="n">function</span>
+         <span class="n">shape</span><span class="p">:</span> <span class="n">circle</span>
+      <span class="k">return</span><span class="p">:</span>
+         <span class="n">color</span><span class="p">:</span> <span class="n">green</span>
+         <span class="n">label</span><span class="p">:</span> <span class="n">a</span>
+         <span class="n">value</span><span class="p">:</span> <span class="n">x</span> <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">python</span> <span class="n">variable</span> <span class="n">local</span> <span class="n">to</span> <span class="n">the</span> <span class="n">function</span>
+         <span class="n">shape</span><span class="p">:</span> <span class="n">circle</span>
+</pre></div>
+</div>
+<p>Naturally at one point f(x,y) will be cloud related such as starting a
+vm and executing a command in teh vm ….</p>
+<p>Followup:</p>
+<p>We added a value to the return. Values can be any object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">a</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;done&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;shape&quot;</span><span class="p">:</span> <span class="s2">&quot;circle&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">x</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rest">
+<h2>REST<a class="headerlink" href="#rest" title="Permalink to this headline">¶</a></h2>
+<p>An OpenAPI specification for this is to be defined.</p>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/xflr6/graphviz">https://github.com/xflr6/graphviz</a></p></li>
+<li><p><a class="reference external" href="http://visjs.org/examples/network/events/interactionEvents.html">http://visjs.org/examples/network/events/interactionEvents.html</a></p></li>
+<li><p>This work is influenced by <a class="reference external" href="https://github.com/cloudmesh/workflow">https://github.com/cloudmesh/workflow</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="vm/vm.html" class="btn btn-neutral float-right" title="Virtual Machine Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hpc/refcard.html" class="btn btn-neutral float-left" title="HPC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

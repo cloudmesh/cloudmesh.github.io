@@ -1,0 +1,1205 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cloudmesh Database &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Cloudmesh Database</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/database/database.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cloudmesh-database">
+<h1>Cloudmesh Database<a class="headerlink" href="#cloudmesh-database" title="Permalink to this headline">¶</a></h1>
+<p>Cloudmesh has a database in which a local copy of information about
+objects that are stored in the cloud is maintained. The objects contain
+all information of the cloud that can be retrieved with the raw provider
+but are enhanced with a cloudmesh attribute dict. Potential security
+related attributes, will however be removed from it so they are not
+stored in the database.</p>
+<p>This dict looks like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;cm&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="s2">&quot;kind&quot;</span><span class="p">:</span> <span class="n">the</span> <span class="n">kind</span> <span class="n">of</span> <span class="n">the</span> <span class="n">provider</span>
+   <span class="s2">&quot;cloud&quot;</span><span class="p">:</span> <span class="n">the</span> <span class="n">cloud</span> <span class="ow">or</span> <span class="n">service</span> <span class="n">name</span><span class="p">,</span> <span class="n">will</span> <span class="n">be</span> <span class="n">renamed</span> <span class="n">to</span> <span class="n">service</span> <span class="ow">in</span> <span class="n">future</span><span class="p">)</span>
+   <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">a</span> <span class="n">unique</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">object</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>We list in the next section examples of such data objects</p>
+<div class="section" id="virtual-machines">
+<h2>Virtual Machines<a class="headerlink" href="#virtual-machines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="openstack">
+<h3>Openstack<a class="headerlink" href="#openstack" title="Permalink to this headline">¶</a></h3>
+<p>The compute provider kind is <code class="docutils literal notranslate"><span class="pre">openstack</span></code>. The Provider is located at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/virtualbox/Provider.py">https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/virtualbox/Provider.py</a></p></li>
+</ul>
+<p>This provider should not be used, but you need to use the general
+provider at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/vm/Provider.py">https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/vm/Provider.py</a></p></li>
+</ul>
+<div class="section" id="flavor">
+<h4>Flavor<a class="headerlink" href="#flavor" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5ca798a7dc64f18b19e644e1&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;id&quot;</span> <span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;m1.tiny&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ram&quot;</span> <span class="p">:</span> <span class="mi">512</span><span class="p">,</span>
+    <span class="s2">&quot;disk&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;bandwidth&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;price&quot;</span> <span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="s2">&quot;extra&quot;</span> <span class="p">:</span> <span class="p">{},</span>
+    <span class="s2">&quot;vcpus&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;ephemeral_disk&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;swap&quot;</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;flavor&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;driver&quot;</span> <span class="p">:</span> <span class="s2">&quot;openstack&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;chameleon&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-05 18:04:23.621043&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;m1.tiny&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;chameleon-flavor&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-06 06:50:23.894035&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;updated&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-06 06:50:23.867695&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="image">
+<h4>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5ca798abdc64f18b19e644e9&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;id&quot;</span> <span class="p">:</span> <span class="s2">&quot;4c8e6dac-97f0-4224-b7a2-0daef96b5c9f&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;CC-Ubuntu16.04&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;extra&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;visibility&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;updated&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-03-25T21:21:06Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-03-25T21:20:51Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span> <span class="p">:</span> <span class="s2">&quot;ACTIVE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;progress&quot;</span> <span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&quot;metadata&quot;</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;build-repo-commit&quot;</span> <span class="p">:</span> <span class="s2">&quot;4ba0beb418de52f0d3bf93a94392b662d653c073&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;build-variant&quot;</span> <span class="p">:</span> <span class="s2">&quot;base&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;build-os-base-image-revision&quot;</span> <span class="p">:</span> <span class="s2">&quot;20190325&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;build-os&quot;</span> <span class="p">:</span> <span class="s2">&quot;ubuntu-xenial&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;build-tag&quot;</span> <span class="p">:</span> <span class="s2">&quot;jenkins-cc-ubuntu16.04-builder-34&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;build-repo&quot;</span> <span class="p">:</span> <span class="s2">&quot;https://github.com/ChameleonCloud/CC-Ubuntu16.04&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;os_type&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;serverId&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;minDisk&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;minRam&quot;</span> <span class="p">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;image&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;driver&quot;</span> <span class="p">:</span> <span class="s2">&quot;openstack&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;chameleon&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-05 18:04:27.417958&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;updated&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-03-25T21:21:06Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;CC-Ubuntu16.04&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;chameleon-image&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-06 06:50:33.747656&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="vm">
+<h4>VM<a class="headerlink" href="#vm" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5ca798acdc64f18b19e6454e&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;id&quot;</span> <span class="p">:</span> <span class="s2">&quot;f531d2df-c472-4b32-8239-0e3969d33ebb&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;exp-grp-gregor-vm-1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;state&quot;</span> <span class="p">:</span> <span class="s2">&quot;running&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;public_ips&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;private_ips&quot;</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;192.168.0.249&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;size&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;created_at&quot;</span> <span class="p">:</span> <span class="n">ISODate</span><span class="p">(</span><span class="s2">&quot;2019-04-01T11:05:56.000-04:00&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;image&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;extra&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;addresses&quot;</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;CH-819337-net&quot;</span> <span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;OS-EXT-IPS-MAC:mac_addr&quot;</span> <span class="p">:</span> <span class="s2">&quot;fa:16:3e:9d:ca:c2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;version&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                    <span class="s2">&quot;addr&quot;</span> <span class="p">:</span> <span class="s2">&quot;192.168.0.249&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;OS-EXT-IPS:type&quot;</span> <span class="p">:</span> <span class="s2">&quot;fixed&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hostId&quot;</span> <span class="p">:</span> <span class="s2">&quot;64472a496451a2d599c215a8e86275191c9e3fb9d53790de35bbb6dc&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;access_ip&quot;</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;access_ipv6&quot;</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tenantId&quot;</span> <span class="p">:</span> <span class="s2">&quot;CH-819337&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;userId&quot;</span> <span class="p">:</span> <span class="s2">&quot;tg455498&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;imageId&quot;</span> <span class="p">:</span> <span class="s2">&quot;4c8e6dac-97f0-4224-b7a2-0daef96b5c9f&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flavorId&quot;</span> <span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;uri&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://openstack.tacc.chameleoncloud.org:8774/v2/CH-819337/servers/f531d2df-c472-4b32-8239-0e3969d33ebb&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;nova&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;metadata&quot;</span> <span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;password&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-01T15:05:56Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;updated&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-01T15:06:06Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;key_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;gregor&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;disk_config&quot;</span> <span class="p">:</span> <span class="s2">&quot;MANUAL&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;config_drive&quot;</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;availability_zone&quot;</span> <span class="p">:</span> <span class="s2">&quot;nova&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;volumes_attached&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;task_state&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;vm_state&quot;</span> <span class="p">:</span> <span class="s2">&quot;active&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;power_state&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;progress&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;fault&quot;</span> <span class="p">:</span> <span class="n">null</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;node&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;driver&quot;</span> <span class="p">:</span> <span class="s2">&quot;openstack&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;chameleon&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;updated&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-06 06:50:35.592158&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;exp-grp-gregor-vm-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-05 18:04:28.376784&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;chameleon-node&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-06 06:50:35.596479&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="azure-azprovider">
+<h2>Azure AzProvider<a class="headerlink" href="#azure-azprovider" title="Permalink to this headline">¶</a></h2>
+<p>The compute provider kind is <code class="docutils literal notranslate"><span class="pre">azure</span></code>. The Provider is located at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/azure/AzProvider.py">https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/azure/AzProvider.py</a></p></li>
+</ul>
+<p>This provider should not be used, but you need to use the general
+provider at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/vm/Provider.py">https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/vm/Provider.py</a></p></li>
+</ul>
+<div class="section" id="id1">
+<h3>Flavor<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id2">
+<h3>Image<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id3">
+<h3>VM<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5cbe0513b6ac5a154ef64a26&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;additionalCapabilities&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;availabilitySet&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;diagnosticsProfile&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;hardwareProfile&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;vmSize&quot;</span> <span class="p">:</span> <span class="s2">&quot;Standard_DS1_v2&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;id&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;identity&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;instanceView&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;licenseType&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;location&quot;</span> <span class="p">:</span> <span class="s2">&quot;eastus&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;testvm1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;networkProfile&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;networkInterfaces&quot;</span> <span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                <span class="s2">&quot;primary&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                <span class="s2">&quot;resourceGroup&quot;</span> <span class="p">:</span> <span class="s2">&quot;test&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;osProfile&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;adminPassword&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;adminUsername&quot;</span> <span class="p">:</span> <span class="s2">&quot;ubuntu&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;allowExtensionOperations&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;computerName&quot;</span> <span class="p">:</span> <span class="s2">&quot;testvm1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;customData&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;linuxConfiguration&quot;</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;disablePasswordAuthentication&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+            <span class="s2">&quot;provisionVmAgent&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+            <span class="s2">&quot;ssh&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;publicKeys&quot;</span> <span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;keyData&quot;</span> <span class="p">:</span> <span class="s2">&quot;ssh-rsa ....&quot;</span>
+                        <span class="s2">&quot;path&quot;</span> <span class="p">:</span> <span class="s2">&quot;/home/ubuntu/.ssh/authorized_keys&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;requireGuestProvisionSignal&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;secrets&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;windowsConfiguration&quot;</span> <span class="p">:</span> <span class="n">null</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;plan&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;provisioningState&quot;</span> <span class="p">:</span> <span class="s2">&quot;Succeeded&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;resourceGroup&quot;</span> <span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;resources&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;storageProfile&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;dataDisks&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;imageReference&quot;</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;offer&quot;</span> <span class="p">:</span> <span class="s2">&quot;UbuntuServer&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;publisher&quot;</span> <span class="p">:</span> <span class="s2">&quot;Canonical&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sku&quot;</span> <span class="p">:</span> <span class="s2">&quot;18.04-LTS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;version&quot;</span> <span class="p">:</span> <span class="s2">&quot;latest&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;osDisk&quot;</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;caching&quot;</span> <span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;createOption&quot;</span> <span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;diffDiskSettings&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;diskSizeGb&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;encryptionSettings&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;image&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;managedDisk&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                <span class="s2">&quot;resourceGroup&quot;</span> <span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;storageAccountType&quot;</span> <span class="p">:</span> <span class="n">null</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;testvm1_OsDisk_1_a6a6a6a7639468d88e7b018385e225f&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;osType&quot;</span> <span class="p">:</span> <span class="s2">&quot;Linux&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vhd&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;writeAcceleratorEnabled&quot;</span> <span class="p">:</span> <span class="n">null</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;tags&quot;</span> <span class="p">:</span> <span class="p">{},</span>
+    <span class="s2">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;Microsoft.Compute/virtualMachines&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;vmId&quot;</span> <span class="p">:</span> <span class="s2">&quot;aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaa&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;zones&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;node&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;driver&quot;</span> <span class="p">:</span> <span class="s2">&quot;azure&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;az&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;testvm1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;az-node&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-22 18:16:51.552324&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-22 18:16:51.552324&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="azure-ms-azure-library-provider">
+<h2>Azure MS Azure Library Provider<a class="headerlink" href="#azure-ms-azure-library-provider" title="Permalink to this headline">¶</a></h2>
+<p>This provider is written with the help of the Azure python libraries</p>
+<p>This provider should not be used, but you need to use the general
+provider at</p>
+<p>This provider should not be used, but you need to use the general
+provider at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/vm/Provider.py">https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/vm/Provider.py</a></p></li>
+</ul>
+<div class="section" id="id4">
+<h3>Flavor<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id5">
+<h3>Image<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id6">
+<h3>VM<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="aws-libcloud-provider">
+<h2>AWS Libcloud Provider<a class="headerlink" href="#aws-libcloud-provider" title="Permalink to this headline">¶</a></h2>
+<p>The compute provider kind is <code class="docutils literal notranslate"><span class="pre">aws</span></code>. The Provider is located at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/aws/Provider.py">https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/aws/Provider.py</a></p></li>
+</ul>
+<p>This provider should not be used, but you need to use the general
+provider at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/vm/Provider.py">https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/vm/Provider.py</a></p></li>
+</ul>
+<div class="section" id="id7">
+<h3>Flavor<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;bandwidth&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+ <span class="s1">&#39;cm&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;cloud&#39;</span><span class="p">:</span> <span class="s1">&#39;aws&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;created&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-04-25 11:01:21.939851&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;driver&#39;</span><span class="p">:</span> <span class="s1">&#39;aws&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;kind&#39;</span><span class="p">:</span> <span class="s1">&#39;flavor&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;t2.micro&#39;</span><span class="p">},</span>
+ <span class="s1">&#39;disk&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+ <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;t2.micro&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;t2.micro&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="mf">0.012</span><span class="p">,</span>
+ <span class="s1">&#39;ram&#39;</span><span class="p">:</span> <span class="mi">1024</span><span class="p">,</span>
+ <span class="s1">&#39;updated&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-04-25 11:01:21.939851&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>Image<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;cm&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;cloud&#39;</span><span class="p">:</span> <span class="s1">&#39;aws&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;created&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-04-25 11:10:31.912143&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;driver&#39;</span><span class="p">:</span> <span class="s1">&#39;aws&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;kind&#39;</span><span class="p">:</span> <span class="s1">&#39;image&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;memsql-cloudformation_6.7.11-5d2517b77a_1.5.3_1.0.6 &#39;</span>
+                 <span class="s1">&#39;20190208-212347&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;updated&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-04-25 11:10:31.912155&#39;</span><span class="p">},</span>
+  <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;ami-0496a382c868777a4&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;memsql-cloudformation_6.7.11-5d2517b77a_1.5.3_1.0.6 &#39;</span>
+          <span class="s1">&#39;20190208-212347&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>VM<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;cm&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;cloud&#39;</span><span class="p">:</span> <span class="s1">&#39;aws&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;created&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-04-25 06:47:39+00:00&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;driver&#39;</span><span class="p">:</span> <span class="s1">&#39;aws&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;kind&#39;</span><span class="p">:</span> <span class="s1">&#39;node&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;t0&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;updated&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-04-25 10:55:45.394053&#39;</span><span class="p">},</span>
+  <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=&lt;</span><span class="n">libcloud</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">iso8601</span><span class="o">.</span><span class="n">Utc</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x1119225c0</span><span class="o">&gt;</span><span class="p">),</span>
+  <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;i-032d5c07fcfaf5b8b&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+  <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;t0&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;private_ips&#39;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s1">&#39;public_ips&#39;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+  <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="s1">&#39;running&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="aws-boto3-provider">
+<h2>AWS Boto3 Provider<a class="headerlink" href="#aws-boto3-provider" title="Permalink to this headline">¶</a></h2>
+<p>The compute provider kind is <code class="docutils literal notranslate"><span class="pre">MISSING</span></code>. The Provider is located at</p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>This provider should not be used, but you need to use the general
+provider at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/vm/Provider.py">https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/compute/vm/Provider.py</a></p></li>
+</ul>
+<div class="section" id="id10">
+<h3>Flavor<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id11">
+<h3>Image<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id12">
+<h3>VM<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="storage">
+<h2>Storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="box">
+<h3>Box<a class="headerlink" href="#box" title="Permalink to this headline">¶</a></h3>
+<p>The storage provider kind is <code class="docutils literal notranslate"><span class="pre">box</span></code>. The Provider is located at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/provider/box/Provider.py">https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/provider/box/Provider.py</a></p></li>
+</ul>
+<p>This provider should not be used, but you need to use the general
+provider at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/Provider.py">https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/Provider.py</a></p></li>
+</ul>
+<div class="section" id="directory">
+<h4>Directory<a class="headerlink" href="#directory" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span><span class="s1">&#39;_object_id&#39;</span>: <span class="s1">&#39;71983743142&#39;</span>,
+    <span class="s1">&#39;cm&#39;</span>: <span class="o">{</span>
+        <span class="s1">&#39;cloud&#39;</span>: <span class="s1">&#39;box&#39;</span>,
+    <span class="s1">&#39;kind&#39;</span>: <span class="s1">&#39;storage&#39;</span>,
+    <span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;test01&#39;</span>
+    <span class="o">}</span>,
+    <span class="s1">&#39;etag&#39;</span>: <span class="s1">&#39;0&#39;</span>,
+    <span class="s1">&#39;id&#39;</span>: <span class="s1">&#39;71983743142&#39;</span>,
+    <span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;test01&#39;</span>,
+    <span class="s1">&#39;sequence_id&#39;</span>: <span class="s1">&#39;0&#39;</span>,
+    <span class="s1">&#39;type&#39;</span>: <span class="s1">&#39;folder&#39;</span><span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="file">
+<h4>File<a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span><span class="s1">&#39;_object_id&#39;</span>: <span class="s1">&#39;432543586295&#39;</span>,
+  <span class="s1">&#39;cm&#39;</span>: <span class="o">{</span>
+      <span class="s1">&#39;cloud&#39;</span>: <span class="s1">&#39;box&#39;</span>,
+      <span class="s1">&#39;kind&#39;</span>: <span class="s1">&#39;storage&#39;</span>,
+      <span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;test.txt&#39;</span>
+  <span class="o">}</span>,
+  <span class="s1">&#39;etag&#39;</span>: <span class="s1">&#39;285&#39;</span>,
+  <span class="s1">&#39;id&#39;</span>: <span class="s1">&#39;432543586295&#39;</span>,
+  <span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;test.txt&#39;</span>,
+  <span class="s1">&#39;sequence_id&#39;</span>: <span class="s1">&#39;285&#39;</span>,
+  <span class="s1">&#39;sha1&#39;</span>: <span class="s1">&#39;bca20547e94049e1ffea27223581c567022a5774&#39;</span>,
+  <span class="s1">&#39;type&#39;</span>: <span class="s1">&#39;file&#39;</span><span class="o">}]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="azure-blob">
+<h3>Azure Blob<a class="headerlink" href="#azure-blob" title="Permalink to this headline">¶</a></h3>
+<p>The storage provider kind is <code class="docutils literal notranslate"><span class="pre">azureblob</span></code>. The Provider is located at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/provider/azureblob/Provider.py">https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/provider/azureblob/Provider.py</a></p></li>
+</ul>
+<p>This provider should not be used, but you need to use the general
+provider at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/Provider.py">https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/Provider.py</a></p></li>
+</ul>
+<div class="section" id="id13">
+<h4>Directory<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<p>Note that directory in Azure Blob storage is a virtual folder. An empty
+directory cannot be created and hence cloudmesh-storage creates a
+default marker file <code class="docutils literal notranslate"><span class="pre">dummy.txt</span></code> to create the directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span><span class="s1">&#39;cm&#39;</span>: <span class="o">{</span><span class="s1">&#39;cloud&#39;</span>: <span class="s1">&#39;azureblob&#39;</span>,
+         <span class="s1">&#39;created&#39;</span>: <span class="s1">&#39;2&#39;</span>,
+         <span class="s1">&#39;kind&#39;</span>: <span class="s1">&#39;storage&#39;</span>,
+         <span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;dirtest/dummy.txt&#39;</span>,
+         <span class="s1">&#39;size&#39;</span>: <span class="m">1</span>,
+         <span class="s1">&#39;status&#39;</span>: <span class="s1">&#39;exists&#39;</span>,
+         <span class="s1">&#39;updated&#39;</span>: <span class="s1">&#39;2&#39;</span><span class="o">}</span>,
+  <span class="s1">&#39;content&#39;</span>: None,
+  <span class="s1">&#39;deleted&#39;</span>: False,
+  <span class="s1">&#39;metadata&#39;</span>: None,
+  <span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;dirtest/dummy.txt&#39;</span>,
+  <span class="s1">&#39;properties&#39;</span>: <span class="o">{</span><span class="s1">&#39;append_blob_committed_block_count&#39;</span>: None,
+                 <span class="s1">&#39;blob_tier&#39;</span>: None,
+                 <span class="s1">&#39;blob_tier_change_time&#39;</span>: None,
+                 <span class="s1">&#39;blob_tier_inferred&#39;</span>: False,
+                 <span class="s1">&#39;blob_type&#39;</span>: <span class="s1">&#39;BlockBlob&#39;</span>,
+                 <span class="s1">&#39;content_length&#39;</span>: <span class="m">1</span>,
+                 <span class="s1">&#39;content_range&#39;</span>: None,
+                 <span class="s1">&#39;deleted_time&#39;</span>: None,
+                 <span class="s1">&#39;etag&#39;</span>: <span class="s1">&#39;0x8D6CA68C2D61B73&#39;</span>,
+                 <span class="s1">&#39;page_blob_sequence_number&#39;</span>: None,
+                 <span class="s1">&#39;remaining_retention_days&#39;</span>: None,
+                 <span class="s1">&#39;server_encrypted&#39;</span>: True<span class="o">}</span>,
+  <span class="s1">&#39;snapshot&#39;</span>: None<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h4>File<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span><span class="s1">&#39;cm&#39;</span>: <span class="o">{</span><span class="s1">&#39;cloud&#39;</span>: <span class="s1">&#39;azureblob&#39;</span>,
+         <span class="s1">&#39;created&#39;</span>: <span class="s1">&#39;2&#39;</span>,
+         <span class="s1">&#39;kind&#39;</span>: <span class="s1">&#39;storage&#39;</span>,
+         <span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;a/a/a1.txt&#39;</span>,
+         <span class="s1">&#39;size&#39;</span>: <span class="m">19</span>,
+         <span class="s1">&#39;status&#39;</span>: <span class="s1">&#39;exists&#39;</span>,
+         <span class="s1">&#39;updated&#39;</span>: <span class="s1">&#39;2&#39;</span><span class="o">}</span>,
+  <span class="s1">&#39;content&#39;</span>: None,
+  <span class="s1">&#39;deleted&#39;</span>: False,
+  <span class="s1">&#39;metadata&#39;</span>: None,
+  <span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;a/a/a1.txt&#39;</span>,
+  <span class="s1">&#39;properties&#39;</span>: <span class="o">{</span><span class="s1">&#39;append_blob_committed_block_count&#39;</span>: None,
+                 <span class="s1">&#39;blob_tier&#39;</span>: None,
+                 <span class="s1">&#39;blob_tier_change_time&#39;</span>: None,
+                 <span class="s1">&#39;blob_tier_inferred&#39;</span>: False,
+                 <span class="s1">&#39;blob_type&#39;</span>: <span class="s1">&#39;BlockBlob&#39;</span>,
+                 <span class="s1">&#39;content_length&#39;</span>: <span class="m">19</span>,
+                 <span class="s1">&#39;content_range&#39;</span>: None,
+                 <span class="s1">&#39;deleted_time&#39;</span>: None,
+                 <span class="s1">&#39;etag&#39;</span>: <span class="s1">&#39;0x8D6CA57263B4AEA&#39;</span>,
+                 <span class="s1">&#39;page_blob_sequence_number&#39;</span>: None,
+                 <span class="s1">&#39;remaining_retention_days&#39;</span>: None,
+                 <span class="s1">&#39;server_encrypted&#39;</span>: True<span class="o">}</span>,
+  <span class="s1">&#39;snapshot&#39;</span>: None<span class="o">}</span>
+</pre></div>
+</div>
+<p>AWSS3 Provider
+~~~~~———</p>
+<p>The storage provider kind is <code class="docutils literal notranslate"><span class="pre">awss3</span></code>. The Provider is located at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/provider/awss3/Provider.py">https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/provider/awss3/Provider.py</a></p></li>
+</ul>
+<p>This provider should not be used, but you need to use the general
+provider at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/Provider.py">https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/Provider.py</a></p></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h4>Directory<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id16">
+<h4>File<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="awss3-objectstore-provider">
+<h3>AWSS3 Objectstore Provider<a class="headerlink" href="#awss3-objectstore-provider" title="Permalink to this headline">¶</a></h3>
+<p>It is unclear what the difference to AWSS3 the one from cloudmesh-cloud
+is Please explain. If its the same, let us know and we should merge</p>
+<p>The storage provider kind is <code class="docutils literal notranslate"><span class="pre">objstorage</span></code>. The Provider is located at</p>
+<ul class="simple">
+<li><p>link is missing</p></li>
+</ul>
+<p>This provider should not be used, but you need to use the general
+provider at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/Provider.py">https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/Provider.py</a></p></li>
+</ul>
+<div class="section" id="id17">
+<h4>Directory<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id18">
+<h4>File<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="google-drive">
+<h3>Google Drive<a class="headerlink" href="#google-drive" title="Permalink to this headline">¶</a></h3>
+<p>The storage provider kind is <code class="docutils literal notranslate"><span class="pre">gdrive</span></code>. The Provider is located at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/provider/gdrive/Provider.py">https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/provider/gdrive/Provider.py</a></p></li>
+</ul>
+<p>This provider should not be used, but you need to use the general
+provider at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/Provider.py">https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/Provider.py</a></p></li>
+</ul>
+<div class="section" id="id19">
+<h4>Directory<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id20">
+<h4>File<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="local">
+<h3>Local<a class="headerlink" href="#local" title="Permalink to this headline">¶</a></h3>
+<p>This has not been tested yet, so be careful as it could remove local dir
+trees. we may need ta add an option –force for this provider and always
+ask if we want to delete the files while showing them first. This could
+even be a reason to introduce it in all providers.</p>
+<p>The storage provider kind is <code class="docutils literal notranslate"><span class="pre">local</span></code>. The Provider is located at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/provider/local/Provider.py">https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/provider/local/Provider.py</a></p></li>
+</ul>
+<p>This provider should not be used, but you need to use the general
+provider at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/Provider.py">https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/Provider.py</a></p></li>
+</ul>
+<div class="section" id="id21">
+<h4>Directory<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id22">
+<h4>File<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/*</span> <span class="mi">2</span> <span class="o">*/</span>
+<span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5cbc414e20b39a69d014efec&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dependencies&quot;</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;c&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;workflow&quot;</span> <span class="p">:</span> <span class="s2">&quot;workflow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;flow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;workflow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;workflow-flow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-21 10:09:18.887115&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-21 10:09:18.887115&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;flow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;workflow&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="emr">
+<h2>EMR<a class="headerlink" href="#emr" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cluster-listing">
+<h3>Cluster Listing<a class="headerlink" href="#cluster-listing" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5cae2f2176cd490cac627e04&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;emr cluster list&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;emr&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws-emr cluster list&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:00:01.850862&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:00:55.341485&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;data&quot;</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;Id&quot;</span> <span class="p">:</span> <span class="s2">&quot;j-XXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Name&quot;</span> <span class="p">:</span> <span class="s2">&quot;NAME&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Status&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;State&quot;</span> <span class="p">:</span> <span class="s2">&quot;TERMINATED&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;StateChangeReason&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;Code&quot;</span> <span class="p">:</span> <span class="s2">&quot;USER_REQUEST&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Message&quot;</span> <span class="p">:</span> <span class="s2">&quot;Terminated by user request&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;Timeline&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;CreationDateTime&quot;</span> <span class="p">:</span> <span class="n">ISODate</span><span class="p">(</span><span class="s2">&quot;2019-04-04T01:38:26.595Z&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;EndDateTime&quot;</span> <span class="p">:</span> <span class="n">ISODate</span><span class="p">(</span><span class="s2">&quot;2019-04-04T01:43:53.907Z&quot;</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;NormalizedInstanceHours&quot;</span> <span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+      <span class="o">...</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="instance-listing">
+<h3>Instance Listing<a class="headerlink" href="#instance-listing" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5cae36b976cd490de715a25a&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;emr instance list&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;j-XXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws-emr instance list&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:32:25.886579&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:32:39.244152&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;data&quot;</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;Id&quot;</span> <span class="p">:</span> <span class="s2">&quot;ci-XXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Ec2InstanceId&quot;</span> <span class="p">:</span> <span class="s2">&quot;i-XXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;PublicDnsName&quot;</span> <span class="p">:</span> <span class="s2">&quot;ec2-54-193-70-173.us-west-1.compute.amazonaws.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;PublicIpAddress&quot;</span> <span class="p">:</span> <span class="s2">&quot;54.193.70.173&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;PrivateDnsName&quot;</span> <span class="p">:</span> <span class="s2">&quot;ip-172-31-10-13.us-west-1.compute.internal&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;PrivateIpAddress&quot;</span> <span class="p">:</span> <span class="s2">&quot;172.31.10.13&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Status&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;State&quot;</span> <span class="p">:</span> <span class="s2">&quot;TERMINATED&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;StateChangeReason&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;Code&quot;</span> <span class="p">:</span> <span class="s2">&quot;INSTANCE_FAILURE&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Message&quot;</span> <span class="p">:</span> <span class="s2">&quot;Instance was terminated.&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;Timeline&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;CreationDateTime&quot;</span> <span class="p">:</span> <span class="n">ISODate</span><span class="p">(</span><span class="s2">&quot;2019-04-04T01:39:20.733Z&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;ReadyDateTime&quot;</span> <span class="p">:</span> <span class="n">ISODate</span><span class="p">(</span><span class="s2">&quot;2019-04-04T01:42:11.677Z&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;EndDateTime&quot;</span> <span class="p">:</span> <span class="n">ISODate</span><span class="p">(</span><span class="s2">&quot;2019-04-04T01:43:53.810Z&quot;</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;InstanceGroupId&quot;</span> <span class="p">:</span> <span class="s2">&quot;ig-XXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Market&quot;</span> <span class="p">:</span> <span class="s2">&quot;ON_DEMAND&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;InstanceType&quot;</span> <span class="p">:</span> <span class="s2">&quot;m4.xlarge&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;EbsVolumes&quot;</span> <span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;Device&quot;</span> <span class="p">:</span> <span class="s2">&quot;/dev/sdb&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;VolumeId&quot;</span> <span class="p">:</span> <span class="s2">&quot;vol-0255d0ae88dbbe78f&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;Device&quot;</span> <span class="p">:</span> <span class="s2">&quot;/dev/sdc&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;VolumeId&quot;</span> <span class="p">:</span> <span class="s2">&quot;vol-0092cf772c4cb49d6&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="o">...</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cluster-description">
+<h3>Cluster Description<a class="headerlink" href="#cluster-description" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5cae3acd76cd490f74997607&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;emr cluster description&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;j-2KJT8GO4RV4VR&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws-emr cluster description&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:49:49.923422&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:49:49.923422&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;data&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;Id&quot;</span> <span class="p">:</span> <span class="s2">&quot;j-XXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Name&quot;</span> <span class="p">:</span> <span class="s2">&quot;NAME&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Status&quot;</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;State&quot;</span> <span class="p">:</span> <span class="s2">&quot;TERMINATED&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;StateChangeReason&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;Code&quot;</span> <span class="p">:</span> <span class="s2">&quot;USER_REQUEST&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Message&quot;</span> <span class="p">:</span> <span class="s2">&quot;Terminated by user request&quot;</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;Timeline&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;CreationDateTime&quot;</span> <span class="p">:</span> <span class="n">ISODate</span><span class="p">(</span><span class="s2">&quot;2019-04-04T01:38:26.595Z&quot;</span><span class="p">),</span>
+                <span class="s2">&quot;EndDateTime&quot;</span> <span class="p">:</span> <span class="n">ISODate</span><span class="p">(</span><span class="s2">&quot;2019-04-04T01:43:53.907Z&quot;</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;Ec2InstanceAttributes&quot;</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;RequestedEc2SubnetIds&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="p">],</span>
+            <span class="s2">&quot;Ec2AvailabilityZone&quot;</span> <span class="p">:</span> <span class="s2">&quot;us-west-1c&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;RequestedEc2AvailabilityZones&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="p">],</span>
+            <span class="s2">&quot;IamInstanceProfile&quot;</span> <span class="p">:</span> <span class="s2">&quot;EMR_EC2_DefaultRole&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;EmrManagedMasterSecurityGroup&quot;</span> <span class="p">:</span> <span class="s2">&quot;sg-XXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;EmrManagedSlaveSecurityGroup&quot;</span> <span class="p">:</span> <span class="s2">&quot;sg-XXXXXXXXXXXXX&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;InstanceCollectionType&quot;</span> <span class="p">:</span> <span class="s2">&quot;INSTANCE_GROUP&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ReleaseLabel&quot;</span> <span class="p">:</span> <span class="s2">&quot;emr-5.22.0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;AutoTerminate&quot;</span> <span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;TerminationProtected&quot;</span> <span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;VisibleToAllUsers&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;Applications&quot;</span> <span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Name&quot;</span> <span class="p">:</span> <span class="s2">&quot;Spark&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Version&quot;</span> <span class="p">:</span> <span class="s2">&quot;2.4.0&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Name&quot;</span> <span class="p">:</span> <span class="s2">&quot;Hadoop&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Version&quot;</span> <span class="p">:</span> <span class="s2">&quot;2.8.5&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;Tags&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="p">],</span>
+        <span class="s2">&quot;ServiceRole&quot;</span> <span class="p">:</span> <span class="s2">&quot;EMR_DefaultRole&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;NormalizedInstanceHours&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;MasterPublicDnsName&quot;</span> <span class="p">:</span> <span class="s2">&quot;ec2-54-193-70-173.us-west-1.compute.amazonaws.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Configurations&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="p">],</span>
+        <span class="s2">&quot;ScaleDownBehavior&quot;</span> <span class="p">:</span> <span class="s2">&quot;TERMINATE_AT_TASK_COMPLETION&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;KerberosAttributes&quot;</span> <span class="p">:</span> <span class="p">{</span>
+
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy-file-request">
+<h3>Copy File Request<a class="headerlink" href="#copy-file-request" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5cae3c7576cd49129fde9fd7&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;emr copy file request&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;test.md&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws-emr copy file request&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:56:53.568585&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:56:53.568585&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;data&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;StepIds&quot;</span> <span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;s-XXXXXXXXXXXXX&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;ResponseMetadata&quot;</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;RequestId&quot;</span> <span class="p">:</span> <span class="s2">&quot;077a0182-5bc2-11e9-a7ff-118a03244614&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;HTTPStatusCode&quot;</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+            <span class="s2">&quot;HTTPHeaders&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;x-amzn-requestid&quot;</span> <span class="p">:</span> <span class="s2">&quot;077a0182-5bc2-11e9-a7ff-118a03244614&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;content-type&quot;</span> <span class="p">:</span> <span class="s2">&quot;application/x-amz-json-1.1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;content-length&quot;</span> <span class="p">:</span> <span class="s2">&quot;30&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;date&quot;</span> <span class="p">:</span> <span class="s2">&quot;Wed, 10 Apr 2019 18:54:11 GMT&quot;</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;RetryAttempts&quot;</span> <span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="file-upload">
+<h3>File Upload<a class="headerlink" href="#file-upload" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5cae3c3576cd49120a3a0513&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;emr file upload&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;test.md&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws-emr file upload&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:55:49.612897&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:55:49.612897&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;data&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;file&quot;</span> <span class="p">:</span> <span class="s2">&quot;LICENSE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bucket&quot;</span> <span class="p">:</span> <span class="s2">&quot;BUCKET NAME&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bucketname&quot;</span> <span class="p">:</span> <span class="s2">&quot;FILE NAME&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-file-request">
+<h3>Run File Request<a class="headerlink" href="#run-file-request" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5cae3c8e76cd4913333930cc&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;emr run file request&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;main.py&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws-emr run file request&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:57:18.893398&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:57:18.893398&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;data&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;StepIds&quot;</span> <span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;s-XXXXXXXXXXXXX&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;ResponseMetadata&quot;</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;RequestId&quot;</span> <span class="p">:</span> <span class="s2">&quot;16944707-5bc2-11e9-ab7c-333f036e49a6&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;HTTPStatusCode&quot;</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+            <span class="s2">&quot;HTTPHeaders&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;x-amzn-requestid&quot;</span> <span class="p">:</span> <span class="s2">&quot;16944707-5bc2-11e9-ab7c-333f036e49a6&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;content-type&quot;</span> <span class="p">:</span> <span class="s2">&quot;application/x-amz-json-1.1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;content-length&quot;</span> <span class="p">:</span> <span class="s2">&quot;30&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;date&quot;</span> <span class="p">:</span> <span class="s2">&quot;Wed, 10 Apr 2019 18:54:36 GMT&quot;</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;RetryAttempts&quot;</span> <span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="start-cluster-request">
+<h3>Start Cluster Request<a class="headerlink" href="#start-cluster-request" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5cae3ba776cd4910291c2bbf&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;emr start cluster request&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;temp12&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws-emr start cluster request&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:53:27.965266&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:53:27.965266&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;data&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cluster&quot;</span> <span class="p">:</span> <span class="s2">&quot;j-XXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;NAME&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="stop-cluster-request">
+<h3>Stop Cluster Request<a class="headerlink" href="#stop-cluster-request" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5cae3c9c76cd4913c74b5060&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;emr stop cluster request&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;j-XXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws-emr stop cluster request&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:57:32.779245&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:57:32.779245&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;data&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;j-XXXXXXXXXXXXX&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-list">
+<h3>Step List<a class="headerlink" href="#step-list" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5cae3ac276cd490f2ae1c8b7&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;emr step list&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;j-2KJT8GO4RV4VR&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws-emr step list&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:49:38.921115&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-10 18:49:38.921115&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;data&quot;</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;Id&quot;</span> <span class="p">:</span> <span class="s2">&quot;s-XXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Name&quot;</span> <span class="p">:</span> <span class="s2">&quot;Run main.py&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Config&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;Jar&quot;</span> <span class="p">:</span> <span class="s2">&quot;command-runner.jar&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Properties&quot;</span> <span class="p">:</span> <span class="p">{</span>
+
+                <span class="p">},</span>
+                <span class="s2">&quot;Args&quot;</span> <span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;spark-submit&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s3://BUCKET/FILENAME.py&quot;</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;ActionOnFailure&quot;</span> <span class="p">:</span> <span class="s2">&quot;CANCEL_AND_WAIT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Status&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;State&quot;</span> <span class="p">:</span> <span class="s2">&quot;CANCELLED&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;StateChangeReason&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;Message&quot;</span> <span class="p">:</span> <span class="s2">&quot;Job terminated&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;Timeline&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;CreationDateTime&quot;</span> <span class="p">:</span> <span class="n">ISODate</span><span class="p">(</span><span class="s2">&quot;2019-04-04T01:42:11.574Z&quot;</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="o">...</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="hpc">
+<h2>HPC<a class="headerlink" href="#hpc" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="batch">
+<h3>Batch<a class="headerlink" href="#batch" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="queue">
+<h3>Queue<a class="headerlink" href="#queue" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="job">
+<h3>Job<a class="headerlink" href="#job" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="keys">
+<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5ca79c92dc64f1905d924234&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;gregor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fingerprint&quot;</span> <span class="p">:</span> <span class="s2">&quot;aa:aa:bb:11:22:33:88:98:13:74:8a:3b:6a:5a:b2:5d&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;public_key&quot;</span> <span class="p">:</span> <span class="s2">&quot;ssh-rsa xxxxxxxxx ... gregor@nowhere test&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;private_key&quot;</span> <span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;extra&quot;</span> <span class="p">:</span> <span class="p">{},</span>
+    <span class="s2">&quot;cm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;kind&quot;</span> <span class="p">:</span> <span class="s2">&quot;key&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;driver&quot;</span> <span class="p">:</span> <span class="s2">&quot;openstack&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cloud&quot;</span> <span class="p">:</span> <span class="s2">&quot;chameleon&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;gregor&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span> <span class="p">:</span> <span class="s2">&quot;chameleon-key&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-05 18:21:06.898856&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;modified&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-06 06:50:30.975625&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

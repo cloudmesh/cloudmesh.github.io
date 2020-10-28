@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Azure Account &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Google Acounts" href="google/index.html" />
+    <link rel="prev" title="AWS Account" href="aws.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Cloud Accounts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="openstack.html">OpenStack Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aws.html">AWS Account</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Azure Account</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#azure-account-1">Azure Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-cli">Azure CLI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installing-azure-cli-on-ubuntu-os">Installing Azure CLI on Ubuntu OS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installing-azure-cli-on-windows-10">Installing Azure CLI on Windows 10</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-resource-group-for-storage">Azure Resource Group (for Storage)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-api-credentials">Azure API Credentials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#azure-subscription-id">Azure_Subscription_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#azure-tenant-id-azure-client-id">Azure_Tenant_ID &amp; Azure_Client_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#azure-secret-key">Azure_Secret_Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grant-permission-to-application">Grant permission to application</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-the-credentials-to-cloudmesh-yaml">Add the credentials to cloudmesh.yaml</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-resource-group-for-compute">Azure Resource Group (for Compute)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-resource-group-for-storage-and-compute">Azure Resource Group (for Storage and Compute)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#faq">FAQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="google/index.html">Google Acounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oracle/account.html">Oracle Cloud Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="box.html">Box Account</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Cloud Accounts</a> &raquo;</li>
+        
+      <li>Azure Account</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/accounts/azure.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="azure-account">
+<h1>Azure Account<a class="headerlink" href="#azure-account" title="Permalink to this headline">¶</a></h1>
+<p>Microsoft Azure is a cloud computing service created by Microsoft for
+building, testing, deploying, and managing applications and services
+through Microsoft-managed data centers.</p>
+<p>Azure has over 600 services, including compute, mobile service, storage
+service, data management, messaging and so on. In this case, Azure
+itself is a multi-functional platform. As for the compute service, which
+is the core part for cloud computing, it provides virtual machines
+allowing users to launch general-purpose Microsoft Windows and Linux
+virtual machines, as well as preconfigured machine images for popular
+software packages. The app services environment lets developers easily
+publish and manage websites. Azure provides all its services to users
+based on website, so users do not need to install any kind of software
+in order to implement cloud computing or use other services;</p>
+<div class="section" id="azure-account-1">
+<span id="id1"></span><h2>Azure Account<a class="headerlink" href="#azure-account-1" title="Permalink to this headline">¶</a></h2>
+<p>You can choose either using your outlook email address to create a free
+trial account including $200 credit and free access to most popular
+Azure products for 12 months, or using your educational email address to
+create a student account including $100 credit.</p>
+<p>If you want to create an azure account using your outlook email, you can
+go to the next site after creating an outlook email address at:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://azure.microsoft.com/en-us/">https://azure.microsoft.com/en-us/</a></p></li>
+</ul>
+<p>Then you need to click the Start Free button as shown in the next screen
+shot. After entering all required information, your account will be set
+up. However, the account will only be available for 30 days. After 30
+days, you can continue using your free products after you upgrade your
+account to a pay-as-you-go Azure subscription. If you forget to do so
+you will not be able to access Azure, So pleas add it to your calendar
+in order not to forget.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/image16.png"><img alt="Start free" src="../_images/image16.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Start free</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>If you want to create an azure account using your educational email, you
+can go to the next site if you already have an .edu email address:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://azure.microsoft.com/en-us/free/students/">https://azure.microsoft.com/en-us/free/students/</a></p></li>
+</ul>
+<p>Then you need to click the Activate now button showing in the next
+figure. By entering all required information, your account will be set
+up. If you use up all credits, you also need to upgrade your account to
+a pay-as-you-go Azure subscription to continue using other services.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/image24.png"><img alt="Activate now" src="../_images/image24.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Activate now</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>As pointed out, to continue to use azure services after 30 days, you
+need to upgrade your account to a pay-as-you-go Azure subscription. In
+this case, you need to provide your information related to your credit
+card to complete the upgrade steps. Go to the next link and click on
+<code class="docutils literal notranslate"><span class="pre">Purchase</span> <span class="pre">now</span></code>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://azure.microsoft.com/en-us/offers/ms-azr-0003p/">https://azure.microsoft.com/en-us/offers/ms-azr-0003p/</a></p></li>
+</ul>
+<p>Congratulations, you can now use Azure.</p>
+</div>
+<div class="section" id="azure-cli">
+<h2>Azure CLI<a class="headerlink" href="#azure-cli" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have an account we want to test if it works. The most
+convenient way to test your access this from the command line is to
+install the azure command line client. You can access azure services by
+just typing command on your local shell. It can be installed on Windows,
+macOS and Linux systems.</p>
+<p>For detailed instructions for your system of interest we recommend you
+visit the page</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest">https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest</a></p></li>
+</ul>
+<div class="section" id="installing-azure-cli-on-ubuntu-os">
+<h3>Installing Azure CLI on Ubuntu OS<a class="headerlink" href="#installing-azure-cli-on-ubuntu-os" title="Permalink to this headline">¶</a></h3>
+<p>In the following steps we will only discuss how to install it on an
+Ubuntu OS. First, make sure you have an up to date OS and that curl is
+installed with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update
+$ sudo apt-get install curl
+</pre></div>
+</div>
+<p>The installation is conducted with the following command that you will
+have to run as superuser:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -sL https://aka.ms/InstallAzureCLIDeb <span class="p">|</span> sudo bash
+</pre></div>
+</div>
+<p>When the installation is finished, you can test your az command by
+trying to use it to connect to your azure account. Type the next command
+in your bash:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ az login
+</pre></div>
+</div>
+<p>It opens your default browser and to conduct a sign-in to azure. If it
+does not open, please go to <a class="reference external" href="https://aka.ms/devicelogin">https://aka.ms/devicelogin</a> in your browser.
+Once the page is loaded, you can sign in with your account credentials
+in the browser.</p>
+</div>
+<div class="section" id="installing-azure-cli-on-windows-10">
+<h3>Installing Azure CLI on Windows 10<a class="headerlink" href="#installing-azure-cli-on-windows-10" title="Permalink to this headline">¶</a></h3>
+<p>The following steps document an Azure CLI installation for Windows 10.</p>
+<p>Start with opening up Windows PowerShell in Administrative Mode, then
+run the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
+~<span class="se">\E</span>NV3<span class="se">\S</span>cripts<span class="se">\A</span>ctivate.ps1
+Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .<span class="se">\A</span>zureCLI.msi<span class="p">;</span> Start-Process msiexec.exe -Wait -ArgumentList <span class="s1">&#39;/I AzureCLI.msi /quiet&#39;</span>
+</pre></div>
+</div>
+<p>Once installed, the next step is to test using the new <code class="docutils literal notranslate"><span class="pre">az</span></code> command.
+Let’s start by running <code class="docutils literal notranslate"><span class="pre">az</span> <span class="pre">login</span></code>, which will then prompt you to login
+via your default browser. Note: you can now utilize Windows Command
+Prompt or PowerShell for interacting with the Azure CLI:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az login
+</pre></div>
+</div>
+<p>Sign in via the default browser using your Azure credentials.</p>
+<p><a class=""
+               data-lightbox="group-65a22703-d83a-42fe-a976-e309d01651b0"
+               href="../_images/azure-confirm-signin1.png"
+               title=""
+               data-title=""
+               ><img src="../_images/azure-confirm-signin1.png"
+                     class=""
+                     width="30%"
+                     height="auto"
+                     alt="Sign in"/>
+                </a> <a class=""
+               data-lightbox="group-c1ed4e60-e53e-4396-9c08-8e794be192c6"
+               href="../_images/azure-confirm-signin21.png"
+               title=""
+               data-title=""
+               ><img src="../_images/azure-confirm-signin21.png"
+                     class=""
+                     width="30%"
+                     height="auto"
+                     alt="Sign in2"/>
+                </a></p>
+<p>Now you are ready to use the <code class="docutils literal notranslate"><span class="pre">az</span></code> command to interact with Azure.</p>
+</div>
+</div>
+<div class="section" id="azure-resource-group-for-storage">
+<h2>Azure Resource Group (for Storage)<a class="headerlink" href="#azure-resource-group-for-storage" title="Permalink to this headline">¶</a></h2>
+<p>To use any resource on Azure, you first need to create a resource group.
+This is potentially a confusing step as information in the internet may
+point you to outdated information. If you use other information from the
+internet, make sure it is up to date and references the services
+subscription account. After you logged into the Azure portal at:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://portal.azure.com/">https://portal.azure.com/</a></p></li>
+</ul>
+<p>You will be presented with a window such as</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/azure-portal.png"><img alt="AZ-Portal" src="../_images/azure-portal.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">AZ-Portal</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the Azure window, click on <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">resource</span></code> on the top left
+corner.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/azure-resource.png"><img alt="AZ-Resource" src="../_images/azure-resource.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">AZ-Resource</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now, select <code class="docutils literal notranslate"><span class="pre">Storage</span> <span class="pre">Account</span></code> from the options shown</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/azure-account.png"><img alt="AZ-Account" src="../_images/azure-account.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">AZ-Account</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>Follow the steps carefully:</p>
+<ol class="arabic simple">
+<li><p>Select the subscription in which to create the storage account.</p></li>
+<li><p>Under the <code class="docutils literal notranslate"><span class="pre">Resource</span> <span class="pre">group</span></code> field, select Create new. Enter a name
+for your new resource group.</p></li>
+<li><p>Next, enter a name for your storage account.</p></li>
+<li><p>Select a <code class="docutils literal notranslate"><span class="pre">location</span></code> for your storage account, or use the default
+location.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">create</span></code></p></li>
+</ol>
+<p>After the completion of above steps, Azure blob storage service will be
+ready for use.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/azure-create-resourcegroup.png"><img alt="AZ-Account" src="../_images/azure-create-resourcegroup.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">AZ-Account</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>As a first step, a <code class="docutils literal notranslate"><span class="pre">Container</span></code> should be created in the Blob storage.
+A container organizes a set of blobs, similar to a directory in a file
+system. A default <code class="docutils literal notranslate"><span class="pre">Container</span></code> should be set in the <code class="docutils literal notranslate"><span class="pre">cloudmesh.yaml</span></code>
+file, details of which are outlined
+<a class="reference external" href="configuration/configuration.md">here</a></p>
+</div>
+<div class="section" id="azure-api-credentials">
+<h2>Azure API Credentials<a class="headerlink" href="#azure-api-credentials" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="azure-subscription-id">
+<h3>Azure_Subscription_ID<a class="headerlink" href="#azure-subscription-id" title="Permalink to this headline">¶</a></h3>
+<p>Navigate to subscriptions</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/image31.png"><img alt="Navigate to Subs" src="../_images/image31.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Navigate to Subs</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>Copy the Subscription ID to notepad</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/image41.png"><img alt="sub ID" src="../_images/image41.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">sub ID</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="azure-tenant-id-azure-client-id">
+<h3>Azure_Tenant_ID &amp; Azure_Client_ID<a class="headerlink" href="#azure-tenant-id-azure-client-id" title="Permalink to this headline">¶</a></h3>
+<p>Navigate to “Azure Active Directory” service and select “App
+Registrations”. Then select “New Registration”</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/image51.png"><img alt="app register" src="../_images/image51.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">app register</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can input any name for the application</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/image61.png"><img alt="app creation" src="../_images/image61.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">app creation</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>After creation, you will be navigated to the overview page of the
+application, on this page copy the client ID and tenant ID to notepad</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/image71.png"><img alt="app overview" src="../_images/image71.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">app overview</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="azure-secret-key">
+<h3>Azure_Secret_Key<a class="headerlink" href="#azure-secret-key" title="Permalink to this headline">¶</a></h3>
+<p>In the same application page, navigate to Certificates &amp; secrets and
+select “New client secret”</p>
+<div class="figure align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/image81.png"><img alt="cert and sec" src="../_images/image81.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">cert and sec</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can give any meaningful name to the new secret, use the default
+expiration for security purpose</p>
+<div class="figure align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/image91.png"><img alt="add client secret" src="../_images/image91.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">add client secret</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>After creation, copy the new client secret to notepad</p>
+<p><a class=""
+               data-lightbox="group-2df43f4e-a906-4967-aebe-328689b6926e"
+               href="../_images/image102.png"
+               title=""
+               data-title=""
+               ><img src="../_images/image102.png"
+                     class=""
+                     width="30%"
+                     height="auto"
+                     alt="new client secret"/>
+                </a></p>
+</div>
+<div class="section" id="grant-permission-to-application">
+<h3>Grant permission to application<a class="headerlink" href="#grant-permission-to-application" title="Permalink to this headline">¶</a></h3>
+<p>After we have collected 4 credentials, we need to add a role assignment
+to the application that we just created, so it can access the resources</p>
+<p>Navigate to the subscription overview page and select “Access
+control(IAM)” then select “add”, “Add role assignment”</p>
+<div class="figure align-default" id="id15">
+<a class="reference internal image-reference" href="../_images/image111.png"><img alt="add role assignment" src="../_images/image111.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">add role assignment</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can give the application “Contributor” role, the “contributor” role
+has enough access for compute resources. Leave the second option as
+“Azure AD user, group, or service principal”. For third option, you need
+to input the application name that you just created, it doesn’t show up
+by default</p>
+<div class="figure align-default" id="id16">
+<a class="reference internal image-reference" href="../_images/image121.png"><img alt="grant role assignment" src="../_images/image121.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">grant role assignment</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="add-the-credentials-to-cloudmesh-yaml">
+<h3>Add the credentials to cloudmesh.yaml<a class="headerlink" href="#add-the-credentials-to-cloudmesh-yaml" title="Permalink to this headline">¶</a></h3>
+<p>Now we need to open cloudmesh.yaml and add the 4 credentials that we
+just collected to the “azure” section of cloudmesh.yaml</p>
+<div class="figure align-default" id="id17">
+<a class="reference internal image-reference" href="../_images/image131.png"><img alt="cloudmesh.yaml" src="../_images/image131.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">cloudmesh.yaml</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="azure-resource-group-for-compute">
+<h2>Azure Resource Group (for Compute)<a class="headerlink" href="#azure-resource-group-for-compute" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>[ ] TODO: Azure. Compute Resource Group. To be completed by students</p></li>
+</ul>
+</div>
+<div class="section" id="azure-resource-group-for-storage-and-compute">
+<h2>Azure Resource Group (for Storage and Compute)<a class="headerlink" href="#azure-resource-group-for-storage-and-compute" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>[ ] TODO: Azure. Storage and Compute Resource Group. To be completed
+by students.</p></li>
+</ul>
+</div>
+<div class="section" id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+<p>Can the resource group be created with the az command? How is it done
+for storage, how is it done for compute?</p>
+<ul class="simple">
+<li><p>[ ] todo: Azure. Compute and Storage FAQ: to be completed by student.</p></li>
+<li><p>[ ] TODO: there are several images in the folder
+<code class="docutils literal notranslate"><span class="pre">accounts/impgaes/azure</span></code>, but they are not used in the text]</p></li>
+</ul>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>Additional references are included here</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest">https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest</a></p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest">https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest</a></p></li>
+<li><p><a class="reference external" href="https://www.luminanetworks.com/docs-lsc-610/Topics/SDN_Controller_Software_Installation_Guide/Appendix/Installing_cURL_for_Ubuntu_1.html">https://www.luminanetworks.com/docs-lsc-610/Topics/SDN_Controller_Software_Installation_Guide/Appendix/Installing_cURL_for_Ubuntu_1.html</a></p></li>
+<li><p><a class="reference external" href="https://azure.microsoft.com/en-us/">https://azure.microsoft.com/en-us/</a></p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction">https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction</a></p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview">https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="google/index.html" class="btn btn-neutral float-right" title="Google Acounts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="aws.html" class="btn btn-neutral float-left" title="AWS Account" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

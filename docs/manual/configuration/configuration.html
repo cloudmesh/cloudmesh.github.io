@@ -1,0 +1,849 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configuration &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Concepts" href="../concepts/index.html" />
+    <link rel="prev" title="Cloudmesh Database" href="../installation/database/install-mongo.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cloudmesh-yaml-file-object-definitions">Cloudmesh Yaml File Object definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-values">Getting Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-values">Setting values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editing-values">Editing Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-yaml-variables">Advanced Yaml Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#profile">Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#default">Default</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-service-attributes">General Service Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cm">cm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-templates">Adding Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compute-cloud-providers">Compute Cloud Providers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Default</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#credentials">Credentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#google">Google</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#openstack">OpenStack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#virtual-box">Virtual Box</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#storage-providers">Storage Providers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#aws-s3">AWS S3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#google-drive">Google drive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#google-cloud-storage">Google Cloud Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#box">Box</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#volume-cloud-providers">Volume Cloud Providers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#aws">AWS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure">Azure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Google</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multipass">Multipass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oracle">Oracle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Openstack</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#log-file">Log File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mongo">Mongo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mongo-via-docker">Mongo via Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#config-api">Config API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Configuration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/configuration/configuration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<p>The Configuration of Cloudmesh is controlled with a YAML file that is
+placed in <cite>~/.cloudmesh/cloudmesh.yaml</cite>. It is created automatically
+from the template located at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/etc/cloudmesh.yaml">https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/etc/cloudmesh.yaml</a></p></li>
+</ul>
+<p>upon first calling <cite>cms help</cite>. You can customize the file while editing it or add new
+providers.</p>
+<p>you can use the command <cite>cms register</cite> to find out what you need to specify.</p>
+<p>An example would be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">register</span> <span class="nb">list</span> <span class="n">sample</span> <span class="o">--</span><span class="n">service</span><span class="o">=</span><span class="n">compute</span> <span class="o">--</span><span class="n">kind</span><span class="o">=</span><span class="n">openstack</span>
+</pre></div>
+</div>
+<table class="colwidths-given docutils align-default" id="id4">
+<caption><span class="caption-text">Configuration Samples for Compute</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Provider</p></th>
+<th class="head"><p>Account</p></th>
+<th class="head"><p>Compute</p></th>
+<th class="head"><p>Volume</p></th>
+<th class="head"><p>Storage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AWS</p></td>
+<td><p><a class="reference internal" href="../accounts/aws.html"><span class="doc">Integrate</span></a></p></td>
+<td><p><a class="reference internal" href="../register/compute-aws.html"><span class="doc">AWS</span></a></p></td>
+<td><p><a class="reference internal" href="../register/volume-aws.html"><span class="doc">AWS</span></a></p></td>
+<td><p><a class="reference internal" href="../register/storage-awss3.html"><span class="doc">AWS</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Azure</p></td>
+<td><p><a class="reference internal" href="../accounts/azure.html"><span class="doc">Integrate</span></a></p></td>
+<td><p><a class="reference internal" href="../register/compute-azure.html"><span class="doc">Azure</span></a></p></td>
+<td><p><a class="reference internal" href="../register/volume-azure.html"><span class="doc">Azure</span></a></p></td>
+<td><p><a class="reference internal" href="../register/storage-azureblob.html"><span class="doc">Azure</span></a>, <a class="reference internal" href="../register/storage-parallelazureblob.html"><span class="doc">ParallelAzure</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Google</p></td>
+<td><p><a class="reference internal" href="../accounts/google/index.html"><span class="doc">Integrate</span></a></p></td>
+<td><p><a class="reference internal" href="../register/compute-google.html"><span class="doc">Google</span></a></p></td>
+<td><p><a class="reference internal" href="../register/volume-google.html"><span class="doc">Google</span></a></p></td>
+<td><p><a class="reference internal" href="../register/storage-parallelgdrive.html"><span class="doc">G-Drive</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Oracle</p></td>
+<td></td>
+<td><p><a class="reference internal" href="../register/compute-oracle.html"><span class="doc">Oracle</span></a></p></td>
+<td><p><a class="reference internal" href="../register/volume-oracle.html"><span class="doc">Oracle</span></a></p></td>
+<td><p><a class="reference internal" href="../register/storage-oracle.html"><span class="doc">Oracle</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>OpenStack</p></td>
+<td></td>
+<td><p><a class="reference internal" href="../register/compute-openstack.html"><span class="doc">OpenStack</span></a></p></td>
+<td><p><a class="reference internal" href="../register/volume-openstack.html"><span class="doc">OpenStack</span></a></p></td>
+<td><p><a class="reference internal" href="../register/storage-openstack.html"><span class="doc">OpenStack</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Multipass</p></td>
+<td></td>
+<td><p><a class="reference internal" href="../register/compute-multipass.html"><span class="doc">Multipass</span></a></p></td>
+<td><p><a class="reference internal" href="../register/volume-multipass.html"><span class="doc">Multipass</span></a></p></td>
+<td><p><span class="xref std std-doc">Multipass</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Box</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p><a class="reference internal" href="../register/storage-box.html"><span class="doc">Box</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Local</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p><a class="reference internal" href="../register/storage-local.html"><span class="doc">Local</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="cloudmesh-yaml-file-object-definitions">
+<h2>Cloudmesh Yaml File Object definitions<a class="headerlink" href="#cloudmesh-yaml-file-object-definitions" title="Permalink to this headline">¶</a></h2>
+<p>In addition to the register command, the YAML file can easily be controlled
+form the command line with the <cite>config</cite> command.</p>
+</div>
+<div class="section" id="getting-values">
+<h2>Getting Values<a class="headerlink" href="#getting-values" title="Permalink to this headline">¶</a></h2>
+<p>We implemented a convenient get method in case you need to look up
+some values in the configuration file. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">config</span> <span class="n">get</span> <span class="n">cloudmesh</span><span class="o">.</span><span class="n">profile</span>
+<span class="n">cms</span> <span class="n">config</span> <span class="n">get</span> <span class="n">cloudmesh</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">firstname</span>
+</pre></div>
+</div>
+<p>print information out. While the first points to a dict, it
+prints out all the values form that dict, the last is an
+attribute and just prints out the attribute and its value.</p>
+</div>
+<div class="section" id="setting-values">
+<h2>Setting values<a class="headerlink" href="#setting-values" title="Permalink to this headline">¶</a></h2>
+<p>In addition, if you need to set a value quickly in the configuration
+file you can do this with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">config</span> <span class="nb">set</span> <span class="n">cloudmesh</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">firstname</span><span class="o">=</span><span class="n">Gregor</span>
+</pre></div>
+</div>
+<p>Will set the firstname in the profiles to Gregor</p>
+<p>This command at this time does not work on dicts, so you need to define each attribute.</p>
+</div>
+<div class="section" id="editing-values">
+<h2>Editing Values<a class="headerlink" href="#editing-values" title="Permalink to this headline">¶</a></h2>
+<p>In case the values in the yaml file have a TBD the can also be
+edited with our built-in command that requires you
+to specify the dict in which such values occur.</p>
+<p>For example, let us assume the value in cloudmesh.profile.firstname
+is TBD then, the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">config</span> <span class="n">edit</span> <span class="n">cloudmesh</span><span class="o">.</span><span class="n">profile</span>
+</pre></div>
+</div>
+<p>can be used to change it.</p>
+</div>
+<div class="section" id="advanced-yaml-variables">
+<h2>Advanced Yaml Variables<a class="headerlink" href="#advanced-yaml-variables" title="Permalink to this headline">¶</a></h2>
+<p>One of the features of the Cloudmesh YAML file is that it allows you to
+use previously defined attributes in the YAML file itself. Thus if an
+attribute value contains for example  <cite>“{cloudmesh.attribute}”</cite> or any
+environment variable, it finds the value for this dict entry in the YAML
+file and replace it
+with its value. For example. let us assume the YAML file contains:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cloudmesh:
+  profile:
+    name: Gregor
+  cloud:
+    aws:
+      username: &quot;{cloudmesh.profile.name}&quot;
+      key: ~/.ssh/id_rsa
+      dir: $HOME
+      current: .
+</pre></div>
+</div>
+<p>cloudmesh will replace the will result be transformed with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cloudmesh</span><span class="p">:</span>
+  <span class="n">profile</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">:</span> <span class="n">Gregor</span>
+  <span class="n">cloud</span><span class="p">:</span>
+    <span class="n">aws</span><span class="p">:</span>
+      <span class="n">username</span><span class="p">:</span> <span class="s2">&quot;Gregor&quot;</span>
+      <span class="n">key</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">gregor</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span>
+      <span class="nb">dir</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">gregor</span>
+      <span class="n">current</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">gregor</span><span class="o">/</span><span class="n">github</span><span class="o">/</span><span class="n">cm</span>
+</pre></div>
+</div>
+<p>This feature is naturally handy for creating templates for users.</p>
+</div>
+<div class="section" id="profile">
+<h2>Profile<a class="headerlink" href="#profile" title="Permalink to this headline">¶</a></h2>
+<p>The profile defines simple information about you:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">profile</span><span class="p">:</span>
+  <span class="n">firstname</span><span class="p">:</span> <span class="n">TBD</span>
+  <span class="n">lastname</span><span class="p">:</span> <span class="n">TBD</span>
+  <span class="n">email</span><span class="p">:</span> <span class="n">TBD</span><span class="nd">@sample</span><span class="o">.</span><span class="n">edu</span>
+  <span class="n">user</span><span class="p">:</span> <span class="n">TBD</span>
+  <span class="n">github</span><span class="p">:</span> <span class="n">TBD</span>
+  <span class="n">publickey</span><span class="p">:</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="o">.</span><span class="n">pub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="default">
+<h2>Default<a class="headerlink" href="#default" title="Permalink to this headline">¶</a></h2>
+<p>The variable default is used to identify information about your
+experiments and groups that are used throughout your
+interaction with Cloudmesh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span><span class="p">:</span>
+  <span class="n">group</span><span class="p">:</span> <span class="n">cloudmesh</span>
+  <span class="n">experiment</span><span class="p">:</span> <span class="n">base</span>
+  <span class="n">cloud</span><span class="p">:</span> <span class="n">azure</span>
+  <span class="n">cluster</span><span class="p">:</span> <span class="n">clustera</span>
+</pre></div>
+</div>
+<p>The values can be set with the default command.</p>
+</div>
+<div class="section" id="general-service-attributes">
+<h2>General Service Attributes<a class="headerlink" href="#general-service-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Each Cloudmesh service must have an attribute <code class="docutils literal notranslate"><span class="pre">cm</span></code> with the
+following fields. If an attribute contains the value <cite>TBD</cite>
+it needs to be updated. You only have to update the providers
+you like to use, you can delete the others if you like.</p>
+<div class="section" id="cm">
+<h3>cm<a class="headerlink" href="#cm" title="Permalink to this headline">¶</a></h3>
+<p>In the <cite>cm</cite> portion, we define elementary information that identifies
+the service. This includes the following information</p>
+<p>active</p>
+<blockquote>
+<div><p>if set to True, this cloud is going to be used in Cloudmesh,
+if it is set to False it is not activated.
+This has the advantage that you do not have to remove
+the service from the YAML file if you do not use it</p>
+</div></blockquote>
+<p>heading</p>
+<blockquote>
+<div><p>This field is currently not used but in future releases this
+field will be used in table or GUIs to be printed when list
+functions are used</p>
+</div></blockquote>
+<p>label</p>
+<blockquote>
+<div><p>This field is typically the same as the entry under which the cloud
+service is filed.  It is used as
+a convenient abbreviation that can be used in your programs.</p>
+</div></blockquote>
+<p>kind</p>
+<blockquote>
+<div><p>This field is the most important field that identified what kind
+of service your cloud is, and it determines based on its name
+how to interact with the service.</p>
+<p>For compute services the following kinds are valid: <code class="docutils literal notranslate"><span class="pre">aws</span></code>,
+<code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">openstack</span></code></p>
+<p>For storage services the following kinds are valid: <code class="docutils literal notranslate"><span class="pre">aws</span></code>,
+<code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">openstack</span></code>, <code class="docutils literal notranslate"><span class="pre">box</span></code></p>
+<p>For volume services the following kinds are valid: <code class="docutils literal notranslate"><span class="pre">aws</span></code>,
+<code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">multipass</span></code>, <code class="docutils literal notranslate"><span class="pre">oracle</span></code>, <code class="docutils literal notranslate"><span class="pre">openstack</span></code></p>
+</div></blockquote>
+<p>host</p>
+<blockquote>
+<div><p>This field is used to identify where to find information about the
+service provider</p>
+</div></blockquote>
+<p>service</p>
+<blockquote>
+<div><p>The type of service. valid values are <code class="docutils literal notranslate"><span class="pre">compute</span></code>, <code class="docutils literal notranslate"><span class="pre">storage</span></code>,
+<code class="docutils literal notranslate"><span class="pre">volume</span></code>.</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span><span class="p">:</span>
+    <span class="n">active</span><span class="p">:</span> <span class="kc">False</span>
+    <span class="n">heading</span><span class="p">:</span> <span class="n">AWS</span>
+    <span class="n">host</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">amazon</span><span class="o">.</span><span class="n">com</span>
+    <span class="n">label</span><span class="p">:</span> <span class="n">aws</span>
+    <span class="n">kind</span><span class="p">:</span> <span class="n">aws</span>
+    <span class="n">version</span><span class="p">:</span> <span class="mf">1.0</span>
+    <span class="n">service</span><span class="p">:</span> <span class="n">compute</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="adding-templates">
+<h2>Adding Templates<a class="headerlink" href="#adding-templates" title="Permalink to this headline">¶</a></h2>
+<p>New templates can be added with the register command.</p>
+<p>The manual page to the rgister command is avalable here.</p>
+</div>
+<div class="section" id="compute-cloud-providers">
+<h2>Compute Cloud Providers<a class="headerlink" href="#compute-cloud-providers" title="Permalink to this headline">¶</a></h2>
+<p>The default YAML file includes templates to configure various clouds.
+You can change these defaults and provide access to your cloud
+credentials to make the management of cloud virtual machines easier.
+Templates for AWS, Azure, Google, OpenStack are provided. Specific
+templates for Jetstream and Chameleon cloud are included in the example
+<a class="reference external" href="https://github.com/cloudmesh/cloudmesh-cloud/blob/master/cloudmesh/etc/cloudmesh.yaml">cloudmesh.yaml</a>.
+We list each template next.</p>
+<p>We explain in more detail the features of the configuration files for
+cloud services.</p>
+<p>First, all cloud services are listed under the key <code class="docutils literal notranslate"><span class="pre">cloud</span></code>. You can
+add arbitrary compute cloud services with a name you like. You can
+even create multiple names that refer to the same cloud but may have
+different parameters.  We like to focus on the example for <code class="docutils literal notranslate"><span class="pre">aws</span></code> and
+explain this in a bit more detail.</p>
+<p>The Cloudmesh entry for a compute service is divided into three portions:
+<code class="docutils literal notranslate"><span class="pre">cm</span></code>, <code class="docutils literal notranslate"><span class="pre">default</span></code>, and <code class="docutils literal notranslate"><span class="pre">credentials</span></code>. The format of the <code class="docutils literal notranslate"><span class="pre">cm</span></code>
+is explained previously.</p>
+<div class="section" id="id1">
+<h3>Default<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The next category is defaults, that can be preset for each cloud.
+However, defaults are overwritten by the Cloudmesh shell
+variables. So they are only used once at startup if these defaults are not already defined by Cloudmesh shell. Typically
+we use them to for example define values for images and sizes or
+flavors of images</p>
+<p>image</p>
+<blockquote>
+<div><p>The name of the default image</p>
+</div></blockquote>
+<p>size</p>
+<p>The size of the default image</p>
+</div>
+<div class="section" id="credentials">
+<h3>Credentials<a class="headerlink" href="#credentials" title="Permalink to this headline">¶</a></h3>
+<p>The credentials are dependent on the kind of the cloud and include all
+information needed for authenticating and use the cloud service.</p>
+<p>As the information is sensitive the file in .cloudmesh holding
+the information must be properly protected.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We even have a project that encrypts the cloudmesh.yaml
+file, but it is not fully integrated yet.  Future versions
+of cloudmesh will encrypt the information by default.</p>
+</div>
+</div>
+<div class="section" id="google">
+<h3>Google<a class="headerlink" href="#google" title="Permalink to this headline">¶</a></h3>
+<p>To obtain an account on Google you can follow our instructions at
+<a class="reference internal" href="../accounts/google/index.html"><span class="doc">Google Acounts</span></a>. THe configuration file contains the
+following:</p>
+</div>
+<div class="section" id="openstack">
+<h3>OpenStack<a class="headerlink" href="#openstack" title="Permalink to this headline">¶</a></h3>
+<p>We provide an example of how to use an OpenStack based cloud in
+Cloudmesh. Please, place the following to your <code class="docutils literal notranslate"><span class="pre">cloudmesh.yaml</span></code> file
+and replace the values for <code class="docutils literal notranslate"><span class="pre">TBD</span></code>. Our example uses <a class="reference external" href="https://www.chameleoncloud.org/">Chameleon Cloud</a>. This is a cloud for academic
+research. Certainly, you can configure other clouds based on this
+template. We have successfully used also clouds in Canada (Cybera),
+Germany (KIT), Indiana University (jetstream). TO get started, you can
+even install your local cloud with devstack and make adjustments.
+Please remember you can have multiple clouds in the
+<code class="docutils literal notranslate"><span class="pre">cloudmesh.yaml</span></code> file so you could if you have access to them
+integrate all of them.  You will need access to a project and add your
+project number to. the credentials.  Example for chameleon cloud:</p>
+</div>
+<div class="section" id="virtual-box">
+<h3>Virtual Box<a class="headerlink" href="#virtual-box" title="Permalink to this headline">¶</a></h3>
+<p>Virtualbox has at this time-limited functionality, but creation, ssh,
+and the deletion of the virtual box is possible.</p>
+<p>You can also integrate virtualbox as part of cloudmesh while providing
+the following description:</p>
+</div>
+</div>
+<div class="section" id="storage-providers">
+<h2>Storage Providers<a class="headerlink" href="#storage-providers" title="Permalink to this headline">¶</a></h2>
+<p>General description for all storage providers, comment on the
+<code class="docutils literal notranslate"><span class="pre">default:</span></code> and what that does</p>
+<div class="section" id="aws-s3">
+<h3>AWS S3<a class="headerlink" href="#aws-s3" title="Permalink to this headline">¶</a></h3>
+<p>It is beyond the scope of this manual to discuss how to get an account
+on Google. However, we do provide a convenient documentation at
+<a class="reference internal" href="../accounts/aws.html"><span class="doc">AWS Account</span></a>.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">cloudmesh.yaml</span></code> file, the ‘aws’ section under ‘storage’
+describes an example configuration or a AWS S3 storage provider. In
+the credentials section under aws, specify the access key id and
+secret access key which is available in the AWS console under AWS
+IAM <code class="docutils literal notranslate"><span class="pre">service</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Users</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Security</span> <span class="pre">Credentials</span></code>. Container is
+the default Bucket which is used to store the files in AWS
+S3. The region is the geographic area like <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code> which contains
+the bucket.  The region is required to get a connection handle on the S3
+Client or resource for that geographic area.</p>
+</div>
+<div class="section" id="google-drive">
+<h3>Google drive<a class="headerlink" href="#google-drive" title="Permalink to this headline">¶</a></h3>
+<p>Due to bugs in the requirements of the google driver code, we have not
+yet included it in the Provider code. This needs to be fixed before we
+can do this.</p>
+<p>It is beyond the scope of this manual to discuss how to get an account
+on Google. However, we do provide a convenient documentation at
+.</p>
+</div>
+<div class="section" id="google-cloud-storage">
+<h3>Google Cloud Storage<a class="headerlink" href="#google-cloud-storage" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="box">
+<h3>Box<a class="headerlink" href="#box" title="Permalink to this headline">¶</a></h3>
+<p>It is beyond the scope of this manual to discuss how to get an account
+on Google. However, we do provide a convenient documentation at
+<a class="reference internal" href="../accounts/box.html"><span class="doc">Box Account</span></a>.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">cloudmesh.yaml</span></code> file, find the ‘box’ section under ‘storage’.
+Under credentials, set <code class="docutils literal notranslate"><span class="pre">config_path</span></code> to the path of the configuration
+file you created as described in the Box chapter:</p>
+</div>
+</div>
+<div class="section" id="volume-cloud-providers">
+<h2>Volume Cloud Providers<a class="headerlink" href="#volume-cloud-providers" title="Permalink to this headline">¶</a></h2>
+<p>Cloud providers that offer compute services usually have functions for managing
+block volumes which can be attached to virtual machine instances.
+Documentation on using cloudmesh to manage block volumes can be found in the
+<a class="reference external" href="https://github.com/cloudmesh/cloudmesh-volume/blob/master/README.md">cloudmesh-volume</a>
+package.  The credentials needed in the volume configurations are typically
+the same as those needed for the compute configuration.  The default,
+which varies by provider, allows the user to create volumes from a set
+default values such as volume type and size.</p>
+<div class="section" id="aws">
+<h3>AWS<a class="headerlink" href="#aws" title="Permalink to this headline">¶</a></h3>
+<p>In the AWS volume configuration, the <code class="docutils literal notranslate"><span class="pre">region_name</span></code> refers to the AWS region
+e.g. <code class="docutils literal notranslate"><span class="pre">us-east-2</span></code>, while the <code class="docutils literal notranslate"><span class="pre">region</span></code> refers to the AWS availability zone
+e.g. <code class="docutils literal notranslate"><span class="pre">us-east-2a</span></code>.  Other defaults that can be changed by the user for
+creating a volume include the volume type, size, input/output operations per
+second <code class="docutils literal notranslate"><span class="pre">iops</span></code>, whether the volume is encrypted, or a snapshot to create the
+volume from.</p>
+</div>
+<div class="section" id="azure">
+<h3>Azure<a class="headerlink" href="#azure" title="Permalink to this headline">¶</a></h3>
+<p>TBD</p>
+</div>
+<div class="section" id="id2">
+<h3>Google<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The default volume <code class="docutils literal notranslate"><span class="pre">type</span></code> in the Google configuration takes a url as a value.
+The url should look like this:
+<code class="docutils literal notranslate"><span class="pre">projects/project_id/zones/zone/diskTypes/pd-standard</span></code>, where <code class="docutils literal notranslate"><span class="pre">project_id</span></code>
+is the project ID for your project and <code class="docutils literal notranslate"><span class="pre">zone</span></code> is the zone in which the volume
+is located.</p>
+</div>
+<div class="section" id="multipass">
+<h3>Multipass<a class="headerlink" href="#multipass" title="Permalink to this headline">¶</a></h3>
+<p>The default <code class="docutils literal notranslate"><span class="pre">path</span></code> designates the location on the user’s computer where the
+multipass volumes will be created.  For Windows users, the path should use
+<code class="docutils literal notranslate"><span class="pre">/</span></code> instead of <code class="docutils literal notranslate"><span class="pre">\</span></code>.</p>
+</div>
+<div class="section" id="oracle">
+<h3>Oracle<a class="headerlink" href="#oracle" title="Permalink to this headline">¶</a></h3>
+<p>TBD</p>
+</div>
+<div class="section" id="id3">
+<h3>Openstack<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="log-file">
+<h2>Log File<a class="headerlink" href="#log-file" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Previous versions of cloudmesh had a sophisticated logging feature.
+This version has this feature not yet made available. Implement it
+and make available. At this time, it is not our highest priority.</p>
+</div>
+<p>Log files are stored by default in <code class="docutils literal notranslate"><span class="pre">~/.cloudmesh/log</span></code> The directory
+can be specified in the yaml file.</p>
+</div>
+<div class="section" id="mongo">
+<h2>Mongo<a class="headerlink" href="#mongo" title="Permalink to this headline">¶</a></h2>
+<p>The cache of Cloudmesh is managed in a mongo db database with various
+collections. However, the user does not have to manage the collections
+as this is done for the user through Cloudmesh. Before you can use it,
+mongo does need to be installed.</p>
+<p>If you have not installed mongo, you may try</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms admin mongo install
+</pre></div>
+</div>
+<p>However, to install it with cms, you must also make sure the following values are
+installed in the cloudmesh yaml file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="n">MONGO_PASSWORD</span><span class="p">:</span> <span class="n">TBD</span>
+<span class="o">...</span>
+<span class="n">MONGO_AUTOINSTALL</span><span class="p">:</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>The value for the password must not be <code class="docutils literal notranslate"><span class="pre">TBD</span></code>.</p>
+<p>Next, you create the database template with authentication with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms admin mongo create
+</pre></div>
+</div>
+<p>Now you are ready to use it in Cloudmesh. The mongo db can be started
+and stopped with the command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms admin mongo start
+$ cms admin mongo stop
+</pre></div>
+</div>
+<p>or simply</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms start
+$ cms stop
+</pre></div>
+</div>
+<p>The configuration details are included in the yaml file and looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cloudmesh</span><span class="p">:</span>
+  <span class="o">...</span>
+  <span class="n">mongo</span><span class="p">:</span>
+    <span class="n">MONGO_AUTOINSTALL</span><span class="p">:</span> <span class="kc">False</span>
+    <span class="n">MONGO_BREWINSTALL</span><span class="p">:</span> <span class="kc">False</span>
+    <span class="n">LOCAL</span><span class="p">:</span> <span class="o">~/</span><span class="n">local</span>
+    <span class="n">MODE</span><span class="p">:</span> <span class="n">native</span>
+    <span class="n">MONGO_DBNAME</span><span class="p">:</span> <span class="s1">&#39;cloudmesh&#39;</span>
+    <span class="n">MONGO_HOST</span><span class="p">:</span> <span class="s1">&#39;127.0.0.1&#39;</span>
+    <span class="n">MONGO_PORT</span><span class="p">:</span> <span class="s1">&#39;27017&#39;</span>
+    <span class="n">MONGO_USERNAME</span><span class="p">:</span> <span class="s1">&#39;admin&#39;</span>
+    <span class="n">MONGO_PASSWORD</span><span class="p">:</span> <span class="n">TBD</span>
+    <span class="n">MONGO_DOWNLOAD</span><span class="p">:</span>
+      <span class="n">darwin</span><span class="p">:</span>
+        <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">fastdl</span><span class="o">.</span><span class="n">mongodb</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">osx</span><span class="o">/</span><span class="n">mongodb</span><span class="o">-</span><span class="n">osx</span><span class="o">-</span><span class="n">ssl</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="mf">4.0</span><span class="o">.</span><span class="mf">12.</span><span class="n">tgz</span>
+        <span class="n">MONGO_PATH</span><span class="p">:</span> <span class="o">~/.</span><span class="n">cloudmesh</span><span class="o">/</span><span class="n">mongodb</span>
+        <span class="n">MONGO_LOG</span><span class="p">:</span> <span class="o">~/.</span><span class="n">cloudmesh</span><span class="o">/</span><span class="n">mongodb</span><span class="o">/</span><span class="n">log</span>
+        <span class="n">MONGO_HOME</span><span class="p">:</span> <span class="o">~/</span><span class="n">local</span><span class="o">/</span><span class="n">mongo</span>
+      <span class="n">linux</span><span class="p">:</span>
+        <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">fastdl</span><span class="o">.</span><span class="n">mongodb</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">linux</span><span class="o">/</span><span class="n">mongodb</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="mf">4.0</span><span class="o">.</span><span class="mf">10.</span><span class="n">tgz</span>
+        <span class="n">MONGO_PATH</span><span class="p">:</span> <span class="o">~/.</span><span class="n">cloudmesh</span><span class="o">/</span><span class="n">mongodb</span>
+        <span class="n">MONGO_LOG</span><span class="p">:</span> <span class="o">~/.</span><span class="n">cloudmesh</span><span class="o">/</span><span class="n">mongodb</span><span class="o">/</span><span class="n">log</span>
+        <span class="n">MONGO_HOME</span><span class="p">:</span> <span class="o">~/</span><span class="n">local</span><span class="o">/</span><span class="n">mongo</span>
+      <span class="n">win32</span><span class="p">:</span>
+        <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">fastdl</span><span class="o">.</span><span class="n">mongodb</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">win32</span><span class="o">/</span><span class="n">mongodb</span><span class="o">-</span><span class="n">win32</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="mi">2008</span><span class="n">plus</span><span class="o">-</span><span class="n">ssl</span><span class="o">-</span><span class="mf">4.0</span><span class="o">.</span><span class="mi">10</span><span class="o">-</span><span class="n">signed</span><span class="o">.</span><span class="n">msi</span>
+        <span class="n">MONGO_PATH</span><span class="p">:</span> <span class="o">~</span>\<span class="o">.</span><span class="n">cloudmesh</span>\<span class="n">mongodb</span><span class="o">-</span><span class="n">data</span>
+        <span class="n">MONGO_LOG</span><span class="p">:</span> <span class="o">~</span>\<span class="o">.</span><span class="n">cloudmesh</span>\<span class="n">mongodb</span><span class="o">-</span><span class="n">data</span>\<span class="n">log</span>
+        <span class="n">MONGO_HOME</span><span class="p">:</span> <span class="o">~</span>\<span class="o">.</span><span class="n">cloudmesh</span>\<span class="n">mongo</span>
+      <span class="n">redhat</span><span class="p">:</span>
+        <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">mongodb</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">yum</span><span class="o">/</span><span class="n">redhat</span><span class="o">/</span><span class="mi">7</span><span class="o">/</span><span class="n">mongodb</span><span class="o">-</span><span class="n">org</span><span class="o">/</span><span class="mf">4.0</span><span class="o">/</span><span class="n">x86_64</span><span class="o">/</span><span class="n">RPMS</span><span class="o">/</span><span class="n">mongodb</span><span class="o">-</span><span class="n">org</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mf">4.0</span><span class="o">.</span><span class="mi">10</span><span class="o">-</span><span class="mf">1.</span><span class="n">el7</span><span class="o">.</span><span class="n">x86_64</span><span class="o">.</span><span class="n">rpm</span>
+        <span class="n">MONGO_PATH</span><span class="p">:</span> <span class="o">~/.</span><span class="n">cloudmesh</span><span class="o">/</span><span class="n">mongodb</span>
+        <span class="n">MONGO_LOG</span><span class="p">:</span> <span class="o">~/.</span><span class="n">cloudmesh</span><span class="o">/</span><span class="n">mongodb</span><span class="o">/</span><span class="n">log</span>
+        <span class="n">MONGO_HOME</span><span class="p">:</span> <span class="o">~/</span><span class="n">local</span><span class="o">/</span><span class="n">mongo</span>
+</pre></div>
+</div>
+<div class="section" id="mongo-via-docker">
+<h3>Mongo via Docker<a class="headerlink" href="#mongo-via-docker" title="Permalink to this headline">¶</a></h3>
+<p>Mongo can also be easily deployed and run via docker for Cloudmesh. To achieve
+this you have to set the <cite>MODE</cite> to <cite>docker</cite> either by editing the yaml file or using</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config <span class="nb">set</span> cloudmesh.data.mongo.MODE<span class="o">=</span>docker
+</pre></div>
+</div>
+<p>If you have not yet use the database in docker, you need to initialize it just
+as in the native mode with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms mongo admin install
+$ cms mongo admin create
+</pre></div>
+</div>
+<p>Then you can use as usual</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms init
+$ cms start
+$ cms stop
+</pre></div>
+</div>
+<p>to start and stop the DB.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To set it back to a native install use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config <span class="nb">set</span> cloudmesh.data.mongo.MODE<span class="o">=</span>native
+</pre></div>
+</div>
+<p>Naturally, you have to do the native setup also if you have never done it.</p>
+</div>
+</div>
+</div>
+<div class="section" id="config-api">
+<h2>Config API<a class="headerlink" href="#config-api" title="Permalink to this headline">¶</a></h2>
+<p>Cloudmesh has a very easy to use interface to access the
+configuration file programmatically. This is best demonstrated with the following example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">()</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;cloudmesh.profile.name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Here we simply can use our dot notation to get that value of an attribute from
+the configuration file. More advanced functions such as a search with regular
+expressions such as searching for all compute clouds using OpenStack are also
+possible.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">clouds</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;cloudmesh.cloud.*.cm.kind&quot;</span><span class="p">,</span> <span class="s2">&quot;opensatck&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This feature is even integrated into the variable or set functionality of <cite>cms</cite>
+as demonstrated earlier. For more information about the API, please consult the
+manual pages on</p>
+<ul class="simple">
+<li><p>cloudmesh.cmd5.var</p></li>
+<li><p>cloudmesh.configuration.Config</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../concepts/index.html" class="btn btn-neutral float-right" title="Concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../installation/database/install-mongo.html" class="btn btn-neutral float-left" title="Cloudmesh Database" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

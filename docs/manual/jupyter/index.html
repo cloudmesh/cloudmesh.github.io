@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Jupyter Integration &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Community Projects" href="../projects/index.html" />
+    <link rel="prev" title="Cloudmesh Command API" href="../api/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Jupyter Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api-calls">API calls</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Jupyter Integration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/jupyter/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jupyter-integration">
+<h1>Jupyter Integration<a class="headerlink" href="#jupyter-integration" title="Permalink to this headline">¶</a></h1>
+<p>To install jupyter please use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install jupyter
+</pre></div>
+</div>
+<p>To start a notebuk use the regular jupyter command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter notebook
+</pre></div>
+</div>
+<p>Now select under <cite>new</cite> the name of the notbook you like to create, and make
+sure you use python 3. As cloudmesh provides an API it is very easy to
+integrate it into jupyter. The following image shows how easy it is</p>
+<a class=""
+               data-lightbox="group-0e011fa3-44ea-4b36-baef-66d613fb0f5e"
+               href="../_images/jupyter1.png"
+               title=""
+               data-title=""
+               ><img src="../_images/jupyter1.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt=""/>
+                </a><p>However, naturally we can also use build in fetuares of jupyter such as
+running shell commands with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="m">1</span><span class="o">]</span> !cms <span class="nb">set</span> <span class="nv">cloud</span><span class="o">=</span>AWS
+<span class="o">[</span><span class="m">2</span><span class="o">]</span> !cms vm star
+</pre></div>
+</div>
+<div class="section" id="api-calls">
+<h2>API calls<a class="headerlink" href="#api-calls" title="Permalink to this headline">¶</a></h2>
+<p>To use the specific API calls, We recommend you to look at the API
+documentation of cloudmesh. To show you a simple example of advanced
+functionality we demonstarte how to list flavors of a cloud:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cloudmesh.compute.vm.Provider</span> <span class="kn">import</span> <span class="n">Provider</span>
+<span class="n">provider</span> <span class="o">=</span> <span class="n">Provider</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;chameleon&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flavors</span> <span class="o">=</span> <span class="n">provider</span><span class="o">.</span><span class="n">flavors</span><span class="p">()</span>
+<span class="n">flavors</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;m1.tiny&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">provider</span><span class="o">.</span><span class="n">Print</span><span class="p">(</span><span class="n">flavors</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+----------------+-------+-------+------+</span>
+<span class="o">|</span> <span class="n">Name</span>           <span class="o">|</span> <span class="n">VCPUS</span> <span class="o">|</span> <span class="n">RAM</span>   <span class="o">|</span> <span class="n">Disk</span> <span class="o">|</span>
+<span class="o">+----------------+-------+-------+------+</span>
+<span class="o">|</span> <span class="n">m1</span><span class="o">.</span><span class="n">tiny</span>        <span class="o">|</span> <span class="mi">1</span>     <span class="o">|</span> <span class="mi">512</span>   <span class="o">|</span> <span class="mi">1</span>    <span class="o">|</span>
+<span class="o">|</span> <span class="n">m1</span><span class="o">.</span><span class="n">small</span>       <span class="o">|</span> <span class="mi">1</span>     <span class="o">|</span> <span class="mi">2048</span>  <span class="o">|</span> <span class="mi">20</span>   <span class="o">|</span>
+<span class="o">|</span> <span class="n">m1</span><span class="o">.</span><span class="n">medium</span>      <span class="o">|</span> <span class="mi">2</span>     <span class="o">|</span> <span class="mi">4096</span>  <span class="o">|</span> <span class="mi">40</span>   <span class="o">|</span>
+<span class="o">|</span> <span class="n">m1</span><span class="o">.</span><span class="n">large</span>       <span class="o">|</span> <span class="mi">4</span>     <span class="o">|</span> <span class="mi">8192</span>  <span class="o">|</span> <span class="mi">80</span>   <span class="o">|</span>
+<span class="o">|</span> <span class="n">m1</span><span class="o">.</span><span class="n">xlarge</span>      <span class="o">|</span> <span class="mi">8</span>     <span class="o">|</span> <span class="mi">16384</span> <span class="o">|</span> <span class="mi">160</span>  <span class="o">|</span>
+<span class="o">|</span> <span class="n">storage</span><span class="o">.</span><span class="n">medium</span> <span class="o">|</span> <span class="mi">1</span>     <span class="o">|</span> <span class="mi">4096</span>  <span class="o">|</span> <span class="mi">2048</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">m1</span><span class="o">.</span><span class="n">xxlarge</span>     <span class="o">|</span> <span class="mi">8</span>     <span class="o">|</span> <span class="mi">32768</span> <span class="o">|</span> <span class="mi">160</span>  <span class="o">|</span>
+<span class="o">|</span> <span class="n">m1</span><span class="o">.</span><span class="n">xxxlarge</span>    <span class="o">|</span> <span class="mi">16</span>    <span class="o">|</span> <span class="mi">32768</span> <span class="o">|</span> <span class="mi">160</span>  <span class="o">|</span>
+<span class="o">+----------------+-------+-------+------+</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../projects/index.html" class="btn btn-neutral float-right" title="Community Projects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../api/index.html" class="btn btn-neutral float-left" title="Cloudmesh Command API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

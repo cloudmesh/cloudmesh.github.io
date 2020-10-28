@@ -1,0 +1,524 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Windows Cloudmesh Ubuntu Subsystem Environment &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using windows instead of Linux" href="windows-linux.html" />
+    <link rel="prev" title="workflow_draft" href="../manual/workflow_draft.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../todo.html">To Do</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api/modules.html">cloudmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/analytics.html">analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/book.html">book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/bookmanagerservice.html">bookmanagerservice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/emr.html">emr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/git.html">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/queue.html">queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/test.html">test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/windows.html">windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/workflow_draft.html">workflow_draft</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Windows Cloudmesh Ubuntu Subsystem Environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup-git">Setup git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bashrc">.bashrc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pycharm-different-terminal">Pycharm different terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cloudmesh-installer">cloudmesh-installer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#development-with-pycharm">Development with pyCharm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github-use">Github use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git-pull-requests">Git Pull requests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compiling-the-code">Compiling the code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="windows-linux.html">Using windows instead of Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-ubuntu.html">Windows Cloudmesh Development Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../todo.html">To Do</a> &raquo;</li>
+        
+      <li>Windows Cloudmesh Ubuntu Subsystem Environment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/windows/windows-broken-make.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="windows-cloudmesh-ubuntu-subsystem-environment">
+<h1>Windows Cloudmesh Ubuntu Subsystem Environment<a class="headerlink" href="#windows-cloudmesh-ubuntu-subsystem-environment" title="Permalink to this headline">¶</a></h1>
+<p>It is trivial to set up cloudmesh on Windows when leveraging the Ubuntu
+subsystem. First you need to install the Linux subsystem from</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">https://docs.microsoft.com/en-us/windows/wsl/install-win10</a></p></li>
+</ul>
+<p>Next you launch the Ubuntu 18.04TLS image from the Microsoft App store</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?rtc=1&amp;activetab=pivot:overviewtab">Ubuntu
+18.04</a></p></li>
+</ul>
+<p>Once you have started the Ubuntu subsystem, you need to execute the
+following to update to a new version of python. We want to use python
+3.7.4:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">make</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">emacs</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">git</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">software</span><span class="o">-</span><span class="n">properties</span><span class="o">-</span><span class="n">common</span>
+<span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="o">-</span><span class="n">y</span> <span class="n">ppa</span><span class="p">:</span><span class="n">deadsnakes</span><span class="o">/</span><span class="n">ppa</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python3</span><span class="o">.</span><span class="mi">7</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">ENV3</span> <span class="o">--</span><span class="n">without</span><span class="o">-</span><span class="n">pip</span>
+<span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">bootstrap</span><span class="o">.</span><span class="n">pypa</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">get</span><span class="o">-</span><span class="n">pip</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">o</span> <span class="n">get</span><span class="o">-</span><span class="n">pip</span><span class="o">.</span><span class="n">py</span>
+<span class="n">python</span> <span class="n">get</span><span class="o">-</span><span class="n">pip</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">user</span>
+<span class="n">python3</span><span class="o">.</span><span class="mi">7</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">pip</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<div class="section" id="setup-git">
+<h2>Setup git<a class="headerlink" href="#setup-git" title="Permalink to this headline">¶</a></h2>
+<p>Next configure your github identity. It is important you do this or your
+may not get proper credit as we obtain user information form github</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;user_name&quot;</span>
+git config --global user.email <span class="s2">&quot;email_id&quot;</span>
+git config --global core.editor emacs
+</pre></div>
+</div>
+</div>
+<div class="section" id="bashrc">
+<h2>.bashrc<a class="headerlink" href="#bashrc" title="Permalink to this headline">¶</a></h2>
+<p>At the end of your .bashrc place the following lines so that your
+environment will be always activated when you start a new ubuntu
+terminal.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">emacs</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<p>Add the following line to it so whenever you start the the ubuntu shell,
+it just jumps right into your development directory and replace user
+with your username</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># the default ls has some uggly colors, so lets improve this</span>
+<span class="n">export</span> <span class="n">LS_COLORS</span><span class="o">=</span><span class="s2">&quot;$LS_COLORS:ow=1;34:tw=1;34:&quot;</span>
+<span class="c1"># lets us make python 3.7 available via python</span>
+<span class="n">alias</span> <span class="n">python</span><span class="o">=</span><span class="s1">&#39;python3.7&#39;</span>
+<span class="c1"># let us cd to the cloudmesh working directory upon login</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">Users</span><span class="o">/&lt;</span><span class="n">USER</span><span class="o">&gt;/</span><span class="n">cm</span>
+<span class="c1"># set ENV3 to be the default python</span>
+<span class="n">alias</span> <span class="n">ENV3</span><span class="o">=</span><span class="s2">&quot;source ~/ENV3/bin/activate&quot;</span>
+<span class="n">ENV3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pycharm-different-terminal">
+<h2>Pycharm different terminal<a class="headerlink" href="#pycharm-different-terminal" title="Permalink to this headline">¶</a></h2>
+<p>go to <code class="docutils literal notranslate"><span class="pre">Settings-&gt;tools-&gt;terminal</span></code></p>
+<p>original:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmd</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+<p>gitbash:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&quot;C:\Users\USERNAME\AppData\Local\Programs\Git\bin\sh.exe &quot; –login -i
+</pre></div>
+</div>
+<p>ubuntu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="o">&lt;</span><span class="n">my_user</span><span class="o">&gt;</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Microsoft</span>\<span class="n">WindowsApps</span>\<span class="n">ubuntu</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cloudmesh-installer">
+<h2>cloudmesh-installer<a class="headerlink" href="#cloudmesh-installer" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Next we install an easy <code class="docutils literal notranslate"><span class="pre">cloudmesh-installer</span></code> program that we use
+to clone the cloudmesh repositories</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install cloudmesh-installer
+</pre></div>
+</div>
+</li>
+<li><p>Let us check out the needed repositories. Cloudmesh is distributed in
+bundles for development. One of the most comprehensive bundles is the
+<code class="docutils literal notranslate"><span class="pre">storage</span></code> bundles. Let us clone it with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir cm
+<span class="nb">cd</span> cm
+cloudmesh-installer git clone storage
+</pre></div>
+</div>
+</li>
+<li><p>Do a <code class="docutils literal notranslate"><span class="pre">dir</span></code> and you will see something like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">ENV3</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">yourname</span>\<span class="n">cm</span><span class="o">&gt;</span><span class="nb">dir</span>
+ <span class="n">Volume</span> <span class="ow">in</span> <span class="n">drive</span> <span class="n">C</span> <span class="n">has</span> <span class="n">no</span> <span class="n">label</span><span class="o">.</span>
+ <span class="n">Volume</span> <span class="n">Serial</span> <span class="n">Number</span> <span class="ow">is</span> <span class="n">B215</span><span class="o">-</span><span class="n">C79C</span>
+
+ <span class="n">Directory</span> <span class="n">of</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">blue</span>\<span class="n">cm</span>
+
+<span class="mi">05</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="mi">2019</span>  <span class="mi">12</span><span class="p">:</span><span class="mi">09</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="o">.</span>
+<span class="mi">05</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="mi">2019</span>  <span class="mi">12</span><span class="p">:</span><span class="mi">09</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="o">..</span>
+<span class="mi">05</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="mi">2019</span>  <span class="mi">12</span><span class="p">:</span><span class="mi">06</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="n">cloudmesh</span><span class="o">-</span><span class="n">box</span>
+<span class="mi">05</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="mi">2019</span>  <span class="mi">12</span><span class="p">:</span><span class="mi">06</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cloud</span>
+<span class="mi">05</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="mi">2019</span>  <span class="mi">12</span><span class="p">:</span><span class="mi">06</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cmd5</span>
+<span class="mi">05</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="mi">2019</span>  <span class="mi">12</span><span class="p">:</span><span class="mi">06</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="n">cloudmesh</span><span class="o">-</span><span class="n">common</span>
+<span class="mi">05</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="mi">2019</span>  <span class="mi">12</span><span class="p">:</span><span class="mi">06</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="n">cloudmesh</span><span class="o">-</span><span class="n">inventory</span>
+<span class="mi">05</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="mi">2019</span>  <span class="mi">12</span><span class="p">:</span><span class="mi">06</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="n">cloudmesh</span><span class="o">-</span><span class="n">manual</span>
+<span class="mi">05</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="mi">2019</span>  <span class="mi">12</span><span class="p">:</span><span class="mi">06</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="n">cloudmesh</span><span class="o">-</span><span class="n">storage</span>
+<span class="mi">05</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="mi">2019</span>  <span class="mi">12</span><span class="p">:</span><span class="mi">06</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="n">cloudmesh</span><span class="o">-</span><span class="n">sys</span>
+               <span class="mi">0</span> <span class="n">File</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>              <span class="mi">0</span> <span class="nb">bytes</span>
+              <span class="mi">11</span> <span class="n">Dir</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="mi">965</span><span class="p">,</span><span class="mi">946</span><span class="p">,</span><span class="mi">884</span><span class="p">,</span><span class="mi">096</span> <span class="nb">bytes</span> <span class="n">free</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>If you like to explore other bundles, you can do this with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">ENV3</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">blue</span>\<span class="n">cm</span><span class="o">&gt;</span><span class="n">cloudmesh</span><span class="o">-</span><span class="n">installer</span> <span class="n">bundles</span>
+</pre></div>
+</div>
+<p>Which will return you a list of the different development combinations.
+Please note that they are here just for developer convenience and you do
+not have to think about which bundles you need. Get in contact with us
+to find out mor. We even can create you a custom bundle. If you are a
+user, you naturally will be able to use a pip install once the package
+has been released and the dependencies will be discovered automatically.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span><span class="p">:</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">common</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cmd5</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">sys</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">manual</span>
+<span class="n">cloud</span><span class="p">:</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">common</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cmd5</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">sys</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cloud</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">inventory</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">manual</span>
+<span class="n">batch</span><span class="p">:</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">common</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cmd5</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">sys</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cloud</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">inventory</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">batch</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">manual</span>
+<span class="n">storage</span><span class="p">:</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">common</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cmd5</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">sys</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cloud</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">storage</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">inventory</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">box</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">manual</span>
+<span class="n">source</span><span class="p">:</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">common</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cmd5</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">sys</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cloud</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">storage</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">inventory</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">emr</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">comet</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">openapi</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">nn</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">nist</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">conda</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">azure</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">aws</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">box</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">redshift</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">manual</span>
+<span class="n">web</span><span class="p">:</span>
+        <span class="n">about</span> <span class="n">get</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">github</span><span class="o">.</span><span class="n">io</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">manual</span>
+<span class="n">community</span><span class="p">:</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">community</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span>
+<span class="n">flow</span><span class="p">:</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">common</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cmd5</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">sys</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cloud</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">inventory</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">flow</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">manual</span>
+<span class="n">emr</span><span class="p">:</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">common</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cmd5</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">sys</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cloud</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">inventory</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">emr</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">manual</span>
+<span class="n">conda</span><span class="p">:</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">conda</span>
+<span class="nb">all</span><span class="p">:</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">box</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cloud</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cmd5</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">common</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">inventory</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">manual</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">storage</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">sys</span>
+<span class="n">cloudmesh</span><span class="p">:</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">box</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cloud</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">cmd5</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">common</span>
+        <span class="n">cloudmesh</span><span class="o">-</span><span class="n">inventory</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">manual</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">storage</span> <span class="n">cloudmesh</span><span class="o">-</span><span class="n">sys</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="development-with-pycharm">
+<h2>Development with pyCharm<a class="headerlink" href="#development-with-pycharm" title="Permalink to this headline">¶</a></h2>
+<p>Pycharm is a great editor with many features. It is worthwhile to spend
+some time with it and explore. Please install pycharm <code class="docutils literal notranslate"><span class="pre">community</span></code>
+edition from</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.jetbrains.com/pycharm/download/">https://www.jetbrains.com/pycharm/download/</a></p></li>
+</ul>
+<p>Start it up and say Open Project. Locate the <code class="docutils literal notranslate"><span class="pre">cm</span></code> directory and open
+it. All repositories will be imported and you can use them for
+development.</p>
+<p>Next we want to configure the python interpreter. Go to</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">File-&gt;Settings-&gt;Project:cm-&gt;Project</span> <span class="pre">Interpreter</span></code></p></li>
+</ul>
+<p>Click on project interpreter and select <code class="docutils literal notranslate"><span class="pre">All</span></code> add the interpreter with
+the location</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">C:\USers\yourusername\venv</span></code></p></li>
+</ul>
+<p>It will add your interpreter to pycharm</p>
+</div>
+<div class="section" id="github-use">
+<h2>Github use<a class="headerlink" href="#github-use" title="Permalink to this headline">¶</a></h2>
+<p>cloudmesh-installer is best used with ssh keys. Generate one in the
+terminal while saying</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span>
+</pre></div>
+</div>
+<p>It is very important that you do not create a password less key out of
+security reasons. If we find out you do, you will get all repository
+access revoked in case you have write access. Look at the public key
+with in gitbash</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat ~/.ssh/id_rsa.pub
+</pre></div>
+</div>
+<p>and upload the key to</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/settings/keys">https://github.com/settings/keys</a></p></li>
+</ul>
+<p>As you can directly commit from pycharm you can set up git hub access
+also in pycharm.</p>
+</div>
+<div class="section" id="git-pull-requests">
+<h2>Git Pull requests<a class="headerlink" href="#git-pull-requests" title="Permalink to this headline">¶</a></h2>
+<p>In case you do not have direct access to github cloudmesh, you can
+create yourself a local clone and create pull requests. Please note it
+is of utmost important that you do not wait for 10 weeks with your pull
+request, we want to see your git updates on a weekly basis.</p>
+</div>
+<div class="section" id="compiling-the-code">
+<h2>Compiling the code<a class="headerlink" href="#compiling-the-code" title="Permalink to this headline">¶</a></h2>
+<p>To avoid compiling the code all the time you can visit each directory
+and issue the command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>or you can apply it an a bundle with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cloudmesh</span><span class="o">-</span><span class="n">installer</span> <span class="n">install</span> <span class="n">storage</span> <span class="o">-</span><span class="n">e</span>
+</pre></div>
+</div>
+<p>where we assume that your bundle is storage. This will take quire a
+while as we install lots of libraries to give you access to lots of
+clouds.</p>
+<p>To see if this installed cloudmesh you can do</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms <span class="nb">help</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="windows-linux.html" class="btn btn-neutral float-right" title="Using windows instead of Linux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../manual/workflow_draft.html" class="btn btn-neutral float-left" title="workflow_draft" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

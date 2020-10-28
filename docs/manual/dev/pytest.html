@@ -1,0 +1,442 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pytest &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Version Management" href="version.html" />
+    <link rel="prev" title="Code Management" href="management.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Contributing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="conventions.html">Code Conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual.html">Documentation Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management.html">Code Management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Pytest</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cloudmesh-debugging-information">Cloudmesh Debugging Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-specification-and-execution">Test Specification and Execution</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="version.html">Version Management</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Contributing</a> &raquo;</li>
+        
+      <li>Pytest</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/dev/pytest.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pytest">
+<h1>Pytest<a class="headerlink" href="#pytest" title="Permalink to this headline">¶</a></h1>
+<p>Pytest is a utility to unit test python code. We use pytest and not
+<code class="docutils literal notranslate"><span class="pre">__main__</span></code> to test all functionality so they can me automatically run and
+reports can be generated. A project that does not have a sufficient
+number of tests to make sure the module works can not be accepted.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>The pytest module can be installed with the help of pip utility:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install pytest
+</pre></div>
+</div>
+<p>This will install the pytest module in the current Python distribution.
+All tests are included in the folder <code class="docutils literal notranslate"><span class="pre">tests</span></code>. For example for the
+cloudmesh-cloud module they are in</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-cloud/tree/master/tests">https://github.com/cloudmesh/cloudmesh-cloud/tree/master/tests</a></p></li>
+</ul>
+<p>If the order of the tests is important make sure the tests are specified in
+alphabetical order while introducing a numbering such as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">cm</span>
+  <span class="o">+</span> <span class="n">cloudmesh</span>
+  <span class="o">+</span> <span class="n">tests</span>
+    <span class="o">-</span> <span class="n">test_01_topic1</span><span class="o">.</span><span class="n">py</span>
+    <span class="o">-</span> <span class="n">test_02_topic2</span><span class="o">.</span><span class="n">py</span>
+    <span class="o">-</span> <span class="n">test_03_topic2</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cloudmesh-debugging-information">
+<h2>Cloudmesh Debugging Information<a class="headerlink" href="#cloudmesh-debugging-information" title="Permalink to this headline">¶</a></h2>
+<p>To switch on debugging information for the tests you can do this with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms <span class="nb">set</span> <span class="nv">trace</span><span class="o">=</span>True
+cms <span class="nb">set</span> <span class="nv">debug</span><span class="o">=</span>True
+cms <span class="nb">set</span> <span class="nv">verbose</span><span class="o">=</span><span class="m">10</span>
+</pre></div>
+</div>
+<p>After you are done testing, you may want to set them back to</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms <span class="nb">set</span> <span class="nv">trace</span><span class="o">=</span>True
+cms <span class="nb">set</span> <span class="nv">debug</span><span class="o">=</span>True
+cms <span class="nb">set</span> <span class="nv">verbose</span><span class="o">=</span><span class="m">10</span>
+</pre></div>
+</div>
+<p>You can also set them within a test with the command</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cloudmesh.common3.Benchmark</span> <span class="kn">import</span> <span class="n">Benchmark</span>
+
+<span class="n">Benchmark</span><span class="o">.</span><span class="n">debug</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="test-specification-and-execution">
+<h2>Test Specification and Execution<a class="headerlink" href="#test-specification-and-execution" title="Permalink to this headline">¶</a></h2>
+<p>A simple example for a test is</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-cloud/blob/master/tests/test_key.py">https://github.com/cloudmesh/cloudmesh-cloud/blob/master/tests/test_key.py</a></p></li>
+</ul>
+<p>Note that all test python programs have specific function names of the
+form</p>
+<p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">test_topic</span> <span class="pre">(self)</span></code></p>
+<p>Through the class decorator they are executed in order</p>
+<dl class="simple">
+<dt>A test may also have a method <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">setup(self)</span></code> whcih is run prior to each</dt><dd><p>other method.</p>
+</dd>
+</dl>
+<p>A test method includes one or multiple asserts that check if a particular test
+succeeds and reports this to pytest to expose the information if a tess
+succeeds or fails, when running it</p>
+<p>To have better visual separation of tests with the <cite>–capture=no</cite> option, all
+pytest functions in cloudmesh start with a <code class="docutils literal notranslate"><span class="pre">HEADING()</span></code>, which will print a
+banner with the function name. Invocation is simply done with the comment
+lines you see on top that you will include. In our case the test is called
+<cite>test_key.py</cite> so we include on the top:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">###############################################################</span>
+<span class="c1"># pytest -v --capture=no tests/test_key.py</span>
+<span class="c1"># pytest -v  tests/test_key.py</span>
+<span class="c1"># pytest -v --capture=no -v tests/test_key.py:Test_key.&lt;METHODNAME&gt;</span>
+<span class="c1">###############################################################</span>
+</pre></div>
+</div>
+<p>Make sure that you place this comment in your tests. to remind the
+developers how to execute your test from the main directory. If you need
+dpecial instructions, please add them here.</p>
+<p>The following example is our simple pytest for key. THe file is stored at
+<code class="docutils literal notranslate"><span class="pre">tests/test_key.py</span></code></p>
+<p>First, we import the needed classes and methods we like to test. We
+define a class, and than we define the methods. such as the setup and
+the actual tests.</p>
+<p>your run it with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pytest -v --capture<span class="o">=</span>no tests/test_key.py
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">###############################################################</span>
+<span class="c1"># pytest -v --capture=no tests/test_key.py</span>
+<span class="c1"># pytest -v  tests/test_key.py</span>
+<span class="c1"># pytest -v --capture=no -v --nocapture tests/test_key.py:Test_key.&lt;METHIDNAME&gt;</span>
+<span class="c1">###############################################################</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">from</span> <span class="nn">cloudmesh.common.Printer</span> <span class="kn">import</span> <span class="n">Printer</span>
+<span class="kn">from</span> <span class="nn">cloudmesh.common.util</span> <span class="kn">import</span> <span class="n">HEADING</span><span class="p">,</span> <span class="n">banner</span>
+<span class="kn">from</span> <span class="nn">cloudmesh.management.configuration.SSHkey</span> <span class="kn">import</span> <span class="n">SSHkey</span>
+<span class="kn">from</span> <span class="nn">cloudmesh.management.configuration.config</span> <span class="kn">import</span> <span class="n">Config</span>
+<span class="kn">from</span> <span class="nn">cloudmesh.common.StopWatch</span> <span class="kn">import</span> <span class="n">StopWatch</span>
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">incremental</span>
+<span class="k">class</span> <span class="nc">TestKey</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sshkey</span> <span class="o">=</span> <span class="n">SSHkey</span><span class="p">()</span>
+
+
+    <span class="k">def</span> <span class="nf">test_find_key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">HEADING</span><span class="p">()</span>
+        <span class="n">StopWatch</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sshkey</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sshkey</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sshkey</span><span class="p">))</span>
+        <span class="n">pprint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sshkey</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">sshkey</span><span class="o">.</span><span class="vm">__dict__</span>  <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+
+    <span class="k">def</span> <span class="nf">test__key_from_git</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">HEADING</span><span class="p">()</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">()</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;cloudmesh.profile.github&quot;</span><span class="p">]</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Username:&quot;</span><span class="p">,</span> <span class="n">username</span><span class="p">)</span>
+        <span class="n">StopWatch</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s2">&quot;get from git&quot;</span><span class="p">)</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sshkey</span><span class="o">.</span><span class="n">get_from_git</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+        <span class="n">StopWatch</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="s2">&quot;get from git&quot;</span><span class="p">)</span>
+        <span class="n">pprint</span> <span class="p">(</span><span class="n">keys</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">Printer</span><span class="o">.</span><span class="n">flatwrite</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span>
+                            <span class="n">sort_keys</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">),</span>
+                            <span class="n">order</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;fingerprint&quot;</span><span class="p">],</span>
+                            <span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Fingerprint&quot;</span><span class="p">])</span>
+              <span class="p">)</span>
+
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+
+
+    <span class="k">def</span> <span class="nf">test_results</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">HEADING</span><span class="p">()</span>
+        <span class="n">banner</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Benchmark results for Keys&quot;</span><span class="p">)</span>
+        <span class="n">StopWatch</span><span class="o">.</span><span class="n">benchmark</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The output with <code class="docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">tests/test_key.py</span></code> does not provide any
+detail, but just reports if tests fail or succeed.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">----------------------------------------------------------------------</span>
+<span class="n">Ran</span> <span class="mi">2</span> <span class="n">tests</span> <span class="ow">in</span> <span class="mf">0.457</span><span class="n">s</span>
+
+<span class="n">OK</span>
+</pre></div>
+</div>
+<p>The output with <code class="docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">-v</span> <span class="pre">tests/test_key.py</span></code> results in</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tests</span><span class="o">.</span><span class="n">test_key</span><span class="o">.</span><span class="n">TestName</span><span class="o">.</span><span class="n">test_01_key</span> <span class="o">...</span> <span class="n">ok</span>
+<span class="n">tests</span><span class="o">.</span><span class="n">test_key</span><span class="o">.</span><span class="n">TestName</span><span class="o">.</span><span class="n">test_02_git</span> <span class="o">...</span> <span class="n">ok</span>
+
+<span class="o">----------------------------------------------------------------------</span>
+<span class="n">Ran</span> <span class="mi">2</span> <span class="n">tests</span> <span class="ow">in</span> <span class="mf">1.072</span><span class="n">s</span>
+
+<span class="n">OK</span>
+</pre></div>
+</div>
+<p>During development phase you want to use</p>
+<p><code class="docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">-v</span> <span class="pre">--capture=no</span> <span class="pre">tests/test_key.py</span></code></p>
+<p>which prints all print statements</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="version.html" class="btn btn-neutral float-right" title="Version Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="management.html" class="btn btn-neutral float-left" title="Code Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

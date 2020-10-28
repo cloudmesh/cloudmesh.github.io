@@ -1,0 +1,998 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cloudmesh Version 4 &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Preface" href="preface/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Cloudmesh Version 4</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cloudmesh-version-4">
+<h1>Cloudmesh Version 4<a class="headerlink" href="#cloudmesh-version-4" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://cloudmesh.github.io/cloudmesh-manual/">Manual</a></p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preface/index.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface/about.html">About</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preface/about.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preface/about.html#versions">Versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preface/about.html#contact">Contact</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="preface/contributors.html">Contributors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation/install.html">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/install.html#installation-of-cloudmesh-with-docker">Installation of cloudmesh with Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/install.html#installation-of-cloudmesn-in-python">Installation of Cloudmesn in Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation/install.html#anaconda-and-conda">Anaconda and Conda</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation/install.html#python-installation-from-python-org">Python Installation from python.org</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation/install.html#ssh-key">SSH key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/install.html#first-configuration">First configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/install.html#the-directory-cloudmesh">The Directory .cloudmesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/install.html#installation-of-mongodb">Installation of MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/quickstart/quickstart.html">Quickstart</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#configuration-with-the-gui">Configuration with the GUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#manual">Manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#generating-the-key-and-certificate">Generating the Key and Certificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#validate-and-verify-the-key">Validate and verify the key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#initialization">Initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#initialize-keys-and-security-groups">Initialize keys and Security Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#command-line">Command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#interactive-shell">Interactive shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#command-scripts">Command scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#cache">Cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#using-quotes">Using quotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#configuring-chameleon-cloud">Configuring chameleon cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#timer">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/quickstart/quickstart.html#debugging">Debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/docker/install-docker.html">Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation/os/install-linux.html">Installation for for Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/os/install-linux.html#prerequisites-for-ubuntu-20-4">Prerequisites for Ubuntu 20.4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/os/install-linux.html#prerequisites-for-ubuntu-18-04">Prerequisites for Ubuntu 18.04</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/os/install-linux.html#installation-for-container-users">Installation for Container Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/os/install-linux.html#installation-for-users">Installation for Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/os/install-linux.html#installation-for-developers">Installation for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/os/install-linux.html#installation-diagram">Installation Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/os/install-macos.html">Installation for macOS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/os/install-macos.html#prerequisites-for-macos">Prerequisites for macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/os/install-macos.html#prerequisite-venv">Prerequisite venv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/os/install-macos.html#installation-for-container-users">Installation for Container Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/os/install-macos.html#installation-for-users">Installation for Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/os/install-macos.html#installation-for-developers">Installation for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/os/install-macos.html#installation-diagram">Installation Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/pi/install-pi.html">Prerequisites for Raspbian</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/pi/install-pi.html#setup-with-curl">Setup with curl</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/windows/index.html">Windows Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/windows/windows-install.html">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation/windows/windows-install.html#prerequisites-for-windows">Prerequisites for Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation/windows/windows-install.html#install">Install</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation/windows/windows-install.html#windows-container-approach">Windows Container Approach</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation/windows/windows-install.html#linux-subsystem-installation-approach">Linux Subsystem Installation Approach</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation/windows/windows-install.html#venv-setup-on-windows-cmd-exe">venv Setup on Windows CMD.EXE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation/windows/windows-update.html">User Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/windows/windows-update.html#developer-reinstall">Developer Reinstall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/windows/windows-linux-subsystem.html">Linux Subsystem on Windows 10</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation/windows/windows-linux-subsystem.html#installation-for-users">Installation for Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation/windows/windows-linux-subsystem.html#installation-for-developers">Installation for Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation/windows/faq.html">FAQ for Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation/windows/faq.html#videos">Videos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation/windows/faq.html#visual-studio-build-tools">Visual Studio Build Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation/windows/faq.html#mongodb">MongoDB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation/windows/faq.html#which-version-of-windows-do-i-need-to-use-multipass">Which version of Windows do I need to use multipass?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation/windows/faq.html#multipass-hyper-v-instalation-on-windows">multipass Hyper-V instalation on Windows</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation/windows/faq.html#general-windows-tips">General Windows Tips</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="installation/windows/faq.html#where-do-i-find-the-release-numbers-for-windows">Where do I find the release numbers for Windows?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="installation/windows/faq.html#how-can-i-get-the-edu-version">How can I get the EDU Version?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="installation/windows/faq.html#issues-with-docker-on-windows">Issues with docker on Windows</a></li>
+<li class="toctree-l6"><a class="reference internal" href="installation/windows/faq.html#usernames-in-windows-must-not-have-spaces">Usernames in Windows must not have spaces</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/install-dev.html">Installation of Cloudmesh (Source Install for Developers)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/install-dev.html#cloudmesh-updates">Cloudmesh Updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/install-dev.html#reinstallation">Reinstallation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/database/install-mongo.html">Cloudmesh Database</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/database/install-mongo.html#mongodb-installation-steps">MongoDB Installation Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/database/install-mongo.html#uninstall-of-mongodb-on-windows-10">Uninstall of MongoDB on Windows 10</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration/configuration.html">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#cloudmesh-yaml-file-object-definitions">Cloudmesh Yaml File Object definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#getting-values">Getting Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#setting-values">Setting values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#editing-values">Editing Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#advanced-yaml-variables">Advanced Yaml Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#profile">Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#default">Default</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#general-service-attributes">General Service Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#cm">cm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#adding-templates">Adding Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#compute-cloud-providers">Compute Cloud Providers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#id1">Default</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#credentials">Credentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#google">Google</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#openstack">OpenStack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#virtual-box">Virtual Box</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#storage-providers">Storage Providers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#aws-s3">AWS S3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#google-drive">Google drive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#google-cloud-storage">Google Cloud Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#box">Box</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#volume-cloud-providers">Volume Cloud Providers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#aws">AWS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#azure">Azure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#id2">Google</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#multipass">Multipass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#oracle">Oracle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#id3">Openstack</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#log-file">Log File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#mongo">Mongo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuration/configuration.html#mongo-via-docker">Mongo via Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/configuration.html#config-api">Config API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/index.html">Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="concepts/commandshell.html">Extensible Command Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/namespaces.html">Cloudmesh API Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/compute.html">Virtual Machine Providers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/storage.html">Storage Providers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="concepts/storage.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="concepts/storage.html#commandline">Commandline</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#monitor">Monitor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#run">Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#clean">Clean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#create-dir">Create dir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#put">Put</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#get">Get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#search">Search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#list">List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#delete">Delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#copy">Copy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="concepts/storage.html#pytests">Pytests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#generic-tests">Generic Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#provider-specific-pytests">Provider Specific Pytests</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="concepts/storage.html#virtual-directory">Virtual Directory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#configuration-1">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#pytests-2">Pytests</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="concepts/storage.html#google-drive">Google drive</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#note">Note</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concepts/storage.html#links">Links</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/vdir.html">Virtual Directory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="concepts/vdir.html#pytest">PyTest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="concepts/vdir.html#google-drive">Google drive</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="concepts/vdir.html#note">Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="concepts/vdir.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/openapi.html">OpenAPI Web Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="accounts/index.html">Cloud Accounts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="accounts/openstack.html">OpenStack Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="accounts/aws.html">AWS Account</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="accounts/aws.html#access-key">Access Key</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="accounts/aws.html#create-and-download-access-key">Create and Download Access Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/aws.html#using-the-access-key">Using the Access Key</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/aws.html#compute-service">Compute Service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="accounts/aws.html#import-public-key">Import Public key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/aws.html#cloudmesh-yaml-configuration-for-aws">Cloudmesh.yaml Configuration for AWS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/aws.html#storage-service">Storage Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/aws.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="accounts/azure.html">Azure Account</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="accounts/azure.html#azure-account-1">Azure Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/azure.html#azure-cli">Azure CLI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="accounts/azure.html#installing-azure-cli-on-ubuntu-os">Installing Azure CLI on Ubuntu OS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/azure.html#installing-azure-cli-on-windows-10">Installing Azure CLI on Windows 10</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/azure.html#azure-resource-group-for-storage">Azure Resource Group (for Storage)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/azure.html#azure-api-credentials">Azure API Credentials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="accounts/azure.html#azure-subscription-id">Azure_Subscription_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/azure.html#azure-tenant-id-azure-client-id">Azure_Tenant_ID &amp; Azure_Client_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/azure.html#azure-secret-key">Azure_Secret_Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/azure.html#grant-permission-to-application">Grant permission to application</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/azure.html#add-the-credentials-to-cloudmesh-yaml">Add the credentials to cloudmesh.yaml</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/azure.html#azure-resource-group-for-compute">Azure Resource Group (for Compute)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/azure.html#azure-resource-group-for-storage-and-compute">Azure Resource Group (for Storage and Compute)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/azure.html#faq">FAQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/azure.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="accounts/google/index.html">Google Acounts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="accounts/google/google-cloud.html">Google Cloud Platform</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="accounts/google/google-cloud.html#google-compute-engine">Google Compute Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/google/google-cloud.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/google/google-cloud.html#creating-the-google-account">Creating the Google Account</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/google/google-cloud.html#activation-google-cloud-service">Activation Google Cloud Service</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="accounts/google/google-cloud.html#setting-up-google-cloud-account">Setting up Google Cloud Account</a></li>
+<li class="toctree-l5"><a class="reference internal" href="accounts/google/google-cloud.html#registering-google-cloud-to-cloudmesh">Registering Google Cloud to Cloudmesh</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="accounts/google/google-cloud.html#register-google-compute">Register Google Compute</a></li>
+<li class="toctree-l6"><a class="reference internal" href="accounts/google/google-cloud.html#register-google-storage">Register Google Storage</a></li>
+<li class="toctree-l6"><a class="reference internal" href="accounts/google/google-cloud.html#register-google-volume">Register Google Volume</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="accounts/google/google-cloud.html#verify-setup">Verify Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/google/google-cloud.html#links">Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/google/google-cloud.html#google-cloud-storage">Google Cloud Storage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/google/gdrive/gdrive.html">Google Drive</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="accounts/google/gdrive/gdrive.html#create-a-project">Create a Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/google/gdrive/gdrive.html#enable-apis-and-services">Enable APIs and Services</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/google/gdrive/gdrive.html#create-credentials">Create Credentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/google/gdrive/gdrive.html#authorization-flow">Authorization Flow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="accounts/oracle/account.html">Oracle Cloud Account</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="accounts/oracle/account.html#account-creation">Account Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/oracle/account.html#account-login">Account Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/oracle/account.html#oracle-api">Oracle API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/oracle/account.html#cloudmesh-config-file">Cloudmesh Config File</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="accounts/oracle/account.html#compute-entry">Compute Entry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/oracle/account.html#storage-entry">Storage Entry</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/oracle/account.html#required-keys-and-ocids">Required Keys and OCIDs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="accounts/oracle/account.html#create-api-signing-key">Create API Signing Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/oracle/account.html#user">User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/oracle/account.html#tenancy">Tenancy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/oracle/account.html#compartment">Compartment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="accounts/oracle/account.html#public-key">Public Key</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/oracle/account.html#compute-service">Compute Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/oracle/account.html#storage-service">Storage Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/oracle/account.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="accounts/box.html">Box Account</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="accounts/box.html#sign-up">Sign up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/box.html#create-an-app">Create an App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/box.html#authenticate-with-jwt">Authenticate with JWT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accounts/box.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq/install.html">FAQ - Cloudmesh</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faq/install.html#where-is-the-manual">Where is the manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq/install.html#having-control-over-your-computers">Having control over your computers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="faq/install.html#install-mongodb">Install MongoDB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="faq/install.html#do-an-update-of-the-source">Do an update of the source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="faq/install.html#interact-with-chameleon-cloud">Interact with Chameleon CLoud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="faq/install.html#draft-cms-mostly-automated-install-on-macos-and-linux">Draft: Cms Mostly automated install on macOS and Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="faq/install.html#switching-between-cms-and-cmsd">Switching between cms and cmsd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faq/chameleon.html">FAQ - Chameleon cloud</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faq/chameleon.html#how-check-if-chmaeleon-cloud-works">How check if chmaeleon cloud works</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq/chameleon.html#how-do-i-upload-my-key-to-chameleon">How do I upload my key to chameleon?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq/chameleon.html#what-is-the-error">What is the error …?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq/chameleon.html#what-is-the-chameleon-account-bug">What is the chameleon account bug?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq/chameleon.html#you-must-not-use-iuguest-network">You must not use IUGuest network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq/chameleon.html#tethering-you-computer-through-a-cell-phone">Tethering you computer through a cell phone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq/chameleon.html#can-i-keep-my-instance-running-when-not-in-use">Can I keep my instance running when not in use?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq/chameleon.html#what-is-warning-remote-host-identification-has-changed">What is <code class="docutils literal notranslate"><span class="pre">WARNING:</span> <span class="pre">REMOTE</span> <span class="pre">HOST</span> <span class="pre">IDENTIFICATION</span> <span class="pre">HAS</span> <span class="pre">CHANGED!</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq/chameleon.html#ssh-keygen-vs-putty">ssh-keygen vs putty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq/chameleon.html#can-i-give-my-own-network-when-booting">Can I give my own network when booting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq/chameleon.html#how-do-i-upload-the-secgroups">How do I upload the secgroups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq/chameleon.html#are-there-additional-videos">Are there additional Videos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="faq/chameleon.html#starting-vms-in-horizon">Starting vms in horizon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="faq/chameleon.html#starting-vms-in-cloudmesh">Starting VMs in cloudmesh</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="benchmarks/index.html">Benchmarks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="benchmarks/gregor.html">Benchmarks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="benchmarks/gregor.html#systems">Systems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="benchmarks/gregor.html#gregor-laptop">Gregor Laptop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="benchmarks/gregor.html#gregor-pc">Gregor PC</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="benchmarks/gregor.html#key">Key</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="benchmarks/gregor.html#openstack">OpenStack</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="benchmarks/gregor.html#flavor">Flavor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="benchmarks/gregor.html#aws">AWS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="benchmarks/gregor.html#gregors-pc">Gregors PC</a></li>
+<li class="toctree-l5"><a class="reference internal" href="benchmarks/gregor.html#gregors-macos-laptop">Gregor’s macOS Laptop</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="benchmarks/gregor.html#openstack-1">Openstack</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="benchmarks/gregor.html#gregors-macos-laptop-1">Gregor’s macOS Laptop</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="benchmarks/gregor.html#secgroup">Secgroup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="benchmarks/gregor.html#openstack-2">Openstack</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="benchmarks/gregor.html#gregors-macos-laptop-2">Gregor’s macOS Laptop</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cmd5.html">cms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cmd5.html#features">Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cmd5.html#execution-shell-command">Execution shell command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmd5.html#timers">Timers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmd5.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmd5.html#defaults">Defaults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmd5.html#stopwatch">Stopwatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmd5.html#accessing-python">Accessing Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmd5.html#accessing-shell-commands">Accessing Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmd5.html#accessing-the-yaml-file">Accessing the yaml file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cmd5.html#plugins">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmd5.html#docker">Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-cmd5.html">Basic Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manual/banner.html">banner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/clear.html">clear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/commands.html">commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/default.html">default</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/debug.html">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/echo.html">echo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/EOF.html">EOF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/help.html">help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/info.html">info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/man.html">man</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/pause.html">pause</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/plugin.html">plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/py.html">py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/q.html">q</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/quit.html">quit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/set.html">set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/shell.html">shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/sleep.html">sleep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/stopwatch.html">stopwatch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/sys.html">sys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/var.html">var</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/version.html">version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manual-configuration.html">Configuration Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manual/help.html">help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/check.html">check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/gui.html">gui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/admin.html">admin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/init.html">init</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/start.html">start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/stop.html">stop</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manual-group.html">Group Command</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manual/group.html">group</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manual-compute.html">Compute Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manual/host.html">host</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/inventory.html">inventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/config.html">config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/register.html">register</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/batch.html">batch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/flavor.html">flavor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/image.html">image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/key.html">key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/ip.html">ip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/open.html">open</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/openstack.html">openstack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/sec.html">sec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/ssh.html">ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/vbox.html">vbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/vcluster.html">vcluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/vm.html">vm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/group.html">group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/aws.html">aws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/azure.html">azure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/container.html">container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/google.html">google</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/multipass.html">multipass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/provider.html">provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/oracle.html">oracle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manual-storage.html">Storage Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manual/storage.html">storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/volume.html">volume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/vdir.html">vdir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manual-community.html">Community Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manual/data.html">data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/service.html">service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/source.html">source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/flow.html">flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/openapi.html">openapi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference-card.html">Reference Card</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference-card.html#shell-invocation">Shell invocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference-card.html#shell-basic-commands">Shell basic commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference-card.html#cloud-commands">Cloud commands</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Cloudmesh Command API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html#cloudmesh-api">Cloudmesh API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter/index.html">Jupyter Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jupyter/index.html#api-calls">API calls</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="projects/index.html">Community Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects/project-ai.html">Cloudmesh Cloud AI Service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-ai.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-ai.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-ai.html#difficulty">Difficulty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-ai.html#deliverables">Deliverables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects/project-compute.html">Cloudmesh Compute</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-compute.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-compute.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-compute.html#difficulty">Difficulty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-compute.html#deliverables">Deliverables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects/project-frugal.html">Cloudmesh Frugal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-frugal.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-frugal.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-frugal.html#difficulty">Difficulty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-frugal.html#deliverables">Deliverables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects/project-gui.html">Cloudmesh Graphical User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-gui.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-gui.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-gui.html#difficulty">Difficulty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-gui.html#deliverables">Deliverables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-gui.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects/project-hpc.html">Cloudmesh HPC Batch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-hpc.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-hpc.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-hpc.html#difficulty">Difficulty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-hpc.html#deliverables">Deliverables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects/project-mini-ocal.html">Cloudmesh Local Compute and Storage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-mini-ocal.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-mini-ocal.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-mini-ocal.html#difficulty">Difficulty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-mini-ocal.html#deliverables">Deliverables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects/project-pi-burn.html">Cloudmesh Raspberry Cloud Clusters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-pi-burn.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-pi-burn.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-pi-burn.html#difficulty">Difficulty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-pi-burn.html#deliverables">Deliverables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-pi-burn.html#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects/project-storage.html">Cloudmesh Storage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-storage.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-storage.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-storage.html#difficulty">Difficulty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-storage.html#deliverables">Deliverables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects/project-twister2.html">Cloudmesh Twister2 Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-twister2.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-twister2.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-twister2.html#difficulty">Difficulty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-twister2.html#deliverables">Deliverables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects/project-workflow.html">Cloudmesh Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-workflow.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-workflow.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-workflow.html#difficulty">Difficulty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects/project-workflow.html#deliverables">Deliverables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dev/index.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dev/conventions.html">Code Conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/manual.html">Documentation Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/management.html">Code Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/pytest.html">Pytest</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dev/pytest.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dev/pytest.html#cloudmesh-debugging-information">Cloudmesh Debugging Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dev/pytest.html#test-specification-and-execution">Test Specification and Execution</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dev/version.html">Version Management</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="other">
+<h1>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation/database/mongo-use.html">Developping with Mongo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation/database/mongo-use.html#database-decorator">Database Decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation/database/mongo-use.html#database-access">Database Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation/database/mongo-use.html#creating-unique-names">Creating Unique Names</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">To Do</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/modules.html">cloudmesh</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manual/analytics.html">analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/book.html">book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/bookmanagerservice.html">bookmanagerservice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/emr.html">emr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/git.html">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/queue.html">queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/test.html">test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/windows.html">windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/workflow_draft.html">workflow_draft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows/windows-broken-make.html">Windows Cloudmesh Ubuntu Subsystem Environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-broken-make.html#setup-git">Setup git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-broken-make.html#bashrc">.bashrc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-broken-make.html#pycharm-different-terminal">Pycharm different terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-broken-make.html#cloudmesh-installer">cloudmesh-installer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-broken-make.html#development-with-pycharm">Development with pyCharm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-broken-make.html#github-use">Github use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-broken-make.html#git-pull-requests">Git Pull requests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-broken-make.html#compiling-the-code">Compiling the code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="windows/windows-linux.html">Using windows instead of Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-linux.html#using-bash">Using bash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-linux.html#using-gitbash">Using gitbash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-linux.html#using-conda">Using conda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-linux.html#using-cmd">Using cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-linux.html#easy-install">EASY INSTALL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="windows/windows-linux.html#env3-bat">ENV3.bat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows/windows-linux.html#setup-env3-bat">SETUP-ENV3.bat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows/windows-linux.html#cms-clone-bat">CMS-CLONE.bat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows/windows-linux.html#cms-aa-bat">CMS-AA.bat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows/windows-linux.html#using-it">Using it</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="windows/windows-ubuntu.html">Windows Cloudmesh Development Environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-ubuntu.html#development-with-pycharm">Development with pyCharm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-ubuntu.html#github-use">Github use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-ubuntu.html#git-pull-requests">Git Pull requests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-ubuntu.html#compiling-the-code">Compiling the code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-ubuntu.html#makefile">Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-ubuntu.html#setup-git">Setup git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-ubuntu.html#bashrc">.bashrc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows/windows-ubuntu.html#pycharm-different-terminal">Pycharm different terminal</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deprecated.html">Deprecated</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration/encryption.html">Cloudmesh Config File Encryption</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuration/encryption.html#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/encryption.html#quick-start">Quick-Start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/encryption.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/encryption.html#preparation">Preparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/encryption.html#encrypting-the-config-file">Encrypting the Config File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/encryption.html#decrypting-the-config-file">Decrypting the Config File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/encryption.html#additional-configuration-options">Additional Configuration Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="configuration/encryption.html#changing-the-secinit-directory">Changing the secinit Directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configuration/encryption.html#cms-key-gen-options">CMS Key Gen Options</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="configuration/encryption.html#setting-non-default-names-for-key-generation">Setting Non-Default Names for Key Generation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="configuration/encryption.html#setting-keys-for-encryption-without-key-gen-command">Setting Keys for Encryption Without Key Gen Command</a></li>
+<li class="toctree-l5"><a class="reference internal" href="configuration/encryption.html#generating-a-key-without-a-password">Generating a Key Without a Password</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="configuration/encryption.html#selecting-attributes-to-encrypt">Selecting Attributes to Encrypt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configuration/encryption.html#selecting-attributes-to-exclude-from-encryption">Selecting Attributes to Exclude from Encryption</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vcluster.html">Virtual Cluster (in progress)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vcluster.html#creating-a-virtual-cluster-and-testing-connections">Creating a Virtual Cluster and testing connections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vcluster.html#creating-a-runtime-configuration">Creating a runtime-configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vcluster.html#running-parallel-remote-jobs">Running Parallel Remote Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vcluster.html#cleaning-the-remote">Cleaning the remote</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpc/batch.html">Batch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc/batch.html#creating-a-job-configuration">Creating a job configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/batch.html#testing-the-connection">Testing the connection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/batch.html#running-the-job">Running the Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/batch.html#downloading-the-results">Downloading the Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/batch.html#cleaning-the-remote">Cleaning the remote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/batch.html#get-the-list-of-the-jobs-and-clusters">Get the list of the jobs and clusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/batch.html#modifying-the-configuration-by-setting-parameters">Modifying the Configuration by Setting Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/batch.html#removing-jobs-and-clusters">Removing jobs and clusters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpc/refcard.html">HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow.html">Infrastructure Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workflow.html#database-objects">Database Objects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflow.html#definition-collection">Definition Collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflow.html#running-flow-collection">Running Flow Collection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflow.html#javascript-interface-proposed">Javascript Interface (proposed)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflow.html#rest">REST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflow.html#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vm/vm.html">Virtual Machine Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vm/vm.html#command-line-and-shell-interface">Command Line and Shell Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vm/vm.html#uniform-parameter-management">Uniform Parameter Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vm/vm.html#virtual-machine-management-1">Virtual machine management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vm/vm.html#key-management">Key management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vm/vm.html#security-groups">Security groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vm/vm.html#check-instances">Check instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vm/vm.html#command-examples">Command Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vm/vm.html#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="preface/index.html" class="btn btn-neutral float-right" title="Preface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

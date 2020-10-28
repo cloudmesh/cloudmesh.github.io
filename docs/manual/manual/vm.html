@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>vm &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="aws" href="aws.html" />
+    <link rel="prev" title="vcluster" href="vcluster.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../manual-compute.html">Compute Commands</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="host.html">host</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inventory.html">inventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="register.html">register</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batch.html">batch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flavor.html">flavor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image.html">image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key.html">key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ip.html">ip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="open.html">open</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html">openstack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec.html">sec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html">ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vbox.html">vbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vcluster.html">vcluster</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">vm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="group.html">group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aws.html">aws</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.html">azure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container.html">container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="google.html">google</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multipass.html">multipass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="provider.html">provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oracle.html">oracle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../manual-compute.html">Compute Commands</a> &raquo;</li>
+        
+      <li>vm</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/manual/vm.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vm">
+<h1>vm<a class="headerlink" href="#vm" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span>
+    <span class="n">vm</span> <span class="n">ping</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUDS</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">count</span><span class="o">=</span><span class="n">N</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">check</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUDS</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">username</span><span class="o">=</span><span class="n">USERNAME</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">status</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUDS</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">output</span><span class="o">=</span><span class="n">OUTPUT</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">console</span> <span class="p">[</span><span class="n">NAME</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">force</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">log</span> <span class="p">[</span><span class="n">NAME</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">force</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">stop</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span>  <span class="p">[</span><span class="o">--</span><span class="n">dryrun</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">start</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">dryrun</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">terminate</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUD</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">dryrun</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">delete</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUD</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">dryrun</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">refresh</span> <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUDS</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="nb">list</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUDS</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">output</span><span class="o">=</span><span class="n">OUTPUT</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">refresh</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">short</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">boot</span> <span class="p">[</span><span class="o">--</span><span class="n">n</span><span class="o">=</span><span class="n">COUNT</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">NAMES</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">label</span><span class="o">=</span><span class="n">LABEL</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUD</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">username</span><span class="o">=</span><span class="n">USERNAME</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">image</span><span class="o">=</span><span class="n">IMAGE</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">flavor</span><span class="o">=</span><span class="n">FLAVOR</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">size</span><span class="o">=</span><span class="n">SIZE</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">network</span><span class="o">=</span><span class="n">NETWORK</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">public</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">secgroup</span><span class="o">=</span><span class="n">SECGROUP</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">group</span><span class="o">=</span><span class="n">GROUP</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">--</span><span class="n">dryrun</span><span class="p">]</span>
+            <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">meta</span> <span class="nb">list</span> <span class="p">[</span><span class="n">NAME</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">meta</span> <span class="nb">set</span> <span class="p">[</span><span class="n">NAME</span><span class="p">]</span> <span class="n">KEY</span><span class="o">=</span><span class="n">VALUE</span><span class="o">...</span>
+    <span class="n">vm</span> <span class="n">meta</span> <span class="n">delete</span> <span class="p">[</span><span class="n">NAME</span><span class="p">]</span> <span class="n">KEY</span><span class="o">...</span>
+    <span class="n">vm</span> <span class="n">script</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">username</span><span class="o">=</span><span class="n">USERNAME</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">dryrun</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="nb">dir</span><span class="o">=</span><span class="n">DESTINATION</span><span class="p">]</span>
+              <span class="n">SCRIPT</span>
+    <span class="n">vm</span> <span class="n">ip</span> <span class="n">assign</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUD</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">ip</span> <span class="n">show</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">group</span><span class="o">=</span><span class="n">GROUP</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUD</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">output</span><span class="o">=</span><span class="n">OUTPUT</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">refresh</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">ip</span> <span class="n">inventory</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">ssh</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span>
+           <span class="p">[</span><span class="o">--</span><span class="n">username</span><span class="o">=</span><span class="n">USER</span><span class="p">]</span>
+           <span class="p">[</span><span class="o">--</span><span class="n">quiet</span><span class="p">]</span>
+           <span class="p">[</span><span class="o">--</span><span class="n">ip</span><span class="o">=</span><span class="n">IP</span><span class="p">]</span>
+           <span class="p">[</span><span class="o">--</span><span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">]</span>
+           <span class="p">[</span><span class="o">--</span><span class="n">command</span><span class="o">=</span><span class="n">COMMAND</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">put</span> <span class="n">SOURCE</span> <span class="n">DESTINATION</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">get</span> <span class="n">SOURCE</span> <span class="n">DESTINATION</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">rename</span> <span class="p">[</span><span class="n">OLDNAMES</span><span class="p">]</span> <span class="p">[</span><span class="n">NEWNAMES</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">force</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">dryrun</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">wait</span> <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUD</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">interval</span><span class="o">=</span><span class="n">INTERVAL</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">timeout</span><span class="o">=</span><span class="n">TIMEOUT</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">info</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUD</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">output</span><span class="o">=</span><span class="n">OUTPUT</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">dryrun</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">username</span> <span class="n">USERNAME</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUD</span><span class="p">]</span>
+    <span class="n">vm</span> <span class="n">resize</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">size</span><span class="o">=</span><span class="n">SIZE</span><span class="p">]</span>
+
+<span class="n">Arguments</span><span class="p">:</span>
+    <span class="n">OUTPUT</span>         <span class="n">the</span> <span class="n">output</span> <span class="nb">format</span>
+    <span class="n">COMMAND</span>        <span class="n">positional</span> <span class="n">arguments</span><span class="p">,</span> <span class="n">the</span> <span class="n">commands</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span>
+                   <span class="n">execute</span> <span class="n">on</span> <span class="n">the</span> <span class="n">server</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">ls</span> <span class="o">-</span><span class="n">a</span><span class="p">)</span> <span class="n">separated</span> <span class="n">by</span> <span class="s1">&#39;;&#39;</span><span class="p">,</span>
+                   <span class="n">you</span> <span class="n">will</span> <span class="n">get</span> <span class="n">a</span> <span class="k">return</span> <span class="n">of</span> <span class="n">executing</span> <span class="n">result</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">login</span> <span class="n">to</span>
+                   <span class="n">the</span> <span class="n">server</span><span class="p">,</span> <span class="n">note</span> <span class="n">that</span> <span class="nb">type</span> <span class="ow">in</span> <span class="o">--</span> <span class="ow">is</span> <span class="n">suggested</span> <span class="n">before</span>
+                   <span class="n">you</span> <span class="nb">input</span> <span class="n">the</span> <span class="n">commands</span>
+    <span class="n">NAME</span>           <span class="n">server</span> <span class="n">name</span><span class="o">.</span> <span class="n">By</span> <span class="n">default</span> <span class="n">it</span> <span class="ow">is</span> <span class="nb">set</span> <span class="n">to</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">last</span> <span class="n">vm</span> <span class="kn">from</span> <span class="nn">database.</span>
+    <span class="n">NAMES</span>          <span class="n">server</span> <span class="n">name</span><span class="o">.</span> <span class="n">By</span> <span class="n">default</span> <span class="n">it</span> <span class="ow">is</span> <span class="nb">set</span> <span class="n">to</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">last</span> <span class="n">vm</span> <span class="kn">from</span> <span class="nn">database.</span>
+    <span class="n">KEYPAIR_NAME</span>   <span class="n">Name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">vm</span> <span class="n">keypair</span> <span class="n">to</span> <span class="n">be</span> <span class="n">used</span> <span class="n">to</span> <span class="n">create</span> <span class="n">VM</span><span class="o">.</span> <span class="n">Note</span> <span class="n">this</span> <span class="ow">is</span>
+                   <span class="ow">not</span> <span class="n">a</span> <span class="n">path</span> <span class="n">to</span> <span class="n">key</span><span class="o">.</span>
+    <span class="n">NEWNAMES</span>       <span class="n">New</span> <span class="n">names</span> <span class="n">of</span> <span class="n">the</span> <span class="n">VM</span> <span class="k">while</span> <span class="n">renaming</span><span class="o">.</span>
+    <span class="n">OLDNAMES</span>       <span class="n">Old</span> <span class="n">names</span> <span class="n">of</span> <span class="n">the</span> <span class="n">VM</span> <span class="k">while</span> <span class="n">renaming</span><span class="o">.</span>
+
+<span class="n">Options</span><span class="p">:</span>
+    <span class="o">-</span><span class="n">v</span>             <span class="n">verbose</span><span class="p">,</span> <span class="n">prints</span> <span class="n">the</span> <span class="nb">dict</span> <span class="n">at</span> <span class="n">the</span> <span class="n">end</span>
+    <span class="o">--</span><span class="n">output</span><span class="o">=</span><span class="n">OUTPUT</span>   <span class="n">the</span> <span class="n">output</span> <span class="nb">format</span>
+    <span class="o">-</span><span class="n">H</span> <span class="o">--</span><span class="n">modify</span><span class="o">-</span><span class="n">knownhosts</span>  <span class="n">Do</span> <span class="ow">not</span> <span class="n">modify</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">known_hosts</span> <span class="n">file</span>
+                          <span class="n">when</span> <span class="n">ssh</span><span class="s1">&#39;ing into a machine</span>
+    <span class="o">--</span><span class="n">username</span><span class="o">=</span><span class="n">USERNAME</span>   <span class="n">the</span> <span class="n">username</span> <span class="n">to</span> <span class="n">login</span> <span class="n">into</span> <span class="n">the</span> <span class="n">vm</span><span class="o">.</span> <span class="n">If</span> <span class="ow">not</span>
+                          <span class="n">specified</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">guessed</span>
+                          <span class="kn">from</span> <span class="nn">the</span> <span class="n">image</span> <span class="n">name</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">cloud</span>
+    <span class="o">--</span><span class="n">ip</span><span class="o">=</span><span class="n">IP</span>          <span class="n">give</span> <span class="n">the</span> <span class="n">public</span> <span class="n">ip</span> <span class="n">of</span> <span class="n">the</span> <span class="n">server</span>
+    <span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUD</span>    <span class="n">give</span> <span class="n">a</span> <span class="n">cloud</span> <span class="n">to</span> <span class="n">work</span> <span class="n">on</span><span class="p">,</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">given</span><span class="p">,</span> <span class="n">selected</span>
+                     <span class="ow">or</span> <span class="n">default</span> <span class="n">cloud</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span>
+    <span class="o">--</span><span class="n">count</span><span class="o">=</span><span class="n">COUNT</span>    <span class="n">give</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">servers</span> <span class="n">to</span> <span class="n">start</span>
+    <span class="o">--</span><span class="n">detail</span>         <span class="k">for</span> <span class="n">table</span><span class="p">,</span> <span class="n">a</span> <span class="n">brief</span> <span class="n">version</span>
+                     <span class="ow">is</span> <span class="n">used</span> <span class="k">as</span> <span class="n">default</span><span class="p">,</span> <span class="n">use</span> <span class="n">this</span> <span class="n">flag</span> <span class="n">to</span> <span class="nb">print</span>
+                     <span class="n">detailed</span> <span class="n">table</span>
+    <span class="o">--</span><span class="n">flavor</span><span class="o">=</span><span class="n">FLAVOR</span>  <span class="n">give</span> <span class="n">the</span> <span class="n">name</span> <span class="ow">or</span> <span class="nb">id</span> <span class="n">of</span> <span class="n">the</span> <span class="n">flavor</span>
+    <span class="o">--</span><span class="n">group</span><span class="o">=</span><span class="n">GROUP</span>          <span class="n">give</span> <span class="n">the</span> <span class="n">group</span> <span class="n">name</span> <span class="n">of</span> <span class="n">server</span>
+    <span class="o">--</span><span class="n">secgroup</span><span class="o">=</span><span class="n">SECGROUP</span>    <span class="n">security</span> <span class="n">group</span> <span class="n">name</span> <span class="k">for</span> <span class="n">the</span> <span class="n">server</span>
+    <span class="o">--</span><span class="n">image</span><span class="o">=</span><span class="n">IMAGE</span>    <span class="n">give</span> <span class="n">the</span> <span class="n">name</span> <span class="ow">or</span> <span class="nb">id</span> <span class="n">of</span> <span class="n">the</span> <span class="n">image</span>
+    <span class="o">--</span><span class="n">key</span><span class="o">=</span><span class="n">KEY</span>        <span class="n">specify</span> <span class="n">a</span> <span class="n">key</span> <span class="n">to</span> <span class="n">use</span><span class="p">,</span> <span class="nb">input</span> <span class="n">a</span> <span class="n">string</span> <span class="n">which</span>
+                     <span class="ow">is</span> <span class="n">the</span> <span class="n">full</span> <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">private</span> <span class="n">key</span> <span class="n">file</span>
+    <span class="o">--</span><span class="n">keypair_name</span><span class="o">=</span><span class="n">KEYPAIR_NAME</span>   <span class="n">Name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">vm</span> <span class="n">keypair</span> <span class="n">to</span>
+                                  <span class="n">be</span> <span class="n">used</span> <span class="n">to</span> <span class="n">create</span> <span class="n">VM</span><span class="o">.</span>
+                                  <span class="n">Note</span> <span class="n">this</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">path</span> <span class="n">to</span> <span class="n">key</span><span class="o">.</span>
+    <span class="o">--</span><span class="n">user</span><span class="o">=</span><span class="n">USER</span>      <span class="n">give</span> <span class="n">the</span> <span class="n">user</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">server</span> <span class="n">that</span> <span class="n">you</span> <span class="n">want</span>
+                     <span class="n">to</span> <span class="n">use</span> <span class="n">to</span> <span class="n">login</span>
+    <span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">NAME</span>      <span class="n">give</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">virtual</span> <span class="n">machine</span>
+    <span class="o">--</span><span class="n">force</span>          <span class="n">rename</span><span class="o">/</span> <span class="n">delete</span> <span class="n">vms</span> <span class="n">without</span> <span class="n">user</span><span class="s1">&#39;s confirmation</span>
+    <span class="o">--</span><span class="n">command</span><span class="o">=</span><span class="n">COMMAND</span>
+                     <span class="n">specify</span> <span class="n">the</span> <span class="n">commands</span> <span class="n">to</span> <span class="n">be</span> <span class="n">executed</span>
+
+
+<span class="n">Description</span><span class="p">:</span>
+     <span class="n">commands</span> <span class="n">used</span> <span class="n">to</span> <span class="n">boot</span><span class="p">,</span> <span class="n">start</span> <span class="ow">or</span> <span class="n">delete</span> <span class="n">servers</span> <span class="n">of</span> <span class="n">a</span> <span class="n">cloud</span>
+
+     <span class="n">vm</span> <span class="n">default</span> <span class="p">[</span><span class="n">options</span><span class="o">...</span><span class="p">]</span>
+         <span class="n">Displays</span> <span class="n">default</span> <span class="n">parameters</span> <span class="n">that</span> <span class="n">are</span> <span class="nb">set</span> <span class="k">for</span> <span class="n">vm</span> <span class="n">boot</span> <span class="n">either</span>
+         <span class="n">on</span> <span class="n">the</span> <span class="n">default</span> <span class="n">cloud</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">cloud</span><span class="o">.</span>
+
+     <span class="n">vm</span> <span class="n">boot</span> <span class="p">[</span><span class="n">options</span><span class="o">...</span><span class="p">]</span>
+         <span class="n">Boots</span> <span class="n">servers</span> <span class="n">on</span> <span class="n">a</span> <span class="n">cloud</span><span class="p">,</span> <span class="n">user</span> <span class="n">may</span> <span class="n">specify</span> <span class="n">flavor</span><span class="p">,</span> <span class="n">image</span>
+         <span class="o">.</span><span class="n">etc</span><span class="p">,</span> <span class="n">otherwise</span> <span class="n">default</span> <span class="n">values</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span><span class="p">,</span> <span class="n">see</span> <span class="n">how</span> <span class="n">to</span> <span class="nb">set</span>
+         <span class="n">default</span> <span class="n">values</span> <span class="n">of</span> <span class="n">a</span> <span class="n">cloud</span><span class="p">:</span> <span class="n">cloud</span> <span class="n">help</span>
+
+     <span class="n">vm</span> <span class="n">start</span> <span class="p">[</span><span class="n">options</span><span class="o">...</span><span class="p">]</span>
+         <span class="n">Starts</span> <span class="n">a</span> <span class="n">suspended</span> <span class="ow">or</span> <span class="n">stopped</span> <span class="n">vm</span> <span class="n">instance</span><span class="o">.</span>
+
+     <span class="n">vm</span> <span class="n">stop</span> <span class="p">[</span><span class="n">options</span><span class="o">...</span><span class="p">]</span>
+         <span class="n">Stops</span> <span class="n">a</span> <span class="n">vm</span> <span class="n">instance</span> <span class="o">.</span>
+
+     <span class="n">vm</span> <span class="n">delete</span> <span class="p">[</span><span class="n">options</span><span class="o">...</span><span class="p">]</span>
+
+         <span class="n">Delete</span> <span class="n">servers</span> <span class="n">of</span> <span class="n">a</span> <span class="n">cloud</span><span class="p">,</span> <span class="n">user</span> <span class="n">may</span> <span class="n">delete</span> <span class="n">a</span> <span class="n">server</span> <span class="n">by</span> <span class="n">its</span>
+         <span class="n">name</span> <span class="ow">or</span> <span class="nb">id</span><span class="p">,</span> <span class="n">delete</span> <span class="n">servers</span> <span class="n">of</span> <span class="n">a</span> <span class="n">group</span> <span class="ow">or</span> <span class="n">servers</span> <span class="n">of</span> <span class="n">a</span> <span class="n">cloud</span><span class="p">,</span>
+         <span class="n">give</span> <span class="n">prefix</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="nb">range</span> <span class="n">to</span> <span class="n">find</span> <span class="n">servers</span> <span class="n">by</span> <span class="n">their</span> <span class="n">names</span><span class="o">.</span>
+         <span class="n">Or</span> <span class="n">user</span> <span class="n">may</span> <span class="n">specify</span> <span class="n">more</span> <span class="n">options</span> <span class="n">to</span> <span class="n">narrow</span> <span class="n">the</span> <span class="n">search</span>
+
+     <span class="n">vm</span> <span class="n">floating_ip_assign</span> <span class="p">[</span><span class="n">options</span><span class="o">...</span><span class="p">]</span>
+         <span class="n">assign</span> <span class="n">a</span> <span class="n">public</span> <span class="n">ip</span> <span class="n">to</span> <span class="n">a</span> <span class="n">VM</span> <span class="n">of</span> <span class="n">a</span> <span class="n">cloud</span>
+
+     <span class="n">vm</span> <span class="n">ip</span> <span class="n">show</span> <span class="p">[</span><span class="n">options</span><span class="o">...</span><span class="p">]</span>
+         <span class="n">show</span> <span class="n">the</span> <span class="n">ips</span> <span class="n">of</span> <span class="n">VMs</span>
+
+     <span class="n">vm</span> <span class="n">ssh</span> <span class="p">[</span><span class="n">options</span><span class="o">...</span><span class="p">]</span>
+         <span class="n">login</span> <span class="n">to</span> <span class="n">a</span> <span class="n">server</span> <span class="ow">or</span> <span class="n">execute</span> <span class="n">commands</span> <span class="n">on</span> <span class="n">it</span>
+
+     <span class="n">vm</span> <span class="nb">list</span> <span class="p">[</span><span class="n">options</span><span class="o">...</span><span class="p">]</span>
+         <span class="n">same</span> <span class="k">as</span> <span class="n">command</span> <span class="s2">&quot;list vm&quot;</span><span class="p">,</span> <span class="n">please</span> <span class="n">refer</span> <span class="n">to</span> <span class="n">it</span>
+
+     <span class="n">vm</span> <span class="n">status</span> <span class="p">[</span><span class="n">options</span><span class="o">...</span><span class="p">]</span>
+         <span class="n">Retrieves</span> <span class="n">status</span> <span class="n">of</span> <span class="n">last</span> <span class="n">VM</span> <span class="n">booted</span> <span class="n">on</span> <span class="n">cloud</span> <span class="ow">and</span> <span class="n">displays</span> <span class="n">it</span><span class="o">.</span>
+
+     <span class="n">vm</span> <span class="n">refresh</span> <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUDS</span><span class="p">]</span>
+         <span class="n">this</span> <span class="n">command</span> <span class="n">refreshes</span> <span class="n">the</span> <span class="n">data</span> <span class="k">for</span> <span class="n">virtual</span> <span class="n">machines</span><span class="p">,</span>
+         <span class="n">images</span> <span class="ow">and</span> <span class="n">flavors</span> <span class="k">for</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">clouds</span><span class="o">.</span>
+
+     <span class="n">vm</span> <span class="n">ping</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">CLOUDS</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">count</span><span class="o">=</span><span class="n">N</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">processors</span><span class="o">=</span><span class="n">PROCESSORS</span><span class="p">]</span>
+          <span class="n">pings</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">virtual</span> <span class="n">machines</span><span class="p">,</span> <span class="k">while</span> <span class="n">using</span> <span class="n">at</span> <span class="n">most</span> <span class="n">N</span> <span class="n">pings</span><span class="o">.</span>
+          <span class="n">The</span> <span class="n">ping</span> <span class="ow">is</span> <span class="n">executed</span> <span class="ow">in</span> <span class="n">parallel</span><span class="o">.</span>
+          <span class="n">If</span> <span class="n">names</span> <span class="n">are</span> <span class="n">specifies</span> <span class="n">the</span> <span class="n">ping</span> <span class="ow">is</span> <span class="n">restricted</span> <span class="n">to</span> <span class="n">the</span> <span class="n">given</span> <span class="n">names</span> <span class="ow">in</span>
+          <span class="n">parameter</span> <span class="nb">format</span><span class="o">.</span> <span class="n">If</span> <span class="n">clouds</span> <span class="n">are</span> <span class="n">specified</span><span class="p">,</span> <span class="n">names</span> <span class="n">that</span> <span class="n">are</span> <span class="ow">not</span> <span class="ow">in</span>
+          <span class="n">these</span> <span class="n">clouds</span> <span class="n">are</span> <span class="n">ignored</span><span class="o">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">name</span> <span class="ow">is</span> <span class="nb">set</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">variables</span>
+          <span class="n">this</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">used</span><span class="o">.</span>
+
+     <span class="n">cms</span> <span class="n">vm</span> <span class="n">ssh</span> <span class="o">--</span><span class="n">command</span><span class="o">=</span><span class="s2">&quot;uname -a&quot;</span>
+
+           <span class="n">executes</span> <span class="n">the</span> <span class="n">uname</span> <span class="n">command</span> <span class="n">on</span> <span class="n">the</span> <span class="n">last</span> <span class="n">booted</span> <span class="n">vm</span>
+
+     <span class="n">vm</span> <span class="n">script</span> <span class="p">[</span><span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">NAMES</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">username</span><span class="o">=</span><span class="n">USERNAME</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">dryrun</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="nb">dir</span><span class="o">=</span><span class="n">DESTINATION</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">shell</span><span class="o">=</span><span class="n">SHELL</span><span class="p">]</span>
+               <span class="n">SCRIPT</span>
+
+        <span class="n">The</span> <span class="n">script</span> <span class="n">command</span> <span class="n">copies</span> <span class="n">a</span> <span class="n">shell</span> <span class="n">script</span> <span class="n">to</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">vms</span>
+        <span class="n">into</span> <span class="n">the</span> <span class="n">DESTINATION</span> <span class="n">directory</span> <span class="ow">and</span> <span class="n">than</span> <span class="n">execute</span> <span class="n">it</span><span class="o">.</span> <span class="n">With</span>
+        <span class="n">SHELL</span> <span class="n">you</span> <span class="n">can</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">shell</span> <span class="k">for</span> <span class="n">executing</span> <span class="n">the</span> <span class="n">command</span><span class="p">,</span>
+        <span class="n">this</span> <span class="n">coudl</span> <span class="n">even</span> <span class="n">be</span> <span class="n">a</span> <span class="n">python</span> <span class="n">interpreter</span><span class="o">.</span> <span class="n">Examples</span> <span class="k">for</span>
+        <span class="n">SHELL</span> <span class="n">are</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">sh</span><span class="p">,</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">env</span> <span class="n">python</span>
+
+     <span class="n">vm</span> <span class="n">put</span> <span class="n">SOURCE</span> <span class="n">DESTINATION</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span>
+
+         <span class="n">puts</span> <span class="n">the</span> <span class="n">file</span> <span class="n">defined</span> <span class="n">by</span> <span class="n">SOURCE</span> <span class="n">into</span> <span class="n">the</span> <span class="n">DESINATION</span> <span class="n">folder</span>
+        <span class="n">on</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">machines</span><span class="o">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">file</span> <span class="n">exists</span> <span class="n">it</span> <span class="ow">is</span>
+         <span class="n">overwritten</span><span class="p">,</span> <span class="n">so</span> <span class="n">be</span> <span class="n">careful</span><span class="o">.</span>
+
+     <span class="n">vm</span> <span class="n">get</span> <span class="n">SOURCE</span> <span class="n">DESTINATION</span> <span class="p">[</span><span class="n">NAMES</span><span class="p">]</span>
+
+         <span class="n">gets</span>  <span class="n">the</span> <span class="n">file</span> <span class="n">defined</span> <span class="n">by</span> <span class="n">SOURCE</span> <span class="n">into</span> <span class="n">the</span> <span class="n">DESINATION</span> <span class="n">folder</span>
+         <span class="n">on</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">machines</span><span class="o">.</span> <span class="n">The</span> <span class="n">SOURCE</span> <span class="ow">is</span> <span class="n">on</span> <span class="n">the</span> <span class="n">remote</span>
+         <span class="n">machine</span><span class="o">.</span> <span class="n">If</span> <span class="n">one</span> <span class="n">machine</span> <span class="ow">is</span> <span class="n">specified</span><span class="p">,</span> <span class="n">the</span> <span class="n">SOURCE</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">same</span>
+         <span class="n">name</span> <span class="k">as</span> <span class="n">on</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">machine</span><span class="o">.</span> <span class="n">If</span> <span class="n">multiple</span> <span class="n">machines</span> <span class="n">are</span>
+         <span class="n">specified</span><span class="p">,</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">machine</span> <span class="n">will</span> <span class="n">be</span> <span class="n">a</span> <span class="n">prefix</span> <span class="n">to</span> <span class="n">the</span>
+         <span class="n">filename</span><span class="o">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">filenames</span> <span class="n">exists</span><span class="p">,</span> <span class="n">they</span> <span class="n">will</span> <span class="n">be</span> <span class="n">overwritten</span><span class="p">,</span>
+         <span class="n">so</span> <span class="n">be</span> <span class="n">careful</span><span class="o">.</span>
+
+  <span class="n">Tip</span><span class="p">:</span>
+     <span class="n">give</span> <span class="n">the</span> <span class="n">VM</span> <span class="n">name</span><span class="p">,</span> <span class="n">but</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">hostlist</span> <span class="n">style</span><span class="p">,</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">very</span>
+     <span class="n">convenient</span> <span class="n">when</span> <span class="n">you</span> <span class="n">need</span> <span class="n">a</span> <span class="nb">range</span> <span class="n">of</span> <span class="n">VMs</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">sample</span><span class="p">[</span><span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+     <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;sample1&#39;</span><span class="p">,</span> <span class="s1">&#39;sample2&#39;</span><span class="p">,</span> <span class="s1">&#39;sample3&#39;</span><span class="p">]</span>
+    <span class="n">sample</span><span class="p">[</span><span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">18</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;sample1&#39;</span><span class="p">,</span> <span class="s1">&#39;sample2&#39;</span><span class="p">,</span> <span class="s1">&#39;sample3&#39;</span><span class="p">,</span> <span class="s1">&#39;sample18&#39;</span><span class="p">]</span>
+
+  <span class="n">Quoting</span> <span class="n">commands</span><span class="p">:</span>
+     <span class="n">cm</span> <span class="n">vm</span> <span class="n">login</span> <span class="n">gregor</span><span class="o">-</span><span class="mi">004</span> <span class="o">--</span><span class="n">command</span><span class="o">=</span><span class="s2">&quot;uname -a&quot;</span>
+
+  <span class="n">Limitations</span><span class="p">:</span>
+
+     <span class="n">Azure</span><span class="p">:</span> <span class="n">rename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">supported</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="aws.html" class="btn btn-neutral float-right" title="aws" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vcluster.html" class="btn btn-neutral float-left" title="vcluster" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

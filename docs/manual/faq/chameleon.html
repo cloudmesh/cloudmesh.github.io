@@ -1,0 +1,464 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FAQ - Chameleon cloud &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Benchmarks" href="../benchmarks/index.html" />
+    <link rel="prev" title="FAQ - Cloudmesh" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FAQ</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="install.html">FAQ - Cloudmesh</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">FAQ - Chameleon cloud</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-check-if-chmaeleon-cloud-works">How check if chmaeleon cloud works</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-upload-my-key-to-chameleon">How do I upload my key to chameleon?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-the-error">What is the error …?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-the-chameleon-account-bug">What is the chameleon account bug?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#you-must-not-use-iuguest-network">You must not use IUGuest network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tethering-you-computer-through-a-cell-phone">Tethering you computer through a cell phone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#can-i-keep-my-instance-running-when-not-in-use">Can I keep my instance running when not in use?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-warning-remote-host-identification-has-changed">What is <code class="docutils literal notranslate"><span class="pre">WARNING:</span> <span class="pre">REMOTE</span> <span class="pre">HOST</span> <span class="pre">IDENTIFICATION</span> <span class="pre">HAS</span> <span class="pre">CHANGED!</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ssh-keygen-vs-putty">ssh-keygen vs putty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#can-i-give-my-own-network-when-booting">Can I give my own network when booting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-upload-the-secgroups">How do I upload the secgroups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#are-there-additional-videos">Are there additional Videos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#starting-vms-in-horizon">Starting vms in horizon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starting-vms-in-cloudmesh">Starting VMs in cloudmesh</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">FAQ</a> &raquo;</li>
+        
+      <li>FAQ - Chameleon cloud</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/faq/chameleon.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="faq-chameleon-cloud">
+<h1>FAQ - Chameleon cloud<a class="headerlink" href="#faq-chameleon-cloud" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Disclaimer:</strong> Unfortunately, Chameleon cloud had between
+January 2020 - October 2020 significant issues that required us to
+put this FAQ together. We were told by Chamelon Cloud that the
+issues are supposed to be removed, but we will keep this FAQ for a
+while longer here just in case it is not the case.</p>
+<p>Furthermore, due to our extensive debugging of their fault
+authentication, Chameleon will be providing soon new mechanisms for
+authentication. We have not tested them at this time but hope that
+they will work without change. As we use vanilla OpenStack, it would
+be a disappointment if Chamelon cloud would change the
+authentication mechanisms.</p>
+</div>
+<p>All FAQ’s related to chameleon cloud assume</p>
+<ol class="arabic simple">
+<li><p>you have looked at the instances with horizon before you use <code class="docutils literal notranslate"><span class="pre">cms</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cms</span></code> is installed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">init</span></code> worked and</p></li>
+</ol>
+<p>Cloudmesh is trivial to install.</p>
+<div class="section" id="how-check-if-chmaeleon-cloud-works">
+<h2>How check if chmaeleon cloud works<a class="headerlink" href="#how-check-if-chmaeleon-cloud-works" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms <span class="nb">set</span> <span class="nv">cloud</span><span class="o">=</span>chameleon
+cms flavor list --refresh
+</pre></div>
+</div>
+<p>This returns the list of flavors</p>
+</div>
+<div class="section" id="how-do-i-upload-my-key-to-chameleon">
+<h2>How do I upload my key to chameleon?<a class="headerlink" href="#how-do-i-upload-my-key-to-chameleon" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms key upload --cloud<span class="o">=</span>chameleon
+cms key list --cloud<span class="o">=</span>chameleon
+</pre></div>
+</div>
+</div>
+<div class="section" id="what-is-the-error">
+<h2>What is the error …?<a class="headerlink" href="#what-is-the-error" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>If you get this error</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">UnboundLocalError</span><span class="p">:</span> <span class="n">local</span> <span class="n">variable</span> <span class="s1">&#39;key&#39;</span> <span class="n">referenced</span> <span class="n">before</span> <span class="n">assignment</span>
+</pre></div>
+</div>
+<p>then you have not upload your key to chameleon</p>
+</li>
+</ol>
+</div>
+<div class="section" id="what-is-the-chameleon-account-bug">
+<h2>What is the chameleon account bug?<a class="headerlink" href="#what-is-the-chameleon-account-bug" title="Permalink to this headline">¶</a></h2>
+<p>Preriquisite:</p>
+<ol class="arabic simple">
+<li><p>We assume you start by deleting your .cloudmesh directory and have
+install a proper version of cms.</p></li>
+<li><p>Before you do anything verify if you can remember your password. You
+must logout of the chameleon cloud.org dashboard and login, while not
+using an auto completion Web password completer. Make sure to remove
+your password if you use one of them.</p></li>
+</ol>
+<p>Chameleon has several strange bugs we know of that will hopefully be
+fixed</p>
+<ol class="arabic">
+<li><p>Any account in chameleon that wants to use OpenStack KVM <strong>must</strong>
+first visit horizon and through the visit activate the account. The
+activation via the e-mail that they send to you does not fully
+activate your account.</p></li>
+<li><p>When activation your account in horizon, you must login to a login
+screen. However, sometimes we observed that screen do not complete
+the activation and you do not get forwarded to horizon. Instead you
+end in an endless loop for activation requests.</p></li>
+<li><p>Some students despite the issue of being able to login reported that
+they can not use cms even though they typed in the password
+correctly. To find this out you have to talk to Gregor which
+unfortunately needs your username and password. to verify if your
+account works or not.</p></li>
+<li><p>If Gregor can verify that your account works (e.g. he does this on a
+computer on which we checked chameleon cloud works for another
+account), you will have to apply for a new chameleon account with an
+e-mal that has not been used at</p>
+<ul class="simple">
+<li><p>University of Chicago</p></li>
+<li><p>Indiana University</p></li>
+<li><p>jetstream</p></li>
+<li><p>XSEDE</p></li>
+<li><p>Chameleon Cloud</p></li>
+</ul>
+<p>Than you do the previous steps and check if you can use this account
+in cms. If it works fine, if it does not file a ticket with chameleon
+cloud.</p>
+</li>
+</ol>
+<p>Gregor completely hats to do 3. and 4. but chameleon cloud have not
+provided any proper solutions.</p>
+</div>
+<div class="section" id="you-must-not-use-iuguest-network">
+<h2>You must not use IUGuest network<a class="headerlink" href="#you-must-not-use-iuguest-network" title="Permalink to this headline">¶</a></h2>
+<p>IU GUEST or any other insecure network:</p>
+<p>If you are at IU, chameleon cloud does not allow you to connect to it
+from IU guest. So if you say cms vm list –refresh and it hangs there for
+a long time you will at one point see “Failed to discover available
+identity versions when contacting
+<a class="reference external" href="https://kvm.tacc.chameleoncloud.org:5000/v3">https://kvm.tacc.chameleoncloud.org:5000/v3</a>. Attempting to parse version
+from URL.”</p>
+<p>This indicates you can not connect to chamelon cloud as you are on an
+insecure network. You can do a CRTL C here</p>
+<p>If you wait longer, you will see</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keystoneauth1</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">ConnectFailure</span><span class="p">:</span> <span class="n">Unable</span> <span class="n">to</span> <span class="n">establish</span>
+<span class="n">connection</span> <span class="n">to</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">kvm</span><span class="o">.</span><span class="n">tacc</span><span class="o">.</span><span class="n">chameleoncloud</span><span class="o">.</span><span class="n">org</span><span class="p">:</span><span class="mi">5000</span><span class="o">/</span><span class="n">v3</span><span class="o">/</span><span class="n">auth</span><span class="o">/</span><span class="n">tokens</span><span class="p">:</span>
+<span class="n">HTTPSConnectionPool</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;kvm.tacc.chameleoncloud.org&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5000</span><span class="p">):</span> <span class="n">Max</span> <span class="n">retries</span>
+<span class="n">exceeded</span> <span class="k">with</span> <span class="n">url</span><span class="p">:</span> <span class="o">/</span><span class="n">v3</span><span class="o">/</span><span class="n">auth</span><span class="o">/</span><span class="n">tokens</span> <span class="p">(</span><span class="n">Caused</span> <span class="n">by</span>
+<span class="n">NewConnectionError</span><span class="p">(</span><span class="s1">&#39; \&lt; urllib3.connection.VerifiedHTTPSConnection object at</span>
+<span class="mh">0x7f63fc14a040</span> \<span class="o">&gt;</span> <span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">establish</span> <span class="n">a</span> <span class="n">new</span> <span class="n">connection</span><span class="p">:</span> <span class="p">[</span><span class="n">Errno</span> <span class="mi">110</span><span class="p">]</span> <span class="n">Connection</span>
+<span class="n">timed</span> <span class="n">out</span><span class="s1">&#39;))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tethering-you-computer-through-a-cell-phone">
+<h2>Tethering you computer through a cell phone<a class="headerlink" href="#tethering-you-computer-through-a-cell-phone" title="Permalink to this headline">¶</a></h2>
+<p>This will likely not work as your cell phone company has likely some
+restrictions.</p>
+</div>
+<div class="section" id="can-i-keep-my-instance-running-when-not-in-use">
+<h2>Can I keep my instance running when not in use?<a class="headerlink" href="#can-i-keep-my-instance-running-when-not-in-use" title="Permalink to this headline">¶</a></h2>
+<p>No you shout terminate and restart it. However if you initially have
+issues keep it running and find in the manual how to suspend and resume
+it. You can also do this from horizon if you prefer.</p>
+</div>
+<div class="section" id="what-is-warning-remote-host-identification-has-changed">
+<h2>What is <code class="docutils literal notranslate"><span class="pre">WARNING:</span> <span class="pre">REMOTE</span> <span class="pre">HOST</span> <span class="pre">IDENTIFICATION</span> <span class="pre">HAS</span> <span class="pre">CHANGED!</span></code><a class="headerlink" href="#what-is-warning-remote-host-identification-has-changed" title="Permalink to this headline">¶</a></h2>
+<p>This is happening when a previously used ip address is used on another vm
+You need to remove the ip from ~/.ssh/kown hosts by using</p>
+<p>ssh-keygen -R IPADDRESS</p>
+<p>where IPADDRESS is the address to be removed, and than try again</p>
+</div>
+<div class="section" id="ssh-keygen-vs-putty">
+<h2>ssh-keygen vs putty<a class="headerlink" href="#ssh-keygen-vs-putty" title="Permalink to this headline">¶</a></h2>
+<p>use ssh-keygen as it is far easier.</p>
+</div>
+<div class="section" id="can-i-give-my-own-network-when-booting">
+<h2>Can I give my own network when booting<a class="headerlink" href="#can-i-give-my-own-network-when-booting" title="Permalink to this headline">¶</a></h2>
+<p>Yes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">vm</span> <span class="n">boot</span> <span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">gregor</span><span class="o">-</span><span class="mi">02</span> \
+            <span class="o">--</span><span class="n">image</span><span class="o">=</span><span class="n">CC</span><span class="o">-</span><span class="n">Ubuntu18</span><span class="o">.</span><span class="mi">04</span> \
+            <span class="o">--</span><span class="n">network</span><span class="o">=</span><span class="n">e01ee12e</span><span class="o">-</span><span class="n">fd22</span><span class="o">-</span><span class="mi">4</span><span class="n">b21</span><span class="o">-</span><span class="n">a050</span><span class="o">-</span><span class="n">d3e015f42bb1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-i-upload-the-secgroups">
+<h2>How do I upload the secgroups<a class="headerlink" href="#how-do-i-upload-the-secgroups" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">sec</span> <span class="n">group</span> <span class="n">load</span> <span class="o">--</span><span class="n">cloud</span><span class="o">=</span><span class="n">chameleon</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="are-there-additional-videos">
+<h2>Are there additional Videos<a class="headerlink" href="#are-there-additional-videos" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="starting-vms-in-horizon">
+<h3>Starting vms in horizon<a class="headerlink" href="#starting-vms-in-horizon" title="Permalink to this headline">¶</a></h3>
+<p>A video was shot by Rahul. I do recommend however if you can just to
+keep the keyname on your computer to be id_rsa.</p>
+<p>In horizon you naturally use a keyname such as rahul-222 (e.g. what
+rahul used)</p>
+<p>The reason is that in the future we use cloudmesh and we have a default
+key for cloudmesh set as <code class="docutils literal notranslate"><span class="pre">id_rsa</span></code>. This simplifies debugging in case
+something does not go right</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=-2RgDrhN02Q">https://www.youtube.com/watch?v=-2RgDrhN02Q</a></p></li>
+</ul>
+</div>
+<div class="section" id="starting-vms-in-cloudmesh">
+<h3>Starting VMs in cloudmesh<a class="headerlink" href="#starting-vms-in-cloudmesh" title="Permalink to this headline">¶</a></h3>
+<p>Rahul has done a video to show how to start vms in cloudmesh Also we
+added the network id to the cloudmesh.yaml file, so if you have a new
+version its no longer needed to add the network</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=bDue67M1xl0">https://www.youtube.com/watch?v=bDue67M1xl0</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../benchmarks/index.html" class="btn btn-neutral float-right" title="Benchmarks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral float-left" title="FAQ - Cloudmesh" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
