@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cloudmesh – Documentation</title>
+    <title>Cloudmesh – Overview</title>
     <link>/docs/</link>
-    <description>Recent content in Documentation on Cloudmesh</description>
+    <description>Recent content in Overview on Cloudmesh</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
@@ -69,33 +69,6 @@ like to acknowledge all those that helped us developing Cloudmesh.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A convenient REST service generator allows to create REST services
 from simple python functions.&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: PI</title>
-      <link>/docs/modules/pi/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/modules/pi/</guid>
-      <description>
-        
-        
-        
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Cloudmesh PI can be used to create your own minicloud&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Pi Cluster Burner
-&lt;ul&gt;
-&lt;li&gt;A convenient script to create SDCards for a PI cluster&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

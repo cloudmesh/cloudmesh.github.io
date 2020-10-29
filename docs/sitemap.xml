@@ -8,6 +8,10 @@
   </url>
   
   <url>
+    <loc>/docs/manual/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/news/</loc>
     <lastmod>2020-10-15T12:37:10-04:00</lastmod>
   </url>
@@ -23,38 +27,13 @@
   </url>
   
   <url>
-    <loc>/docs/core/</loc>
-    <lastmod>2020-10-15T11:21:33-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/plugins/cloudmesh-rest/</loc>
-    <lastmod>2020-10-15T11:21:33-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/plugins/</loc>
-    <lastmod>2020-10-15T12:37:10-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/docs/</loc>
     <lastmod>2020-10-15T11:21:33-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/modules/</loc>
-    <lastmod>2020-10-15T12:37:10-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/docs/version/version-4/</loc>
     <lastmod>2020-10-15T11:21:33-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/modules/pi/</loc>
-    <lastmod>2020-10-28T14:19:45-04:00</lastmod>
   </url>
   
   <url>
@@ -133,7 +112,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-10-15T12:37:10-04:00</lastmod>
+    <lastmod>2020-10-28T16:29:59-04:00</lastmod>
   </url>
   
 </urlset>
