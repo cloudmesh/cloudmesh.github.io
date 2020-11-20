@@ -1,0 +1,3 @@
+[submodule "docs/get"]
+	path = docs/get
+	url = git@github.com:cloudmesh/get.git
