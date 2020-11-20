@@ -1,0 +1,59 @@
+#! /bin/sh
+
+# curl -Ls http://cloudmesh.github.io/get/romeo/tf | sh
+
+# <pre>
+
+
+
+PIP="python -m pip"
+PWF=`pwd`
+
+echo "#######################################################"
+echo "# NOTICE - Developer install of Tensorflow for Romeo  #"
+echo "#######################################################"
+echo
+
+    start_total=`date +%s`
+
+    time python3 -m venv ENV3
+    . ENV3/bin/activate
+
+    time ${PIP} install --upgrade pip
+    time ${PIP} install --upgrade setuptools
+    time ${PIP} install jupyter
+    time ${PIP} install numpy
+    time ${PIP} install matplotlib
+    time ${PIP} install pandas
+    time ${PIP} install scipy
+    time ${PIP} install jupyterlab
+    time ${PIP} install tensorflow-gpu==2.0
+    time ${PIP} install keras
+
+
+    # wget http://cloudmesh.githupip b.io/get/romeo/tf/tf_sample.py
+
+echo "#################################################"
+echo "# Install Completed                             #"
+echo "#################################################"
+echo
+end_total=`date +%s`
+time_total=$((end_total-start_total))
+echo
+echo
+echo "Time for total install:     ${time_total} s"
+echo
+echo "#################################################"
+
+echo
+echo "Please activate with"
+echo
+echo "    source ${PWD}/ENV3/bin/activate"
+echo
+exit 0
+
+```
+
+exit 0
+
+# </pre>
