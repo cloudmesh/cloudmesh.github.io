@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cloudmesh Database &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Configuration" href="../../configuration/configuration.html" />
+    <link rel="prev" title="Installation of Cloudmesh (Source Install for Developers)" href="../install-dev.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface/index.html">Preface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Installation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docker/install-docker.html">Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../os/install-linux.html">Installation for for Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../os/install-macos.html">Installation for macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pi/install-pi.html">Prerequisites for Raspbian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/index.html">Windows Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install-dev.html">Installation of Cloudmesh (Source Install for Developers)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cloudmesh Database</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mongodb-installation-steps">MongoDB Installation Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uninstall-of-mongodb-on-windows-10">Uninstall of MongoDB on Windows 10</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Installation</a> &raquo;</li>
+        
+      <li>Cloudmesh Database</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/installation/database/install-mongo.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cloudmesh-database">
+<h1>Cloudmesh Database<a class="headerlink" href="#cloudmesh-database" title="Permalink to this headline">¶</a></h1>
+<p>Cloudmesh stores its status in a database so that you can easily
+remember which services you used where and have an accurate account of
+them. We use as a database mongoDB to store this information. To use
+cloudmesh you simply need to create and start the database service.</p>
+<p>We install a separate version of mongo in your <cite>~/.cloudmesh</cite> directory. Use the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">admin</span> <span class="n">mongo</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>On windows you need to do this very carefully as there is one installation
+box that you need to ignore to make this possible.</p>
+<p>First you need to change the password for mongo in the <code class="docutils literal notranslate"><span class="pre">cloudmesh.yaml</span></code> file
+Now you can create an empty database with</p>
+<p>you can initialize it with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms gui quick
+cms init
+</pre></div>
+</div>
+<div class="section" id="mongodb-installation-steps">
+<h2>MongoDB Installation Steps<a class="headerlink" href="#mongodb-installation-steps" title="Permalink to this headline">¶</a></h2>
+<p>The following steps document the MongoDB server configuration and
+installation steps from the standpoint of a fresh install. We
+recommend utilizing our build script for a seamless installation
+experience.  However, If you already have a pre-existing installation
+of MongoDB, please feel free to skip ahead once you’ve reviewed the
+configuration steps and confirmed you have an admin user with a strong
+password created. Please also note that some commands we use during
+the development wipe out the database completely including all
+collections. So make a backup.</p>
+<p>If you would like to remove an existing MongoDB installation, please
+skip to the next subsection in order to reference the uninstall steps
+for MongoDB; then revert back to this section to kick off a fresh
+install.</p>
+<p>You should also note to <em>not</em> expose mongo on the internet in order
+to keep your information within mongo private.</p>
+<p>Prior to starting the MongoDB installation, you will need to install and
+configure the <code class="docutils literal notranslate"><span class="pre">cloudmesh.yaml</span></code> file if you have not already done so.
+To install it, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Then, be sure to edit the cloudmesh.yaml configuration file (which is created
+under <code class="docutils literal notranslate"><span class="pre">~/.cloudmesh</span></code> directory) and update the parameters values used in the
+mongo install. You can use a text editor, such as:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>emacs ~/.cloudmesh/cloudmesh.yaml
+</pre></div>
+</div>
+<p>and change the password of the mongo entry to something of your choosing.
+Note, be sure to use a very strong password credential:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MONGO_PASSWORD</span><span class="p">:</span> <span class="n">TBD</span>
+</pre></div>
+</div>
+<p>In case you do not have mongod installed, you can do so for macOS and Ubuntu
+18.xx by setting the following variable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MONGO_AUTOINSTALL</span><span class="p">:</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>Alternatively you can set these cloudmesh.yaml parameter values from the
+command line  without using an editor by running the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms config <span class="nb">set</span> cloudmesh.data.mongo.MONGO_AUTOINSTALL<span class="o">=</span>True
+cms config <span class="nb">set</span> cloudmesh.data.mongo.MONGO_PASSWORD<span class="o">=</span>YOURPASSWORD
+</pre></div>
+</div>
+<p>Another item to note is the default location of the MongoDB installation.
+In a Linux/MacOS environment, the default installation path will be under
+<code class="docutils literal notranslate"><span class="pre">~/local/mongo/bin</span></code>. In a Windows environment, the default path is under
+<code class="docutils literal notranslate"><span class="pre">C:\Users\USERNAME\.cloudmesh\mongo</span></code>. If you would like to change these
+paths, be sure to update these in the <cite>cloudmesh.yaml</cite> file.</p>
+<p>Once configuration of the <cite>cloudmesh.yaml</cite> file has been completed,  run the
+following command (assuming you have the user in the c drive), where USERNAME
+is the username you installe d cloudmesh in:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:/Users/USERNAME<span class="se">\E</span>NV3<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+cms admin mongo install
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In a Windows installation, we are only required to install
+MongoDB commands, <em>not</em> MongoDB Service. By default, the
+silent installer will attempt to install and start the
+MongoDB System Service. When prompted that the Service
+failed to start, simply select <code class="docutils literal notranslate"><span class="pre">Ignore</span></code>.</p>
+</div>
+<div class="align-center figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/MongoInstall_Windows_Ignore.png"><img alt="alternate text" src="../../_images/MongoInstall_Windows_Ignore.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Figure: Mongo Windows install. Make sure to press ignore</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>After the installation completes, in a Linux/MacOS environment, confirm the
+MongoDB installation path was added to the <code class="docutils literal notranslate"><span class="pre">.bash_*</span></code> file. This should have
+already been done automatically if the <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">admin</span> <span class="pre">mongo</span> <span class="pre">install</span></code> command
+was used to kick off the installation.</p>
+<p>In a Windows environment, however, the default path is not automatically added
+to the Path variable, so you will need to add this manually:</p>
+<div class="align-center figure" id="id2">
+<a class="reference internal image-reference" href="installation/database/../images/MongoInstall_Windows_Path.png"><img alt="alternate text" src="installation/database/../images/MongoInstall_Windows_Path.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Figure: Mongo Windows path configuration</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now that MongoDB has been installed, we initialize it with the following
+command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms init
+</pre></div>
+</div>
+<p>In case you like to stop or start is you can say:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms stop
+cms start
+</pre></div>
+</div>
+<p>Please remember that for cloudmesh to work properly you need to start
+mongo. In case you need a different port you can configure that in the yaml
+file.</p>
+</div>
+<div class="section" id="uninstall-of-mongodb-on-windows-10">
+<h2>Uninstall of MongoDB on Windows 10<a class="headerlink" href="#uninstall-of-mongodb-on-windows-10" title="Permalink to this headline">¶</a></h2>
+<p>This section documents  steps required to uninstall MongoDB from a prior installation</p>
+<p>Note that there are two distinct uninstallation steps to consider. If you have
+installed MongoDB using the cloudmesh installer
+(i.e. <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">admin</span> <span class="pre">mongo</span> <span class="pre">install</span></code>), Mongo is not installed with a service by
+default, and can be simply uninstalled by removing the install directories
+under <code class="docutils literal notranslate"><span class="pre">~\.cloudmesh</span></code> (reference the MONGO_PATH, MONGO_LOG, and MONGO_HOME
+variables within the cloudmesh.yaml file for specifics).</p>
+<p>If, however, you have a pre-existing installation of MongoDB, or
+have MongoDB Server Service installed through an alternative installation method
+outside of cloudmesh, proceed through the following steps if you wish to
+completely uninstall MongoDB.</p>
+<p>To uninstall, please terminate the running MongoDB service (if
+applicable), <em>then</em> delete it. To stop the service, open Task Manager
+and confirm the status = <cite>Stopped</cite>. If it is not stopped, please do
+so. To delete it, run the following as an administrator from the
+command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sc.exe delete MongoDB
+</pre></div>
+</div>
+<p>Next, delete the Mongo installation directories. Please reference the
+cloudmesh.yaml file for the MONGO_HOME, MONGO_PATH, and MONGO_LOG path values if
+<code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">admin</span> <span class="pre">mongo</span> <span class="pre">install</span></code> was attempted at some point.</p>
+<div class="align-center figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/MongoInstall_Windows_InstallPathYAML.png"><img alt="alternate text" src="../../_images/MongoInstall_Windows_InstallPathYAML.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Figure: Mongo install path</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Finally, execute the mongodb <cite>msiexe</cite> installer to check if there are
+any remaining components that need to be uninstalled. Once launched,
+click on the <cite>Remove</cite> button. Note that this installer can be
+downloaded locally using the URL found under the MONGO_DOWNLOAD
+variable in the cloudmesh.yaml file.</p>
+<div class="align-center figure" id="id4">
+<a class="reference internal image-reference" href="../../_images/MongoInstall_Windows_msiexec.png"><img alt="alternate text" src="../../_images/MongoInstall_Windows_msiexec.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Figure: Mongo installation</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If Compass was installed, this can simply be removed by
+navigating to the Windows ‘Add Remove Programs’.</p>
+</div>
+<p>You have now successfully removed MongoDB, and are ready to reinstall
+a fresh instance.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../configuration/configuration.html" class="btn btn-neutral float-right" title="Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../install-dev.html" class="btn btn-neutral float-left" title="Installation of Cloudmesh (Source Install for Developers)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,5 +1,10 @@
+.PHONY: manual
+
 draft:
 	hugo server -D
+
+manual:
+	cd manual; make
 
 view:
 	gopen http://localhost:1313/ 

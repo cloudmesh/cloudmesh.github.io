@@ -1,0 +1,719 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AWS Account &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Azure Account" href="azure.html" />
+    <link rel="prev" title="OpenStack Account" href="openstack.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Cloud Accounts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="openstack.html">OpenStack Account</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">AWS Account</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#access-key">Access Key</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-and-download-access-key">Create and Download Access Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-the-access-key">Using the Access Key</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#compute-service">Compute Service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#import-public-key">Import Public key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cloudmesh-yaml-configuration-for-aws">Cloudmesh.yaml Configuration for AWS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#storage-service">Storage Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.html">Azure Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="google/index.html">Google Acounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oracle/account.html">Oracle Cloud Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="box.html">Box Account</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Cloud Accounts</a> &raquo;</li>
+        
+      <li>AWS Account</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/accounts/aws.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aws-account">
+<h1>AWS Account<a class="headerlink" href="#aws-account" title="Permalink to this headline">¶</a></h1>
+<p>Amazon Web Services (AWS) provides a wide variety of cloud-based
+products including analytics, application integration, AR and VR, cost
+management, blockchain, business applications, compute, customer
+engagement, database, developer tools, end user computing, game tech,
+IoT, machine learning, management and governance, media services,
+migration and transfer, mobile, networking and content delivery,
+robotics, satellite, security, identity and compliance, and storage.
+Here at cloudmesh, we develop services through providers to support your
+utilization of many of these products.</p>
+<p>Here we are especially interested in using the following services:</p>
+<ul class="simple">
+<li><p><strong>Amazon Elastic Compute Cloud (EC2)</strong> Amazon EC2 is web service that
+enables users to perform elastic web-scalable computing while having
+complete control over instances. It is integrated with most AWS
+services such as Amazon S3, RDS, and VPC.</p></li>
+<li><p><strong>Amazon Simple Storage Service (S3)</strong> Amazon S3 an object storage
+service that offers a wide range of storage classes.</p></li>
+</ul>
+<p>We provide a step-by-step guide on how to create an AWS account through
+the AWS Web page to utilize these services. For more information you can
+consult the <a class="reference external" href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/">AWS
+FAQ</a>.</p>
+<p>First, we go to the AWS website</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://aws.amazon.com">https://aws.amazon.com</a></p></li>
+</ul>
+<p>and click on <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">an</span> <span class="pre">AWS</span> <span class="pre">Account</span></code>.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/image1.png"><img alt="Create Account" src="../_images/image1.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Create Account</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>This will direct you to the account creation page. Now we fill out your
+information and click <code class="docutils literal notranslate"><span class="pre">Continue</span></code>.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/image2.png"><img alt="Continue" src="../_images/image2.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Continue</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Next, you will need to fill out your contact information. You can choose
+<code class="docutils literal notranslate"><span class="pre">Professional</span></code> or <code class="docutils literal notranslate"><span class="pre">Personal</span></code> as your account type. Here in this
+tutorial, we selected <code class="docutils literal notranslate"><span class="pre">Personal</span></code>. Read the <em>AWS Customer Agreement</em>,
+and check the box if agreed. Click on <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Account</span> <span class="pre">and</span> <span class="pre">Continue</span></code> to
+continue.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/image3.png"><img alt="Contact Information" src="../_images/image3.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Contact Information</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Fill out your payment information and proceed. Dependent on your level
+of security, you may want to explore using a prepaid credit card if you
+do not want to use your regular credit card.</p>
+<p>If you just started using AWS, you will have a free account for a while
+as AWS will state:</p>
+<blockquote>
+<div><p>We will not charge you unless your usage exceeds the AWS Free Tier
+Limits. - Amazon AWS</p>
+</div></blockquote>
+<p>Please review the terms of the free tier carefully.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/image4.png"><img alt="Payment" src="../_images/image4.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Payment</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Next your need to confirm your identity. You can choose either
+<code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">message</span> <span class="pre">(SMS)</span></code> or <code class="docutils literal notranslate"><span class="pre">Voice</span> <span class="pre">call</span></code> to receive your verification
+code. Here we choose <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">message</span> <span class="pre">(SMS)</span></code>. Enter your phone number and
+the security check code and click <code class="docutils literal notranslate"><span class="pre">Send</span> <span class="pre">SMS</span></code>.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/image5.png"><img alt="Identity confirmation" src="../_images/image5.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Identity confirmation</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Enter the 4-digit verification code you received from your phone, and
+click on <code class="docutils literal notranslate"><span class="pre">Verify</span> <span class="pre">Code</span></code>.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/image6.png"><img alt="Verification" src="../_images/image6.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Verification</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>If you entered the correct verification code, you will see this page.
+Click on <code class="docutils literal notranslate"><span class="pre">Continue</span></code>.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/image7.png"><img alt="Continue" src="../_images/image7.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Continue</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>You will need to choose your support plan. We chose Amazon’s free tier
+<code class="docutils literal notranslate"><span class="pre">Basic</span> <span class="pre">Plan</span></code>.</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/image8.png"><img alt="Select a Plan" src="../_images/image8.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Select a Plan</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>Congratulations! You have successfully created an AWS account. Now you
+can click on <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">In</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">Console</span></code> to sign in.</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/image9.png"><img alt="Personalize" src="../_images/image9.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Personalize</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>Enter the email address you used for registration, and click on
+<code class="docutils literal notranslate"><span class="pre">Next</span></code>.</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/image10.png"><img alt="email" src="../_images/image10.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">email</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>Enter the password you used for registration, and click on <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">In</span></code>.</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/image11.png"><img alt="Password" src="../_images/image11.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Password</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now you’ve successfully signed in to the AWS Management Console.</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/image12.png"><img alt="AWS Services" src="../_images/image12.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">AWS Services</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can click on <code class="docutils literal notranslate"><span class="pre">Services</span></code> to explore AWS services through their Web
+page.</p>
+<div class="figure align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/image13.png"><img alt="Explore services" src="../_images/image13.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">Explore services</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can also start managing your account and instances through our
+cloudmesh services. This is especially of interest if you use cloudmesh
+to manage your storage and computational needs while also being able to
+leverage other clouds.</p>
+<ul class="simple">
+<li><p>[ ] To do verify this works and you have created a user.</p></li>
+</ul>
+<div class="section" id="access-key">
+<h2>Access Key<a class="headerlink" href="#access-key" title="Permalink to this headline">¶</a></h2>
+<p>Now that you have an account it is necessary that you can authenticate
+to your cloud account from a program or a command line. The instructions
+for this can be found at</p>
+<p>-<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html">https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html</a></p>
+<p>However, it is far easier to use the convenient cloudmesh tools by just
+using the cloudmesh open command.</p>
+<p>In case you have not yet added a user, you can visit the user creation
+page with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms open account aws
+</pre></div>
+</div>
+<div class="section" id="create-and-download-access-key">
+<h3>Create and Download Access Key<a class="headerlink" href="#create-and-download-access-key" title="Permalink to this headline">¶</a></h3>
+<p>After logging into your account, you will then see the following
+console:</p>
+<div class="figure align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/image14.png"><img alt="IAM Management Console: Users" src="../_images/image14.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">IAM Management Console: Users</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>Click on <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">user</span></code> and begin the process for creating a new user.
+Type the name <code class="docutils literal notranslate"><span class="pre">cloudmesh</span></code> in the <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">name</span></code> and make sure you check
+the <code class="docutils literal notranslate"><span class="pre">programmatic</span>&#160; <span class="pre">access</span></code>:</p>
+<div class="figure align-default" id="id15">
+<a class="reference internal image-reference" href="../_images/image15.png"><img alt="IAM Management Console: Add User" src="../_images/image15.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">IAM Management Console: Add User</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+<p>After clicking on the <code class="docutils literal notranslate"><span class="pre">Next:</span> <span class="pre">Permissions</span></code>, you then have to add the
+user to a group. If you do not have any group created, click on
+<code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">group</span></code> button and you will be redirected to the corresponding
+page. You can call the group <code class="docutils literal notranslate"><span class="pre">cloudmesh</span></code> and then check the select the
+<code class="docutils literal notranslate"><span class="pre">AmazonEC2FullAccess</span></code> for the permission:</p>
+<div class="figure align-default" id="id16">
+<a class="reference internal image-reference" href="../_images/image17.png"><img alt="IAM Management Console: Create Group" src="../_images/image17.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">IAM Management Console: Create Group</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+<p>After creating the group, select it so that the new user will be
+assigned to that group:</p>
+<div class="figure align-default" id="id17">
+<a class="reference internal image-reference" href="../_images/image18.png"><img alt="IAM Management Console: Select Group" src="../_images/image18.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">IAM Management Console: Select Group</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the next page you can create the tags for the new user. You can just
+create a <code class="docutils literal notranslate"><span class="pre">cloudmesh</span></code> key for the user as a tag:</p>
+<div class="figure align-default" id="id18">
+<a class="reference internal image-reference" href="../_images/image19.png"><img alt="IAM Management Console: Add Tag" src="../_images/image19.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">IAM Management Console: Add Tag</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+<p>The next page is the review page where you can review the information
+you entered:</p>
+<div class="figure align-default" id="id19">
+<a class="reference internal image-reference" href="../_images/image20.png"><img alt="IAM Management Console: Review" src="../_images/image20.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">IAM Management Console: Review</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+<p>After clicking on <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">user</span></code> the user will be finally created and
+you will be redirected to the following success page:</p>
+<div class="figure align-default" id="id20">
+<a class="reference internal image-reference" href="../_images/image21.png"><img alt="IAM Management Console: Success" src="../_images/image21.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">IAM Management Console: Success</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can view the secret access key by clicking on the <code class="docutils literal notranslate"><span class="pre">show</span></code> button:</p>
+<div class="figure align-default" id="id21">
+<a class="reference internal image-reference" href="../_images/image22.png"><img alt="IAM Management Console: Access Key" src="../_images/image22.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">IAM Management Console: Access Key</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<p>Next, download the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file by clicking on the <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">.csv</span></code>
+button and save it as <code class="docutils literal notranslate"><span class="pre">~/.cloudmesh/credentials.csv</span></code>:</p>
+<div class="figure align-default" id="id22">
+<a class="reference internal image-reference" href="../_images/image23.png"><img alt="IAM Management Console: Download CSV" src="../_images/image23.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">IAM Management Console: Download CSV</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+<p>Then you can click on the <code class="docutils literal notranslate"><span class="pre">close</span></code> button and go back to the IAM
+Management Console which now provide you a summary of the newly created
+user called <code class="docutils literal notranslate"><span class="pre">cloudmesh</span></code> and looks like this:</p>
+<div class="figure align-default" id="id23">
+<a class="reference internal image-reference" href="../_images/image25.png"><img alt="IAM Management Console: Summary" src="../_images/image25.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">IAM Management Console: Summary</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+<p>By clicking on the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">access</span> <span class="pre">key</span></code>, you can create another access
+key:</p>
+<div class="figure align-default" id="id24">
+<a class="reference internal image-reference" href="../_images/image26.png"><img alt="IAM Management Console: Create Access Key" src="../_images/image26.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">IAM Management Console: Create Access Key</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</div>
+<p>As is mentioned in the screen shot, this is the only time you can view
+or download the secret access key. So go ahead and click on the
+<code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">.csv</span> <span class="pre">file</span></code> and save it as <code class="docutils literal notranslate"><span class="pre">~/.cloudmesh/accessKey.csv</span></code>:</p>
+<div class="figure align-default" id="id25">
+<a class="reference internal image-reference" href="../_images/image27.png"><img alt="IAM Management Console: Download CSV File" src="../_images/image27.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">IAM Management Console: Download CSV File</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="using-the-access-key">
+<h3>Using the Access Key<a class="headerlink" href="#using-the-access-key" title="Permalink to this headline">¶</a></h3>
+<p>To obtain the keys for an already existing account or the one that you
+just created you can use the command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms open account aws NAME
+</pre></div>
+</div>
+<p>This command will open a browser window to the credential page of AWS.
+PLease replace the NAME with your username that you created when you
+added your user to the IAM.</p>
+<p>IN case you do not yet have a credentials choose the Security
+credentials tab and then choose Create access key. To see the new access
+key, choose Show. Your credentials will look something like this:</p>
+<p>Access key ID: AAABBCCHHH7EXAMPLE Secret access key:
+wJalrXUtnFhsjlashlkjh/bPxRfiCYEXAMPLEKEY</p>
+<p>To download the key pair, choose Download .csv file. Store the keys in a
+secure location and do not by default store them in the Downloads
+folder. We recommend that you store is in ~/.cloudmesh, but before doing
+so make sure the permissions for ~/.cloudmesh are restricted,</p>
+</div>
+</div>
+<div class="section" id="compute-service">
+<h2>Compute Service<a class="headerlink" href="#compute-service" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="import-public-key">
+<h3>Import Public key<a class="headerlink" href="#import-public-key" title="Permalink to this headline">¶</a></h3>
+<p>Before we get started with AWS compute services, we need to be sure we
+import our public ssh key. We assume an ssh has already been set up
+under <code class="docutils literal notranslate"><span class="pre">~\.ssh\id_rsa.pub</span></code>. If this prerequisite has not yet been
+satisfied, please reference the installation section.</p>
+<p>While logged into AWS’s console, navigate to the EC2 Management Console
+under <code class="docutils literal notranslate"><span class="pre">Services</span> <span class="pre">&gt;</span> <span class="pre">Compute</span> <span class="pre">&gt;</span> <span class="pre">EC2</span></code>:</p>
+<div class="figure align-default" id="id26">
+<a class="reference internal image-reference" href="../_images/aws_compute_ec2.png"><img alt="EC2 Management Console: EC2 Console" src="../_images/aws_compute_ec2.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">EC2 Management Console: EC2 Console</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</div>
+<p>Next, on the left-hand panel, navigate to
+<code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">&amp;</span> <span class="pre">Security</span> <span class="pre">&gt;</span> <span class="pre">Key</span> <span class="pre">Pairs</span></code> and select <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">key</span> <span class="pre">pair</span></code>. Once
+you’re at the Import Settings screen, browse to <code class="docutils literal notranslate"><span class="pre">~\.ssh</span></code> and select
+the <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code> file. Name the imported file after the same username
+configured you have configured in the cloudmesh.yaml file.</p>
+<div class="figure align-default" id="id27">
+<a class="reference internal image-reference" href="../_images/aws_ec2_import_settings.png"><img alt="EC2 Management Console: Import Settings" src="../_images/aws_ec2_import_settings.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">EC2 Management Console: Import Settings</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id28">
+<a class="reference internal image-reference" href="../_images/aws_ec2_import_pub_key.png"><img alt="EC2 Management Console: Pub SSH Key" src="../_images/aws_ec2_import_pub_key.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">EC2 Management Console: Pub SSH Key</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="cloudmesh-yaml-configuration-for-aws">
+<h3>Cloudmesh.yaml Configuration for AWS<a class="headerlink" href="#cloudmesh-yaml-configuration-for-aws" title="Permalink to this headline">¶</a></h3>
+<p>Please reference the section on Configuration for more information on
+getting, setting, and editing values to the cloudmesh.yaml configuration
+file; along with referencing the compute cloud provider templates and
+default values.</p>
+<p>Run the following code to set the AWS compute provider values specific
+to your configuration. Alternatively, you can manually set these values
+using a text editor to update the cloudmesh.yaml file under
+<code class="docutils literal notranslate"><span class="pre">~\.cloudmesh</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms config <span class="nb">set</span> cloudmesh.cloud.aws.cm.active<span class="o">=</span><span class="nb">true</span>
+cms config <span class="nb">set</span> cloudmesh.cloud.aws.credentials.region<span class="o">=</span>AWSMGMTCONSOLEREGIONVALUE
+cms config <span class="nb">set</span> cloudmesh.cloud.aws.credentials.EC2_SECURITY_GROUP<span class="o">=</span>SECGROUPVALUE
+cms config <span class="nb">set</span> cloudmesh.cloud.aws.credentials.EC2_ACCESS_ID<span class="o">=</span>ACCESSIDVALUE
+cms config <span class="nb">set</span> cloudmesh.cloud.aws.credentials.EC2_SECRET_KEY<span class="o">=</span>SECRETKEYVALUE
+</pre></div>
+</div>
+<p><strong>Notes</strong>:</p>
+<ul class="simple">
+<li><p>Region can be found while logged into the AWS management console in
+the upper right-hand side. <a class=""
+               data-lightbox="group-2651b172-b2ef-40d5-bf85-217b3ee46597"
+               href="../_images/aws_region1.png"
+               title=""
+               data-title=""
+               ><img src="../_images/aws_region1.png"
+                     class=""
+                     width="30%"
+                     height="auto"
+                     alt="AWS Management Console: Pub SSH Key"/>
+                </a></p></li>
+<li><p>EC2_ACCESS_ID and EC2_SECRET_KEY values can be found either during
+the initial setup in AWS, or by referencing the Access Key downloaded
+as a csv and moved to the <code class="docutils literal notranslate"><span class="pre">~\.cloudmesh</span></code> directory. <a class=""
+               data-lightbox="group-b7f52541-d3ca-46d5-930b-e4f662539c65"
+               href="../_images/aws_access_key1.png"
+               title=""
+               data-title=""
+               ><img src="../_images/aws_access_key1.png"
+                     class=""
+                     width="30%"
+                     height="auto"
+                     alt="AWS Configuration: Access Key Credentials"/>
+                </a></p></li>
+<li><p>TODO: Confirm if EC2_PRIVATE_KEY_FILE_PATH and
+EC2_PRIVATE_KEY_FILE_NAME cloudmesh.yaml AWS compute variables are
+being utilized, as these are not referenced in <code class="docutils literal notranslate"><span class="pre">Provider.py</span></code>. If
+this is not needed, remove from cloudmesh.yaml. If this is needed,
+update the AWS account section with the following steps:</p>
+<ul>
+<li><p>Create a new key pair and name the key pair <code class="docutils literal notranslate"><span class="pre">aws_cert</span></code>. Then
+download the key and move to the <code class="docutils literal notranslate"><span class="pre">~\.cloudmesh</span></code> directory.
+<a class=""
+               data-lightbox="group-95716490-6c5b-463a-8499-60643ec2275c"
+               href="../_images/aws_private_key1.png"
+               title=""
+               data-title=""
+               ><img src="../_images/aws_private_key1.png"
+                     class=""
+                     width="30%"
+                     height="auto"
+                     alt="REVIEW: AWS_CERT Private Key"/>
+                </a></p></li>
+</ul>
+</li>
+</ul>
+<p>Once the values have been set: <a class=""
+               data-lightbox="group-307dfa5a-5df8-4488-9186-3b52f80bcd45"
+               href="../_images/aws_config1.png"
+               title=""
+               data-title=""
+               ><img src="../_images/aws_config1.png"
+                     class=""
+                     width="30%"
+                     height="auto"
+                     alt="AWS Configuration: Set Config"/>
+                </a> <a class=""
+               data-lightbox="group-18ecbc5a-1e7b-43ff-bd0a-d0256f6d2bb6"
+               href="../_images/aws_config_check1.png"
+               title=""
+               data-title=""
+               ><img src="../_images/aws_config_check1.png"
+                     class=""
+                     width="30%"
+                     height="auto"
+                     alt="AWS Configuration: Check Config"/>
+                </a></p>
+<p>run the following to get started and test AWS compute services:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms <span class="nb">set</span> <span class="nv">cloud</span><span class="o">=</span>aws
+cms init
+cms key init
+cms vm boot
+</pre></div>
+</div>
+<p>This should have allowed you to initialize cms with the updated
+configurations and boot up a new vm in AWS based. <a class=""
+               data-lightbox="group-81f9871c-a07d-4cea-9809-dc0cb73a551f"
+               href="../_images/aws_cms_init_and_vmboot1.png"
+               title=""
+               data-title=""
+               ><img src="../_images/aws_cms_init_and_vmboot1.png"
+                     class=""
+                     width="30%"
+                     height="auto"
+                     alt="AWS Configuration: CMS init"/>
+                </a></p>
+<p>Check the status of the vm by executing the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms vm list --refresh
+</pre></div>
+</div>
+<div class="figure align-default" id="id29">
+<a class="reference internal image-reference" href="../_images/aws_vmlist.png"><img alt="AWS Configuration: vm list" src="../_images/aws_vmlist.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">AWS Configuration: vm list</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now test stopping the vm. Note that you may need to give it a minute or
+two before you refresh the vm list to validate Status=stopped.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms vm stop VMINSTANCENAME
+</pre></div>
+</div>
+<div class="figure align-default" id="id30">
+<a class="reference internal image-reference" href="../_images/aws_vmstop.png"><img alt="AWS Configuration: vm stop" src="../_images/aws_vmstop.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">AWS Configuration: vm stop</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now test terminating the vm. (Note the example provided if you are
+attempting run commands against multiple vm’s.)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms vm delete VMINSTANCENAME
+</pre></div>
+</div>
+<div class="figure align-default" id="id31">
+<a class="reference internal image-reference" href="../_images/aws_vmdelete.png"><img alt="AWS Configuration: vm delete" src="../_images/aws_vmdelete.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-text">AWS Configuration: vm delete</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>[x] TODO: Aws EC2 account. Describe here if there is anything to be
+done for accessing EC2</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="storage-service">
+<h2>Storage Service<a class="headerlink" href="#storage-service" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>AWS S3 and Credentials Set up:</p>
+<ol class="arabic simple">
+<li><p>Create aws account following the instructions above</p></li>
+<li><p>Select S3 service in AWS Management Console</p></li>
+<li><p>In S3 service, create a bucket. (Please remember the bucket name and bucket region)</p></li>
+<li><p>Select IAM service in AWS Management Console</p></li>
+<li><p>In IAM service, Add a new user with “Probrammatic access” access type and “S3All” Permission</p></li>
+<li><p>Remember the user “Access key ID” and “Secret access key”</p></li>
+<li><p>Fill in the following info into the ~/.cloudmesh/cloudmesh.yaml file under “cloudmesh.storage.aws.credentials” section</p>
+<ul class="simple">
+<li><p>bucket</p></li>
+<li><p>access_key_id</p></li>
+<li><p>secret_access_key</p></li>
+<li><p>region</p></li>
+</ul>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>Additional information about the services can be found at:</p>
+<ul class="simple">
+<li><p>Open Distribution for Elastic Search,
+<a class="reference external" href="https://aws.amazon.com/?nc2=h_lg">https://aws.amazon.com/?nc2=h_lg</a></p></li>
+<li><p>Amazon EC2, <a class="reference external" href="https://aws.amazon.com/ec2/?nc2=h_m1">https://aws.amazon.com/ec2/?nc2=h_m1</a></p></li>
+<li><p>Amazon S3, <a class="reference external" href="https://aws.amazon.com/s3/?c=23&amp;pt=1">https://aws.amazon.com/s3/?c=23&amp;pt=1</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.html" class="btn btn-neutral float-right" title="Azure Account" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="openstack.html" class="btn btn-neutral float-left" title="OpenStack Account" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

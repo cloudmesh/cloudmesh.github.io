@@ -1,0 +1,601 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cms &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Command List" href="manual/all.html" />
+    <link rel="prev" title="Benchmarks" href="benchmarks/gregor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">cms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#features">Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#execution-shell-command">Execution shell command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#timers">Timers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#defaults">Defaults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stopwatch">Stopwatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-python">Accessing Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-shell-commands">Accessing Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-the-yaml-file">Accessing the yaml file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#plugins">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docker">Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>cms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/cmd5.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cms">
+<h1>cms<a class="headerlink" href="#cms" title="Permalink to this headline">¶</a></h1>
+<p>Cloudmesh used cmd5 which provides an easy to use command line and command
+shell interface. Hence you can run each command as a sepearte command line,
+but you can also start a shell in which you can execute multiple commands one
+after another. Furthermore, you can create cloudmesh scripts in a file that if
+run via the cloudmesh shell get executed sequentially.</p>
+<p>To run the cloudmesh shell you can activate it with the <cite>cms</cite> command. <cite>cms</cite> stands
+for cloudmesh shell:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span>
+</pre></div>
+</div>
+<p>It will print the banner and enter the shell:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>+-------------------------------------------------------+
+|   ____ _                 _                     _      |
+|  / ___| | ___  _   _  __| |_ __ ___   ___  ___| |__   |
+| | |   | |/ _ \| | | |/ _` | &#39;_ ` _ \ / _ \/ __| &#39;_ \  |=
+| | |___| | (_) | |_| | (_| | | | | | |  __/\__ \ | | | |
+|  \____|_|\___/ \__,_|\__,_|_| |_| |_|\___||___/_| |_| |
++-------------------------------------------------------+
+|                  Cloudmesh CMD5 Shell                 |
++-------------------------------------------------------+
+
+cms&gt;
+</pre></div>
+</div>
+<p>To see the list of commands you can say:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span><span class="o">&gt;</span> <span class="n">help</span>
+</pre></div>
+</div>
+<p>To see the manual page for a specific command, please use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span> <span class="n">COMMANDNAME</span>
+</pre></div>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p>The following highlighted features are available:</p>
+<ul class="simple">
+<li><p>easy command integration through separate modules</p></li>
+<li><p>multi cloud environments (under development) though cloudmesh-cloud
+plugin</p></li>
+<li><p>openapi integration through cloudmesh-openapi plugin</p></li>
+<li><p>general commands as documented at in the
+<a class="reference external" href="https://cloudmesh.github.io/cloudmesh-manual/">manual</a> such as
+<a class="reference external" href="manual/cmd5/manual/cmd5/admin.html">admin</a>,
+<a class="reference external" href="manual/cmd5/manual/cmd5/banner.html">banner</a>,
+<a class="reference external" href="manual/cmd5/manual/cmd5/clear.html">clear</a>,
+<a class="reference external" href="manual/cmd5/echo.html">echo</a>,
+<a class="reference external" href="manual/cmd5/default.html">default</a>,
+<a class="reference external" href="manual/cmd5/info.html">info</a>, <a class="reference external" href="manual/cmd5/pause.html">pause</a>,
+<a class="reference external" href="manual/cmd5/plugin.html">plugin</a>,
+<a class="reference external" href="manual/cmd5/quit.html">quit</a>, <a class="reference external" href="manual/cmd5/shell.html">shell</a>,
+<a class="reference external" href="manual/cmd5/sleep.html">sleep</a>,
+<a class="reference external" href="manual/cmd5/stopwatch.html">stopwatch</a>,
+<a class="reference external" href="manual/cmd5/sys.html">sys</a>, <a class="reference external" href="manual/cmd5/var.html">var</a>,
+<a class="reference external" href="manual/cmd5/version.html">version</a>,
+<a class="reference external" href="manual/cmd5/open.html">open</a>, and others</p></li>
+</ul>
+<div class="section" id="execution-shell-command">
+<h3>Execution shell command<a class="headerlink" href="#execution-shell-command" title="Permalink to this headline">¶</a></h3>
+<p>You can execute shell commands when the beginning character is !</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cms !pwd
+cms shell pwd
+</pre></div>
+</div>
+</div>
+<div class="section" id="timers">
+<h3>Timers<a class="headerlink" href="#timers" title="Permalink to this headline">¶</a></h3>
+<p>To switch timers on or off you can use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="nb">set</span> <span class="n">timer</span><span class="o">=</span><span class="n">on</span>
+</pre></div>
+</div>
+<p>Than every command you type is timed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">banner</span> <span class="n">hallo</span>
+<span class="n">banner</span>
+<span class="c1">######################################################################</span>
+<span class="c1"># hallo</span>
+<span class="c1">######################################################################</span>
+<span class="n">Timer</span><span class="p">:</span> <span class="mf">0.0011</span><span class="n">s</span> <span class="p">(</span><span class="n">banner</span> <span class="n">hallo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
+<p>you can store variables with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">var</span> <span class="n">a</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="nb">set</span> <span class="n">a</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>you can access them on the commandline with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var.a
+$a
+</pre></div>
+</div>
+<p>Thus if you type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">banner</span> <span class="n">var</span><span class="o">.</span><span class="n">a</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cms banner $a
+</pre></div>
+</div>
+<p>it will print the variable value in a banner</p>
+<p>You can list all variables with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<p>OS Variables can also be integrated. <code class="docutils literal notranslate"><span class="pre">os.HOME</span></code> will be replaced with
+the HOME variable from the shell, try it with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">banner</span> <span class="n">os</span><span class="o">.</span><span class="n">HOME</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="defaults">
+<h3>Defaults<a class="headerlink" href="#defaults" title="Permalink to this headline">¶</a></h3>
+<p>Defaults are variables with a context in which the default applies. For
+example we can set default images for a cloud. General defaults are
+placed in the context <code class="docutils literal notranslate"><span class="pre">general</span></code>. To set the default cloud you can
+use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">default</span> <span class="n">cloud</span><span class="o">=</span><span class="n">kilo</span>
+</pre></div>
+</div>
+<p>To List the defaults use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">default</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<p>To use the defaults in a command proceed it with the the keyword
+<code class="docutils literal notranslate"><span class="pre">default.</span></code> and append the context and the name of the default
+variable. If the context is missing, the <code class="docutils literal notranslate"><span class="pre">general</span></code> context will be
+used. Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">banner</span> <span class="n">default</span><span class="o">.</span><span class="n">cloud</span>
+<span class="n">default</span> <span class="n">image</span><span class="o">=</span><span class="n">ubuntu</span> <span class="o">--</span><span class="n">context</span><span class="o">=</span><span class="n">chameleon</span>
+<span class="n">banner</span> <span class="n">default</span><span class="o">.</span><span class="n">chameleon</span><span class="o">.</span><span class="n">image</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="stopwatch">
+<h3>Stopwatch<a class="headerlink" href="#stopwatch" title="Permalink to this headline">¶</a></h3>
+<p>For some benchmarks this could be helpful. Naturally in an interactive
+shell you will not be able to measure reliably as you also measure the
+response time of the user, but in case you use cloudmesh scripts this
+could be a great good way for you to customize your benchmarks. We
+even provide convenient integration for pytests and you can see in our
+special pytest section how to use the stopwatch from within pytests.</p>
+<p>Here is an example for a script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stopwatch</span> <span class="n">start</span> <span class="n">g</span>
+<span class="n">stopwatch</span> <span class="n">stop</span> <span class="n">g</span>
+<span class="n">stopwatch</span> <span class="nb">print</span> <span class="n">g</span>
+</pre></div>
+</div>
+<p>Then execute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">s</span><span class="o">.</span><span class="n">cm</span> <span class="o">|</span> <span class="n">cms</span>
+</pre></div>
+</div>
+<p>You will get something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cat s.cm | cms
+
++-------------------------------------------------------+
+|   ____ _                 _                     _      |
+|  / ___| | ___  _   _  __| |_ __ ___   ___  ___| |__   |
+| | |   | |/ _ \| | | |/ _` | &#39;_ ` _ \ / _ \/ __| &#39;_ \  |
+| | |___| | (_) | |_| | (_| | | | | | |  __/\__ \ | | | |
+|  \____|_|\___/ \__,_|\__,_|_| |_| |_|\___||___/_| |_| |
++-------------------------------------------------------+
+|                  Cloudmesh CMD5 Shell                 |
++-------------------------------------------------------+
+cms&gt; Timer g started ...
+cms&gt; Timer g started ...
+cms&gt; Timer g: 0.000274181365967 s
+</pre></div>
+</div>
+<p>Cmd5 has even a convenient benchmark print command that not only prints all timers, but includes some
+information about your machine on which you run the benchmarks. You can get this information with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">stopwatch</span> <span class="n">benchmark</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessing-python">
+<h3>Accessing Python<a class="headerlink" href="#accessing-python" title="Permalink to this headline">¶</a></h3>
+<p>You can access python in a commandline while using the prefix py:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">py</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="mi">2</span>
+</pre></div>
+</div>
+<p>Or redirectiong the python output to a cloudmesh variable as part of the set command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="nb">set</span> <span class="n">a</span><span class="o">=</span>\<span class="s2">&quot;py 1 + 1</span><span class="se">\&quot;</span>
+<span class="n">a</span><span class="o">=</span><span class="s1">&#39;2&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessing-shell-commands">
+<h3>Accessing Shell Commands<a class="headerlink" href="#accessing-shell-commands" title="Permalink to this headline">¶</a></h3>
+<p>You can access shell commands while starting a line with !:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cms \!pwd
+</pre></div>
+</div>
+<p>or you can use it as part of a variable assignment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cms set a=\!pwd
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessing-the-yaml-file">
+<h3>Accessing the yaml file<a class="headerlink" href="#accessing-the-yaml-file" title="Permalink to this headline">¶</a></h3>
+<p>You can read values from a yaml configuration file in <cite>~/.cloudmesh/cloudmesh.yaml</cite>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="nb">set</span> <span class="n">a</span><span class="o">=</span><span class="n">cloudmesh</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">user</span>
+</pre></div>
+</div>
+<p>where it is defined as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cloudmesh</span><span class="p">:</span>
+<span class="n">profile</span><span class="p">:</span>
+  <span class="n">user</span><span class="p">:</span> <span class="n">gregor</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="plugins">
+<h2>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h2>
+<p>Cmd5 comes with a sophisticated plugin mechanism. Commands can be
+readily designed with the help of  sys command.</p>
+<p>The sys command can be installed either from source (as discussed
+previously) or via pip</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install cloudmesh-sys
+</pre></div>
+</div>
+<p>Once you have installed it, execute <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">help</span> <span class="pre">sys</span></code> to see the usage.
+Now you simply can in a new directory execute the sys command as
+follows, where <code class="docutils literal notranslate"><span class="pre">mycommnad</span></code> is than name of the command you like to
+implement.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir mycommand
+<span class="nb">cd</span> mycommand
+cms sys <span class="nb">command</span> generate mycommand
+</pre></div>
+</div>
+<p>A directory with the name <code class="docutils literal notranslate"><span class="pre">cloudmesh-mycommand</span></code> will be generated that
+contains the template for the command. You can enter this template and
+modify the implementation in the folders <code class="docutils literal notranslate"><span class="pre">cloudmesh/mycommand/api</span></code> and
+<code class="docutils literal notranslate"><span class="pre">cloudmesh/mycommand/command</span></code> when installing it with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install .
+</pre></div>
+</div>
+<p>The command will be added to the cms command&gt;</p>
+<p>An example for the bar command is presented at:</p>
+<ul class="simple">
+<li><p><cite>cloudmesh/bar/command/bar.py
+&lt;https://github.com/cloudmesh/cloudmesh.bar/blob/master/cloudmesh/bar/command/bar.py&gt;</cite></p></li>
+</ul>
+<p>It shows how simple the command definition is (bar.py):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">from</span> <span class="nn">cloudmesh.shell.command</span> <span class="kn">import</span> <span class="n">command</span>
+<span class="kn">from</span> <span class="nn">cloudmesh.shell.command</span> <span class="kn">import</span> <span class="n">PluginCommand</span>
+
+<span class="k">class</span> <span class="nc">BarCommand</span><span class="p">(</span><span class="n">PluginCommand</span><span class="p">):</span>
+
+    <span class="nd">@command</span>
+    <span class="k">def</span> <span class="nf">do_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">arguments</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        ::</span>
+
+<span class="sd">          Usage:</span>
+<span class="sd">                command -f FILE</span>
+<span class="sd">                command FILE</span>
+<span class="sd">                command list</span>
+<span class="sd">          This command does some useful things.</span>
+<span class="sd">          Arguments:</span>
+<span class="sd">              FILE   a file name</span>
+<span class="sd">          Options:</span>
+<span class="sd">              -f      specify the file</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">arguments</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>An important difference to other CMD solutions is that our commands can
+leverage (besides the standard definition), docopts as a way to define
+the manual page. This allows us to use arguments as dict and use simple
+if conditions to interpret the command. Using docopts has the advantage
+that contributors are forced to think about the command and its options
+and document them from the start. Previously we used not to use docopts
+and argparse was used. However we noticed that for some contributions
+the lead to commands that were either not properly documented or the
+developers delivered ambiguous commands that resulted in confusion and
+wrong usage by the users. Hence, we do recommend that you use docopts.</p>
+<p>The transformation is enabled by the <code class="docutils literal notranslate"><span class="pre">&#64;command</span></code> decorator that takes
+also the manual page and creates a proper help message for the shell
+automatically. Thus there is no need to introduce a separate help method
+as would normally be needed in CMD.</p>
+</div>
+<div class="section" id="docker">
+<h2>Docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h2>
+<p>Developers can easily create a docker container.</p>
+<p>Cloudmesh can be run easily in a container with the help of docker. A
+Dockerfile is provided as an example that you may adapt for your needs</p>
+<p>To use the docker file we have included a number or convenient targets
+also in our makefile.</p>
+<p>You can create the image with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make image
+</pre></div>
+</div>
+<p>You can run teh image and enter a shell with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make shell
+</pre></div>
+</div>
+<p>This allows you to try things out in the image from bash which is good
+for development and debugging. You can directly enter the cloudmesh
+shell <code class="docutils literal notranslate"><span class="pre">cms</span></code> with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make cms
+</pre></div>
+</div>
+<p>or say</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The docker image is not yet updated.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it cloudmesh/cmd5:1.0
+</pre></div>
+</div>
+<p>It will create a default .cloudmesh/cloudmesh.yaml file which your would
+have to modify. The reason we have not mounted the yaml file in the make files
+form your directory is that we need a clean image to test the initial
+setup.</p>
+<p>If you have an example on how to mount the yaml file please let us know
+and we add it here.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="manual/all.html" class="btn btn-neutral float-right" title="Command List" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="benchmarks/gregor.html" class="btn btn-neutral float-left" title="Benchmarks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

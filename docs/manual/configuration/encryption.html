@@ -1,0 +1,536 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cloudmesh Config File Encryption &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Virtual Cluster (in progress)" href="../vcluster.html" />
+    <link rel="prev" title="Deprecated" href="../deprecated.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../deprecated.html">Deprecated</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cloudmesh Config File Encryption</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quick-start">Quick-Start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preparation">Preparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#encrypting-the-config-file">Encrypting the Config File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decrypting-the-config-file">Decrypting the Config File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-configuration-options">Additional Configuration Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#changing-the-secinit-directory">Changing the secinit Directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cms-key-gen-options">CMS Key Gen Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selecting-attributes-to-encrypt">Selecting Attributes to Encrypt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selecting-attributes-to-exclude-from-encryption">Selecting Attributes to Exclude from Encryption</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../vcluster.html">Virtual Cluster (in progress)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpc/batch.html">Batch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpc/refcard.html">HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow.html">Infrastructure Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vm/vm.html">Virtual Machine Management</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../deprecated.html">Deprecated</a> &raquo;</li>
+        
+      <li>Cloudmesh Config File Encryption</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/configuration/encryption.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cloudmesh-config-file-encryption">
+<h1>Cloudmesh Config File Encryption<a class="headerlink" href="#cloudmesh-config-file-encryption" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>THIS SECTION IS UNDER DEVELOPMENT</p>
+</div>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>The cloudmesh.yaml configuration file stores passwords and other secrets
+to simplify accessing machines. By default <strong>none</strong> of the passwords are
+encrypted. Encryption allows you to store your secrets within the file
+and prevents the accidental exposure of your secrets (if you edit your
+config while sharing a screen) and makes it harder for malicious users
+to steal your passwords. This is all done through the
+<code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">config</span> <span class="pre">encrypt</span></code> and <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">config</span> <span class="pre">decrypt</span></code> commands.</p>
+</div>
+<div class="section" id="quick-start">
+<h2>Quick-Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h2>
+<p>This guide assumes you are running an Gnu/Linux or macOS machine.</p>
+<p>Assuming you do not have cloudmesh installed run the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir cm
+$ <span class="nb">cd</span> cm
+$ pip install cloudmesh-installer
+$ cloudmesh-installer git clone cloud
+$ cloudmesh-installer install cloud
+$ cms <span class="nb">help</span>
+</pre></div>
+</div>
+<p>To initialize cloudmesh security run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config secinit
+</pre></div>
+</div>
+<p><strong>If you have already generated an RSA key pair, skip the next command</strong></p>
+<p>Assuming you <strong>have not</strong> previously generated an RSA public-private key pair
+(This could have been generated with an <code class="docutils literal notranslate"><span class="pre">openssl</span></code> or <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> command)
+you can generate a private key located at <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa</span></code> and public key
+located at <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa.pub</span></code> by running the following.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms key gen pem
+</pre></div>
+</div>
+<p>Assuming you have an RSA private-public key pair located at <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa</span></code> and
+<code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa.pub</span></code> <strong>with PEM or SSH encoding</strong> you can encrypt the default
+cloudmesh secrets by executing the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config encrypt
+</pre></div>
+</div>
+<p>When you want to decrypt the configuration secrets run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config decrypt
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>You must be sure that cloudmesh is installed. The easiest way to install
+cloudmesh is via pip. However, it is not yet released with the security
+extensions we discuss next. If you would like to use them you need to install
+cloudmesh-cloud from source. Which is discussed in the <a class="reference external" href="https://cloudmesh.github.io/cloudmesh-manual/installation/install.html">cloudmesh manual</a>.</p>
+<p>To remind you how easy it is you can use the following steps.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir cm
+$ <span class="nb">cd</span> cm
+$ pip install cloudmesh-installer
+$ cloudmesh-installer git clone cloud
+$ cloudmesh-installer install cloud
+$ cms <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Please remember that after this you should configure your
+<code class="docutils literal notranslate"><span class="pre">~/.cloudmesh/cloudmesh.yaml</span></code> configuration file.</p>
+</div>
+<div class="section" id="preparation">
+<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h2>
+<p>After the system has been installed cloudmesh will need to initialize its
+security capabilities. If you wish to control where it is initialized
+reference the <a class="reference internal" href="#changing-the-secinit-directory">Changing the secinit Directory</a> section.
+Otherwise, initialize the configuration capabilities by running the the
+following.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config secinit
+</pre></div>
+</div>
+<p>Now that we have the proper system related properties initialized we need
+an RSA public-private key pair to execute encryption and decryption of
+the data. The public key is used to encrypt data and the private key is
+used to decrypt. <strong>If you have previously generated an RSA key pair</strong> please
+reference the <a class="reference internal" href="#setting-keys-for-encryption-without-key-gen-command">Setting Keys for Encryption Without Key Gen Command</a>
+section. Otherwise, run the following to generate a key pair.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms key gen pem
+</pre></div>
+</div>
+<p>Now that we ran secinit and obtained an RSA key pair we can encrypt the config.</p>
+</div>
+<div class="section" id="encrypting-the-config-file">
+<h2>Encrypting the Config File<a class="headerlink" href="#encrypting-the-config-file" title="Permalink to this headline">¶</a></h2>
+<p>Cloudmesh encrypts some attributes by default. To reference which values
+will be encrypted run the <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">config</span> <span class="pre">security</span> <span class="pre">list</span></code> command. This will
+print all of the attribute dot paths whoes values will be encrypted by the
+<cite>cms config encrypt</cite> command.</p>
+<p>Cloudmesh provides functionality to add or remove which attributes are encrypted.
+To add attributes that will be encrypted reference the
+<a class="reference internal" href="#selecting-attributes-to-encrypt">Selecting Attributes to Encrypt</a> section. To ensure certain attributes are
+<strong>not encrypted</strong> reference the <a class="reference internal" href="#selecting-attributes-to-exclude-from-encryption">Selecting Attributes to Exclude from Encryption</a></p>
+<p>After referencing the <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">config</span> <span class="pre">security</span> <span class="pre">list</span></code> command and ensuring that the
+list meets your needs you can encrypt the config file by running the following.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config encrypt
+</pre></div>
+</div>
+<p>After this command is completed all of the explicitly defined secrets
+are encrypted at rest. This means that even if the data is exposed the
+data should be secured by typical definitions of security. This also
+means that any other cloudmesh command that references an encrypted
+attribute will return an encrypted value. Thus, care should be taken to
+not call commands that require encrypted attributes. To reference the
+original values you must decrypt the config file.</p>
+</div>
+<div class="section" id="decrypting-the-config-file">
+<h2>Decrypting the Config File<a class="headerlink" href="#decrypting-the-config-file" title="Permalink to this headline">¶</a></h2>
+<p>The configuration file can be decrypted by running the following
+command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config decrypt
+</pre></div>
+</div>
+<p>If the private key was password protected you must enter the password
+when prompted. If the key has no password either hit enter immediately
+after being prompted or run the following.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config decrypt --nopass
+</pre></div>
+</div>
+</div>
+<div class="section" id="additional-configuration-options">
+<span id="id1"></span><h2>Additional Configuration Options<a class="headerlink" href="#additional-configuration-options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="changing-the-secinit-directory">
+<span id="id2"></span><h3>Changing the secinit Directory<a class="headerlink" href="#changing-the-secinit-directory" title="Permalink to this headline">¶</a></h3>
+<p>The secinit directory controls where encryption related data is stored.
+The default location is ~/.cloudmesh/security. If you wish to change
+this location you must edit the <code class="docutils literal notranslate"><span class="pre">cloudmesh.security.secpath</span></code>
+attribute. For example, if you wish that cloudmesh secrets are stored
+within <code class="docutils literal notranslate"><span class="pre">~/.cloudmesh/.foosec</span></code> run the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config <span class="nb">set</span> cloudmesh.security.secpath<span class="o">=</span>~/.cloudmesh/.foosec
+$ cms config secinit
+</pre></div>
+</div>
+</div>
+<div class="section" id="cms-key-gen-options">
+<h3>CMS Key Gen Options<a class="headerlink" href="#cms-key-gen-options" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="setting-non-default-names-for-key-generation">
+<h4>Setting Non-Default Names for Key Generation<a class="headerlink" href="#setting-non-default-names-for-key-generation" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">key</span> <span class="pre">gen</span></code> command will automatically generate the key pair
+into the default locations of <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa</span></code> and
+<code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa.pub</span></code>. If this key already exists or if you prefer a
+different location use the <code class="docutils literal notranslate"><span class="pre">--filename=FILENAME</span></code> argument. Where the FILENAME
+is the full file path to the key you would like to generate. For example, if we
+would like to have a private key called <code class="docutils literal notranslate"><span class="pre">cms</span></code> and public key called <code class="docutils literal notranslate"><span class="pre">cms.pub</span></code>
+in the .ssh directory execute the following.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms key gen rsa --filename<span class="o">=</span>~/.ssh/cms
+</pre></div>
+</div>
+</div>
+<div class="section" id="setting-keys-for-encryption-without-key-gen-command">
+<span id="id3"></span><h4>Setting Keys for Encryption Without Key Gen Command<a class="headerlink" href="#setting-keys-for-encryption-without-key-gen-command" title="Permalink to this headline">¶</a></h4>
+<p>The path to the encryption and decryption keys are located in
+<code class="docutils literal notranslate"><span class="pre">cloudmesh.security.pubickey</span></code> and <code class="docutils literal notranslate"><span class="pre">cloudmesh.security.privatekey</span></code>
+respectively. When keys are generated with the <code class="docutils literal notranslate"><span class="pre">--set_path</span></code> argument
+they set these attributes after the keys are generated.</p>
+<p>If you already have RSA keys that are PEM or OpenSSH encoded you can set the
+path directly. For instance let us assume we already had <code class="docutils literal notranslate"><span class="pre">~/.ssh/priv/cms</span></code>
+and its public key pair <code class="docutils literal notranslate"><span class="pre">~/.ssh/pub/cms.pub</span></code>. We can set Cloudmesh to use
+these keys for encryption by running the following.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config <span class="nb">set</span> cloudmesh.security.privatekey<span class="o">=</span>~/.ssh/priv/cms
+$ cms config <span class="nb">set</span> cloudmesh.security.publickey<span class="o">=</span>~/.ssh/pub/cms.pub
+</pre></div>
+</div>
+</div>
+<div class="section" id="generating-a-key-without-a-password">
+<h4>Generating a Key Without a Password<a class="headerlink" href="#generating-a-key-without-a-password" title="Permalink to this headline">¶</a></h4>
+<p>Passwords for your RSA private key are recommended. It is much easier to
+<strong>lose all security guarantees</strong> if you private key is not encrypted.
+Unless you have a good reason, keep a password on your private file. If
+you understand this and still wish to generate a key without a password
+run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms key gen pem --nopass
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="selecting-attributes-to-encrypt">
+<span id="id4"></span><h3>Selecting Attributes to Encrypt<a class="headerlink" href="#selecting-attributes-to-encrypt" title="Permalink to this headline">¶</a></h3>
+<p>Internally, Cloudmesh represents all values as the yaml dot path to the
+attribute. The <code class="docutils literal notranslate"><span class="pre">cloudmesh.security.secrets</span></code> attribute takes a list
+of python regular expressions that will be matched on the dot paths to
+the attributes to decide which attributes will be encrypted.</p>
+<p>To learn the specifics about python regular expression please reference
+the <a class="reference external" href="https://docs.python.org/3.8/library/re.html">python re documentation</a>.</p>
+<p>loudmesh encrypts some values by default. To reference which values
+will be encrypted run the <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">config</span> <span class="pre">security</span> <span class="pre">list</span></code> command. This will
+print all of the attribute dot paths that will be encrypted by the
+<code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">config</span> <span class="pre">encrypt</span></code> command.</p>
+<p>If you wish to add you own regular expression to encrypt attributes run
+the <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">config</span> <span class="pre">security</span> <span class="pre">add</span> <span class="pre">--secret=REGEXP</span></code> command. Where REGEXP is a
+python regular expression. For instance, if you wish to encrypt all
+<code class="docutils literal notranslate"><span class="pre">AZURE_SECRET_KEY</span></code> attributes you can execute the following.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config security add --secret<span class="o">=</span>.*AZURE_SECRET_KEY
+</pre></div>
+</div>
+<p>If you wish to encrypt a specific attribute you can provide the dot
+path. For instance, to encrypt the mongo database <code class="docutils literal notranslate"><span class="pre">MONGO_PASSWORD</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config security add --secret<span class="o">=</span>cloudmesh.data.mongo.MONGO_PASSWORD
+</pre></div>
+</div>
+<p>Expressions added by the user can be referenced within the
+<code class="docutils literal notranslate"><span class="pre">cloudmesh.security.secrets</span></code> attribute. If you wish to remove any regular
+expressions from the secrets section run the <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">config</span> <span class="pre">security</span> <span class="pre">rmv</span></code> command
+For instance, to remove the previously added attribute run the following.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config security rmv --secret<span class="o">=</span>cloudmesh.data.mongo.MONGO_PASSWORD
+</pre></div>
+</div>
+</div>
+<div class="section" id="selecting-attributes-to-exclude-from-encryption">
+<span id="id5"></span><h3>Selecting Attributes to Exclude from Encryption<a class="headerlink" href="#selecting-attributes-to-exclude-from-encryption" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">cloudmesh.security.exception</span></code> section is intended to list attributes
+that must <strong>not</strong> be encrypted. This section also explicitly uses python regular
+expressions to capture the attribute dot paths. Cloudmesh has some attributes
+that will not be encrypted, these attributes are necessary for the decryption of
+data. You can add your own regular expressions to capture which attributes will
+not be encrypted with the <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">config</span> <span class="pre">security</span> <span class="pre">add</span> <span class="pre">--exception=REGEXP</span></code> command</p>
+<p>For instance, if you wish to ensure that none of the
+<code class="docutils literal notranslate"><span class="pre">AZURE_SECRET_KEY</span></code> attributes are encrypted run the following.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config security add --exception<span class="o">=</span>.*AZURE_SECRET_KEY
+</pre></div>
+</div>
+<p>If you wish to exclude a specific attribute give the dot path.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config security add --exception<span class="o">=</span>cloudmesh.data.mongo.MDB_PASSWORD
+</pre></div>
+</div>
+<p>If you wish to remove any regular expressions within the exceptions
+section run the <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">config</span> <span class="pre">security</span> <span class="pre">rmv</span></code> command. For instance to
+remove the example exceptions.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms config security rmv --exception<span class="o">=</span>.*AZURE_SECRET_KEY
+$ cms config security rmv --exception<span class="o">=</span>cloudmesh.data.mongo.MDB_PASSWORD
+</pre></div>
+</div>
+<p>You can verify the addition or removal of the rule by observing the results
+of the <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">config</span> <span class="pre">security</span> <span class="pre">list</span></code> command and confirming that the dot path
+to the attribute you do not want to encrypt is not listed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The exceptions section has priority over the secrets section.
+If there is ever an attribute that is matched on both secrets and
+exceptions regular expressions the attribute will <strong>not</strong> be encrypted.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../vcluster.html" class="btn btn-neutral float-right" title="Virtual Cluster (in progress)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../deprecated.html" class="btn btn-neutral float-left" title="Deprecated" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

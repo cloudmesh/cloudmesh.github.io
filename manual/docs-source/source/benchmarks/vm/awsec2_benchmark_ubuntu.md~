@@ -1,0 +1,48 @@
+AWS EC2 VM Management
+---------------------
+
+Benchmark results using cloudmesh-cloud/tests/test_cms_aws.py
+
+```
+PING ms : 34 
+DOWNLOAD Mbps : 69.27 
+UPLOAD Mbps : 5.99
+```
+    
+\``\` +———————+——————————————————————+ \| Machine Arribute \| Time/s \|
++———————+——————————————————————+ \| BUG_REPORT_URL \|
+“https://bugs.launchpad.net/ubuntu/” \| \| DISTRIB_CODENAME \| bionic \|
+\| DISTRIB_DESCRIPTION \| “Ubuntu 18.04.2 LTS” \| \| DISTRIB_ID \|
+Ubuntu \| \| DISTRIB_RELEASE \| 18.04 \| \| HOME_URL \|
+“https://www.ubuntu.com/” \| \| ID \| ubuntu \| \| ID_LIKE \| debian \|
+\| NAME \| “Ubuntu” \| \| PRETTY_NAME \| “Ubuntu 18.04.2 LTS” \| \|
+PRIVACY_POLICY_URL \|
+“https://www.ubuntu.com/legal/terms-and-policies/privacy-policy” \| \|
+SUPPORT_URL \| “https://help.ubuntu.com/” \| \| UBUNTU_CODENAME \|
+bionic \| \| VERSION \| “18.04.2 LTS (Bionic Beaver)” \| \|
+VERSION_CODENAME \| bionic \| \| VERSION_ID \| “18.04” \| \| mac_version
+\| \| \| machine \| (‘x86_64’,) \| \| node \| (‘cloudcomputingVM’,) \|
+\| platform \| Linux-4.18.0-17-generic-x86_64-with-debian-buster-sid \|
+\| processor \| (‘x86_64’,) \| \| processors \| Linux \| \| python \|
+3.7.2 (default, Feb 14 2019, 23:11:37) \| \| \| [GCC 7.3.0] \| \|
+release \| (‘4.18.0-17-generic’,) \| \| sys \| linux \| \| system \|
+Linux \| \| user \| colliner \| \| version \| #18~18.04.1-Ubuntu SMP Fri
+Mar 15 15:27:12 UTC 2019 \| \| win_version \| \|
++———————+——————————————————————+ +————————-+——+———————–+——–+————-+————-+
+\| timer \| time \| node \| system \| mac_version \| win_version \|
++————————-+——+———————–+——–+————-+————-+ \| cms vm list \| 4.05 \|
+(‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm status \| 2.28 \|
+(‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm stop dryrun \| 2.45 \|
+(‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm stop \| 2.32 \|
+(‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm ping \| 2.33 \|
+(‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm check \| 1.81 \|
+(‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm run dryrun \| 2.3 \|
+(‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm script dryrun \| 2.3
+\| (‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm start dryrun \|
+1.78 \| (‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm start \| 2.44
+\| (‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm delete dryrun \|
+1.83 \| (‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm terminate
+dryrun \| 2.56 \| (‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm
+terminate \| 2.23 \| (‘cloudcomputingVM’,) \| Linux \| \| \| \| cms vm
+delete \| 1.78 \| (‘cloudcomputingVM’,) \| Linux \| \| \|
++————————-+——+———————–+——–+————-+————-+

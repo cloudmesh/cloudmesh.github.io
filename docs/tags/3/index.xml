@@ -1,0 +1,41 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloudmesh – 3</title>
+    <link>/tags/3/</link>
+    <description>Recent content in 3 on Cloudmesh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 11 Apr 2018 11:13:32 -0400</lastBuildDate>
+    
+	  <atom:link href="/tags/3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Cloudmesh Version 3</title>
+      <link>/docs/version/version-3/</link>
+      <pubDate>Wed, 11 Apr 2018 11:13:32 -0400</pubDate>
+      
+      <guid>/docs/version/version-3/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;2016 - 2017&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh-cmd3&#34;&gt;https://github.com/cloudmesh-cmd3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Contains&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;base&lt;/li&gt;
+&lt;li&gt;cloudmesh&lt;/li&gt;
+&lt;li&gt;client portal&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

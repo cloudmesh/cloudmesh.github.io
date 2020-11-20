@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FAQ for Windows &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Installation of Cloudmesh (Source Install for Developers)" href="../install-dev.html" />
+    <link rel="prev" title="Linux Subsystem on Windows 10" href="windows-linux-subsystem.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface/index.html">Preface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Installation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docker/install-docker.html">Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../os/install-linux.html">Installation for for Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../os/install-macos.html">Installation for macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pi/install-pi.html">Prerequisites for Raspbian</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Windows Installation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="windows-install.html">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows-update.html">User Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows-update.html#developer-reinstall">Developer Reinstall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows-linux-subsystem.html">Linux Subsystem on Windows 10</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">FAQ for Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#videos">Videos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#visual-studio-build-tools">Visual Studio Build Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mongodb">MongoDB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#which-version-of-windows-do-i-need-to-use-multipass">Which version of Windows do I need to use multipass?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multipass-hyper-v-instalation-on-windows">multipass Hyper-V instalation on Windows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../install-dev.html">Installation of Cloudmesh (Source Install for Developers)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/install-mongo.html">Cloudmesh Database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Installation</a> &raquo;</li>
+        
+          <li><a href="index.html">Windows Installation</a> &raquo;</li>
+        
+      <li>FAQ for Windows</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/installation/windows/faq.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="faq-for-windows">
+<h1>FAQ for Windows<a class="headerlink" href="#faq-for-windows" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="videos">
+<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this headline">¶</a></h2>
+<p>Showcase the complete install of CMS in a video assumong you have done
+the prerequisits as discussed later</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://iu.zoom.us/rec/share/yuZcE_Lg2DlLSKOd7hmEXaALRrbHaaa80yVK-aAOn0iCwnrZnokx6Rxwl91bIWqy">https://iu.zoom.us/rec/share/yuZcE_Lg2DlLSKOd7hmEXaALRrbHaaa80yVK-aAOn0iCwnrZnokx6Rxwl91bIWqy</a></p></li>
+<li><p><a class="reference external" href="https://iu.zoom.us/rec/share/tJZUK5DJ_2BOa5WWwRzQd758Qav4aaa823NPqPcOy06Vcf-xaVmuyG3Bnq70OujX">https://iu.zoom.us/rec/share/tJZUK5DJ_2BOa5WWwRzQd758Qav4aaa823NPqPcOy06Vcf-xaVmuyG3Bnq70OujX</a></p></li>
+</ul>
+<p>Other:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=5GpwfSjM9Lg">https://www.youtube.com/watch?v=5GpwfSjM9Lg</a></p></li>
+<li><p>Please Note that this video discusses cloudmesh-windows starting at
+around 23 minutes. However since then it was generalized and allows
+to be run on other OSes. To reflect this change it was renamed from
+cloudmesh-windows to cloudmesh-test. The command is now called</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$cms test
+</pre></div>
+</div>
+<p>as already documented elsewhere.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="visual-studio-build-tools">
+<h2>Visual Studio Build Tools<a class="headerlink" href="#visual-studio-build-tools" title="Permalink to this headline">¶</a></h2>
+<p>You must have cl installed. For deatiled instruction on how to do this
+see</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019">https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019</a></p></li>
+</ul>
+<p>After the install you must add its path to the environment variables. At
+time of writing this was</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">Program</span> <span class="n">Files</span> <span class="p">(</span><span class="n">x86</span><span class="p">)</span>\<span class="n">Microsoft</span> <span class="n">Visual</span> <span class="n">Studio</span>\<span class="mi">2019</span>\<span class="n">BuildTools</span>\<span class="n">VC</span>\<span class="n">Tools</span>\<span class="n">MSVC</span>\<span class="mf">14.24</span><span class="o">.</span><span class="mi">28314</span>\<span class="nb">bin</span>\<span class="n">Hostx64</span>\<span class="n">x64</span>
+</pre></div>
+</div>
+<p>This is also extensively discussed in our regular install notes</p>
+</div>
+<div class="section" id="mongodb">
+<h2>MongoDB<a class="headerlink" href="#mongodb" title="Permalink to this headline">¶</a></h2>
+<p>Please make ssure to switch of all Mongo Services and uninstall all
+previous versions of MongoDB.</p>
+</div>
+<div class="section" id="which-version-of-windows-do-i-need-to-use-multipass">
+<h2>Which version of Windows do I need to use multipass?<a class="headerlink" href="#which-version-of-windows-do-i-need-to-use-multipass" title="Permalink to this headline">¶</a></h2>
+<p>This is a reminder that you must make sure your OS is up to date. You
+must use at least version 1903 or later. Please check the requirements
+at their web site</p>
+<p>You can use multipass in all version of windows fulfilling this
+requirement.</p>
+<p>f you use Windows 10 Home you must configure multipass to use
+virtualbox.</p>
+<p>However, to use hyper V windows 10 must be</p>
+<ul class="simple">
+<li><p>the 64 bit version. you must check this.</p></li>
+<li><p>be EDU or PRO</p></li>
+</ul>
+<p>See <a class="reference external" href="https://multipass.run/">https://multipass.run/</a></p>
+<p>Instructions:</p>
+<p>Multipass Installation on Windows Machine Prerequisite Windows 10 Pro or
+EDU v1903 or above</p>
+</div>
+<div class="section" id="multipass-hyper-v-instalation-on-windows">
+<h2>multipass Hyper-V instalation on Windows<a class="headerlink" href="#multipass-hyper-v-instalation-on-windows" title="Permalink to this headline">¶</a></h2>
+<p>Go to <a class="reference external" href="https://multipass.run">https://multipass.run</a> and download windows installer.</p>
+<ol class="arabic simple">
+<li><p>Run installer with default settings.</p></li>
+<li><p>Ensure that Virtualization support is enabled in BIOS. If not, enable
+it.</p></li>
+<li><p>Open PowerShell in admin mode by pressing windows+X and selecting</p></li>
+<li><p>Window PowerShell(Admin) Option.</p></li>
+<li><p>Enable Hyper-v Hypervisor by using following command in PowerShell.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Restart machine.</p></li>
+<li><p>After reboot, run command to check multipass installation.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ multipass launch --name ubuntu-lts
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>If Successful installation must launch a container.</p></li>
+</ol>
+<div class="section" id="general-windows-tips">
+<h3>General Windows Tips<a class="headerlink" href="#general-windows-tips" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="where-do-i-find-the-release-numbers-for-windows">
+<h4>Where do I find the release numbers for Windows?<a class="headerlink" href="#where-do-i-find-the-release-numbers-for-windows" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/windows/release-information/">https://docs.microsoft.com/en-us/windows/release-information/</a></p></li>
+</ul>
+</div>
+<div class="section" id="how-can-i-get-the-edu-version">
+<h4>How can I get the EDU Version?<a class="headerlink" href="#how-can-i-get-the-edu-version" title="Permalink to this headline">¶</a></h4>
+<p>For IU students you follow</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://iuware.iu.edu/Windows/Title/2977">https://iuware.iu.edu/Windows/Title/2977</a></p></li>
+</ul>
+</div>
+<div class="section" id="issues-with-docker-on-windows">
+<h4>Issues with docker on Windows<a class="headerlink" href="#issues-with-docker-on-windows" title="Permalink to this headline">¶</a></h4>
+<p>For anyone using Docker Desktop for Windows and seeing some error
+with <code class="docutils literal notranslate"><span class="pre">cmsd</span> <span class="pre">--setup</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">E</span><span class="p">:</span> <span class="n">Release</span> <span class="n">file</span> <span class="k">for</span> <span class="n">http</span><span class="p">:</span><span class="o">//...</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">valid</span> <span class="n">yet</span>
+</pre></div>
+</div>
+<p>Restart Docker Desktop. Evidently there’s a bug that causes Docker’s
+clock to stop when your host computer sleeps, so the build engine gets
+stuck in the past</p>
+</div>
+<div class="section" id="usernames-in-windows-must-not-have-spaces">
+<h4>Usernames in Windows must not have spaces<a class="headerlink" href="#usernames-in-windows-must-not-have-spaces" title="Permalink to this headline">¶</a></h4>
+<p>If you have a spce in your username, simply create a new Windows user
+account without spaces.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../install-dev.html" class="btn btn-neutral float-right" title="Installation of Cloudmesh (Source Install for Developers)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="windows-linux-subsystem.html" class="btn btn-neutral float-left" title="Linux Subsystem on Windows 10" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

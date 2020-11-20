@@ -1,0 +1,698 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cloudmesh cmsd &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Cloudmesh cmsd</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/cmsd.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cloudmesh-cmsd">
+<h1>Cloudmesh cmsd<a class="headerlink" href="#cloudmesh-cmsd" title="Permalink to this headline">¶</a></h1>
+<p>Cloudmesh <code class="docutils literal notranslate"><span class="pre">cmsd</span></code> is a command to run cloudmesh in a container
+regardless of the OS. Thus it is extremely easy to install and use in
+case your machine has docker installed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cmsd</span></code> uses the locally installed keys in <code class="docutils literal notranslate"><span class="pre">~/.ssh</span></code> and typically
+cloud configurations stored in <code class="docutils literal notranslate"><span class="pre">~/.cloudmesh/cloudmesh.yaml</span></code>. This
+YAML file is created upon the first call of <code class="docutils literal notranslate"><span class="pre">cmsd</span></code> if it is not
+available.</p>
+<div class="section" id="prerequesites">
+<h2>Prerequesites<a class="headerlink" href="#prerequesites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Docker</p></li>
+<li><p>Python 3.8 or newer</p></li>
+<li><p>We strongly recommended using a python virtual environment</p></li>
+<li><p>ssh public key in <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa.pub</span></code></p></li>
+</ul>
+<div class="section" id="how-to-use-cmsd">
+<h3>How to use <code class="docutils literal notranslate"><span class="pre">cmsd</span></code><a class="headerlink" href="#how-to-use-cmsd" title="Permalink to this headline">¶</a></h3>
+<p>Important. You must have cms in debug off mode. to use the cmsd command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms debug off
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="user-installation">
+<h2>User installation<a class="headerlink" href="#user-installation" title="Permalink to this headline">¶</a></h2>
+<p>Please use a python virtualenv as to not interfere with your system
+python and activate your python venv.</p>
+<p>Linux, osx:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3.8 -m venv ~/ENV3
+$ <span class="nb">source</span> ~/ENV3/bin/activate
+$ pip install pip -U
+</pre></div>
+</div>
+<p>In Windows, you can do this with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python -m venv ENV3
+$ ENV3<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+$ pip install pip -U
+</pre></div>
+</div>
+<p>Now you can install cloudmesh <code class="docutils literal notranslate"><span class="pre">cmsd</span></code> with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install cloudmesh-openstack
+</pre></div>
+</div>
+</div>
+<div class="section" id="developer-source-installation">
+<h2>Developer Source installation<a class="headerlink" href="#developer-source-installation" title="Permalink to this headline">¶</a></h2>
+<p>Developers install <code class="docutils literal notranslate"><span class="pre">cmsd</span></code> from source with our <code class="docutils literal notranslate"><span class="pre">cloudmesh-installer</span></code>
+after they created a venv just as any other user does.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure you use a venv</span>
+$ mkdir cm
+$ <span class="nb">cd</span> cm
+$ pip install cloudmesh-installer -U
+$ cloudmesh-installer get cmsd
+</pre></div>
+</div>
+<p>You will see in the <code class="docutils literal notranslate"><span class="pre">cm</span></code> directory a number of cloudmesh related
+repositories. One of them is <code class="docutils literal notranslate"><span class="pre">cloudmesh-cmsd</span></code> in which the cmsd
+command related code is stored. The other repositories contain code that
+may be used by <code class="docutils literal notranslate"><span class="pre">cloudmesh-cmsd</span></code>.</p>
+</div>
+<div class="section" id="default-setup">
+<h2>Default setup<a class="headerlink" href="#default-setup" title="Permalink to this headline">¶</a></h2>
+<p>To run <code class="docutils literal notranslate"><span class="pre">cmsd</span></code>, you need a configuration directory that is mounted into
+the container. The default setup is done with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd --setup
+</pre></div>
+</div>
+<p>This will set up a number of configurations including a cloudmesh
+configuration YAML file in</p>
+<ul class="simple">
+<li><p>masOS and Linux: <code class="docutils literal notranslate"><span class="pre">~/.cloudmesh/cloudmesh.yaml</span></code></p></li>
+<li><p>Windows <code class="docutils literal notranslate"><span class="pre">%USERPROFILE%\.cloudmesh\cloudmesh.yaml</span></code></p></li>
+</ul>
+<p>You are asked to enter some details that are required for the setup,
+such as profile details.</p>
+</div>
+<div class="section" id="custom-cmsd-setup">
+<h2>Custom cmsd setup<a class="headerlink" href="#custom-cmsd-setup" title="Permalink to this headline">¶</a></h2>
+<p>In case you need to place the configuration files elsewhere you can
+specify the location with the environment variable
+<code class="docutils literal notranslate"><span class="pre">CLOUDMESH_CONFIG_DIR</span></code>.</p>
+<p>For macOS and Linux you set it with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">export</span> <span class="nv">CLOUDMESH_CONFIG_DIR</span><span class="o">=</span>&lt;path to CLOUDMESH_HOME_DIR&gt;
+</pre></div>
+</div>
+<p>For Windows you set it with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; <span class="nb">set</span> <span class="nv">CLOUDMESH_CONFIG_DIR</span><span class="o">=</span>&lt;path to CLOUDMESH_HOME_DIR&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>avoid spaces:</p>
+<p><code class="docutils literal notranslate"><span class="pre">CLOUDMESH_CONFIG_DIR</span></code> path must not have in any spaces in it. For
+example <code class="docutils literal notranslate"><span class="pre">C:\.cloudmesh</span></code> will work, so does
+<code class="docutils literal notranslate"><span class="pre">C:\Users\gregor\.cloudmesh</span></code>, but not
+<code class="docutils literal notranslate"><span class="pre">C:\Users\gregor</span> <span class="pre">von</span> <span class="pre">Laszewski\.cloudmesh</span></code>, as it includes a space
+in th eusername.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>grant access:</p>
+<p>Make sure that the drive of the <code class="docutils literal notranslate"><span class="pre">CLOUDMESH_CONFIG_DIR</span></code> is granted
+file access in Docker settings</p>
+</div>
+<p>Next, you run the setup. If you are running setup on an empty
+<code class="docutils literal notranslate"><span class="pre">CLOUDMESH_CONFIG_DIR</span></code>, you will be asked to
+enter some details that are required for the setup, such as profile
+details, Mongo DB credentials.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd --setup
+</pre></div>
+</div>
+<p>This setup will do most everything automatically and create and start two containers
+for running cloudmesh. The
+containers are called</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudmesh-cms</span></code> for the cms command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudmesh-mongo</span></code> for the mongodb that is used by cms</p></li>
+</ul>
+<p>Run the command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd --ps
+</pre></div>
+</div>
+<p>to see if the containers are running. Additionally, check
+<code class="docutils literal notranslate"><span class="pre">CLOUDMESH_CONFIG_DIR</span></code> or ~/.cloudmesh contains the <code class="docutils literal notranslate"><span class="pre">cloudmesh.yaml</span></code>
+file, dependent where you asked <code class="docutils literal notranslate"><span class="pre">cmsd</span></code> to look for it.</p>
+</div>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<p>To list the containers, please use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd --ps
+</pre></div>
+</div>
+<p>Run the following to verify if the configurations you entered have been
+properly reflected in the <code class="docutils literal notranslate"><span class="pre">cloudmesh.yaml</span></code> file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd config cat
+</pre></div>
+</div>
+<p>To initialize the cloudmesh database use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd init
+</pre></div>
+</div>
+<p>To test if things are working use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd key list
+</pre></div>
+</div>
+<p>To stop the containers use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd --stop
+</pre></div>
+</div>
+<p>To start the containers use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd --start
+</pre></div>
+</div>
+<p>To remove the containers use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd --clean
+</pre></div>
+</div>
+<p>To login to the container via a shell use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd --shell
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-usecase-creating-a-vm-in-chameleon-cloud">
+<h2>Example Usecase - Creating a vm in Chameleon Cloud<a class="headerlink" href="#example-usecase-creating-a-vm-in-chameleon-cloud" title="Permalink to this headline">¶</a></h2>
+<p>To modify the parameters use the command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmsd --gui quick
+</pre></div>
+</div>
+<p>and make sure the MongoDB MODE is set to <code class="docutils literal notranslate"><span class="pre">running</span></code>. This is
+automatically done by the setup. Make sure you add your username and
+password, as well as the network id and the project id and name. Test if
+it works with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmsd flavor list --refresh
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-usecase-creating-a-vm-in-aws">
+<h2>Example Usecase - Creating a vm in AWS<a class="headerlink" href="#example-usecase-creating-a-vm-in-aws" title="Permalink to this headline">¶</a></h2>
+<p>Create an AWS account and add the authentication information in the
+<code class="docutils literal notranslate"><span class="pre">CLOUDMESH_HOME_DIR/cloudmesh.yaml</span></code> file. Please see the <a class="reference external" href="https://cloudmesh.github.io/cloudmesh-manual/accounts/aws.html">Cloudmesh
+Manual -
+AWS</a>
+form more details about AWS.</p>
+<p>Set the cloud to <code class="docutils literal notranslate"><span class="pre">aws</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd <span class="nb">set</span> <span class="nv">cloud</span><span class="o">=</span>aws
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd key upload --cloud<span class="o">=</span>aws
+</pre></div>
+</div>
+<p>where the key name is specified by</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms var key
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms config get cloudmesh.profile.user
+</pre></div>
+</div>
+<p>or</p>
+<p>Make sure you have an ssh key generated prior to booting a vm with the
+default configuration with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd vm boot
+</pre></div>
+</div>
+</div>
+<div class="section" id="mongodb-and-mongo-client-connections">
+<h2>MongoDB and Mongo client connections<a class="headerlink" href="#mongodb-and-mongo-client-connections" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">cmsd</span></code> is running an official MongoDB container from
+<a class="reference external" href="https://hub.docker.com/_/mongo">DockerHub</a>.</p>
+<p>The Mongo server container is bound to <code class="docutils literal notranslate"><span class="pre">127.0.0.1:27071</span></code>. You can use
+use any Mongo client to explore the database by connecting to this port.</p>
+<div class="section" id="manual-page">
+<h3>Manual Page<a class="headerlink" href="#manual-page" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Usage:
+  cmsd --help
+  cmsd --setup
+  cmsd --clean
+  cmsd --version
+  cmsd --update
+  cmsd --start
+  cmsd --stop
+  cmsd --ps
+  cmsd --gui COMMAND...
+  cmsd --shell
+  cmsd --pipe
+  cmsd COMMAND...
+
+
+This <span class="nb">command</span> passes the arguments to a docker container
+that runs cloudmesh.
+
+Arguments:
+    COMMAND the commands we bass along
+
+Description:
+
+  cmsd --help
+
+      prints this manual page
+
+  cmsd --setup
+
+      downloads the <span class="nb">source</span> distribution, installs the image locally
+
+  cmsd --clean
+
+      removes the container form docker
+
+  cmsd --version
+
+      prints out the version of cmsd and the version of the container
+
+  cmsd --update
+
+      gets a new container form dockerhub
+
+  cmsd --start
+
+      starts the mongodb
+
+  cmsd --stop
+
+      stops the mongodb
+
+  cmsd --ps
+
+      lists the container processes
+
+  cmsd --gui <span class="nb">help</span>
+
+      find out which gui commands are available
+
+  cmsd --gui quick
+
+      runs cloudmesh gui on the docker container
+
+  cmsd --shell
+
+      enters the cms container and starts an interactive shell
+
+  cmsd --pipe
+
+      You can pipe commands or scripts to the cmsd container
+
+          <span class="nb">echo</span> <span class="s2">&quot;banner a&quot;</span> <span class="p">|</span> cmsd --pipe
+
+  cmsd COMMAND
+
+      The <span class="nb">command</span> will be executed within the container, just as in
+      <span class="k">case</span> of cms.
+
+  cmsd
+
+      When no <span class="nb">command</span> is specified, cmsd will be run in interactive
+      mode.
+</pre></div>
+</div>
+</div>
+<div class="section" id="quickstart">
+<h3>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="macos-with-python-3-8-2-from-python-org">
+<h2>macOS with python 3.8.2 from python.org<a class="headerlink" href="#macos-with-python-3-8-2-from-python-org" title="Permalink to this headline">¶</a></h2>
+<p>Use python version 3.8.2 or newer</p>
+<ol class="arabic">
+<li><p>Requirements:</p>
+<ul class="simple">
+<li><p>Have a username without a space.</p></li>
+<li><p>Have docker installed and accessible to the user.</p></li>
+<li><p>Have python 3.8.2 or newer from python.org installed.</p></li>
+<li><p>Create a key <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa</span></code> if you do not already have one</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ssh-keygen
+</pre></div>
+</div>
+</li>
+<li><p>Install:</p>
+<p>In a new terminal execute</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3.8 -m venv ~/ENV3
+$ <span class="nb">source</span> ~/ENV3/bin/activate
+$ pip install cloudmesh-cmsd
+$ cmsd --setup
+$ cmsd init
+$ cmsd <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Documented</span> <span class="n">commands</span> <span class="p">(</span><span class="nb">type</span> <span class="n">help</span> <span class="o">&lt;</span><span class="n">topic</span><span class="o">&gt;</span><span class="p">):</span>
+<span class="o">========================================</span>
+<span class="n">EOF</span>       <span class="n">config</span>     <span class="n">help</span>       <span class="n">man</span>        <span class="n">quit</span>      <span class="n">ssh</span>        <span class="n">vcluster</span>
+<span class="n">admin</span>     <span class="n">container</span>  <span class="n">host</span>       <span class="nb">open</span>       <span class="n">register</span>  <span class="n">start</span>      <span class="n">version</span>
+<span class="n">aws</span>       <span class="n">data</span>       <span class="n">image</span>      <span class="n">openstack</span>  <span class="n">sec</span>       <span class="n">stop</span>       <span class="n">vm</span>
+<span class="n">azure</span>     <span class="n">debug</span>      <span class="n">info</span>       <span class="n">pause</span>      <span class="n">service</span>   <span class="n">stopwatch</span>  <span class="n">workflow_draft</span>
+<span class="n">banner</span>    <span class="n">default</span>    <span class="n">init</span>       <span class="n">plugin</span>     <span class="nb">set</span>       <span class="n">sys</span>
+<span class="n">check</span>     <span class="n">echo</span>       <span class="n">inventory</span>  <span class="n">provider</span>   <span class="n">shell</span>     <span class="n">test</span>
+<span class="n">clear</span>     <span class="n">flavor</span>     <span class="n">ip</span>         <span class="n">py</span>         <span class="n">sleep</span>     <span class="n">var</span>
+<span class="n">commands</span>  <span class="n">group</span>      <span class="n">key</span>        <span class="n">q</span>          <span class="n">source</span>    <span class="n">vbox</span>
+</pre></div>
+</div>
+<p>Testing banner command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd banner hello
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">banner</span>
+<span class="c1">######################################################################</span>
+<span class="c1"># hello</span>
+<span class="c1">######################################################################</span>
+</pre></div>
+</div>
+<p>Testing sec command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd sec rule list
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-------+----------+-----------+-----------+</span>
+<span class="o">|</span> <span class="n">Name</span>  <span class="o">|</span> <span class="n">Protocol</span> <span class="o">|</span> <span class="n">Ports</span>     <span class="o">|</span> <span class="n">IP</span> <span class="n">Range</span>  <span class="o">|</span>
+<span class="o">+-------+----------+-----------+-----------+</span>
+<span class="o">|</span> <span class="n">ssh</span>   <span class="o">|</span> <span class="n">tcp</span>      <span class="o">|</span> <span class="mi">22</span><span class="p">:</span><span class="mi">22</span>     <span class="o">|</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">0</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">icmp</span>  <span class="o">|</span> <span class="n">icmp</span>     <span class="o">|</span>           <span class="o">|</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">0</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">flask</span> <span class="o">|</span> <span class="n">tcp</span>      <span class="o">|</span> <span class="mi">8000</span><span class="p">:</span><span class="mi">8000</span> <span class="o">|</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">0</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">http</span>  <span class="o">|</span> <span class="n">tcp</span>      <span class="o">|</span> <span class="mi">80</span><span class="p">:</span><span class="mi">80</span>     <span class="o">|</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">0</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">https</span> <span class="o">|</span> <span class="n">tcp</span>      <span class="o">|</span> <span class="mi">443</span><span class="p">:</span><span class="mi">443</span>   <span class="o">|</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">0</span> <span class="o">|</span>
+<span class="o">+-------+----------+-----------+-----------+</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="section" id="demonstration-of-the-different-uses-of-cmsd">
+<h3>Demonstration of the different uses of cmsd<a class="headerlink" href="#demonstration-of-the-different-uses-of-cmsd" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>Commandline</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd banner hallo
+
+banner
+<span class="c1">######################################################################</span>
+<span class="c1"># hello</span>
+<span class="c1">######################################################################</span>
+</pre></div>
+</div>
+</li>
+<li><p>Pipe</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ echo &quot;banner hello&quot; | cmsd --pipe
+
++-------------------------------------------------------+
+|   ____ _                 _                     _      |
+|  / ___| | ___  _   _  __| |_ __ ___   ___  ___| |__   |
+| | |   | |/ _ \| | | |/ _` | &#39;_ ` _ \ / _ \/ __| &#39;_ \  |
+| | |___| | (_) | |_| | (_| | | | | | |  __/\__ \ | | | |
+|  \____|_|\___/ \__,_|\__,_|_| |_| |_|\___||___/_| |_| |
++-------------------------------------------------------+
+|                  Cloudmesh CMD5 Shell                 |
++-------------------------------------------------------+
+
+cms&gt; banner
+######################################################################
+# hello
+######################################################################   ```
+</pre></div>
+</div>
+</li>
+<li><p>Interactive</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cmsd
+start cms interactively
+
++-------------------------------------------------------+
+|   ____ _                 _                     _      |
+|  / ___| | ___  _   _  __| |_ __ ___   ___  ___| |__   |
+| | |   | |/ _ \| | | |/ _` | &#39;_ ` _ \ / _ \/ __| &#39;_ \  |
+| | |___| | (_) | |_| | (_| | | | | | |  __/\__ \ | | | |
+|  \____|_|\___/ \__,_|\__,_|_| |_| |_|\___||___/_| |_| |
++-------------------------------------------------------+
+|                  Cloudmesh CMD5 Shell                 |
++-------------------------------------------------------+
+
+cms&gt; banner hello
+banner
+######################################################################
+# hello
+######################################################################
+cms&gt; quit
+</pre></div>
+</div>
+</li>
+<li><p>Access container shell for development</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cmsd --shell
+
+root@docker-desktop:/cm# ls -1
+cloudmesh-aws
+cloudmesh-azure
+cloudmesh-cloud
+cloudmesh-cmd5
+cloudmesh-common
+cloudmesh-configuration
+cloudmesh-inventory
+cloudmesh-openstack
+cloudmesh-sys
+cloudmesh-test
+root@docker-desktop:/cm#
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

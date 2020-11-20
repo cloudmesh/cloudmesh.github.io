@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Oracle Cloud Account &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Box Account" href="../box.html" />
+    <link rel="prev" title="Google Drive" href="../google/gdrive/gdrive.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Cloud Accounts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html">OpenStack Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aws.html">AWS Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../azure.html">Azure Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../google/index.html">Google Acounts</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Oracle Cloud Account</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#account-creation">Account Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#account-login">Account Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oracle-api">Oracle API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cloudmesh-config-file">Cloudmesh Config File</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compute-entry">Compute Entry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#storage-entry">Storage Entry</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#required-keys-and-ocids">Required Keys and OCIDs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-api-signing-key">Create API Signing Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user">User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tenancy">Tenancy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compartment">Compartment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#public-key">Public Key</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#compute-service">Compute Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#storage-service">Storage Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../box.html">Box Account</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Cloud Accounts</a> &raquo;</li>
+        
+      <li>Oracle Cloud Account</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/accounts/oracle/account.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="oracle-cloud-account">
+<h1>Oracle Cloud Account<a class="headerlink" href="#oracle-cloud-account" title="Permalink to this headline">¶</a></h1>
+<p>On 16th September 2019, Oracle announced a free tier. This allows
+students and professionals to build, test, and deploy applications on
+the Oracle cloud and database for free for an unlimited time. The free
+tier though, has limits for various services. Two virtual machines and
+two block volumes, and 10 GB each of object and archive storage is the
+current limit for free cloud tier accounts.</p>
+<div class="figure align-default" id="id1">
+<img alt="Free Services" src="../../_images/free-tier-services.png" />
+<p class="caption"><span class="caption-text">Free Services</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>For cloudmesh, two services are important Oracle Cloud Compute Resources
+and Oracle Storage.</p>
+<div class="section" id="account-creation">
+<h2>Account Creation<a class="headerlink" href="#account-creation" title="Permalink to this headline">¶</a></h2>
+<p>Please follow the steps to create a new oracle cloud account and set up
+the keys and values required for the cloudmesh config file.</p>
+<p>Step 1: Go to the Oracle Cloud website to sign up for a free account.</p>
+<p><a class="reference external" href="https://myservices.us.oraclecloud.com/mycloud/signup">https://myservices.us.oraclecloud.com/mycloud/signup</a>?</p>
+<p>Step 2: Fill out your email address and click on <code class="docutils literal notranslate"><span class="pre">Next</span></code>.</p>
+<div class="figure align-default" id="id2">
+<img alt="Create Account" src="../../_images/create-new-account.png" />
+<p class="caption"><span class="caption-text">Create Account</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Step 3: You will be directed to a page to enter your account details.
+Select <code class="docutils literal notranslate"><span class="pre">Account</span> <span class="pre">Type</span></code> as <code class="docutils literal notranslate"><span class="pre">Personal</span></code>. Fill out all the other fields
+and click <code class="docutils literal notranslate"><span class="pre">Next</span></code>.</p>
+<div class="figure align-default" id="id3">
+<img alt="Acoount Details" src="../../_images/account-details.png" />
+<p class="caption"><span class="caption-text">Acoount Details</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Step 4: Verify you mobile number using the code that will be messaged to
+you.</p>
+<p>Step 5: Next, you will be asked to select a password. Please select one
+and click ‘Next’.</p>
+<div class="figure align-default" id="id4">
+<img alt="Password" src="../../_images/password.png" />
+<p class="caption"><span class="caption-text">Password</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Step 6: Fill out your payment information and proceed.</p>
+<div class="figure align-default" id="id5">
+<img alt="Payment" src="../../_images/payment-information.png" />
+<p class="caption"><span class="caption-text">Payment</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Oracle has now created for you a free account with $300 credit for 30
+days. After 30 days you can still use the ‘Always Free’ resources.
+Unless you upgrade, your account will always be free.</p>
+<div class="figure align-default" id="id6">
+<img alt="Trial" src="../../_images/trial.png" />
+<p class="caption"><span class="caption-text">Trial</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="account-login">
+<h2>Account Login<a class="headerlink" href="#account-login" title="Permalink to this headline">¶</a></h2>
+<p>To login to your account, follow the steps.</p>
+<p>Step 1: Go to <a class="reference external" href="https://www.oracle.com/cloud/sign-in.html">https://www.oracle.com/cloud/sign-in.html</a>?. Enter the
+cloud account name you used while registration and click <code class="docutils literal notranslate"><span class="pre">Next</span></code>.</p>
+<div class="figure align-default" id="id7">
+<img alt="Login" src="../../_images/login.png" />
+<p class="caption"><span class="caption-text">Login</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Step 2: Enter the email address and password you used for registration,
+and click on <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">In</span></code>.</p>
+<div class="figure align-default" id="id8">
+<img alt="Login-Next" src="../../_images/login-next.png" />
+<p class="caption"><span class="caption-text">Login-Next</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now you’ve successfully signed in to the Oracle Cloud.</p>
+<p>You can click on the menu on the left to explore different oracle
+services. When you try to access compute or storage services, you will
+first need to select a compartment. A compartment is a logical container
+to organize you resources. A default compartment with the same name as
+your cloud name is created. It is easiest to select that compartment.</p>
+<div class="figure align-default" id="id9">
+<img alt="Compartment" src="../../_images/compartment.png" />
+<p class="caption"><span class="caption-text">Compartment</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="oracle-api">
+<h2>Oracle API<a class="headerlink" href="#oracle-api" title="Permalink to this headline">¶</a></h2>
+<p>To develop or run code related to oracle, its API called OCI (Oracle
+Cloud Infrastructure) needs to be installed. To do this, run the command
+using the command line.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install oci
+</pre></div>
+</div>
+</div>
+<div class="section" id="cloudmesh-config-file">
+<h2>Cloudmesh Config File<a class="headerlink" href="#cloudmesh-config-file" title="Permalink to this headline">¶</a></h2>
+<p>Cloudmesh config file (cloudmesh.yaml) will have the following entries
+for compute and storage respectively. Add them to the config file if not
+already there.</p>
+<p>Note: the image names are dated, and it is possible that this default image
+won’t be available if you created your account recently. If so, you will need
+to run <code class="docutils literal notranslate"><span class="pre">cms</span> <span class="pre">image</span> <span class="pre">list</span> <span class="pre">--refresh</span></code> to see available images and update the yaml files</p>
+<div class="section" id="compute-entry">
+<h3>Compute Entry<a class="headerlink" href="#compute-entry" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cloudmesh</span><span class="p">:</span>
+  <span class="o">...</span>
+  <span class="n">cloud</span><span class="p">:</span>
+    <span class="n">oracle</span><span class="p">:</span>
+      <span class="n">cm</span><span class="p">:</span>
+        <span class="n">active</span><span class="p">:</span> <span class="n">true</span>
+        <span class="n">heading</span><span class="p">:</span> <span class="n">ORACLE</span>
+        <span class="n">host</span><span class="p">:</span> <span class="n">cloud</span><span class="o">.</span><span class="n">oracle</span><span class="o">.</span><span class="n">com</span>
+        <span class="n">label</span><span class="p">:</span> <span class="n">oracle</span>
+        <span class="n">kind</span><span class="p">:</span> <span class="n">oracle</span>
+        <span class="n">version</span><span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">service</span><span class="p">:</span> <span class="n">compute</span>
+      <span class="n">default</span><span class="p">:</span>
+        <span class="n">image</span><span class="p">:</span> <span class="n">Oracle</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="mf">7.7</span><span class="o">-</span><span class="mf">2020.03</span><span class="o">.</span><span class="mi">23</span><span class="o">-</span><span class="mi">0</span>
+        <span class="n">size</span><span class="p">:</span> <span class="n">VM</span><span class="o">.</span><span class="n">Standard</span><span class="o">.</span><span class="n">E2</span><span class="o">.</span><span class="mi">1</span>
+      <span class="n">credentials</span><span class="p">:</span>
+        <span class="n">user</span> <span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">fingerprint</span> <span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">key_file</span> <span class="p">:</span> <span class="o">~/.</span><span class="n">oci</span><span class="o">/</span><span class="n">oci_api_key</span><span class="o">.</span><span class="n">pem</span>
+        <span class="n">pass_phrase</span> <span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">tenancy</span> <span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">compartment_id</span> <span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">region</span> <span class="p">:</span> <span class="n">us</span><span class="o">-</span><span class="n">ashburn</span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="storage-entry">
+<h3>Storage Entry<a class="headerlink" href="#storage-entry" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cloudmesh</span><span class="p">:</span>
+  <span class="o">...</span>
+  <span class="n">storage</span><span class="p">:</span>
+    <span class="n">oracle</span><span class="p">:</span>
+      <span class="n">cm</span><span class="p">:</span>
+        <span class="n">active</span><span class="p">:</span> <span class="n">true</span>
+        <span class="n">heading</span><span class="p">:</span> <span class="n">Oracle</span>
+        <span class="n">host</span><span class="p">:</span> <span class="n">cloud</span><span class="o">.</span><span class="n">oracle</span><span class="o">.</span><span class="n">com</span>
+        <span class="n">label</span><span class="p">:</span> <span class="n">oracle</span>
+        <span class="n">kind</span><span class="p">:</span> <span class="n">oracle</span>
+        <span class="n">version</span><span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">service</span><span class="p">:</span> <span class="n">storage</span>
+      <span class="n">default</span><span class="p">:</span>
+        <span class="n">directory</span><span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">bucket</span><span class="p">:</span> <span class="n">home</span>
+      <span class="n">credentials</span><span class="p">:</span>
+        <span class="n">user</span> <span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">fingerprint</span> <span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">key_file</span> <span class="p">:</span> <span class="o">~/.</span><span class="n">oci</span><span class="o">/</span><span class="n">oci_api_key</span><span class="o">.</span><span class="n">pem</span>
+        <span class="n">pass_phrase</span> <span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">tenancy</span> <span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">compartment_id</span> <span class="p">:</span> <span class="n">TBD</span>
+        <span class="n">region</span> <span class="p">:</span> <span class="n">us</span><span class="o">-</span><span class="n">ashburn</span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="required-keys-and-ocids">
+<h2>Required Keys and OCIDs<a class="headerlink" href="#required-keys-and-ocids" title="Permalink to this headline">¶</a></h2>
+<p>The keys marked as TBD in the config file needs to be filled in using
+the values from your account. To do this, please follow the steps.</p>
+<div class="section" id="create-api-signing-key">
+<h3>Create API Signing Key<a class="headerlink" href="#create-api-signing-key" title="Permalink to this headline">¶</a></h3>
+<p>Run the following commands using command line.</p>
+<p>Step 1: Create a directory <code class="docutils literal notranslate"><span class="pre">.oci</span></code> to store the credentials.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir ~/.oci
+</pre></div>
+</div>
+<p>Step 2: Generate the key using the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ openssl genrsa -out ~/.oci/oci_api_key.pem -aes128 -passout stdin <span class="m">2048</span>
+</pre></div>
+</div>
+<p>Step 3: You will then be prompted for a passphrase. Select a passphrase
+and hit <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<p>Step 4: To ensure that only you can read the key, run the following
+command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ chmod go-rwx ~/.oci/oci_api_key.pem
+</pre></div>
+</div>
+<p>Step 5: Now, generate the public key and hit enter. You will again be
+prompted for the passphrase. Please enter the passphrase created while
+creating the private key and hit <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ openssl rsa -pubout -in ~/.oci/oci_api_key.pem <span class="se">\</span>
+              -out ~/.oci/oci_api_key_public.pem <span class="se">\</span>
+              -passin stdin
+</pre></div>
+</div>
+<p>Step 6: Copy the contents of the public key to the clipboard as you will
+require this.</p>
+<p>Step 7: Add the passphrase to your config file <code class="docutils literal notranslate"><span class="pre">cloudmesh.yaml</span></code> under
+oracle section.</p>
+<dl class="field-list simple">
+<dt class="field-odd">o2</dt>
+<dd class="field-odd"><p>you should have a program that does thsi for you such as</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cms</span> <span class="n">register</span> <span class="n">oracle</span> <span class="p">[</span><span class="o">--</span><span class="nb">dir</span><span class="o">=~/.</span><span class="n">oci</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="user">
+<h3>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h3>
+<p>The value for <code class="docutils literal notranslate"><span class="pre">user</span></code> in the config file is the OCID of your user of
+the oracle cloud account. You can find this using the following steps:</p>
+<p>Step 1: Click on the profile menu on the right and click on
+<code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Settings</span></code>.</p>
+<div class="figure align-default" id="id10">
+<img alt="User-Details" src="../../_images/user-settings.png" />
+<p class="caption"><span class="caption-text">User-Details</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>Step 2: The user OCID can be found under <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Information</span></code>. Copy and
+paste it to the config file.</p>
+<div class="figure align-default" id="id11">
+<img alt="User" src="../../_images/user.png" />
+<p class="caption"><span class="caption-text">User</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>Step 3: Go to the end of web page and click on <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Public</span> <span class="pre">Key</span></code> under
+<code class="docutils literal notranslate"><span class="pre">API</span> <span class="pre">Keys</span></code>.</p>
+<div class="figure align-default" id="id12">
+<img alt="Public Key" src="../../_images/public-key.png" />
+<p class="caption"><span class="caption-text">Public Key</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<p>Step 4: Paste the contents of the public key
+<code class="docutils literal notranslate"><span class="pre">~/.oci/oci_api_key_public.pem</span></code> to the text-box in the pop-up and
+click <code class="docutils literal notranslate"><span class="pre">Add</span></code>.</p>
+<div class="figure align-default" id="id13">
+<img alt="Add Public Key" src="../../_images/add-public-key.png" />
+<p class="caption"><span class="caption-text">Add Public Key</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<p>Step 5: A new key will be added to the API Keys. Copy the
+<code class="docutils literal notranslate"><span class="pre">Fingerprint</span></code> of the key and paste it in the config file.</p>
+</div>
+<div class="section" id="tenancy">
+<h3>Tenancy<a class="headerlink" href="#tenancy" title="Permalink to this headline">¶</a></h3>
+<p>The value for <code class="docutils literal notranslate"><span class="pre">tenancy</span></code> in the config file is the OCID of your tenancy
+account. You can find this using the following steps:</p>
+<p>Step 1: Click on the navigation menu on the left, go to
+<code class="docutils literal notranslate"><span class="pre">Administration</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Tenancy</span> <span class="pre">Details</span></code>.</p>
+<div class="figure align-default" id="id14">
+<img alt="Tenancy" src="../../_images/tenancy.png" />
+<p class="caption"><span class="caption-text">Tenancy</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>Step 2: The tenancy OCID can be found under <code class="docutils literal notranslate"><span class="pre">Tenancy</span> <span class="pre">Information</span></code>.
+Copy and paste it to the config file.</p>
+<div class="figure align-default" id="id15">
+<img alt="Tenancy Details" src="../../_images/tenancy-details.png" />
+<p class="caption"><span class="caption-text">Tenancy Details</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="compartment">
+<h3>Compartment<a class="headerlink" href="#compartment" title="Permalink to this headline">¶</a></h3>
+<p>The value for <code class="docutils literal notranslate"><span class="pre">compartment</span></code> in the config file is the OCID of your
+selected compartment. You can find this using the following steps:</p>
+<p>Step 1: Click on the navigation menu on the left, go to <code class="docutils literal notranslate"><span class="pre">Identity</span></code> and
+click on <code class="docutils literal notranslate"><span class="pre">Compartments</span></code>.</p>
+<div class="figure align-default" id="id16">
+<img alt="Identity" src="../../_images/identity.png" />
+<p class="caption"><span class="caption-text">Identity</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+<p>Step 2: Select your root compartment from the compartment list.</p>
+<div class="figure align-default" id="id17">
+<img alt="Select Compartment" src="../../_images/select-compartment.png" />
+<p class="caption"><span class="caption-text">Select Compartment</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+<p>Step 3: The compartment OCID can be found under
+<code class="docutils literal notranslate"><span class="pre">Compartment</span> <span class="pre">Information</span></code>. Copy and paste it to the config file.</p>
+<div class="figure align-default" id="id18">
+<img alt="Compartment Details" src="../../_images/compartment-details.png" />
+<p class="caption"><span class="caption-text">Compartment Details</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="public-key">
+<h3>Public Key<a class="headerlink" href="#public-key" title="Permalink to this headline">¶</a></h3>
+<p>Add the path to the ssh public key in the cloudmesh.yaml file in
+cloudmesh /profile/publickey.</p>
+</div>
+</div>
+<div class="section" id="compute-service">
+<h2>Compute Service<a class="headerlink" href="#compute-service" title="Permalink to this headline">¶</a></h2>
+<p>The first thing we need to make sure is that a private public ssh key
+pair has been set up in the default directory <code class="docutils literal notranslate"><span class="pre">~\.ssh\id_rsa.pub</span></code>.
+This key will be used to login into the virtual machine instances
+created by us.</p>
+<p>To set the cloud to oracle, use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms <span class="nb">set</span> <span class="nv">cloud</span><span class="o">=</span>oracle
+</pre></div>
+</div>
+<p>To create a new instance on oracle cloud, use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms vm boot
+</pre></div>
+</div>
+<p>To login into the instance, use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms vm ssh
+</pre></div>
+</div>
+<p>To stop the instance, use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms vm stop <span class="s1">&#39;vm-name&#39;</span>
+</pre></div>
+</div>
+<p>To terminate the instance, use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms vm terminate <span class="s1">&#39;vm-name&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="storage-service">
+<h2>Storage Service<a class="headerlink" href="#storage-service" title="Permalink to this headline">¶</a></h2>
+<p>The first time you try to access storage services, it wil be empty and
+any operation to <code class="docutils literal notranslate"><span class="pre">list/get/delete</span></code> will result in an error. Hence, to
+start first <code class="docutils literal notranslate"><span class="pre">put</span></code> a new file on the cloud. This will result in
+creation of a new bucket with the name specified in <code class="docutils literal notranslate"><span class="pre">cloudmesh.yaml</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">create</span> <span class="pre">dir</span></code> command to create a directory on the cloud object storage
+system is not supported in Oracle. Only when uploading a file can a
+directory structure be created. IF all the files in the directory are
+deleted, the directory is deleted too.</p>
+<p>To upload a new file/directory to the cloud, use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage --storage<span class="o">=</span>oracle put SOURCE DESTINATION
+</pre></div>
+</div>
+<p>To download a file from the cloud, use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage --storage<span class="o">=</span>oracle get SOURCE DESTINATION
+</pre></div>
+</div>
+<p>To list all the files from the bucket/directory, use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage --storage<span class="o">=</span>oracle list SOURCE
+</pre></div>
+</div>
+<p>To delete a file/directory from the cloud, use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage --storage<span class="o">=</span>oracle delete SOURCE
+</pre></div>
+</div>
+<p>Note that if a directory is deleted, all the files inside the directory
+are also deleted.</p>
+<p>To search a file in a particular directory, use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage --storage<span class="o">=</span>oracle search DIRECTORY FILENAME
+</pre></div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>OCI Documentation,
+&lt;<a class="reference external" href="https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest">https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest</a>
+/index.html&gt;</p></li>
+<li><p>Required Keys and OCIDs,
+<a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm">https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../box.html" class="btn btn-neutral float-right" title="Box Account" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../google/gdrive/gdrive.html" class="btn btn-neutral float-left" title="Google Drive" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

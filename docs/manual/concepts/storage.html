@@ -1,0 +1,602 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Storage Providers &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Virtual Directory" href="vdir.html" />
+    <link rel="prev" title="Virtual Machine Providers" href="compute.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Concepts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="commandshell.html">Extensible Command Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespaces.html">Cloudmesh API Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute.html">Virtual Machine Providers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Storage Providers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commandline">Commandline</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#monitor">Monitor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run">Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clean">Clean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-dir">Create dir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#put">Put</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get">Get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#search">Search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#list">List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete">Delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copy">Copy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pytests">Pytests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#generic-tests">Generic Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#provider-specific-pytests">Provider Specific Pytests</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#virtual-directory">Virtual Directory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-1">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pytests-2">Pytests</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#google-drive">Google drive</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#note">Note</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#links">Links</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vdir.html">Virtual Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openapi.html">OpenAPI Web Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Concepts</a> &raquo;</li>
+        
+      <li>Storage Providers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/concepts/storage.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="storage-providers">
+<h1>Storage Providers<a class="headerlink" href="#storage-providers" title="Permalink to this headline">¶</a></h1>
+<p>Cloudmesh supports multiple cloud storage services via storage
+providers. You can access them via commandline, an API or REST
+services. A simple abstraction layer between cloud services and you
+local computer makes it possible that the services are accessed the
+same way. This includes Awss3, Azure, Google, and box.</p>
+<p>The code is available a cloudmesh module at</p>
+<ul class="simple">
+<li><p>&lt;<a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage">https://github.com/cloudmesh/cloudmesh-storage</a>&gt;</p></li>
+</ul>
+<p>The instalation is documented in our instalation manual.</p>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>The cloudmesh yaml file contains a number of templates for configuring
+access to your cloud providers storage services. THis includes AWS,
+Azure, Google, and others.</p>
+<p>To showcase the integration, please open the
+<cite>cloudmesh.yaml</cite> config file. Under the ‘storage’ section, we need to
+add the the parameters for authentication.</p>
+<p>In the credentials section under aws, specify the access key id and
+secret access key which will be available in the AWS console under
+<cite>AWS IAM service</cite> -&gt; <cite>Users</cite> -&gt; <cite>Security Credentials</cite>.</p>
+<p>Bucket is the default bucket which will be used to store the files in
+AWS S3. Region is the geographic area like <cite>us-east-1</cite> which contains
+the bucket. Region is required to get a connection handle on the S3
+Client or resource for that geographic area.</p>
+<p>Here is an example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cloudmesh:
+  ...
+  storage:
+    aws:
+      cm:
+        active: True
+        heading: aws
+        host: aws.amazon.com
+        label: aws
+        kind: awss3
+        version: TBD
+        service: storage
+      default:
+      credentials:
+        access_key_id: *********
+        secret_access_key: *******
+        bucket: name of bucket that you want user to be contained in.
+        region: Specfiy the default region eg us-east-1
+</pre></div>
+</div>
+<p>Similar to AWS other storage providers are available. Please check in
+the yaml file for their configuration template.</p>
+</div>
+<div class="section" id="commandline">
+<h2>Commandline<a class="headerlink" href="#commandline" title="Permalink to this headline">¶</a></h2>
+<p>The Cloudmesh command line allows to access a directory with the
+convenient get, put, search, list, create directory, and delete
+functions. To find out more, use the command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms&gt; <span class="nb">help</span> storage
+</pre></div>
+</div>
+<p>To invoke the AWS S3 service, we need to pass awss3 as
+parameter to storage parameter.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage --storage<span class="o">=</span>aws list <span class="s1">&#39;&#39;</span> --run
+</pre></div>
+</div>
+<p>The following command can set the default storage service used in the
+storage command. After this command, you don’t need to specify the
+<cite>–service</cite> option in some commands.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms <span class="nb">set</span> <span class="nv">storage</span><span class="o">=</span>aws
+</pre></div>
+</div>
+<div class="section" id="monitor">
+<h3>Monitor<a class="headerlink" href="#monitor" title="Permalink to this headline">¶</a></h3>
+<p>This command monitors the status of commands in mongodb database and
+refresh itself every 5 seconds.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage monitor
+</pre></div>
+</div>
+</div>
+<div class="section" id="run">
+<h3>Run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h3>
+<p>This command execute the commands in the mongodb that are in waiting
+status.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage run
+</pre></div>
+</div>
+</div>
+<div class="section" id="clean">
+<h3>Clean<a class="headerlink" href="#clean" title="Permalink to this headline">¶</a></h3>
+<p>This command clean all the actions in mongodb database.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage clean
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-dir">
+<h3>Create dir<a class="headerlink" href="#create-dir" title="Permalink to this headline">¶</a></h3>
+<p>This command helps to create a new directory on AWS S3. You must specify
+the full path of the new directory you would like to create.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage --storage<span class="o">=</span><span class="s1">&#39;aws&#39;</span> create dir /base_path/targetdir --run
+</pre></div>
+</div>
+</div>
+<div class="section" id="put">
+<h3>Put<a class="headerlink" href="#put" title="Permalink to this headline">¶</a></h3>
+<p>The put command uploads files from your local host to the S3.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage --storage<span class="o">=</span><span class="s1">&#39;aws&#39;</span> put ~/.cloudmesh/storage/sourcedir /base_path/targetdir --recursive --run
+</pre></div>
+</div>
+<p>Source for this command could be either a file or directory.</p>
+<p>If you specify a file as the source, the file will be uploaded if no
+such file exists on the cloud or updated if a copy already exists on the
+cloud.</p>
+<p>If the source is a directory, you can choose to specify the recursive
+option to upload the files in the sub-directories in the source as well
+to the target directory in S3. If the recursive option is not specified,
+only the files in the source directory will be uploaded to the target
+directory and the sub-directories will be ignored.</p>
+</div>
+<div class="section" id="get">
+<h3>Get<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h3>
+<p>The get command downloads files from S3 to your local host.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage --storage<span class="o">=</span><span class="s1">&#39;aws&#39;</span> get /base_container/sourcedir ~/.cloudmesh/storage/targetdir --recursive --run
+</pre></div>
+</div>
+<p>Source for this command could be either a file or directory.</p>
+<p>If you specify a file as the source, you need to specify the full path
+of file including the file name where you want the file to be
+downloaded. In case you do not specify the file name and only give the
+target directory, then the file will be downloaded with the same name as
+present on S3.</p>
+<p>If the source is a directory, you can choose to specify the recursive
+option to download files in the sub-directories in the source as well to
+the target directory in your local host. If the recursive option is not
+specified, only the files in the source directory will be downloaded to
+the target directory and the sub-directories will be ignored.</p>
+</div>
+<div class="section" id="search">
+<h3>Search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h3>
+<p>The search command helps to search for a particular file within a
+directory.</p>
+<p>If recursive options is specified, Cloudmesh will search for the file in
+all sub-directories of the original directory as well.</p>
+<p>To search for a file at the root, pass an empty string or / as the
+target dir.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage --storage<span class="o">=</span><span class="s1">&#39;aws&#39;</span> search /base_path/targetdir testfile.txt --recursive --run
+</pre></div>
+</div>
+<p>Note that for the Box storage provider, objects are only indexed every 5
+to 10 minutes and will not show up in a search until they have been
+indexed.</p>
+</div>
+<div class="section" id="list">
+<h3>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
+<p>The list command lists all the contents of a cloud directory. If the
+recursive option is specified, it will list the contents of all
+sub-directories as well.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage --storage<span class="o">=</span><span class="s1">&#39;aws&#39;</span> list /base_path/targetdir --recursive --run
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete">
+<h3>Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h3>
+<p>The delete command can delete files or folders from your cloud file
+storage. Deleting a folder will delete its contents as well (including
+the sub-directories).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage --storage<span class="o">=</span><span class="s1">&#39;aws&#39;</span> delete /base_path/targetdir --run
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy">
+<h3>Copy<a class="headerlink" href="#copy" title="Permalink to this headline">¶</a></h3>
+<p>This command can allow user to copy files/directories across local and
+different cloud providers including aws, azureblob, gdrive, etc.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms storage copy --source<span class="o">=</span>local:./test_file1.txt --target<span class="o">=</span>aws:aws_copy_1.txt --run
+</pre></div>
+</div>
+<p>Help command gives a detail level understanding of what each command
+does and how to use the command line to interact with different object
+storage providers and different parameters / options available in a
+particular command.</p>
+</div>
+<div class="section" id="api">
+<h3>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<p>Cloudmesh Storage provides a simple programming API interface that you
+can use. We highlight a simple example for storing and retrieving a file
+form a storage provider.</p>
+<p>We assume the files at the given path exist</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cloudmesh.storage.provider.Provider</span> <span class="k">as</span> <span class="nn">Provider</span>
+<span class="kn">from</span> <span class="nn">cloudmesh.common.util</span> <span class="kn">import</span> <span class="n">path_expand</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+
+<span class="n">provider</span> <span class="o">=</span> <span class="n">Provider</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="s2">&quot;azure&quot;</span><span class="p">)</span>
+<span class="n">src</span> <span class="o">=</span> <span class="n">path_expand</span><span class="p">(</span><span class="s2">&quot;~/.cloudmesh/storage/test/a/a.txt&quot;</span><span class="p">)</span>
+<span class="n">dst</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">provider</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+<span class="c1"># The resut will be a dict of the information which you can print with</span>
+
+<span class="n">pprint</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pytests">
+<h2>Pytests<a class="headerlink" href="#pytests" title="Permalink to this headline">¶</a></h2>
+<p>THe storage providers have a number of pytests that can be used to test the functionality</p>
+<div class="section" id="generic-tests">
+<h3>Generic Tests<a class="headerlink" href="#generic-tests" title="Permalink to this headline">¶</a></h3>
+<p>We have developed a number of simple pytests that can be called. To see
+the list of Pytests go to our directory</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/tree/master/tests">https://github.com/cloudmesh/cloudmesh-storage/tree/master/tests</a></p></li>
+</ul>
+<p>We also developed a general pytest that works across providers and can
+be invoked as follows</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms <span class="nb">set</span> <span class="nv">storage</span><span class="o">=</span>box
+$ pytest -v --capture<span class="o">=</span>no tests/test_storage.py
+
+$ cms <span class="nb">set</span> <span class="nv">storage</span><span class="o">=</span>azure
+$ pytest -v --capture<span class="o">=</span>no tests/test_storage.py
+
+$ cms <span class="nb">set</span> <span class="nv">storage</span><span class="o">=</span>gdrive
+$ pytest -v --capture<span class="o">=</span>no tests/test_storage.py
+
+$ cms <span class="nb">set</span> <span class="nv">storage</span><span class="o">=</span>aws
+$ pytest -v --capture<span class="o">=</span>no tests/test_storage.py
+
+$ cms <span class="nb">set</span> <span class="nv">storage</span><span class="o">=</span>parallelazureblob
+$ pytest -v --capture<span class="o">=</span>no tests/test_storage.py
+
+$ cms <span class="nb">set</span> <span class="nv">storage</span><span class="o">=</span>parallelazureblob
+$ pytest -v --capture<span class="o">=</span>no tests/test_storage_azure.py
+
+$ cms <span class="nb">set</span> <span class="nv">storage</span><span class="o">=</span>parallelgdrive
+$ pytest -v --capture<span class="o">=</span>no tests/test_storage.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="provider-specific-pytests">
+<h3>Provider Specific Pytests<a class="headerlink" href="#provider-specific-pytests" title="Permalink to this headline">¶</a></h3>
+<p>Open a terminal and navigate to the cloudmesh-storage directory. Enter
+the following command to run pytests:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pytest -v --capture<span class="o">=</span>no tests/test_storage_box.py
+$ pytest -v --capture<span class="o">=</span>no tests/test_azure.py
+$ pytest -v --capture<span class="o">=</span>no tests/test_storage_aws.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="virtual-directory">
+<h2>Virtual Directory<a class="headerlink" href="#virtual-directory" title="Permalink to this headline">¶</a></h2>
+<p>The virtual directory has been developed to mirror the linux directory
+commands. File links in the virtual directory point to files on storage
+providers, which can be retrieved using the virtual directory.</p>
+<div class="section" id="configuration-1">
+<span id="id1"></span><h3>Configuration<a class="headerlink" href="#configuration-1" title="Permalink to this headline">¶</a></h3>
+<p>The credentials for the virtual directory are the same as for the admin
+mongo command. See the Mongo section for details.</p>
+</div>
+<div class="section" id="pytests-2">
+<span id="id2"></span><h3>Pytests<a class="headerlink" href="#pytests-2" title="Permalink to this headline">¶</a></h3>
+<p>The vdir command can be tested as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pytest -v --capture<span class="o">=</span>no tests/test_vdir.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="google-drive">
+<h2>Google drive<a class="headerlink" href="#google-drive" title="Permalink to this headline">¶</a></h2>
+<p>The Google Drive API needs the following two 2 credentials files. *
+<cite>client_secret.json</cite> * <cite>google-drive-credentials.json</cite></p>
+<p>If we run the Google Drive <cite>Provider.py</cite> for the <strong>First time</strong> then
+the required keys, tokens are taken from the <cite>cloudmesh.yaml</cite> file and
+creates a <cite>client_secret.json</cite> file in the following path
+<cite>~/.cloudmesh/gdrive/</cite></p>
+<p>The <cite>Authentication.py</cite> creates a <cite>.credentials</cite> folder under the
+following path <cite>~/.cloudmesh/gdrive/</cite> if it does not exist and creates
+a <cite>google-drive-credentials.json</cite> file under the following folder
+<cite>~/.cloudmesh/gdrive/.credentials/</cite></p>
+<p>So, for the <strong>First time</strong> browser will be opened up automatically and
+asks for the Google Drive(gmail) credentials i.e., login email and
+password. If you provide these 2 then the Authentication step is
+completed and then it will create the <cite>google-drive-credentials.json</cite>
+and place it in <cite>~/.cloudmesh/gdrive/.credentials/</cite> folder.</p>
+<p>These steps are to be followed for the first time or initial run. Once
+it is done then our program is set. After these steps then the program
+will run automatically by using these credentials stored in the
+respective files.</p>
+<div class="section" id="note">
+<h3>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
+<p>The Google Drive API accepts these 2 files in the form of <strong>.json file
+format</strong> and not in the form of a dictionary.</p>
+</div>
+<div class="section" id="links">
+<h3>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
+<p>Link for additional information:</p>
+<ul class="simple">
+<li><p>&lt;<a class="reference external" href="https://github.com/cloudmesh-community/sp19-516-130/blob/master/gdrive.md">https://github.com/cloudmesh-community/sp19-516-130/blob/master/gdrive.md</a>&gt;</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="vdir.html" class="btn btn-neutral float-right" title="Virtual Directory" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="compute.html" class="btn btn-neutral float-left" title="Virtual Machine Providers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

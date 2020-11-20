@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation for for Linux &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Installation for macOS" href="install-macos.html" />
+    <link rel="prev" title="Docker" href="../docker/install-docker.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface/index.html">Preface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Installation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docker/install-docker.html">Docker</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation for for Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites-for-ubuntu-20-4">Prerequisites for Ubuntu 20.4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites-for-ubuntu-18-04">Prerequisites for Ubuntu 18.04</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-for-container-users">Installation for Container Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-for-users">Installation for Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-for-developers">Installation for Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-diagram">Installation Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="install-macos.html">Installation for macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pi/install-pi.html">Prerequisites for Raspbian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/index.html">Windows Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install-dev.html">Installation of Cloudmesh (Source Install for Developers)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/install-mongo.html">Cloudmesh Database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Installation</a> &raquo;</li>
+        
+      <li>Installation for for Linux</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/installation/os/install-linux.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation-for-for-linux">
+<h1>Installation for for Linux<a class="headerlink" href="#installation-for-for-linux" title="Permalink to this headline">¶</a></h1>
+<p>We describe here the various choices for the installation of cloudmesh on linux. We focus
+on Ubuntu but you are able to adopt them easily for other versions of Linux
+including CentOS, RedHat, and Linux Mint. You can contribute these instructions to us.</p>
+<p>Please read the document first, before you copy and paste, as there are
+differences between the installs for regular users, container users and developers.</p>
+<div class="section" id="prerequisites-for-ubuntu-20-4">
+<h2>Prerequisites for Ubuntu 20.4<a class="headerlink" href="#prerequisites-for-ubuntu-20-4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m venv ~/ENV3
+<span class="nb">source</span> ~/ENV3/bin/activate
+pip install pip -U
+</pre></div>
+</div>
+<p>In case you want to install Python 3.9.0 you can use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt-get install python3.9
+sudo apt-get install python3.9-venv
+sudo apt-get install python3.9-dev
+python3.9 --version
+python3.9 -m venv ~/ENV3
+<span class="nb">source</span> ~/ENV3/bin/activate
+pip install pip -U
+</pre></div>
+</div>
+</div>
+<div class="section" id="prerequisites-for-ubuntu-18-04">
+<h2>Prerequisites for Ubuntu 18.04<a class="headerlink" href="#prerequisites-for-ubuntu-18-04" title="Permalink to this headline">¶</a></h2>
+<p>We recommend you switch to Ubuntu 20.04. However if you can not do this please
+follow these steps.</p>
+<p>We first need to make sure that the correct version of the Python3 is
+installed. The default version of Python on Ubuntu 18.04 is 3.6. You can get
+the new version with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get -y update
+sudo apt-get -y install openssl curl
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get install python3.8 python3-dev python3.8-dev
+python3.8 -m venv --without-pip ~/ENV3
+<span class="nb">source</span> ~/ENV3/bin/activate
+curl <span class="s2">&quot;https://bootstrap.pypa.io/get-pip.py&quot;</span> -o <span class="s2">&quot;get-pip.py&quot;</span>
+python get-pip.py
+rm get-pip.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation-for-container-users">
+<h2>Installation for Container Users<a class="headerlink" href="#installation-for-container-users" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install cloudmesh-cmsd
+cmsd --setup
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation-for-users">
+<h2>Installation for Users<a class="headerlink" href="#installation-for-users" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install cloudmesh-openstack
+cms <span class="nb">help</span>
+cms gui quick
+cms admin mongo install
+<span class="nb">source</span> ~/.bashrc <span class="c1"># on linux, source ~/.zprofile on OSX or start a new</span>
+                 <span class="c1"># terminal and execute the next commands in the new terminal</span>
+cms init
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation-for-developers">
+<h2>Installation for Developers<a class="headerlink" href="#installation-for-developers" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir ~/cm
+<span class="nb">cd</span> ~/cm
+pip install cloudmesh-installer
+cloudmesh-installer get openstack
+cms <span class="nb">help</span>
+cms gui quick
+cms admin mongo install
+<span class="nb">source</span> ~/.bashrc <span class="c1"># on linux, source ~/.zprofile on OSX or start a new</span>
+                 <span class="c1"># terminal and execute the next commands in the new terminal</span>
+cms init
+</pre></div>
+</div>
+<p>Please note that the cloudmesh installer uses by default https. It can also use
+ssh and you would than use the following instead:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir ~/cm
+<span class="nb">cd</span> ~/cm
+pip install cloudmesh-installer
+cloudmesh-installer get --ssh openstack
+cms <span class="nb">help</span>
+cms gui quick
+cms admin mongo install
+<span class="nb">source</span> ~/.bashrc <span class="c1"># on linux, source ~/.zprofile on OSX or start a new</span>
+                 <span class="c1"># terminal and execute the next commands in the new terminal</span>
+cms init
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation-diagram">
+<h2>Installation Diagram<a class="headerlink" href="#installation-diagram" title="Permalink to this headline">¶</a></h2>
+<p>We provide an easy to follow installation diagram</p>
+<script>mermaid.initialize({startOnLoad:true});</script><div class="mermaid">
+            graph TD
+
+
+   A(Prerequisite) --&gt; python(Python 3.7, 3.8, or 3.9)
+   python --&gt; venv
+   venv --&gt; pip(pip install pip -U)
+   pip --&gt; install(Prerequisite completed)
+   key --&gt; install
+   A --&gt; keygen(ssh keygen)
+   keygen --&gt;key[fa:fa-key Key]
+   install --&gt; chose
+
+   chose--&gt;cuser([Container User])
+   chose--&gt;nuser([Native User])
+   chose--&gt;duser([Developer])
+
+   duser--&gt;dev(pip install cloudmesh-installer&lt;br/&gt;cloudmesh-installer get openstack)
+   nuser--&gt;user(pip install cloudmesh-openstack)
+   cuser--&gt; idocker(Install Docker)
+   idocker--&gt; container(pip install cloudmesh-cmsd)
+
+   setup(cms help&lt;br/&gt;cms admin mongo install&lt;br/&gt;cms --gui quick&lt;br/&gt;cms init)
+   dev--&gt;setup
+   user--&gt;setup
+   container--&gt;setupd(cmsd --setup)
+
+   setup--&gt;cms
+   setupd--&gt;cmsd
+
+   style keygen fill:gainsboro,stroke:#333,stroke-width:2px
+   style dev fill:gainsboro,stroke:#333,stroke-width:2px
+   style user fill:gainsboro,stroke:#333,stroke-width:2px
+   style container fill:gainsboro,stroke:#333,stroke-width:2px
+   style setup fill:gainsboro,stroke:#333,stroke-width:2px
+   style pip fill:gainsboro,stroke:#333,stroke-width:2px
+        </div></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install-macos.html" class="btn btn-neutral float-right" title="Installation for macOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../docker/install-docker.html" class="btn btn-neutral float-left" title="Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

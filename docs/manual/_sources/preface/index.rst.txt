@@ -1,0 +1,7 @@
+Preface
+=======
+
+.. toctree::
+
+   about
+   contributors

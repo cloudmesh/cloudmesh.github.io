@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Windows &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="User Update" href="windows-update.html" />
+    <link rel="prev" title="Windows Installation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface/index.html">Preface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Installation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docker/install-docker.html">Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../os/install-linux.html">Installation for for Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../os/install-macos.html">Installation for macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pi/install-pi.html">Prerequisites for Raspbian</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Windows Installation</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#prerequisites-for-windows">Prerequisites for Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install">Install</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="windows-update.html">User Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows-update.html#developer-reinstall">Developer Reinstall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows-linux-subsystem.html">Linux Subsystem on Windows 10</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">FAQ for Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../install-dev.html">Installation of Cloudmesh (Source Install for Developers)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/install-mongo.html">Cloudmesh Database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Installation</a> &raquo;</li>
+        
+          <li><a href="index.html">Windows Installation</a> &raquo;</li>
+        
+      <li>Windows</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/installation/windows/windows-install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="windows">
+<h1>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before you install make sure that you have an up to date version of
+python installed. We recommend you use 3.8.2 or newer. Python can be
+downloaded and installed from <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>. On
+Windows you may also need to install the C++ commandline build tools
+as some cryptographic libraries need to be recompiled in 3.8.2 or newer. The
+installation of cls is optional and only needed for encryption.</p>
+</div>
+<div class="section" id="prerequisites-for-windows">
+<h2>Prerequisites for Windows<a class="headerlink" href="#prerequisites-for-windows" title="Permalink to this headline">¶</a></h2>
+<p>First check if any of these commands are not installed. If they are not, please
+install them first. To check if they are available use the <cite>where</cite> command to
+check  the following commands must return a valid path:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">where</span> <span class="bp">cls</span>
+<span class="n">where</span> <span class="n">ssh</span>
+</pre></div>
+</div>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Check and install the prerequisites</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Prerequisite</p></th>
+<th class="head"><p>Check in CMD.exe</p></th>
+<th class="head"><p>Link for installation document</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cls</p></td>
+<td><div class="line-block">
+<div class="line"><cite>C:&gt; where cls</cite></div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line"><a class="reference internal" href="windows-cls.html"><span class="doc">How to install cls on Windows</span></a></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ssh</p></td>
+<td><p><cite>C:&gt; where ssh</cite></p></td>
+<td><p><a class="reference internal" href="windows-ssh.html"><span class="doc">How to install ssh on Windows</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>python 3.8.2 (or newer), 64 bit</p></td>
+<td><p><cite>C:&gt; python –version</cite></p></td>
+<td><p><a class="reference internal" href="windows-python.html"><span class="doc">How to install python on Windows</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Please also run the check if you have the 64 bit vesrsion of python which must return True:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`C:&gt; python -c &#39;import sys;print(&quot;%x&quot; % sys.maxsize, sys.maxsize &gt; 2**32)&#39;`
+</pre></div>
+</div>
+</div>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Likely the code will work with earlier versions starting from 3.7.4.
+We know that Python 3.6 has bugs and should not be used. Although
+cloudmesh previously was supported in Python 2.7 and newer, we have
+removed Python 2 as supported platform.</p>
+</div></blockquote>
+<p>On Windows 10 you can install cloudmesh by either using</p>
+<ul class="simple">
+<li><p>a Windows native installation,</p></li>
+<li><p>a Linux Subsystem installation,</p></li>
+<li><p>a Docker installation,</p></li>
+</ul>
+<p>approach.</p>
+<p>In case you use the docker install you must use use the Professional or the
+Educational version of Windows, as the Home edition is not supporting it.</p>
+<div class="section" id="windows-container-approach">
+<h3>Windows Container Approach<a class="headerlink" href="#windows-container-approach" title="Permalink to this headline">¶</a></h3>
+<p>The user container for cloudmesh shell is called cmsd (cloudmesh shell docker).
+It can be installed with pip as follows</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install cloudmesh-cmsd
+</pre></div>
+</div>
+<p>Please note that in order for you do develop cloudmesh you need to do this
+within the container However we do recommend that Windows developer use the
+Windows native cloudmesh approach. However regular user will have a very
+transparent acces to cloudmesh as most commands ar just passed along to the
+container.</p>
+<p>The manual page for cmsd is located at <span class="xref std std-doc">../cmsd</span></p>
+</div>
+<div class="section" id="linux-subsystem-installation-approach">
+<h3>Linux Subsystem Installation Approach<a class="headerlink" href="#linux-subsystem-installation-approach" title="Permalink to this headline">¶</a></h3>
+<p>See our separate section on this.</p>
+</div>
+<div class="section" id="venv-setup-on-windows-cmd-exe">
+<h3>venv Setup on Windows CMD.EXE<a class="headerlink" href="#venv-setup-on-windows-cmd-exe" title="Permalink to this headline">¶</a></h3>
+<p>On Windows, you run the following command from your home directory at
+<cite>C:UsersUSERNAME</cite>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m venv ENV3
+<span class="nb">source</span> ENV3<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+python -m pip install --upgrade pip
+</pre></div>
+</div>
+<p>Next, create a Windows system variable named <cite>ENV3</cite> and update the
+variable value to <cite>C:UsersUSERNAMEENV3Scriptsactivate</cite>.</p>
+<div class="align-center figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/ENV3variable.png"><img alt="alternate text" src="../../_images/ENV3variable.png" style="width: 200px; height: 100px;" /></a>
+<p class="caption"><span class="caption-text">Figure: Setting the ENV3 variable</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Then add the <cite>ENV3</cite> variable name to the Path variable.</p>
+<div class="align-center figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/ENV3addedtoPath.png"><img alt="alternate text" src="../../_images/ENV3addedtoPath.png" style="width: 200px; height: 100px;" /></a>
+<p class="caption"><span class="caption-text">Figure: Add the variable to the path</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Lastly, to simplify the <cite>venv</cite> activation call, create a new <cite>ENV3.bat</cite>
+file under the default directory, and add the following content to the
+file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:<span class="se">\U</span>sers<span class="se">\U</span>SERNAME<span class="se">\E</span>NV3<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The same can be done in Windows Powershell by creating a <cite>ENV3.ps1</cite> to
+reference the activation command.</p>
+</div>
+<p><strong>Test the venv activation</strong></p>
+<p>We recommend  that you test the venv activation. In a command prompt, type
+<cite>ENV3</cite> while under the home directory; or if the bat file was not created,
+simply reference the system variable %ENV3%.</p>
+<p>Example using bat file activation:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:<span class="se">\U</span>sers<span class="se">\U</span>SERNAME&gt; ENV3
+
+...
+
+<span class="o">(</span>ENV3<span class="o">)</span> C:<span class="se">\U</span>sers<span class="se">\U</span>SERNAME&gt;
+</pre></div>
+</div>
+<p>Example using Windows environment variable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:<span class="se">\U</span>sers<span class="se">\U</span>SERNAME&gt; %ENV3%
+
+<span class="o">(</span>ENV3<span class="o">)</span> C:<span class="se">\U</span>sers<span class="se">\U</span>SERNAME&gt;
+</pre></div>
+</div>
+<p>In both cases you will see the command prompt starting with <cite>(ENV3)</cite>.</p>
+<p><strong>Validate Python and Pip Version in venv</strong></p>
+<p>Check if you have the right version of python and pip installed with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python --version
+pip --version
+</pre></div>
+</div>
+<p>Now you are ready to install cloudmesh.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="windows-update.html" class="btn btn-neutral float-right" title="User Update" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Windows Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

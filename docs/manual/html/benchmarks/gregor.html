@@ -1,0 +1,445 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Benchmarks &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cms" href="../cmd5.html" />
+    <link rel="prev" title="Benchmarks" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Benchmarks</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Benchmarks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#systems">Systems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gregor-laptop">Gregor Laptop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gregor-pc">Gregor PC</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#key">Key</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#openstack">OpenStack</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#flavor">Flavor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#aws">AWS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#openstack-1">Openstack</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#secgroup">Secgroup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#openstack-2">Openstack</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Benchmarks</a> &raquo;</li>
+        
+      <li>Benchmarks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/benchmarks/gregor.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="benchmarks">
+<h1>Benchmarks<a class="headerlink" href="#benchmarks" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="systems">
+<h2>Systems<a class="headerlink" href="#systems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="gregor-laptop">
+<h3>Gregor Laptop<a class="headerlink" href="#gregor-laptop" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tests</span><span class="o">/</span><span class="n">cloud</span><span class="o">/</span><span class="n">test_00_sys</span><span class="o">.</span><span class="n">py</span><span class="p">::</span><span class="n">Test_Sys</span><span class="p">::</span><span class="n">test_benchmark</span>
+<span class="o">+-------------------+--------------------------------------------------------------------------------------------------+</span>
+<span class="o">|</span> <span class="n">Machine</span> <span class="n">Attribute</span> <span class="o">|</span> <span class="n">Value</span>                                                                                            <span class="o">|</span>
+<span class="o">+-------------------+--------------------------------------------------------------------------------------------------+</span>
+<span class="o">|</span> <span class="n">cpu_count</span>         <span class="o">|</span> <span class="mi">8</span>                                                                                                <span class="o">|</span>
+<span class="o">|</span> <span class="n">mac_version</span>       <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>                                                                                          <span class="o">|</span>
+<span class="o">|</span> <span class="n">machine</span>           <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;x86_64&#39;</span><span class="p">,)</span>                                                                                      <span class="o">|</span>
+<span class="o">|</span> <span class="n">mem_active</span>        <span class="o">|</span> <span class="mf">6.0</span> <span class="n">GiB</span>                                                                                          <span class="o">|</span>
+<span class="o">|</span> <span class="n">mem_available</span>     <span class="o">|</span> <span class="mf">6.4</span> <span class="n">GiB</span>                                                                                          <span class="o">|</span>
+<span class="o">|</span> <span class="n">mem_free</span>          <span class="o">|</span> <span class="mf">470.4</span> <span class="n">MiB</span>                                                                                        <span class="o">|</span>
+<span class="o">|</span> <span class="n">mem_inactive</span>      <span class="o">|</span> <span class="mf">5.9</span> <span class="n">GiB</span>                                                                                          <span class="o">|</span>
+<span class="o">|</span> <span class="n">mem_percent</span>       <span class="o">|</span> <span class="mf">59.9</span><span class="o">%</span>                                                                                            <span class="o">|</span>
+<span class="o">|</span> <span class="n">mem_total</span>         <span class="o">|</span> <span class="mf">16.0</span> <span class="n">GiB</span>                                                                                         <span class="o">|</span>
+<span class="o">|</span> <span class="n">mem_used</span>          <span class="o">|</span> <span class="mf">8.4</span> <span class="n">GiB</span>                                                                                          <span class="o">|</span>
+<span class="o">|</span> <span class="n">mem_wired</span>         <span class="o">|</span> <span class="mf">2.4</span> <span class="n">GiB</span>                                                                                          <span class="o">|</span>
+<span class="o">|</span> <span class="n">node</span>              <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span>                                                                                        <span class="o">|</span>
+<span class="o">|</span> <span class="n">platform</span>          <span class="o">|</span> <span class="n">Darwin</span><span class="o">-</span><span class="mf">18.6</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">i386</span><span class="o">-</span><span class="mi">64</span><span class="n">bit</span>                                                                  <span class="o">|</span>
+<span class="o">|</span> <span class="n">processor</span>         <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;i386&#39;</span><span class="p">,)</span>                                                                                        <span class="o">|</span>
+<span class="o">|</span> <span class="n">processors</span>        <span class="o">|</span> <span class="n">Darwin</span>                                                                                           <span class="o">|</span>
+<span class="o">|</span> <span class="n">python</span>            <span class="o">|</span> <span class="mf">3.7</span><span class="o">.</span><span class="mi">4</span> <span class="p">(</span><span class="n">v3</span><span class="o">.</span><span class="mf">7.4</span><span class="p">:</span><span class="n">e09359112e</span><span class="p">,</span> <span class="n">Jul</span>  <span class="mi">8</span> <span class="mi">2019</span><span class="p">,</span> <span class="mi">14</span><span class="p">:</span><span class="mi">54</span><span class="p">:</span><span class="mi">52</span><span class="p">)</span>                                                 <span class="o">|</span>
+<span class="o">|</span>                   <span class="o">|</span> <span class="p">[</span><span class="n">Clang</span> <span class="mf">6.0</span> <span class="p">(</span><span class="n">clang</span><span class="o">-</span><span class="mf">600.0</span><span class="o">.</span><span class="mi">57</span><span class="p">)]</span>                                                                     <span class="o">|</span>
+<span class="o">|</span> <span class="n">release</span>           <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;18.6.0&#39;</span><span class="p">,)</span>                                                                                      <span class="o">|</span>
+<span class="o">|</span> <span class="n">sys</span>               <span class="o">|</span> <span class="n">darwin</span>                                                                                           <span class="o">|</span>
+<span class="o">|</span> <span class="n">system</span>            <span class="o">|</span> <span class="n">Darwin</span>                                                                                           <span class="o">|</span>
+<span class="o">|</span> <span class="n">user</span>              <span class="o">|</span> <span class="n">greg</span>                                                                                             <span class="o">|</span>
+<span class="o">|</span> <span class="n">version</span>           <span class="o">|</span> <span class="n">Darwin</span> <span class="n">Kernel</span> <span class="n">Version</span> <span class="mf">18.6</span><span class="o">.</span><span class="mi">0</span><span class="p">:</span> <span class="n">Thu</span> <span class="n">Apr</span> <span class="mi">25</span> <span class="mi">23</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">27</span> <span class="n">PDT</span> <span class="mi">2019</span><span class="p">;</span> <span class="n">root</span><span class="p">:</span><span class="n">xnu</span><span class="o">-</span><span class="mf">4903.261</span><span class="o">.</span><span class="mi">4</span><span class="o">~</span><span class="mi">2</span><span class="o">/</span><span class="n">RELEASE_X86_64</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">win_version</span>       <span class="o">|</span>                                                                                                  <span class="o">|</span>
+<span class="o">+-------------------+--------------------------------------------------------------------------------------------------+</span>
+<span class="o">+----------------------+------+-----------+-----------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">timer</span>                <span class="o">|</span> <span class="n">time</span> <span class="o">|</span> <span class="n">tag</span>       <span class="o">|</span> <span class="n">node</span>      <span class="o">|</span> <span class="n">user</span> <span class="o">|</span> <span class="n">system</span> <span class="o">|</span> <span class="n">mac_version</span> <span class="o">|</span> <span class="n">win_version</span> <span class="o">|</span>
+<span class="o">+----------------------+------+-----------+-----------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">test_cms_help</span>        <span class="o">|</span> <span class="mf">1.85</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">benchmark_start_stop</span> <span class="o">|</span> <span class="mf">0.0</span>  <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+----------------------+------+-----------+-----------+------+--------+-------------+-------------+</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gregor-pc">
+<h3>Gregor PC<a class="headerlink" href="#gregor-pc" title="Permalink to this headline">¶</a></h3>
+<p>TBD</p>
+</div>
+</div>
+<div class="section" id="key">
+<h2>Key<a class="headerlink" href="#key" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="openstack">
+<h3>OpenStack<a class="headerlink" href="#openstack" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tests</span><span class="o">/</span><span class="n">cloud</span><span class="o">/</span><span class="n">test_01_key</span><span class="o">.</span><span class="n">py</span><span class="p">::</span><span class="n">Test_Key</span><span class="p">::</span><span class="n">test_benchmark</span>
+<span class="o">+-----------------------------+------+-----------+-----------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">timer</span>                       <span class="o">|</span> <span class="n">time</span> <span class="o">|</span> <span class="n">tag</span>       <span class="o">|</span> <span class="n">node</span>      <span class="o">|</span> <span class="n">user</span> <span class="o">|</span> <span class="n">system</span> <span class="o">|</span> <span class="n">mac_version</span> <span class="o">|</span> <span class="n">win_version</span> <span class="o">|</span>
+<span class="o">+-----------------------------+------+-----------+-----------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">test_upload_key_to_database</span> <span class="o">|</span> <span class="mf">0.06</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_upload_key_to_cloud</span>    <span class="o">|</span> <span class="mf">0.32</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_list_key_from_cloud</span>    <span class="o">|</span> <span class="mf">0.26</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_delete_key_from_cloud</span>  <span class="o">|</span> <span class="mf">0.27</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">benchmark_start_stop</span>        <span class="o">|</span> <span class="mf">0.0</span>  <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-----------------------------+------+-----------+-----------+------+--------+-------------+-------------+</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="flavor">
+<h2>Flavor<a class="headerlink" href="#flavor" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="aws">
+<h3>AWS<a class="headerlink" href="#aws" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="gregors-pc">
+<h4>Gregors PC<a class="headerlink" href="#gregors-pc" title="Permalink to this headline">¶</a></h4>
+<p>This is don on Windows 10 in the 18.04 Ubuntu Linux subsystem with
+python 3.7</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-----------------------------+--------+-----+----------------------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">timer</span>                       <span class="o">|</span> <span class="n">time</span>   <span class="o">|</span> <span class="n">tag</span> <span class="o">|</span> <span class="n">node</span>                 <span class="o">|</span> <span class="n">user</span> <span class="o">|</span> <span class="n">system</span> <span class="o">|</span> <span class="n">mac_version</span> <span class="o">|</span> <span class="n">win_version</span> <span class="o">|</span>
+<span class="o">+-----------------------------+--------+-----+----------------------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">test_empty_database</span>         <span class="o">|</span> <span class="mf">0.01</span>   <span class="o">|</span> <span class="n">aws</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;DESKTOP-gregor9&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">blue</span> <span class="o">|</span> <span class="n">Linux</span>  <span class="o">|</span>             <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_provider_flavor</span>        <span class="o">|</span> <span class="mf">92.34</span>  <span class="o">|</span> <span class="n">aws</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;DESKTOP-gregor9&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">blue</span> <span class="o">|</span> <span class="n">Linux</span>  <span class="o">|</span>             <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_provider_flavor_update</span> <span class="o">|</span> <span class="mf">168.03</span> <span class="o">|</span> <span class="n">aws</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;DESKTOP-gregor9&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">blue</span> <span class="o">|</span> <span class="n">Linux</span>  <span class="o">|</span>             <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_cms_flavor_refresh</span>     <span class="o">|</span> <span class="mf">182.62</span> <span class="o">|</span> <span class="n">aws</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;DESKTOP-gregor9&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">blue</span> <span class="o">|</span> <span class="n">Linux</span>  <span class="o">|</span>             <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_cms_flavor</span>             <span class="o">|</span> <span class="mf">4.8</span>    <span class="o">|</span> <span class="n">aws</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;DESKTOP-gregor9&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">blue</span> <span class="o">|</span> <span class="n">Linux</span>  <span class="o">|</span>             <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">benchmark_start_stop</span>        <span class="o">|</span> <span class="mf">0.0</span>    <span class="o">|</span> <span class="n">aws</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;DESKTOP-gregor9&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">blue</span> <span class="o">|</span> <span class="n">Linux</span>  <span class="o">|</span>             <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-----------------------------+--------+-----+----------------------+------+--------+-------------+-------------+</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gregors-macos-laptop">
+<h4>Gregor’s macOS Laptop<a class="headerlink" href="#gregors-macos-laptop" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-----------------------------+--------+-----+-----------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">timer</span>                       <span class="o">|</span> <span class="n">time</span>   <span class="o">|</span> <span class="n">tag</span> <span class="o">|</span> <span class="n">node</span>      <span class="o">|</span> <span class="n">user</span> <span class="o">|</span> <span class="n">system</span> <span class="o">|</span> <span class="n">mac_version</span> <span class="o">|</span> <span class="n">win_version</span> <span class="o">|</span>
+<span class="o">+-----------------------------+--------+-----+-----------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">test_empty_database</span>         <span class="o">|</span> <span class="mf">0.02</span>   <span class="o">|</span> <span class="n">aws</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_provider_flavor</span>        <span class="o">|</span> <span class="mf">121.8</span>  <span class="o">|</span> <span class="n">aws</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_provider_flavor_update</span> <span class="o">|</span> <span class="mf">247.81</span> <span class="o">|</span> <span class="n">aws</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_cms_flavor_refresh</span>     <span class="o">|</span> <span class="mf">259.92</span> <span class="o">|</span> <span class="n">aws</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_cms_flavor</span>             <span class="o">|</span> <span class="mf">5.5</span>    <span class="o">|</span> <span class="n">aws</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">benchmark_start_stop</span>        <span class="o">|</span> <span class="mf">0.0</span>    <span class="o">|</span> <span class="n">aws</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-----------------------------+--------+-----+-----------+------+--------+-------------+-------------+</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="openstack-1">
+<span id="id1"></span><h3>Openstack<a class="headerlink" href="#openstack-1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="gregors-macos-laptop-1">
+<span id="id2"></span><h4>Gregor’s macOS Laptop<a class="headerlink" href="#gregors-macos-laptop-1" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-----------------------------+------+-----------+-----------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">timer</span>                       <span class="o">|</span> <span class="n">time</span> <span class="o">|</span> <span class="n">tag</span>       <span class="o">|</span> <span class="n">node</span>      <span class="o">|</span> <span class="n">user</span> <span class="o">|</span> <span class="n">system</span> <span class="o">|</span> <span class="n">mac_version</span> <span class="o">|</span> <span class="n">win_version</span> <span class="o">|</span>
+<span class="o">+-----------------------------+------+-----------+-----------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">test_empty_database</span>         <span class="o">|</span> <span class="mf">0.01</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_provider_flavor</span>        <span class="o">|</span> <span class="mf">1.36</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_provider_flavor_update</span> <span class="o">|</span> <span class="mf">0.74</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_cms_flavor_refresh</span>     <span class="o">|</span> <span class="mf">3.39</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_cms_flavor</span>             <span class="o">|</span> <span class="mf">1.88</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">benchmark_start_stop</span>        <span class="o">|</span> <span class="mf">0.0</span>  <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;greg&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">greg</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-----------------------------+------+-----------+-----------+------+--------+-------------+-------------+</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="secgroup">
+<h2>Secgroup<a class="headerlink" href="#secgroup" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="openstack-2">
+<span id="id3"></span><h3>Openstack<a class="headerlink" href="#openstack-2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="gregors-macos-laptop-2">
+<span id="id4"></span><h4>Gregor’s macOS Laptop<a class="headerlink" href="#gregors-macos-laptop-2" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tests</span><span class="o">/</span><span class="n">cloud</span><span class="o">/</span><span class="n">test_04_sec_command</span><span class="o">.</span><span class="n">py</span><span class="p">::</span><span class="n">TestSecCLI</span><span class="p">::</span><span class="n">test_benchmark</span>
+<span class="o">+---------------------------+-------+-----------+-----------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">timer</span>                     <span class="o">|</span> <span class="n">time</span>  <span class="o">|</span> <span class="n">tag</span>       <span class="o">|</span> <span class="n">node</span>      <span class="o">|</span> <span class="n">user</span> <span class="o">|</span> <span class="n">system</span> <span class="o">|</span> <span class="n">mac_version</span> <span class="o">|</span> <span class="n">win_version</span> <span class="o">|</span>
+<span class="o">+---------------------------+-------+-----------+-----------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">test_group_add</span>            <span class="o">|</span> <span class="mf">1.85</span>  <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_group_delete</span>         <span class="o">|</span> <span class="mf">1.88</span>  <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_cms_init</span>             <span class="o">|</span> <span class="mf">11.42</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_sec_list</span>             <span class="o">|</span> <span class="mf">1.88</span>  <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_sec_group_list_local</span> <span class="o">|</span> <span class="mf">1.86</span>  <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_sec_group_list_cloud</span> <span class="o">|</span> <span class="mf">2.9</span>   <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">benchmark_start_stop</span>      <span class="o">|</span> <span class="mf">0.0</span>   <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+---------------------------+-------+-----------+-----------+------+--------+-------------+-------------+</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tests</span><span class="o">/</span><span class="n">cloud</span><span class="o">/</span><span class="n">test_05_secgroup_provider</span><span class="o">.</span><span class="n">py</span><span class="p">::</span><span class="n">Test_secgroup_provider</span><span class="p">::</span><span class="n">test_benchmark</span>
+<span class="o">+-----------------------------+------+-----------+-----------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">timer</span>                       <span class="o">|</span> <span class="n">time</span> <span class="o">|</span> <span class="n">tag</span>       <span class="o">|</span> <span class="n">node</span>      <span class="o">|</span> <span class="n">user</span> <span class="o">|</span> <span class="n">system</span> <span class="o">|</span> <span class="n">mac_version</span> <span class="o">|</span> <span class="n">win_version</span> <span class="o">|</span>
+<span class="o">+-----------------------------+------+-----------+-----------+------+--------+-------------+-------------+</span>
+<span class="o">|</span> <span class="n">test_load</span>                   <span class="o">|</span> <span class="mf">0.01</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_list_variables</span>         <span class="o">|</span> <span class="mf">0.0</span>  <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_list_secgroups_rules</span>   <span class="o">|</span> <span class="mf">1.05</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_secgroups_delete</span>       <span class="o">|</span> <span class="mf">0.84</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_secgroups_add</span>          <span class="o">|</span> <span class="mf">0.71</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">test_secgroups_delete_again</span> <span class="o">|</span> <span class="mf">1.02</span> <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">benchmark_start_stop</span>        <span class="o">|</span> <span class="mf">0.0</span>  <span class="o">|</span> <span class="n">chameleon</span> <span class="o">|</span> <span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,)</span> <span class="o">|</span> <span class="n">grey</span> <span class="o">|</span> <span class="n">Darwin</span> <span class="o">|</span> <span class="mf">10.14</span><span class="o">.</span><span class="mi">5</span>     <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-----------------------------+------+-----------+-----------+------+--------+-------------+-------------+</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../cmd5.html" class="btn btn-neutral float-right" title="cms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Benchmarks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

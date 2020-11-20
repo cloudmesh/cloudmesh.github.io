@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Google Cloud Platform &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Google Drive" href="gdrive/gdrive.html" />
+    <link rel="prev" title="Google Acounts" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Cloud Accounts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html">OpenStack Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aws.html">AWS Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../azure.html">Azure Account</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Google Acounts</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Google Cloud Platform</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#google-compute-engine">Google Compute Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-the-google-account">Creating the Google Account</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#activation-google-cloud-service">Activation Google Cloud Service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#links">Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#google-cloud-storage">Google Cloud Storage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gdrive/gdrive.html">Google Drive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../oracle/account.html">Oracle Cloud Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../box.html">Box Account</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Cloud Accounts</a> &raquo;</li>
+        
+          <li><a href="index.html">Google Acounts</a> &raquo;</li>
+        
+      <li>Google Cloud Platform</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/accounts/google/google-cloud.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="google-cloud-platform">
+<h1>Google Cloud Platform<a class="headerlink" href="#google-cloud-platform" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://cloud.google.com/">Google Cloud Platform (GCP)</a>, offered by
+Google, is a suite of cloud computing services that runs on the same
+infrastructure that Google uses internally for its end-user products,
+such as Google Search and YouTube. Alongside a set of management tools,
+it provides a series of modular cloud services including computing, data
+storage, data analytics and machine learning. Within cloudmesh, we
+develop services through taht support some of these these products.</p>
+<div class="section" id="google-compute-engine">
+<h2>Google Compute Engine<a class="headerlink" href="#google-compute-engine" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://cloud.google.com/products/compute/">Google Compute Engine</a>
+delivers virtual machines running in Google’s innovative data centers
+and worldwide fiber network. Compute Engine’s tooling and workflow
+support enable scaling from single instances to global, load-balanced
+cloud computing. Compute Engine’s VMs boot quickly, come with
+high-performance persistent and local disk options, and deliver
+consistent performance. Our virtual servers are available in many
+configurations, including predefined sizes, and options to create
+Custom Machine Types optimized for your specific needs. Flexible
+pricing and automatic sustained use discounts make Compute Engine the
+leader in price/performance.</p>
+<p>Next we provide a a step-by-step guide on how to create an Google
+account and a service account through the Google webpage.</p>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>We assume you have the cloudmesh google provider installed. This can be
+done with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install cloudmesh-google
+</pre></div>
+</div>
+<p>For developers the best way to install it is to use
+<code class="docutils literal notranslate"><span class="pre">cloudmesh-installer</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir cm
+$ <span class="nb">cd</span> cm
+$ pip install cloudmesh-installer
+$ cloudmesh-installer get google
+</pre></div>
+</div>
+<script>mermaid.initialize({startOnLoad:true});</script><div class="mermaid">
+            graph LR
+  prereq(Prequisite)--&gt;choose{Choose};
+
+  choose--&gt;|Developer|a(mkdir cm  &lt;br&gt; cd cm  &lt;br&gt; pip install cloudmesh-installer  &lt;br&gt; cloudmesh-installer get google)
+  choose--&gt;|Production|p(pip install cloudmesh-google)
+        </div></div>
+<div class="section" id="creating-the-google-account">
+<h2>Creating the Google Account<a class="headerlink" href="#creating-the-google-account" title="Permalink to this headline">¶</a></h2>
+<p>If you do not have a google cloud account a
+new google account can be created using following link:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://accounts.google.com/signup/v2/webcreateaccount?flowEntry=SignUp&amp;flowName=GlifWebSignIn">Create your Google
+Account</a></p></li>
+</ul>
+</div>
+<div class="section" id="activation-google-cloud-service">
+<h2>Activation Google Cloud Service<a class="headerlink" href="#activation-google-cloud-service" title="Permalink to this headline">¶</a></h2>
+<p>Google allows you to apply for an free account and offers you $300 in credits
+to use google cloud. After creating a new account apply for free trail and $300
+credit at:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://console.cloud.google.com/freetrial?_ga=2.36435558.-733144975.1575249772&amp;_gac=1.216762084.1575249889.CjwKCAiA5o3vBRBUEiwA9PVzavyytvYEKObpJV-GtriRXXj9JCtqPkm3TEpyZ6pDgOHWgDXuqZ7tFBoCjacQAvD_BwE">Get Started for
+Free</a></p></li>
+</ul>
+<p>For students or education account, apply at:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://edu.google.com/products/google-cloud-platform/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=na-US-all-en-dr-bkws-all-all-trial-b-dr-1007179&amp;utm_content=text-ad-none-any-DEV_c-CRE_182323152622-ADGP_Hybrid%20%7C%20AW%20SEM%20%7C%20SKWS%20%7C%20US%20%7C%20en%20%7C%20Multi%20~%20Student-KWID_43700018304461092-kwd-285517564251&amp;utm_term=KW_%2Bstudent%20%2Bcloud-ST_%2BStudent%20%2BCloud&amp;gclid=EAIaIQobChMI07zC9eeV5gIVhMBkCh2yMwA2EAAYASAAEgKmHfD_BwE&amp;modal_active=none">Google for
+Education</a></p></li>
+</ul>
+<p>Please choose the one that is most appropriate for you. For the
+educational account you may need a verification from your school or an
+email that is registered as an educational institution.</p>
+<div class="section" id="setting-up-google-cloud-account">
+<h3>Setting up Google Cloud Account<a class="headerlink" href="#setting-up-google-cloud-account" title="Permalink to this headline">¶</a></h3>
+<p>Next, you will need to create a project and a service account.
+All service calls from cloudmesh require a project id to
+create VM, Disks, Volumes etc.</p>
+<p>We recommend that you simply use project name <code class="docutils literal notranslate"><span class="pre">cloudmesh</span></code>.</p>
+<p>To authenticate the google cloud API from cloudmesh
+you also need to enable the required API and
+create a service account and then download the service
+account key.</p>
+<p>Steps to setup project and service account:</p>
+<div class="mermaid">
+            graph TD
+  account(Google Cloud Account)--&gt;choose{Already have GCP Account?};
+
+  choose--&gt;|Create|createa(Create Google Cloud Account)
+  choose--&gt;|Signin|signin(Login to Google Cloud Console)
+
+  createa--&gt;choosea{Choose Account Type}
+
+  choosea--&gt;free(Sign Up for Free Tier)
+  choosea--&gt;edu(Sign Up for Education Account)
+
+  free--&gt;|Signin|signin
+  edu--&gt;|Signin|signin
+
+  signin--&gt;project(Create Project &lt;br&gt; name cloudmesh)
+  project--&gt;enableapi(Enable API e.g. &lt;br&gt; Compute, Storage, Volume)
+  enableapi--&gt;createsa(Create/Select Service Account)
+  createsa--&gt;downloadsk(&quot;Create/Download Service Key &lt;br&gt; name google.json &lt;br&gt; to folder ~/.cloudmesh/security&quot;)
+  downloadsk--&gt;register(&quot;Register to Cloudmesh &lt;br&gt; with downloaded json&quot;)
+
+  click createa &quot;https://accounts.google.com/signup/v2/webcreateaccount?flowEntry=SignUp&amp;flowName=GlifWebSignIn&quot;
+  click signin &quot;http://console.cloud.google.com/&quot;
+  click free &quot;https://console.cloud.google.com/freetrial?_ga=2.36435558.-733144975.1575249772&amp;_gac=1.216762084.1575249889.CjwKCAiA5o3vBRBUEiwA9PVzavyytvYEKObpJV-GtriRXXj9JCtqPkm3TEpyZ6pDgOHWgDXuqZ7tFBoCjacQAvD_BwE&quot;
+  click edu &quot;https://edu.google.com/products/google-cloud-platform/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=na-US-all-en-dr-bkws-all-all-trial-b-dr-1007179&amp;utm_content=text-ad-none-any-DEV_c-CRE_182323152622-ADGP_Hybrid%20%7C%20AW%20SEM%20%7C%20SKWS%20%7C%20US%20%7C%20en%20%7C%20Multi%20~%20Student-KWID_43700018304461092-kwd-285517564251&amp;utm_term=KW_%2Bstudent%20%2Bcloud-ST_%2BStudent%20%2BCloud&amp;gclid=EAIaIQobChMI07zC9eeV5gIVhMBkCh2yMwA2EAAYASAAEgKmHfD_BwE&amp;modal_active=none&quot;
+  click project &quot;https://console.cloud.google.com/projectcreate&quot;
+  click enableapi &quot;https://console.cloud.google.com/apis/library&quot;
+  click createsa &quot;https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts?supportedpurview=project&quot;
+  click downloadsk &quot;https://console.cloud.google.com/apis/credentials/serviceaccountkey&quot;
+  click register &quot;https://cloudmesh.github.io/cloudmesh-manual/manual/register.html&quot;
+        </div><table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Google account creation steps</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 35%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Step</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Screenshot</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><a class="reference external" href="https://console.cloud.google.com/projectcreate">Create Project</a></p></td>
+<td><p><a class=""
+               data-lightbox="group-73b58017-615a-4250-9486-7244fdb610c6"
+               href="../../_images/MyAccount_031.png"
+               title=""
+               data-title=""
+               ><img src="../../_images/MyAccount_031.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt="google-account-1"/>
+                </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Next <a class="reference external" href="https://console.cloud.google.com/apis/library">Enable API</a></p></td>
+<td><p><a class=""
+               data-lightbox="group-c9bd6ce6-2315-4317-aa14-4756b312b843"
+               href="../../_images/EnableAPI_011.png"
+               title=""
+               data-title=""
+               ><img src="../../_images/EnableAPI_011.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt="google-account-4"/>
+                </a></p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><div class="line-block">
+<div class="line">For E.g.</div>
+<div class="line"><a class="reference external" href="https://console.cloud.google.com/apis/library/compute.googleapis.com?q=Compute">Enable Compute API</a></div>
+</div>
+</td>
+<td><p><a class=""
+               data-lightbox="group-e5e395ad-90cc-4519-bb36-05ae7b3d88b4"
+               href="../../_images/EnableAPI_021.png"
+               title=""
+               data-title=""
+               ><img src="../../_images/EnableAPI_021.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt="google-account-5"/>
+                </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><div class="line-block">
+<div class="line">Next <a class="reference external" href="https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts?supportedpurview=project">Select Service Account</a></div>
+<div class="line">to create and download</div>
+<div class="line">service account key.</div>
+</div>
+</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><div class="line-block">
+<div class="line"><a class="reference external" href="https://console.cloud.google.com/apis/credentials/serviceaccountkey">Create Service Account Key</a>.</div>
+<div class="line">Download the service</div>
+<div class="line">account key file to</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">~/.cloudmesh/security</span></code></div>
+<div class="line">folder with name</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">google.json</span></code>.</div>
+</div>
+</td>
+<td><p><a class=""
+               data-lightbox="group-5ed12b08-955a-4b7c-b03a-16f7c60b9917"
+               href="../../_images/CreateKey_011.png"
+               title=""
+               data-title=""
+               ><img src="../../_images/CreateKey_011.png"
+                     class=""
+                     width="100%"
+                     height="auto"
+                     alt="google-account-2"/>
+                </a></p></td>
+</tr>
+</tbody>
+</table>
+<p>After the key is downloaded, make sure you keep the <code class="docutils literal notranslate"><span class="pre">~/.cloudmesh</span></code>
+directory secure.</p>
+<p>We will use the downloaded json file to register google cloud with
+cloudmesh and enable cloudmesh to invoke google cloud API
+by updating YAML entry in file</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">~/.cloudmesh/cloudmesh.yaml</span></code></p>
+<p>Next register google cloud account with cloudmesh.</p>
+</div>
+<div class="section" id="registering-google-cloud-to-cloudmesh">
+<h3>Registering Google Cloud to Cloudmesh<a class="headerlink" href="#registering-google-cloud-to-cloudmesh" title="Permalink to this headline">¶</a></h3>
+<p>Use the following command to register google cloud
+with cloudmesh. This command will update the
+<code class="docutils literal notranslate"><span class="pre">cloudmesh.yaml</span></code> file for respective service.</p>
+<div class="section" id="register-google-compute">
+<h4>Register Google Compute<a class="headerlink" href="#register-google-compute" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cms register update --kind=google --service=compute --filename=~/.cloudmesh/security/google.json
+</pre></div>
+</div>
+</div>
+<div class="section" id="register-google-storage">
+<h4>Register Google Storage<a class="headerlink" href="#register-google-storage" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cms register update --kind=google --service=Storage --filename=~/.cloudmesh/security/google.json bucket=cloudmesh-bucket
+</pre></div>
+</div>
+<p>Note: The cloudmesh-bucket will be used as default storage bucket.</p>
+</div>
+<div class="section" id="register-google-volume">
+<h4>Register Google Volume<a class="headerlink" href="#register-google-volume" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cms register update --service=volume --kind=google --filename=~/.cloudmesh/security/google.json zone=us-west-a sizeGb=100 label=google
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="verify-setup">
+<h3>Verify Setup<a class="headerlink" href="#verify-setup" title="Permalink to this headline">¶</a></h3>
+<p>Check the setup by running the following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cms <span class="nb">set</span> <span class="nv">cloud</span><span class="o">=</span>google
+$ cms vm list --refresh
+</pre></div>
+</div>
+<p>The above command should list the VMs from your google cloud compute service.</p>
+<p>You are all set with Google Cloud account setup.</p>
+</div>
+</div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://console.cloud.google.com/getting-started">New Google Cloud Account
+Introduction</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/free/docs/gcp-free-tier">Create a Google Cloud Account- Free
+Tier</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/docs/authentication/">Authentication Overview | Authentication | Google
+Cloud</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/iam/docs/understanding-service-accounts/">Understanding service accounts | Google
+Cloud</a></p></li>
+</ul>
+</div>
+<div class="section" id="google-cloud-storage">
+<h2>Google Cloud Storage<a class="headerlink" href="#google-cloud-storage" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://cloud.google.com/products/storage/">Google Cloud Storage</a>
+provides varity of storage products which are simple, reliable, and
+secure solutions for your media, analytics, and application data.</p>
+<p>The following are avalaible as google cloud storage products:</p>
+<ol class="arabic simple">
+<li><p>Object or blob storage <a class="reference external" href="https://cloud.google.com/storage/">Storage Type: Cloud
+Storage</a></p></li>
+<li><p>Block storage <a class="reference external" href="https://cloud.google.com/persistent-disk/">Storage Type: Persistent
+Disk</a></p></li>
+<li><p>Archival storage <a class="reference external" href="https://cloud.google.com/storage/">Storage Type: Cloud
+Storage</a></p></li>
+<li><p>File storage <a class="reference external" href="https://cloud.google.com/filestore/">Storage Type: Cloud
+Filestore</a></p></li>
+<li><p>Mobile application <a class="reference external" href="https://firebase.google.com/products/storage/">Storage Type: Cloud Storage for
+Firebase</a></p></li>
+<li><p>Data transfer <a class="reference external" href="https://cloud.google.com/products/data-transfer/">Storage Type: Data Transfer
+Services</a></p></li>
+<li><p>Collaboration <a class="reference external" href="https://cloud.google.com/drive-enterprise/">Storage Type: Drive
+enterprise</a></p></li>
+</ol>
+<p>You can refer <a class="reference external" href="https://cloud.google.com/storage/docs/">google storage documentation</a> for more details on google
+cloud storage documentation. Cloudmesh currently supports <a class="reference external" href="https://cloud.google.com/storage/docs/how-to">object/blob
+storage</a>. Users can
+follow instruction to configure google could platform described as
+part of this document.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gdrive/gdrive.html" class="btn btn-neutral float-right" title="Google Drive" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Google Acounts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

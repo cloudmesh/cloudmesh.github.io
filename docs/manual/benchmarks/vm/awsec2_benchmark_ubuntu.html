@@ -1,0 +1,453 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AWS EC2 VM Management &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>AWS EC2 VM Management</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/benchmarks/vm/awsec2_benchmark_ubuntu.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aws-ec2-vm-management">
+<h1>AWS EC2 VM Management<a class="headerlink" href="#aws-ec2-vm-management" title="Permalink to this headline">¶</a></h1>
+<p>Benchmark results using cloudmesh-cloud/tests/test_cms_aws.py</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PING</span> <span class="n">ms</span> <span class="p">:</span> <span class="mi">34</span>
+<span class="n">DOWNLOAD</span> <span class="n">Mbps</span> <span class="p">:</span> <span class="mf">69.27</span>
+<span class="n">UPLOAD</span> <span class="n">Mbps</span> <span class="p">:</span> <span class="mf">5.99</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Machine Arribute</p></th>
+<th class="head"><p>Time/s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BUG_REPORT_URL</p></td>
+<td><p>“ht
+tps://bugs.launchpad.net/ubuntu/”</p></td>
+</tr>
+<tr class="row-odd"><td><p>DISTRIB_CODENAME</p></td>
+<td><p>bionic</p></td>
+</tr>
+<tr class="row-even"><td><p>DISTRIB_DESCRIPTION</p></td>
+<td><p>“Ubuntu 18.04.2 LTS”</p></td>
+</tr>
+<tr class="row-odd"><td><p>DISTRIB_ID</p></td>
+<td><p>Ubuntu</p></td>
+</tr>
+<tr class="row-even"><td><p>DISTRIB_RELEASE</p></td>
+<td><p>18.04</p></td>
+</tr>
+<tr class="row-odd"><td><p>HOME_URL</p></td>
+<td><p>“<a class="reference external" href="https://www.ubuntu.com/">https://www.ubuntu.com/</a>”</p></td>
+</tr>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>ubuntu</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID_LIKE</p></td>
+<td><p>debian</p></td>
+</tr>
+<tr class="row-even"><td><p>NAME</p></td>
+<td><p>“Ubuntu”</p></td>
+</tr>
+<tr class="row-odd"><td><p>PRETTY_NAME</p></td>
+<td><p>“Ubuntu 18.04.2 LTS”</p></td>
+</tr>
+<tr class="row-even"><td><p>PRIVACY_POLICY_URL</p></td>
+<td><p>“<a class="reference external" href="https://www.ubuntu.com/legal/t">https://www.ubuntu.com/legal/t</a>
+erms-and-policies/privacy-policy”</p></td>
+</tr>
+<tr class="row-odd"><td><p>SUPPORT_URL</p></td>
+<td><p>“<a class="reference external" href="https://help.ubuntu.com/">https://help.ubuntu.com/</a>”</p></td>
+</tr>
+<tr class="row-even"><td><p>UBUNTU_CODENAME</p></td>
+<td><p>bionic</p></td>
+</tr>
+<tr class="row-odd"><td><p>VERSION</p></td>
+<td><p>“18.04.2 LTS (Bionic Beaver)”</p></td>
+</tr>
+<tr class="row-even"><td><p>VERSION_CODENAME</p></td>
+<td><p>bionic</p></td>
+</tr>
+<tr class="row-odd"><td><p>VERSION_ID</p></td>
+<td><p>“18.04”</p></td>
+</tr>
+<tr class="row-even"><td><p>mac_version</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>machine</p></td>
+<td><p>(‘x86_64’,)</p></td>
+</tr>
+<tr class="row-even"><td><p>node</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+</tr>
+<tr class="row-odd"><td><p>platform</p></td>
+<td><p>Linux-4.18.0-17-gene
+ric-x86_64-with-debian-buster-sid</p></td>
+</tr>
+<tr class="row-even"><td><p>processor</p></td>
+<td><p>(‘x86_64’,)</p></td>
+</tr>
+<tr class="row-odd"><td><p>processors</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-even"><td><p>python</p></td>
+<td><p>3.7.2 (default, Feb 14 2019,
+23:11:37)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>[GCC 7.3.0]</p></td>
+</tr>
+<tr class="row-even"><td><p>release</p></td>
+<td><p>(‘4.18.0-17-generic’,)</p></td>
+</tr>
+<tr class="row-odd"><td><p>sys</p></td>
+<td><p>linux</p></td>
+</tr>
+<tr class="row-even"><td><p>system</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-odd"><td><p>user</p></td>
+<td><p>colliner</p></td>
+</tr>
+<tr class="row-even"><td><p>version</p></td>
+<td><p>#18~18.04.1-Ubuntu SMP Fri Mar 15
+15:27:12 UTC 2019</p></td>
+</tr>
+<tr class="row-odd"><td><p>win_version</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 7%" />
+<col style="width: 39%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>timer</p></th>
+<th class="head"><p>time</p></th>
+<th class="head"><p>node</p></th>
+<th class="head"><p>system</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cms vm list</p></td>
+<td><p>4.05</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-odd"><td><p>cms vm status</p></td>
+<td><p>2.28</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-even"><td><p>cms vm stop dryrun</p></td>
+<td><p>2.45</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-odd"><td><p>cms vm stop</p></td>
+<td><p>2.32</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-even"><td><p>cms vm ping</p></td>
+<td><p>2.33</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-odd"><td><p>cms vm check</p></td>
+<td><p>1.81</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-even"><td><p>cms vm run dryrun</p></td>
+<td><p>2.3</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-odd"><td><p>cms vm script dryrun</p></td>
+<td><p>2.3</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-even"><td><p>cms vm start dryrun</p></td>
+<td><p>1.78</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-odd"><td><p>cms vm start</p></td>
+<td><p>2.44</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-even"><td><p>cms vm delete dryrun</p></td>
+<td><p>1.83</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-odd"><td><p>cms vm terminate dryrun</p></td>
+<td><p>2.56</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-even"><td><p>cms vm terminate</p></td>
+<td><p>2.23</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+<tr class="row-odd"><td><p>cms vm delete</p></td>
+<td><p>1.78</p></td>
+<td><p>(‘cloudcomputingVM’,)</p></td>
+<td><p>Linux</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

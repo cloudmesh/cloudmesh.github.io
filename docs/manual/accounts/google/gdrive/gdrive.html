@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Google Drive &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Oracle Cloud Account" href="../../oracle/account.html" />
+    <link rel="prev" title="Google Cloud Platform" href="../google-cloud.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../../../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Cloud Accounts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../openstack.html">OpenStack Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../aws.html">AWS Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../azure.html">Azure Account</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Google Acounts</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../google-cloud.html">Google Cloud Platform</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Google Drive</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-project">Create a Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enable-apis-and-services">Enable APIs and Services</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-credentials">Create Credentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#authorization-flow">Authorization Flow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oracle/account.html">Oracle Cloud Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../box.html">Box Account</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Cloud Accounts</a> &raquo;</li>
+        
+          <li><a href="../index.html">Google Acounts</a> &raquo;</li>
+        
+      <li>Google Drive</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/accounts/google/gdrive/gdrive.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="google-drive">
+<h1>Google Drive<a class="headerlink" href="#google-drive" title="Permalink to this headline">¶</a></h1>
+<p>Google Drive is a file storing platform where an user can store all
+his/her files in the google drive.  You will need Google Drive to
+work with Cloudmesh Storage to store files in Google Drive.
+Here files can be of any form
+ranging from documents to audio, video or image files. In free account
+each user will be given around 15 GB of free data space to be
+stored. We can create folders and subfolders in the Google Drive to
+store our data.</p>
+<p>Each file will be stored in Google cloud with a unique URL and it’s up
+to the user to make the file sharable or not.  Google Drive is
+reliable and if an user has different devices and if he/she wants to
+access those files then Google Drive is needed in this case as he can
+have access to his file as all his files are stored in the cloud.  The
+user does not need to install any kind of software in order to view
+these files.</p>
+<div class="section" id="create-a-project">
+<h2>Create a Project<a class="headerlink" href="#create-a-project" title="Permalink to this headline">¶</a></h2>
+<p>Do obtain credentials to use Google drive, go to <a class="reference external" href="https://console.developers.google.com/">Google APIs</a> website and create a
+project.  To create a project, go to Dashboard in Google APIs
+console. In the <strong>Select a Project</strong> window, click <strong>NEW PROJECT</strong>.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../../../_images/1console.PNG"><img alt="alternate text" src="../../../_images/1console.PNG" style="width: 20pt; height: 10pt;" /></a>
+</div>
+<div class="figure align-default">
+<img alt="Google APIs Console" src="../../../_images/1console.PNG" />
+</div>
+<div class="figure align-default">
+<img alt="New Project" src="../../../_images/2new_project.PNG" />
+</div>
+<p>Enter a project name we want to use.  Click <strong>CREATE</strong>.</p>
+<div class="figure align-default">
+<img alt="Project name" src="../../../_images/3my_project.PNG" />
+</div>
+</div>
+<div class="section" id="enable-apis-and-services">
+<h2>Enable APIs and Services<a class="headerlink" href="#enable-apis-and-services" title="Permalink to this headline">¶</a></h2>
+<p>In the APIs and Services Dashboard for the project we created, click
+<strong>ENABLE APIS AND SERVICES</strong>.</p>
+<div class="figure align-default">
+<img alt="Enable APIs and Services" src="../../../_images/4enable_apis.PNG" />
+</div>
+<p>This leads to the <strong>Welcome to the API Library</strong> page.</p>
+<div class="figure align-default">
+<img alt="API Library" src="../../../_images/5api_library.PNG" />
+</div>
+<p>Search for “google drive api”.</p>
+<div class="figure align-default">
+<img alt="Google Drive API" src="../../../_images/6google_drive_api.PNG" />
+</div>
+<p>Click <strong>ENABLE</strong>.</p>
+<div class="figure align-default">
+<img alt="Enable Google Drive API" src="../../../_images/7enable.PNG" />
+</div>
+</div>
+<div class="section" id="create-credentials">
+<h2>Create Credentials<a class="headerlink" href="#create-credentials" title="Permalink to this headline">¶</a></h2>
+<p>At the Google Drive API Overview page, click <strong>CREATE CREDENTIALS</strong>.</p>
+<div class="figure align-default">
+<img alt="Create Credentials" src="../../../_images/8create_credential.PNG" />
+</div>
+<p>Select the credentials you need.  Click <strong>What credentials do I need?</strong>.</p>
+<div class="figure align-default">
+<img alt="What credential do I need?" src="../../../_images/9add_credentials.PNG" />
+</div>
+<p>At the <strong>Set up OAuth consent screen</strong>, click <strong>SET UP CONSENT SCREEN</strong>.</p>
+<div class="figure align-default">
+<img alt="Set up Consent Screen" src="../../../_images/10set_up_oauth.PNG" />
+</div>
+<p>Select <strong>External</strong> user type.  Click <strong>CREATE</strong>.</p>
+<div class="figure align-default">
+<img alt="Oauth consent screen" src="../../../_images/11oauth_consent.PNG" />
+</div>
+<p>Enter application name.  Enter the gmail account we use for the project.</p>
+<div class="figure align-default">
+<img alt="Oauth consent screen - continued" src="../../../_images/12oauth2.png" />
+</div>
+<p>Select scopes to <strong>See, edit, create, and delete all of your Google
+Drive files</strong>, and <strong>See and download all your Google Drive files</strong>.
+Click <strong>ADD</strong>.</p>
+<div class="figure align-default">
+<img alt="Add scope" src="../../../_images/13add_scope.PNG" />
+</div>
+<p>Click <strong>Save</strong>.</p>
+<div class="figure align-default">
+<img alt="Save" src="../../../_images/14save.PNG" />
+</div>
+<p>At the APIs and Services Credentials page, click <strong>CREATE CREDENTIALS</strong>,
+select <strong>OAUTH client ID</strong>.</p>
+<div class="figure align-default">
+<img alt="Create credentials" src="../../../_images/15create_credentials.PNG" />
+</div>
+<p>Select <strong>Other</strong> for application type.  A default name “Other client
+1” will be generated which we can keep.</p>
+<div class="figure align-default">
+<img alt="Create OAuthclient ID" src="../../../_images/16create_oauth.PNG" />
+</div>
+<p>This leads to <strong>OAuth client created</strong> screen.  Click <strong>OK</strong>.</p>
+<div class="figure align-default">
+<img alt="OAuth cliented created" src="../../../_images/17oauth_client2.PNG" />
+</div>
+<p>Click the download button to download the credential file.</p>
+<div class="figure align-default">
+<img alt="Download client secret file" src="../../../_images/18download.PNG" />
+</div>
+<p>The default name of the file is something like
+“client_secret_xxxxxxxxxxxxxxxxxxxxxxxxxxpg2.apps.googleusercontent.com.json”.
+Rename it to “credentials.json”, and place it in the directory
+specified in cloudmesh.yaml for key “credentials_json_path”.</p>
+</div>
+<div class="section" id="authorization-flow">
+<h2>Authorization Flow<a class="headerlink" href="#authorization-flow" title="Permalink to this headline">¶</a></h2>
+<p>In order to create the authorization flow, we also need to modify
+cloudmesh.yaml to store the paths of the files needed for
+authentication, including path for <cite>credentials.json</cite> and path for
+<cite>token.pickle</cite>, which we will create next.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parallelgdrive</span><span class="p">:</span>
+  <span class="n">cm</span><span class="p">:</span>
+    <span class="n">active</span><span class="p">:</span> <span class="n">false</span>
+    <span class="n">heading</span><span class="p">:</span> <span class="n">GDrive</span>
+    <span class="n">host</span><span class="p">:</span> <span class="n">dgrive</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span>
+    <span class="n">label</span><span class="p">:</span> <span class="n">parallelgdrive</span>
+    <span class="n">kind</span><span class="p">:</span> <span class="n">parallelgdrive</span>
+    <span class="n">version</span><span class="p">:</span> <span class="n">TBD</span>
+    <span class="n">service</span><span class="p">:</span> <span class="n">storage</span>
+  <span class="n">default</span><span class="p">:</span>
+    <span class="n">directory</span><span class="p">:</span> <span class="n">TBD</span>
+  <span class="n">credentials</span><span class="p">:</span>
+    <span class="n">credentials_json_path</span><span class="p">:</span> <span class="p">[</span><span class="n">put</span> <span class="n">the</span> <span class="n">path</span> <span class="n">of</span> <span class="n">credentials</span><span class="o">.</span><span class="n">json</span> <span class="n">here</span><span class="p">]</span>
+    <span class="n">token_path</span><span class="p">:</span> <span class="p">[</span><span class="n">put</span> <span class="n">the</span> <span class="n">path</span> <span class="n">of</span> <span class="n">token</span><span class="o">.</span><span class="n">pickle</span> <span class="n">here</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Now we are ready to create the authorization flow.  The codes for
+creating credentials for authorization is included in the Provider.py
+file. Here is the link:</p>
+<p><a class="reference external" href="https://github.com/cloudmesh/cloudmesh-storage/blob/master/cloudmesh/storage/provider/parallelgdrive/Provider.py/">Provider.py</a></p>
+<p>When we run the Provider.py for the first time, do so in the Terminal.</p>
+<div class="figure align-default">
+<img alt="Run Provider.py" src="../../../_images/19run_provider2.PNG" />
+</div>
+<p>We will be redirected to the Sign in page.  Choose the Google account
+to continue to the project.</p>
+<div class="figure align-default">
+<img alt="Sign in" src="../../../_images/20sign_in.PNG" />
+</div>
+<p>Click <strong>Advanced</strong>.</p>
+<div class="figure align-default">
+<img alt="Advanced" src="../../../_images/21advanced.PNG" />
+</div>
+<p>Click <strong>Go to [your project name]</strong>.</p>
+<div class="figure align-default">
+<img alt="Go to project" src="../../../_images/22go_to.PNG" />
+</div>
+<p>In the Grant permission page, click <strong>Allow</strong>.</p>
+<div class="figure align-default">
+<img alt="Allow" src="../../../_images/23allow.PNG" />
+</div>
+<p>Click <strong>Allow</strong> again to confirm.</p>
+<div class="figure align-default">
+<img alt="Confirm allow" src="../../../_images/24confirm_allow.PNG" />
+</div>
+<p>Message will be displayed that the authentication flow has been completed.</p>
+<div class="figure align-default">
+<img alt="Authentication flow completed" src="../../../_images/25authentication.PNG" />
+</div>
+<p>When the authentication flow completes, it will create a
+<code class="docutils literal notranslate"><span class="pre">token.pickle</span></code> file in our working directory on our computer.  We
+need to place this file in the token_path specified in the
+<cite>cloudmesh.yaml</cite> file.</p>
+<p>This file can be used for future purposes so we do not need to login
+everytime. If we delete this file for any reason, e.g. changing the
+permission scope, then the authorization process will again ask for
+login id and password, and again create <code class="docutils literal notranslate"><span class="pre">token.pickle</span></code>
+automatically.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../oracle/account.html" class="btn btn-neutral float-right" title="Oracle Cloud Account" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../google-cloud.html" class="btn btn-neutral float-left" title="Google Cloud Platform" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

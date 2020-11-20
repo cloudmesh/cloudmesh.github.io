@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Batch &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="HPC" href="refcard.html" />
+    <link rel="prev" title="Virtual Cluster (in progress)" href="../vcluster.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../deprecated.html">Deprecated</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../configuration/encryption.html">Cloudmesh Config File Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vcluster.html">Virtual Cluster (in progress)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Batch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-job-configuration">Creating a job configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-the-connection">Testing the connection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-job">Running the Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#downloading-the-results">Downloading the Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cleaning-the-remote">Cleaning the remote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-the-list-of-the-jobs-and-clusters">Get the list of the jobs and clusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modifying-the-configuration-by-setting-parameters">Modifying the Configuration by Setting Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removing-jobs-and-clusters">Removing jobs and clusters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="refcard.html">HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow.html">Infrastructure Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vm/vm.html">Virtual Machine Management</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../deprecated.html">Deprecated</a> &raquo;</li>
+        
+      <li>Batch</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/hpc/batch.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="batch">
+<h1>Batch<a class="headerlink" href="#batch" title="Permalink to this headline">¶</a></h1>
+<p>The purpose of this sub-command is to facilitate job submission on
+clusters that use SLURM as their workload manager. Note that this tools
+assumes that the SLURM file is properly prepared by the user and does
+not modify the SLURM script in any way. Similar to other sub-commands
+<code class="docutils literal notranslate"><span class="pre">batch</span></code> has several sub-commands itself:</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span>cms batch create-job JOB_NAME --slurm-script=SLURM_SCRIPT_PATH \
+          --input-type=INPUT_TYPE --slurm-cluster=SLURM_CLUSTER_NAME \
+          --job-script-path=SCRIPT_PATH --remote-path=REMOTE_PATH \
+          --local-path=LOCAL_PATH [--argfile-path=ARGUMENT_FILE_PATH] \
+         [--outfile-name=OUTPUT_FILE_NAME] [--suffix=SUFFIX] [--overwrite]
+cms batch run-job JOB_NAME
+cms batch fetch JOB_NAME
+cms batch test-connection SLURM_CLUSTER_NAME
+cms batch set-param slurm-cluster CLUSTER_NAME PARAMETER VALUE
+cms batch set-param job-metadata JOB_NAME PARAMETER VALUE
+cms batch list slurm-clusters [DEPTH [default:1]]
+cms batch list jobs [DEPTH [default:1]]
+cms batch remove slurm-cluster CLUSTER_NAME
+cms batch remove job JOB_NAME
+cms batch clean-remote JOB_NAME
+</pre></div>
+</div>
+<p>The main options are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">create-job</span></code>: used for creating a job configuration (this does not
+run the job automatically)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">run-job</span></code>: used for running a job configuration that is previously
+created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test-connection</span></code>: used for testing the connection to a SLURM
+cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set-param</span></code>: used for setting a parameter in any configuration key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code>: used for listing possible instances of an entity</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remove</span></code>: used for removing a cluster or job</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clean-remote</span></code>: used for cleaning the files of a job from a cluster</p></li>
+</ul>
+<p>Each of these sub-commands are reviewed in the following sections with
+examples.</p>
+<div class="section" id="creating-a-job-configuration">
+<h2>Creating a job configuration<a class="headerlink" href="#creating-a-job-configuration" title="Permalink to this headline">¶</a></h2>
+<p>As can be seen, this sub-command has the most number of arguments and is
+the vital part of the <code class="docutils literal notranslate"><span class="pre">batch</span></code> tool. The parameters are all
+self-explanatory, but we will review the important ones here:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--slurm-script</span></code>: defines the path to the SLURM script that is
+going to be submitted to the SLURM cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--input-type</span></code>: defines the type of input for the application that
+is going to be run on the cluster. This is important because if the
+program takes a file name as an argument, that file has to be
+transferred to the cluster as well. Possible values for this parameter
+is either <code class="docutils literal notranslate"><span class="pre">params</span></code> or <code class="docutils literal notranslate"><span class="pre">params+file</span></code>. Note that if you pass
+<code class="docutils literal notranslate"><span class="pre">params+file</span></code> then you have to specify the <code class="docutils literal notranslate"><span class="pre">--argfile-path</span></code> as
+well where you define the path to the argument file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--slurm-cluster</span></code>: defines the name of the cluster that is
+previously defined in cloudmesh yaml file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--job-script-path</span></code>: defines the path to the file that is going to
+be run on the SLURM cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--remote-path</span></code>: defines the path on SLURM cluster on which the job
+files are going to be copied, run and collected.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--local-path</span></code>: defines the local path for saving the results.</p></li>
+</ul>
+<p>Consider the following example :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms batch create-job SlurmTest1 --slurm-script<span class="o">=</span>./1_argsin_stdout.slurm <span class="se">\</span>
+          --input-type<span class="o">=</span>params --slurm-cluster<span class="o">=</span>slurm-taito <span class="se">\</span>
+          --job-script-path<span class="o">=</span>./1_argsin_stdout_script.sh <span class="se">\</span>
+          --remote-path<span class="o">=</span>~/tmp --local-path<span class="o">=</span>../batch/sample_scripts/out <span class="se">\</span>
+          --overwrite
+</pre></div>
+</div>
+<p>This will create a job that looks like this in the <code class="docutils literal notranslate"><span class="pre">slurm_batch</span></code>
+configuration file placed in the workspace directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">slurm_cluster</span><span class="p">:</span>
+  <span class="n">slurm</span><span class="o">-</span><span class="n">taito</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">:</span> <span class="n">taito</span>
+    <span class="n">credentials</span><span class="p">:</span>
+      <span class="n">sshconfigpath</span><span class="p">:</span> <span class="o">~/</span><span class="n">vms</span><span class="o">/</span><span class="n">sshconfig_slurm</span>
+<span class="n">job</span><span class="o">-</span><span class="n">metadata</span><span class="p">:</span>
+  <span class="n">SlurmTest1</span><span class="p">:</span>
+    <span class="n">suffix</span><span class="p">:</span> <span class="n">_20181206_19275141</span>
+    <span class="n">slurm_cluster_name</span><span class="p">:</span> <span class="n">slurm</span><span class="o">-</span><span class="n">taito</span>
+    <span class="n">input_type</span><span class="p">:</span> <span class="n">params</span><span class="o">+</span><span class="n">file</span>
+    <span class="n">raw_remote_path</span><span class="p">:</span> <span class="o">~/</span><span class="n">tmp</span>
+    <span class="n">slurm_script_path</span><span class="p">:</span> <span class="o">./</span><span class="mi">4</span><span class="n">_filein_fileout</span><span class="o">.</span><span class="n">slurm</span>
+    <span class="n">job_script_path</span><span class="p">:</span> <span class="o">./</span><span class="mi">4</span><span class="n">_filein_fileout_script</span><span class="o">.</span><span class="n">sh</span>
+    <span class="n">argfile_path</span><span class="p">:</span> <span class="o">./</span><span class="n">test</span><span class="o">-</span><span class="n">script</span><span class="o">-</span><span class="n">argument</span>
+    <span class="n">argfile_name</span><span class="p">:</span> <span class="n">test</span><span class="o">-</span><span class="n">script</span><span class="o">-</span><span class="n">argument</span>
+    <span class="n">script_name</span><span class="p">:</span> <span class="mi">4</span><span class="n">_filein_fileout_script</span><span class="o">.</span><span class="n">sh</span>
+    <span class="n">slurm_script_name</span><span class="p">:</span> <span class="mi">4</span><span class="n">_filein_fileout</span><span class="o">.</span><span class="n">slurm</span>
+    <span class="n">remote_path</span><span class="p">:</span> <span class="o">~/</span><span class="n">tmp</span><span class="o">/</span><span class="n">job_20181206_19275141</span><span class="o">/</span>
+    <span class="n">remote_script_path</span><span class="p">:</span> <span class="o">~/</span><span class="n">tmp</span><span class="o">/</span><span class="n">job_20181206_19275141</span><span class="o">/</span><span class="mi">4</span><span class="n">_filein_fileout_script</span><span class="o">.</span><span class="n">sh</span>
+    <span class="n">remote_slurm_script_path</span><span class="p">:</span> <span class="o">~/</span><span class="n">tmp</span><span class="o">/</span><span class="n">job_20181206_19275141</span><span class="o">/</span><span class="mi">4</span><span class="n">_filein_fileout</span><span class="o">.</span><span class="n">slurm</span>
+    <span class="n">local_path</span><span class="p">:</span> <span class="o">../</span><span class="n">batch</span><span class="o">/</span><span class="n">sample_scripts</span><span class="o">/</span><span class="n">out</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="testing-the-connection">
+<h2>Testing the connection<a class="headerlink" href="#testing-the-connection" title="Permalink to this headline">¶</a></h2>
+<p>Note that the cluster information is already extracted and added to this
+file. Therefore unlike <code class="docutils literal notranslate"><span class="pre">vcluster</span></code>, there is no need to add the cluster
+manually. So far, we have just added and updated the configuration and
+the job is neither submitted nor run in the cluster. Before doing that,
+let’s try to test our connection to the cluster:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms batch test-connection slurm-taito
+<span class="c1"># Slurm Cluster taito is accessible.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-the-job">
+<h2>Running the Job<a class="headerlink" href="#running-the-job" title="Permalink to this headline">¶</a></h2>
+<p>Now that we are sure that the ssh connection works fine, let’s try to
+run the job:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms batch run-job SlurmTest1
+<span class="c1"># Remote job ID: 32846209</span>
+</pre></div>
+</div>
+<p>Despite the short output, this command does a lot of work behind the
+seen including:</p>
+<ul class="simple">
+<li><p>Creating the proper folder structure in the remote</p></li>
+<li><p>Copying the SLURM script, as well as the job script and the argument
+files if any.</p></li>
+<li><p>Submitting the job</p></li>
+<li><p>Keeping the job ID and save it in the configuration file so that the
+results can be fetched later</p></li>
+</ul>
+<p>Just for the demonstration purpose, let’s check the remote folder in the
+cluster and you will see that all of the files as well as the results
+will be available there:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>taito-login3:~/tmp/job_20181206_19301175$ ll
+total <span class="m">28</span>
+drwxr-xr-x <span class="m">2</span>  <span class="m">4096</span> Dec  <span class="m">7</span> <span class="m">02</span>:36 ./
+drwx------ <span class="m">3</span>  <span class="m">4096</span> Dec  <span class="m">7</span> <span class="m">02</span>:35 ../
+-rwxr-xr-x <span class="m">1</span>   <span class="m">238</span> Dec  <span class="m">7</span> <span class="m">02</span>:35 4_filein_fileout.slurm*
+-rw-r--r-- <span class="m">1</span>     <span class="m">0</span> Dec  <span class="m">7</span> <span class="m">02</span>:36 4_filein_fileout.slurm.e32846209
+-rw-r--r-- <span class="m">1</span>   <span class="m">117</span> Dec  <span class="m">7</span> <span class="m">02</span>:36 4_filein_fileout.slurm.o32846209
+-rwxr-xr-x <span class="m">1</span>    <span class="m">48</span> Dec  <span class="m">7</span> <span class="m">02</span>:35 4_filein_fileout_script.sh*
+-rw-r--r-- <span class="m">1</span>    <span class="m">35</span> Dec  <span class="m">7</span> <span class="m">02</span>:35 test-script-argument
+-rw------- <span class="m">1</span>    <span class="m">35</span> Dec  <span class="m">7</span> <span class="m">02</span>:36 test-script-output
+</pre></div>
+</div>
+</div>
+<div class="section" id="downloading-the-results">
+<h2>Downloading the Results<a class="headerlink" href="#downloading-the-results" title="Permalink to this headline">¶</a></h2>
+<p>Now that the results are ready we can fetch the results using the
+following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms batch fetch SlurmTest1
+collecting results
+Results collected from taito <span class="k">for</span> jobID <span class="m">32846209</span>
+waiting <span class="k">for</span> other results <span class="k">if</span> any...
+All of the remote results collected.
+</pre></div>
+</div>
+<p>Using this, the results will be downloaded in the local path specified
+in the configuration file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>out$ ll job_20181206_19301175/
+total 1M
+drwxr-xr-x <span class="m">2</span> corriel 1M Dec  <span class="m">6</span> <span class="m">19</span>:40 ./
+drwxr-xr-x <span class="m">3</span> corriel 1M Dec  <span class="m">6</span> <span class="m">19</span>:40 ../
+-rw-r--r-- <span class="m">1</span> corriel 0M Dec  <span class="m">6</span> <span class="m">19</span>:40 4_filein_fileout.slurm.e32846209
+-rw-r--r-- <span class="m">1</span> corriel 1M Dec  <span class="m">6</span> <span class="m">19</span>:40 4_filein_fileout.slurm.o32846209
+-rw------- <span class="m">1</span> corriel 1M Dec  <span class="m">6</span> <span class="m">19</span>:40 test-script-output
+</pre></div>
+</div>
+</div>
+<div class="section" id="cleaning-the-remote">
+<h2>Cleaning the remote<a class="headerlink" href="#cleaning-the-remote" title="Permalink to this headline">¶</a></h2>
+<p>Now that you are done, you can easily clean the remote using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms batch clean-remote SlurmTest1
+Job SlurmTest1 cleaned successfully.
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-the-list-of-the-jobs-and-clusters">
+<h2>Get the list of the jobs and clusters<a class="headerlink" href="#get-the-list-of-the-jobs-and-clusters" title="Permalink to this headline">¶</a></h2>
+<p>Naturally after working with the <code class="docutils literal notranslate"><span class="pre">batch</span></code> for a while, several jobs and
+clusters will be accumulated in the configuration file. You can get the
+list of current jobs and clusters using the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms batch list slurm-clusters
+ slurm-taito:
+     name
+     credentials
+cms batch list <span class="nb">jobs</span>
+ SlurmTest1:
+     suffix
+     slurm_cluster_name
+     input_type
+     raw_remote_path
+     slurm_script_path
+     job_script_path
+     argfile_path
+     argfile_name
+     script_name
+     slurm_script_name
+     remote_path
+     remote_script_path
+     remote_slurm_script_path
+     local_path
+     jobIDs
+</pre></div>
+</div>
+<p>It is also possible to increase the depth of the information by adding
+the desired depth as the next parameter:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms batch list slurm-clusters <span class="m">2</span>
+ slurm-taito:
+     name:
+         taito
+     credentials:
+         sshconfigpath:
+             ~/vms/sshconfig_slurm
+</pre></div>
+</div>
+</div>
+<div class="section" id="modifying-the-configuration-by-setting-parameters">
+<h2>Modifying the Configuration by Setting Parameters<a class="headerlink" href="#modifying-the-configuration-by-setting-parameters" title="Permalink to this headline">¶</a></h2>
+<p>In case you want to modify or add a configuration parameter, there is no
+need to directly modify the file. Indeed you can use the <code class="docutils literal notranslate"><span class="pre">set-param</span></code>
+command to set a key for both jobs and slurm-clusters. In the next
+example we will add a test-key and test-value parameter to the
+<code class="docutils literal notranslate"><span class="pre">slurm-taito</span></code> cluster:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms batch set-param slurm-cluster slurm-taito test-key test-value
+slurm-cluster parameter test-key <span class="nb">set</span> to test-value successfully.
+
+cms batch list slurm-clusters <span class="m">2</span>
+ slurm-taito:
+     name:
+         taito
+     credentials:
+         sshconfigpath:
+             ~/vms/sshconfig_slurm
+     test-key:
+         test-value
+</pre></div>
+</div>
+</div>
+<div class="section" id="removing-jobs-and-clusters">
+<h2>Removing jobs and clusters<a class="headerlink" href="#removing-jobs-and-clusters" title="Permalink to this headline">¶</a></h2>
+<p>Finally, when you are done with a job, or when a cluster is not
+accessible anymore, you can easily remove them from the <code class="docutils literal notranslate"><span class="pre">batch</span></code>
+configuration file using the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms baremove slurm-cluster slurm-taito
+Slurm-cluster slurm-taito removed successfully.
+</pre></div>
+</div>
+<p>Similarly, you can remove a obsolete job using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cms batch remove job SlurmTest1
+Job SlurmTest1 removed successfully.
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="refcard.html" class="btn btn-neutral float-right" title="HPC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../vcluster.html" class="btn btn-neutral float-left" title="Virtual Cluster (in progress)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

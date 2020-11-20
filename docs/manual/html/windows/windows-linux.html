@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using windows instead of Linux &mdash; Cloudmesh 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+        <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Windows Cloudmesh Development Environment" href="windows-ubuntu.html" />
+    <link rel="prev" title="Windows Cloudmesh Ubuntu Subsystem Environment" href="windows-broken-make.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Cloudmesh
+          
+
+          
+            
+            <img src="../_static/logo3.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface/index.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/index.html">Cloud Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer/index.html">Cloudmesh Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/index.html">Benchmarks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MANUAL PAGES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmd5.html">cms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/all.html">Command List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-cmd5.html">Basic Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-configuration.html">Configuration Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-group.html">Group Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-compute.html">Compute Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-storage.html">Storage Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual-community.html">Community Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference-card.html">Reference Card</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Cloudmesh Command API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html#cloudmesh-api">Cloudmesh API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/index.html">Jupyter Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">COMMUNITY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Community Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OTHER</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation/database/mongo-use.html">Developping with Mongo</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../todo.html">To Do</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api/modules.html">cloudmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/analytics.html">analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/book.html">book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/bookmanagerservice.html">bookmanagerservice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/emr.html">emr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/git.html">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/queue.html">queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/test.html">test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/windows.html">windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/workflow_draft.html">workflow_draft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-broken-make.html">Windows Cloudmesh Ubuntu Subsystem Environment</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using windows instead of Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-bash">Using bash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-gitbash">Using gitbash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-conda">Using conda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-cmd">Using cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#easy-install">EASY INSTALL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#env3-bat">ENV3.bat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setup-env3-bat">SETUP-ENV3.bat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cms-clone-bat">CMS-CLONE.bat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cms-aa-bat">CMS-AA.bat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-it">Using it</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="windows-ubuntu.html">Windows Cloudmesh Development Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated.html">Deprecated</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cloudmesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../todo.html">To Do</a> &raquo;</li>
+        
+      <li>Using windows instead of Linux</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/windows/windows-linux.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-windows-instead-of-linux">
+<h1>Using windows instead of Linux<a class="headerlink" href="#using-windows-instead-of-linux" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="using-bash">
+<h2>Using bash<a class="headerlink" href="#using-bash" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">o2</dt>
+<dd class="field-odd"><p>students please contribute</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="using-gitbash">
+<h2>Using gitbash<a class="headerlink" href="#using-gitbash" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">o2</dt>
+<dd class="field-odd"><p>students please contribute</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="using-conda">
+<h2>Using conda<a class="headerlink" href="#using-conda" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">o2</dt>
+<dd class="field-odd"><p>students please contribute</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="using-cmd">
+<h2>Using cmd<a class="headerlink" href="#using-cmd" title="Permalink to this headline">¶</a></h2>
+<p>The following table lists commands that do the sam things between linux
+and windows.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 40%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Linux</p></th>
+<th class="head"><p>Windows</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">FILE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">FILE</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">DIR</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">rmdir</span> <span class="pre">DIR</span> <span class="pre">/s</span> <span class="pre">/q</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">history</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">doskey</span> <span class="pre">/HISTORY</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">FILE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">FILE</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">FROM</span> <span class="pre">TO</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">move</span> <span class="pre">FROM</span> <span class="pre">TO</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">FROM</span> <span class="pre">TO</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">copy</span> <span class="pre">FROM</span> <span class="pre">TO</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ls</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dir</span> <span class="pre">/w</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-lisa</span></code></p></td>
+<td><p>???</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dir</span> <span class="pre">/q</span></code></p></td>
+<td><p>shows owner</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>see (1)</p></td>
+<td><p>sows read write</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">powershell</span> <span class="pre">&quot;dir</span> <span class="pre">|</span> <span class="pre">Get-Acl&quot;</span></code></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">powershell</span> <span class="pre">&quot;dir</span> <span class="pre">|</span> <span class="pre">Get-Acl</span> <span class="pre">|</span> <span class="pre">fl&quot;</span></code></p></li>
+</ol>
+</li>
+</ul>
+<p>Do not use notepad, but if nothing else is available</p>
+<p><code class="docutils literal notranslate"><span class="pre">notepad</span> <span class="pre">FILE</span></code></p>
+<p>See also:</p>
+<ul class="simple">
+<li><p>&lt;<a class="reference external" href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4">https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4</a>
+/html/Step_by_Step_Guide/ap-doslinux.html&gt;</p></li>
+</ul>
+</div>
+<div class="section" id="easy-install">
+<h2>EASY INSTALL<a class="headerlink" href="#easy-install" title="Permalink to this headline">¶</a></h2>
+<p>Make sure you have python3.7.4 installed from python.org</p>
+<p>Place the following in your folder that comes up when you start CMD.exe.</p>
+<div class="section" id="env3-bat">
+<h3>ENV3.bat<a class="headerlink" href="#env3-bat" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pip -U --user
+ENV3<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat
+</pre></div>
+</div>
+</div>
+<div class="section" id="setup-env3-bat">
+<h3>SETUP-ENV3.bat<a class="headerlink" href="#setup-env3-bat" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rmdir ENV3 /s /q
+python --version
+python -m venv ENV3
+<span class="nb">echo</span> <span class="s2">&quot;Start a new CMD.exe&quot;</span>
+start cmd.exe /k <span class="s2">&quot;ENV3 &amp; pip install pip -U --user&quot;</span>
+<span class="nb">exit</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cms-clone-bat">
+<h3>CMS-CLONE.bat<a class="headerlink" href="#cms-clone-bat" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir cm
+<span class="nb">cd</span> cm
+pip install cloudmesh-installer
+cloudmesh-installer git clone cms
+cloudmesh-installer git pull cms
+cloudmesh-installer install cms -e
+cms <span class="nb">help</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cms-aa-bat">
+<h3>CMS-AA.bat<a class="headerlink" href="#cms-aa-bat" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rmdir e-cloudmesh-command /s /q
+mkdir e-cloudmesh-command
+<span class="nb">cd</span> e-cloudmesh-command
+cms sys <span class="nb">command</span> generate aa
+<span class="nb">cd</span> cloudmesh-aa
+pip install -e .
+cms <span class="nb">help</span>
+cms aa list
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-it">
+<h3>Using it<a class="headerlink" href="#using-it" title="Permalink to this headline">¶</a></h3>
+<p>Do the following</p>
+<p>start a cmd.exe in which you execute</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>SETUP-ENV3.bat
+</pre></div>
+</div>
+<p>A new window will start in whcih you execute</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CMS</span><span class="o">-</span><span class="n">CLONE</span><span class="o">.</span><span class="n">bat</span>
+<span class="o">..</span>\<span class="n">CMS</span><span class="o">-</span><span class="n">AA</span><span class="o">.</span><span class="n">bat</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="windows-ubuntu.html" class="btn btn-neutral float-right" title="Windows Cloudmesh Development Environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="windows-broken-make.html" class="btn btn-neutral float-left" title="Windows Cloudmesh Ubuntu Subsystem Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2020, Gregor von Laszewski
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
