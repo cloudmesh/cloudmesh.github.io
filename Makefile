@@ -13,6 +13,7 @@ server:
 
 publish:
 	hugo
+	cp -r ../get docs
 	git commit -m "Publish hugo" .
 	git push
 
