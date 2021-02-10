@@ -51,6 +51,8 @@ start_update=`date +%s`
 sudo apt-get update
 sudo apt-get full-upgrade -y
 sudo apt-get install -y nmap
+sudo apt-get install -y libatlas-base-dev
+sudo apt-get install -y pv
 end_update=`date +%s`
 
 echo
@@ -88,7 +90,8 @@ Echo "# Create ssh key if it does not exist"
 Echo "# -----------------------------------------------"
 FILE=$HOME/.ssh/id_rsa.pub
 if [ ! -e "$FILE" ]; then
-     yes y | ssh-keygen -q -N "" -f .ssh/id_rsa
+     mkdir -p -m 700 $HOME/.ssh
+     yes y | ssh-keygen -q -N "" -f $HOME/.ssh/id_rsa
 fi
 echo
 Echo "# -----------------------------------------------"
