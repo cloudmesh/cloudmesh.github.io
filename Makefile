@@ -19,6 +19,7 @@ publish:
 
 publish-get:
 	cp -r ../get docs
+	rm -r docs/get/.git
 	git commit -m "Publish get" .
 	git push
 
